@@ -61,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(DoctorHuntText.doctorHunt,
                 style: TextStyle(
                     fontSize: 25.sp,
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w800,
                     color: blackOut,
                     fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     ),
