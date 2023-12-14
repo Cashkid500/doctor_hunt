@@ -22,14 +22,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Stack(
             children: [
+              
+              // Background Ellipse
               Image.asset(DoctorHuntAssetsPath.ellipse),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Spacer(),
+                    
+                    // Onboarding1 Image
                     Image.asset(DoctorHuntAssetsPath.onboarding1),
                     SizedBox(height: 60.sp,),
+
+                    // Onboarding1 Text
                     Text(DoctorHuntText.onboarding1,
                         style: TextStyle(
                           fontSize: 28.sp,
@@ -39,6 +45,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         ),
                     SizedBox(height: 10.sp,),
+
+                    // Dummy Text
                     SizedBox(
                       width: 275.sp,
                       child: Text(DoctorHuntText.dummyText,
@@ -53,6 +61,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                     ),
                     Spacer(),
+
+                    // Get Started Button
                     ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
                     style: TextStyle(
                       fontSize: 18.sp,
@@ -70,6 +80,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
                     ),
                     ),
+
+                    // Skip Button
                     TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -92,14 +104,21 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             children: [
               Positioned(
                 right: 0.sp,
-                child: Image.asset(DoctorHuntAssetsPath.ellipse2)),
+
+                // Background Ellipse2
+                child: Image.asset(DoctorHuntAssetsPath.ellipse2),
+                ),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Spacer(),
+                  
+                    // Onboarding2 Image 
                     Image.asset(DoctorHuntAssetsPath.onboarding2),
                     SizedBox(height: 60.sp,),
+
+                    // Onboarding2 Text
                     Text(DoctorHuntText.onboarding2,
                         style: TextStyle(
                           fontSize: 28.sp,
@@ -109,6 +128,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         ),
                     SizedBox(height: 10.sp,),
+
+                    // Dummy Text
                     SizedBox(
                       width: 275.sp,
                       child: Text(DoctorHuntText.dummyText,
@@ -123,6 +144,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                     ),
                     Spacer(),
+
+                    // Get Started Button
                     ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
                     style: TextStyle(
                       fontSize: 18.sp,
@@ -140,6 +163,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
                     ),
                     ),
+
+                    // Skip Button
                     TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
                     style: TextStyle(
                       fontSize: 14.sp,
@@ -159,14 +184,19 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           // Onboarding 3
           Stack(
             children: [
+              // Background Ellipse3
               Image.asset(DoctorHuntAssetsPath.ellipse),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Spacer(),
+
+                    // Onboarding3 Image
                     Image.asset(DoctorHuntAssetsPath.onboarding3),
                     SizedBox(height: 60.sp,),
+
+                    // Onboarding3 Text
                     Text(DoctorHuntText.onboarding3,
                         style: TextStyle(
                           fontSize: 28.sp,
@@ -176,6 +206,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         ),
                         ),
                     SizedBox(height: 10.sp,),
+
+                    // Dummy Text
                     SizedBox(
                       width: 275.sp,
                       child: Text(DoctorHuntText.dummyText,
@@ -190,6 +222,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           ),
                     ),
                     Spacer(),
+
+                    // Get Started Button
                     ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
                     style: TextStyle(
                       fontSize: 18.sp,
@@ -207,6 +241,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
                     ),
                     ),
+
+                    // Skip Button
                     TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
                     style: TextStyle(
                       fontSize: 14.sp,
