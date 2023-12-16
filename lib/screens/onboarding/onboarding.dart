@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/signup/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +13,6 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-  TextEditingController emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Stack(
             children: [
-              
               // Background Ellipse
               Image.asset(DoctorHuntAssetsPath.ellipse),
               Center(
@@ -30,74 +29,30 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Spacer(),
-                    
+
                     // Onboarding1 Image
                     Image.asset(DoctorHuntAssetsPath.onboarding1),
-                    SizedBox(height: 60.sp,),
+                    SizedBox(height: 60.sp),
 
                     // Onboarding1 Text
-                    Text(DoctorHuntText.onboarding1,
-                        style: TextStyle(
-                          fontSize: 28.sp,
-                          fontWeight: FontWeight.w600,
-                          color: blackText,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                        ),
-                        ),
-                    SizedBox(height: 10.sp,),
+                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding1),
+                    SizedBox(height: 10.sp),
 
                     // Dummy Text
-                    SizedBox(
-                      width: 275.sp,
-                      child: Text(DoctorHuntText.dummyText,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 12.8.sp,
-                            fontWeight: FontWeight.w400,
-                            color: royalIntrigue,
-                            height: 1.8.sp,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                          ),
-                          ),
-                    ),
+                    DummyText(),
                     Spacer(),
 
                     // Get Started Button
-                    ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
-                    style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      color: whiteText
-                    ),
-                    ),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(greenTeal),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.sp),
-                      ),
-                    ),
-                    fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
-                    ),
-                    ),
+                    GetStartedButton(),
 
                     // Skip Button
-                    TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: royalIntrigue,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                    ),
-                    ),
-                    ),
-                    SizedBox(height: 20.sp,),
+                    SkipButton(),
+                    SizedBox(height: 20.sp),
                   ],
                 ),
               ),
             ],
           ),
-
 
           // Onboarding 2
           Stack(
@@ -107,74 +62,31 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                 // Background Ellipse2
                 child: Image.asset(DoctorHuntAssetsPath.ellipse2),
-                ),
+              ),
               Center(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Spacer(),
-                  
-                    // Onboarding2 Image 
+
+                    // Onboarding2 Image
                     Image.asset(DoctorHuntAssetsPath.onboarding2),
-                    SizedBox(height: 60.sp,),
+                    SizedBox(height: 60.sp),
 
                     // Onboarding2 Text
-                    Text(DoctorHuntText.onboarding2,
-                        style: TextStyle(
-                          fontSize: 28.sp,
-                          fontWeight: FontWeight.w600,
-                          color: blackText,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                        ),
-                        ),
-                    SizedBox(height: 10.sp,),
+                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding2),
+                    SizedBox(height: 10.sp),
 
                     // Dummy Text
-                    SizedBox(
-                      width: 275.sp,
-                      child: Text(DoctorHuntText.dummyText,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 12.8.sp,
-                            fontWeight: FontWeight.w400,
-                            color: royalIntrigue,
-                            height: 1.8.sp,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                          ),
-                          ),
-                    ),
+                    DummyText(),
                     Spacer(),
 
                     // Get Started Button
-                    ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
-                    style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      color: whiteText
-                    ),
-                    ),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(greenTeal),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.sp),
-                      ),
-                    ),
-                    fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
-                    ),
-                    ),
+                    GetStartedButton(),
 
                     // Skip Button
-                    TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: royalIntrigue,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                    ),
-                    ),
-                    ),
-                    SizedBox(height: 20.sp,),
+                    SkipButton(),
+                    SizedBox(height: 20.sp),
                   ],
                 ),
               ),
@@ -194,65 +106,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     // Onboarding3 Image
                     Image.asset(DoctorHuntAssetsPath.onboarding3),
-                    SizedBox(height: 60.sp,),
+                    SizedBox(height: 60.sp),
 
                     // Onboarding3 Text
-                    Text(DoctorHuntText.onboarding3,
-                        style: TextStyle(
-                          fontSize: 28.sp,
-                          fontWeight: FontWeight.w600,
-                          color: blackText,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                        ),
-                        ),
-                    SizedBox(height: 10.sp,),
+                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding3),
+                    SizedBox(height: 10.sp),
 
                     // Dummy Text
-                    SizedBox(
-                      width: 275.sp,
-                      child: Text(DoctorHuntText.dummyText,
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 12.8.sp,
-                            fontWeight: FontWeight.w400,
-                            color: royalIntrigue,
-                            height: 1.8.sp,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                          ),
-                          ),
-                    ),
+                    DummyText(),
                     Spacer(),
 
                     // Get Started Button
-                    ElevatedButton(onPressed: () {}, child: Text(DoctorHuntText.getStarted,
-                    style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      color: whiteText
-                    ),
-                    ),
-                    style: ButtonStyle(backgroundColor: MaterialStateProperty.all(greenTeal),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.sp),
-                      ),
-                    ),
-                    fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
-                    ),
-                    ),
+                    GetStartedButton(),
 
                     // Skip Button
-                    TextButton(onPressed: () {}, child: Text(DoctorHuntText.skip,
-                    style: TextStyle(
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: royalIntrigue,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont
-                    ),
-                    ),
-                    ),
-                    SizedBox(height: 20.sp,),
+                    SkipButton(),
+                    SizedBox(height: 20.sp),
                   ],
                 ),
               ),
@@ -260,6 +129,111 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class SkipButton extends StatelessWidget {
+  const SkipButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) =>
+                const SignupScreen()));
+      },
+      child: Text(
+        DoctorHuntText.skip,
+        style: TextStyle(
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w400,
+            color: royalIntrigue,
+            fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
+      ),
+    );
+  }
+}
+
+class GetStartedButton extends StatelessWidget {
+  const GetStartedButton({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) =>
+                const SignupScreen()));
+      },
+      child: Text(
+        DoctorHuntText.getStarted,
+        style: TextStyle(
+            fontSize: 18.sp,
+            fontWeight: FontWeight.w600,
+            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+            color: whiteText),
+      ),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(greenTeal),
+        shape:
+            MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.sp),
+          ),
+        ),
+        fixedSize:
+            MaterialStateProperty.all(Size(290.sp, 50.sp)),
+      ),
+    );
+  }
+}
+
+class DummyText extends StatelessWidget {
+  const DummyText({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 275.sp,
+      child: Text(
+        DoctorHuntText.dummyText,
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: 12.8.sp,
+            fontWeight: FontWeight.w400,
+            color: royalIntrigue,
+            height: 1.8.sp,
+            fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
+      ),
+    );
+  }
+}
+
+class OnboardingText extends StatelessWidget {
+  const OnboardingText({
+    super.key,
+    required this.onboardingtextpath,
+  });
+
+  final String onboardingtextpath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      onboardingtextpath,
+      style: TextStyle(
+          fontSize: 28.sp,
+          fontWeight: FontWeight.w600,
+          color: blackText,
+          fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
     );
   }
 }
