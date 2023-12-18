@@ -216,7 +216,7 @@ class PasswordField extends StatelessWidget {
       height: 54.sp,
       width: 320.sp,
       child: TextField(
-        keyboardType: TextInputType.name,
+        keyboardType: TextInputType.text,
         obscureText: passwordObscured,
         decoration: InputDecoration(
           focusedBorder:
