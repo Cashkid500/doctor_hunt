@@ -208,18 +208,19 @@ class LoginButton extends StatelessWidget {
 
 // Bottom Sheet
 void _showBottomSheet(BuildContext context) {
+  // Forgot Password Bottom Sheet
   showModalBottomSheet(
     backgroundColor: Colors.transparent,
     isDismissible: false,
     context: context,
     builder: (BuildContext context) {
       return Container(
-        height: 375,
+        height: 375.sp,
         decoration: BoxDecoration(
           color: whiteText,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(32),
-            topRight: Radius.circular(32),
+            topLeft: Radius.circular(32.r),
+            topRight: Radius.circular(32.r),
           ),
         ),
 
@@ -243,7 +244,7 @@ void _showBottomSheet(BuildContext context) {
 
                   // Forgot Password
                   Padding(
-                    padding: EdgeInsets.only(right: 120.0),
+                    padding: EdgeInsets.only(right: 120.sp),
                     child: Text(
                       DoctorHuntText.forgotPassword,
                       style: TextStyle(
@@ -258,7 +259,7 @@ void _showBottomSheet(BuildContext context) {
                   SizedBox(
                     width: 305.sp,
                     child: Text(
-                      "Enter your email for the verification proccesss, we will send 4 digits code to your email.",
+                      DoctorHuntText.verification,
                       style: TextStyle(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
@@ -274,83 +275,85 @@ void _showBottomSheet(BuildContext context) {
                   SizedBox(height: 30.sp),
                   ElevatedButton(
                     onPressed: () {
-                      // Navigator.of(context).push(MaterialPageRoute(
-                      //     builder: (BuildContext context) => const LoginScreen()));
-                        showModalBottomSheet(
-                          backgroundColor: Colors.transparent,
-                          isDismissible: false,
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Container(
-                              height: 375,
-                              decoration: BoxDecoration(
-                                color: whiteText,
-                                borderRadius: BorderRadius.only(
-                                  topLeft: Radius.circular(32),
-                                  topRight: Radius.circular(32),
-                                ),
+                      Navigator.of(context).pop();
+                      // OTP Bottom Sheet
+                      showModalBottomSheet(
+                        backgroundColor: Colors.transparent,
+                        isDismissible: false,
+                        context: context,
+                        builder: (BuildContext context) {
+                          return Container(
+                            height: 375.sp,
+                            decoration: BoxDecoration(
+                              color: whiteText,
+                              borderRadius: BorderRadius.only(
+                                topLeft: Radius.circular(32.r),
+                                topRight: Radius.circular(32.r),
                               ),
+                            ),
 
-                              // Content of the bottom sheet
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  ListTile(
-                                    title: Column(
-                                      children: [
-                                        SizedBox(height: 10.sp),
-                                        SizedBox(
-                                          height: 5.sp,
-                                          width: 130.sp,
-                                          child: Divider(
-                                            color: weatheredStone,
-                                            thickness: 5.sp,
+                            // Content of the bottom sheet
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                ListTile(
+                                  title: Column(
+                                    children: [
+                                      SizedBox(height: 10.sp),
+                                      SizedBox(
+                                        height: 5.sp,
+                                        width: 130.sp,
+                                        child: Divider(
+                                          color: weatheredStone,
+                                          thickness: 5.sp,
+                                        ),
+                                      ),
+                                      SizedBox(height: 50.sp),
+
+                                      // Enter 4 Digits Code
+                                      Padding(
+                                        padding: EdgeInsets.only(right: 100.sp),
+                                        child: Text(
+                                          DoctorHuntText.digitsCode,
+                                          style: TextStyle(
+                                            fontSize: 24.sp,
+                                            fontWeight: FontWeight.w600,
+                                            color: blackText,
+                                            fontFamily: DoctorHuntAssetsPath
+                                                .doctorHuntFont,
                                           ),
                                         ),
-                                        SizedBox(height: 50.sp),
-
-                                        // Enter 4 Digits Code
-                                        Padding(
-                                          padding:
-                                              EdgeInsets.only(right: 100.0),
-                                          child: Text(
-                                            "Enter 4 Digits Code",
-                                            style: TextStyle(
-                                              fontSize: 24.sp,
-                                              fontWeight: FontWeight.w600,
-                                              color: blackText,
-                                              fontFamily: DoctorHuntAssetsPath
-                                                  .doctorHuntFont,
-                                            ),
+                                      ),
+                                      SizedBox(height: 20.sp),
+                                      SizedBox(
+                                        width: 310.sp,
+                                        child: Text(
+                                          DoctorHuntText.fourDigits,
+                                          style: TextStyle(
+                                            fontSize: 15.sp,
+                                            fontWeight: FontWeight.w400,
+                                            height: 1.8.sp,
+                                            color: royalIntrigue,
                                           ),
                                         ),
-                                        SizedBox(height: 20.sp),
-                                        SizedBox(
-                                          width: 310.sp,
-                                          child: Text(
-                                            "Enter the 4 digits code that you received in your email.",
-                                            style: TextStyle(
-                                              fontSize: 15.sp,
-                                              fontWeight: FontWeight.w400,
-                                              height: 1.8.sp,
-                                              color: royalIntrigue,
-                                            ),
-                                          ),
-                                        ),
-                                        SizedBox(height: 30.sp),
+                                      ),
+                                      SizedBox(height: 30.sp),
 
-                                        // OTP TextField
+                                      // OTP TextField
                                       Container(
                                         margin: EdgeInsets.symmetric(
                                             horizontal: 20.sp),
                                         child: PinCodeTextField(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
                                           appContext: context,
                                           length: 4,
                                           cursorHeight: 19,
                                           enableActiveFill: true,
                                           textStyle: TextStyle(
                                             fontSize: 18.sp,
-                                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                            fontFamily: DoctorHuntAssetsPath
+                                                .doctorHuntFont,
                                             fontWeight: FontWeight.normal,
                                             color: greenTeal,
                                           ),
@@ -374,53 +377,323 @@ void _showBottomSheet(BuildContext context) {
                                           onChanged: (value) {},
                                         ),
                                       ),
-                                        SizedBox(height: 30.sp),
-                                        ElevatedButton(
-                                          onPressed: () {
-                                            // Navigator.of(context).push(MaterialPageRoute(
-                                            //     builder: (BuildContext context) => const LoginScreen()));
-                                          },
-                                          child: Text(
-                                            "Continue",
-                                            style: TextStyle(
-                                                fontSize: 18.sp,
-                                                fontWeight: FontWeight.w600,
-                                                fontFamily: DoctorHuntAssetsPath
-                                                    .doctorHuntFont,
-                                                color: whiteText),
-                                          ),
-                                          style: ButtonStyle(
-                                            backgroundColor:
-                                                MaterialStateProperty.all(
-                                                    greenTeal),
-                                            shape: MaterialStateProperty.all<
-                                                RoundedRectangleBorder>(
-                                              RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(
-                                                        10.sp),
-                                              ),
-                                            ),
-                                            fixedSize:
-                                                MaterialStateProperty.all(
-                                                    Size(290.sp, 50.sp)),
-                                          ),
+                                      SizedBox(height: 30.sp),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          Navigator.of(context).pop();
+
+                                          // Reset Password Bottom Sheet
+                                          showModalBottomSheet(
+                                            backgroundColor: Colors.transparent,
+                                            isDismissible: false,
+                                            context: context,
+                                            builder: (BuildContext context) {
+                                              return Container(
+                                                height: 460.sp,
+                                                decoration: BoxDecoration(
+                                                  color: whiteText,
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(32.r),
+                                                    topRight:
+                                                        Radius.circular(32.r),
+                                                  ),
+                                                ),
+
+                                                // Content of the bottom sheet
+                                                child: Column(
+                                                  mainAxisSize:
+                                                      MainAxisSize.min,
+                                                  children: <Widget>[
+                                                    ListTile(
+                                                      title: Column(
+                                                        children: [
+                                                          SizedBox(
+                                                              height: 10.sp),
+                                                          SizedBox(
+                                                            height: 5.sp,
+                                                            width: 130.sp,
+                                                            child: Divider(
+                                                              color:
+                                                                  weatheredStone,
+                                                              thickness: 5.sp,
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                              height: 50.sp),
+
+                                                          // Reset Password
+                                                          Padding(
+                                                            padding:
+                                                                EdgeInsets.only(
+                                                                    right:
+                                                                        135.sp),
+                                                            child: Text(
+                                                              DoctorHuntText
+                                                                  .resetPassword,
+                                                              style: TextStyle(
+                                                                fontSize: 24.sp,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w600,
+                                                                color:
+                                                                    blackText,
+                                                                fontFamily:
+                                                                    DoctorHuntAssetsPath
+                                                                        .doctorHuntFont,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                              height: 20.sp),
+                                                          SizedBox(
+                                                            width: 315.sp,
+                                                            child: Text(
+                                                              DoctorHuntText.setPassword,
+                                                              style: TextStyle(
+                                                                fontSize: 14.sp,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                                height: 1.8.sp,
+                                                                color:
+                                                                    royalIntrigue,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                              height: 30.sp),
+
+                                                          // New Password TextFormField
+                                                          SizedBox(
+                                                            height: 54.sp,
+                                                            width: 320.sp,
+                                                            child: TextField(
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .name,
+                                                              obscureText: true,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                focusedBorder: OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            12.r)),
+                                                                contentPadding:
+                                                                    EdgeInsets.symmetric(
+                                                                        horizontal: 20
+                                                                            .sp,
+                                                                        vertical:
+                                                                            20.sp),
+                                                                isCollapsed:
+                                                                    true,
+                                                                hintText:
+                                                                    DoctorHuntText.newPassword,
+                                                                hintStyle:
+                                                                    TextStyle(
+                                                                  color:
+                                                                      royalIntrigue,
+                                                                  fontFamily:
+                                                                      DoctorHuntAssetsPath
+                                                                          .doctorHuntFont,
+                                                                  fontSize:
+                                                                      16.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w300,
+                                                                ),
+                                                                filled: true,
+                                                                fillColor:
+                                                                    whiteText,
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              12.r),
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                          color:
+                                                                              royalIntrigue),
+                                                                ),
+                                                                suffixIcon:
+                                                                    Icon(
+                                                                  Icons
+                                                                      .visibility_off,
+                                                                  color:
+                                                                      royalIntrigue,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                              height: 20.sp),
+                                                          
+                                                          // Re-enter Password Field
+                                                          SizedBox(
+                                                            height: 54.sp,
+                                                            width: 320.sp,
+                                                            child: TextField(
+                                                              keyboardType:
+                                                                  TextInputType
+                                                                      .name,
+                                                              obscureText: true,
+                                                              decoration:
+                                                                  InputDecoration(
+                                                                focusedBorder: OutlineInputBorder(
+                                                                    borderRadius:
+                                                                        BorderRadius.circular(
+                                                                            12.r)),
+                                                                contentPadding:
+                                                                    EdgeInsets.symmetric(
+                                                                        horizontal: 20
+                                                                            .sp,
+                                                                        vertical:
+                                                                            20.sp),
+                                                                isCollapsed:
+                                                                    true,
+                                                                hintText:
+                                                                    DoctorHuntText.reEnter,
+                                                                hintStyle:
+                                                                    TextStyle(
+                                                                  color:
+                                                                      royalIntrigue,
+                                                                  fontFamily:
+                                                                      DoctorHuntAssetsPath
+                                                                          .doctorHuntFont,
+                                                                  fontSize:
+                                                                      16.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w300,
+                                                                ),
+                                                                filled: true,
+                                                                fillColor:
+                                                                    whiteText,
+                                                                enabledBorder:
+                                                                    OutlineInputBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              12.r),
+                                                                  borderSide:
+                                                                      BorderSide(
+                                                                          color:
+                                                                              royalIntrigue),
+                                                                ),
+                                                                suffixIcon:
+                                                                    Icon(
+                                                                  Icons
+                                                                      .visibility_off,
+                                                                  color:
+                                                                      royalIntrigue,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                          SizedBox(
+                                                              height: 30.sp),
+
+                                                          // Update Password Button
+                                                          ElevatedButton(
+                                                            onPressed: () {
+                                                              Navigator.of(
+                                                                      context)
+                                                                  .push(MaterialPageRoute(
+                                                                      builder: (BuildContext
+                                                                              context) =>
+                                                                          const LoginScreen()));
+                                                            },
+                                                            child: Text(
+                                                              DoctorHuntText
+                                                                  .updatePassword,
+                                                              style: TextStyle(
+                                                                  fontSize:
+                                                                      18.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  fontFamily:
+                                                                      DoctorHuntAssetsPath
+                                                                          .doctorHuntFont,
+                                                                  color:
+                                                                      whiteText),
+                                                            ),
+                                                            style: ButtonStyle(
+                                                              backgroundColor:
+                                                                  MaterialStateProperty
+                                                                      .all(
+                                                                          greenTeal),
+                                                              shape: MaterialStateProperty
+                                                                  .all<
+                                                                      RoundedRectangleBorder>(
+                                                                RoundedRectangleBorder(
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                              10.sp),
+                                                                ),
+                                                              ),
+                                                              fixedSize:
+                                                                  MaterialStateProperty
+                                                                      .all(Size(
+                                                                          290.sp,
+                                                                          50.sp)),
+                                                            ),
+                                                          ),
+                                                        ],
+                                                      ),
+                                                      onTap: () {
+                                                        // Handle option 2
+                                                        Navigator.pop(context);
+                                                      },
+                                                    ),
+                                                  ],
+                                                ),
+                                              );
+                                            },
+                                          );
+                                        },
+                                        child: Text(
+                                          DoctorHuntText.continue1,
+                                          style: TextStyle(
+                                              fontSize: 18.sp,
+                                              fontWeight: FontWeight.w600,
+                                              fontFamily: DoctorHuntAssetsPath
+                                                  .doctorHuntFont,
+                                              color: whiteText),
                                         ),
-                                      ],
-                                    ),
-                                    onTap: () {
-                                      // Handle option 2
-                                      Navigator.pop(context);
-                                    },
+                                        style: ButtonStyle(
+                                          backgroundColor:
+                                              MaterialStateProperty.all(
+                                                  greenTeal),
+                                          shape: MaterialStateProperty.all<
+                                              RoundedRectangleBorder>(
+                                            RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(10.sp),
+                                            ),
+                                          ),
+                                          fixedSize: MaterialStateProperty.all(
+                                              Size(290.sp, 50.sp)),
+                                        ),
+                                      ),
+                                    ],
                                   ),
-                                ],
-                              ),
-                            );
-                          },
-                        );
+                                  onTap: () {
+                                    // Handle option 2
+                                    Navigator.pop(context);
+                                  },
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      );
                     },
                     child: Text(
-                      "Continue",
+                      DoctorHuntText.continue1,
                       style: TextStyle(
                           fontSize: 18.sp,
                           fontWeight: FontWeight.w600,
