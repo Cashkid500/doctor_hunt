@@ -344,23 +344,18 @@ void _showBottomSheet(BuildContext context) {
                                         margin: EdgeInsets.symmetric(
                                             horizontal: 20.sp),
                                         child: PinCodeTextField(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
+                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                           appContext: context,
                                           length: 4,
                                           cursorHeight: 19,
                                           enableActiveFill: true,
                                           textStyle: TextStyle(
                                             fontSize: 18.sp,
-                                            fontFamily: DoctorHuntAssetsPath
-                                                .doctorHuntFont,
+                                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                                             fontWeight: FontWeight.normal,
                                             color: greenTeal,
                                           ),
-                                          inputFormatters: [
-                                            FilteringTextInputFormatter
-                                                .digitsOnly
-                                          ],
+                                          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                                           pinTheme: PinTheme(
                                             shape: PinCodeFieldShape.box,
                                             fieldHeight: 45.17.sp,
@@ -371,8 +366,7 @@ void _showBottomSheet(BuildContext context) {
                                             activeFillColor: whiteText,
                                             selectedFillColor: whiteText,
                                             inactiveFillColor: whiteText,
-                                            borderRadius:
-                                                BorderRadius.circular(10.r),
+                                            borderRadius:BorderRadius.circular(10.r),
                                           ),
                                           onChanged: (value) {},
                                         ),
@@ -394,206 +388,133 @@ void _showBottomSheet(BuildContext context) {
                                                   color: whiteText,
                                                   borderRadius:
                                                       BorderRadius.only(
-                                                    topLeft:
-                                                        Radius.circular(32.r),
-                                                    topRight:
-                                                        Radius.circular(32.r),
+                                                    topLeft: Radius.circular(32.r),
+                                                    topRight: Radius.circular(32.r),
                                                   ),
                                                 ),
 
                                                 // Content of the bottom sheet
                                                 child: Column(
-                                                  mainAxisSize:
-                                                      MainAxisSize.min,
+                                                  mainAxisSize: MainAxisSize.min,
                                                   children: <Widget>[
                                                     ListTile(
                                                       title: Column(
                                                         children: [
-                                                          SizedBox(
-                                                              height: 10.sp),
+                                                          SizedBox(height: 10.sp),
                                                           SizedBox(
                                                             height: 5.sp,
                                                             width: 130.sp,
                                                             child: Divider(
-                                                              color:
-                                                                  weatheredStone,
+                                                              color: weatheredStone,
                                                               thickness: 5.sp,
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                              height: 50.sp),
+                                                          SizedBox(height: 50.sp),
 
                                                           // Reset Password
                                                           Padding(
-                                                            padding:
-                                                                EdgeInsets.only(
-                                                                    right:
-                                                                        135.sp),
+                                                            padding: EdgeInsets.only(right: 135.sp),
                                                             child: Text(
-                                                              DoctorHuntText
-                                                                  .resetPassword,
+                                                              DoctorHuntText.resetPassword,
                                                               style: TextStyle(
                                                                 fontSize: 24.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                color:
-                                                                    blackText,
-                                                                fontFamily:
-                                                                    DoctorHuntAssetsPath
-                                                                        .doctorHuntFont,
+                                                                fontWeight:FontWeight.w600,
+                                                                color: blackText,
+                                                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                                                               ),
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                              height: 20.sp),
+                                                          SizedBox(height: 20.sp),
                                                           SizedBox(
                                                             width: 315.sp,
                                                             child: Text(
                                                               DoctorHuntText.setPassword,
                                                               style: TextStyle(
                                                                 fontSize: 14.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w400,
+                                                                fontWeight: FontWeight.w400,
                                                                 height: 1.8.sp,
-                                                                color:
-                                                                    royalIntrigue,
+                                                                color: royalIntrigue,
                                                               ),
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                              height: 30.sp),
+                                                          SizedBox(height: 30.sp),
 
                                                           // New Password TextFormField
                                                           SizedBox(
                                                             height: 54.sp,
                                                             width: 320.sp,
                                                             child: TextField(
-                                                              keyboardType:
-                                                                  TextInputType
-                                                                      .name,
+                                                              keyboardType: TextInputType.name,
                                                               obscureText: true,
                                                               decoration:
                                                                   InputDecoration(
                                                                 focusedBorder: OutlineInputBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            12.r)),
+                                                                    borderRadius: BorderRadius.circular(12.r)),
                                                                 contentPadding:
-                                                                    EdgeInsets.symmetric(
-                                                                        horizontal: 20
-                                                                            .sp,
-                                                                        vertical:
-                                                                            20.sp),
-                                                                isCollapsed:
-                                                                    true,
-                                                                hintText:
-                                                                    DoctorHuntText.newPassword,
+                                                                    EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                                                                isCollapsed: true,
+                                                                hintText: DoctorHuntText.newPassword,
                                                                 hintStyle:
                                                                     TextStyle(
-                                                                  color:
-                                                                      royalIntrigue,
-                                                                  fontFamily:
-                                                                      DoctorHuntAssetsPath
-                                                                          .doctorHuntFont,
-                                                                  fontSize:
-                                                                      16.sp,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w300,
+                                                                  color: royalIntrigue,
+                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                                                  fontSize: 16.sp,
+                                                                  fontWeight: FontWeight.w300,
                                                                 ),
                                                                 filled: true,
-                                                                fillColor:
-                                                                    whiteText,
+                                                                fillColor: whiteText,
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              12.r),
-                                                                  borderSide:
-                                                                      BorderSide(
-                                                                          color:
-                                                                              royalIntrigue),
+                                                                  borderRadius: BorderRadius.circular(12.r),
+                                                                  borderSide: BorderSide(color: royalIntrigue),
                                                                 ),
                                                                 suffixIcon:
-                                                                    Icon(
-                                                                  Icons
-                                                                      .visibility_off,
-                                                                  color:
-                                                                      royalIntrigue,
+                                                                    Icon(Icons.visibility_off,
+                                                                  color: royalIntrigue,
                                                                 ),
                                                               ),
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                              height: 20.sp),
+                                                          SizedBox(height: 20.sp),
                                                           
                                                           // Re-enter Password Field
                                                           SizedBox(
                                                             height: 54.sp,
                                                             width: 320.sp,
                                                             child: TextField(
-                                                              keyboardType:
-                                                                  TextInputType
-                                                                      .name,
+                                                              keyboardType: TextInputType.name,
                                                               obscureText: true,
                                                               decoration:
                                                                   InputDecoration(
                                                                 focusedBorder: OutlineInputBorder(
-                                                                    borderRadius:
-                                                                        BorderRadius.circular(
-                                                                            12.r)),
+                                                                    borderRadius: BorderRadius.circular(12.r)),
                                                                 contentPadding:
-                                                                    EdgeInsets.symmetric(
-                                                                        horizontal: 20
-                                                                            .sp,
-                                                                        vertical:
-                                                                            20.sp),
-                                                                isCollapsed:
-                                                                    true,
-                                                                hintText:
-                                                                    DoctorHuntText.reEnter,
+                                                                    EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                                                                isCollapsed: true,
+                                                                hintText: DoctorHuntText.reEnter,
                                                                 hintStyle:
                                                                     TextStyle(
-                                                                  color:
-                                                                      royalIntrigue,
-                                                                  fontFamily:
-                                                                      DoctorHuntAssetsPath
-                                                                          .doctorHuntFont,
-                                                                  fontSize:
-                                                                      16.sp,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w300,
+                                                                  color: royalIntrigue,
+                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                                                  fontSize: 16.sp,
+                                                                  fontWeight: FontWeight.w300,
                                                                 ),
                                                                 filled: true,
-                                                                fillColor:
-                                                                    whiteText,
+                                                                fillColor: whiteText,
                                                                 enabledBorder:
                                                                     OutlineInputBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              12.r),
+                                                                  borderRadius: BorderRadius.circular(12.r),
                                                                   borderSide:
-                                                                      BorderSide(
-                                                                          color:
-                                                                              royalIntrigue),
+                                                                      BorderSide(color: royalIntrigue),
                                                                 ),
                                                                 suffixIcon:
-                                                                    Icon(
-                                                                  Icons
-                                                                      .visibility_off,
-                                                                  color:
-                                                                      royalIntrigue,
+                                                                    Icon(Icons.visibility_off,
+                                                                  color: royalIntrigue,
                                                                 ),
                                                               ),
                                                             ),
                                                           ),
-                                                          SizedBox(
-                                                              height: 30.sp),
+                                                          SizedBox(height: 30.sp),
 
                                                           // Update Password Button
                                                           ElevatedButton(
@@ -602,44 +523,28 @@ void _showBottomSheet(BuildContext context) {
                                                                       context)
                                                                   .push(MaterialPageRoute(
                                                                       builder: (BuildContext
-                                                                              context) =>
-                                                                          const LoginScreen()));
+                                                                              context) => const LoginScreen()));
                                                             },
                                                             child: Text(
-                                                              DoctorHuntText
-                                                                  .updatePassword,
+                                                              DoctorHuntText.updatePassword,
                                                               style: TextStyle(
-                                                                  fontSize:
-                                                                      18.sp,
-                                                                  fontWeight:
-                                                                      FontWeight
-                                                                          .w600,
-                                                                  fontFamily:
-                                                                      DoctorHuntAssetsPath
-                                                                          .doctorHuntFont,
+                                                                  fontSize: 18.sp,
+                                                                  fontWeight: FontWeight.w600,
+                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                                                                   color:
                                                                       whiteText),
                                                             ),
                                                             style: ButtonStyle(
                                                               backgroundColor:
-                                                                  MaterialStateProperty
-                                                                      .all(
-                                                                          greenTeal),
+                                                                  MaterialStateProperty.all(greenTeal),
                                                               shape: MaterialStateProperty
                                                                   .all<
                                                                       RoundedRectangleBorder>(
                                                                 RoundedRectangleBorder(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              10.sp),
+                                                                  borderRadius: BorderRadius.circular(10.sp),
                                                                 ),
                                                               ),
-                                                              fixedSize:
-                                                                  MaterialStateProperty
-                                                                      .all(Size(
-                                                                          290.sp,
-                                                                          50.sp)),
+                                                              fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
                                                             ),
                                                           ),
                                                         ],
@@ -660,23 +565,19 @@ void _showBottomSheet(BuildContext context) {
                                           style: TextStyle(
                                               fontSize: 18.sp,
                                               fontWeight: FontWeight.w600,
-                                              fontFamily: DoctorHuntAssetsPath
-                                                  .doctorHuntFont,
+                                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                                               color: whiteText),
                                         ),
                                         style: ButtonStyle(
                                           backgroundColor:
-                                              MaterialStateProperty.all(
-                                                  greenTeal),
+                                              MaterialStateProperty.all(greenTeal),
                                           shape: MaterialStateProperty.all<
                                               RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(10.sp),
+                                              borderRadius: BorderRadius.circular(10.sp),
                                             ),
                                           ),
-                                          fixedSize: MaterialStateProperty.all(
-                                              Size(290.sp, 50.sp)),
+                                          fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
                                         ),
                                       ),
                                     ],
