@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-
+String newPasswordPath = "New Password";
 class _LoginScreenState extends State<LoginScreen> {
   bool passwordObscured = true;
   @override
