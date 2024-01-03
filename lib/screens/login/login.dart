@@ -382,181 +382,7 @@ void _showBottomSheet(BuildContext context) {
                                             isDismissible: false,
                                             context: context,
                                             builder: (BuildContext context) {
-                                              return Container(
-                                                height: 460.sp,
-                                                decoration: BoxDecoration(
-                                                  color: whiteText,
-                                                  borderRadius:
-                                                      BorderRadius.only(
-                                                    topLeft: Radius.circular(32.r),
-                                                    topRight: Radius.circular(32.r),
-                                                  ),
-                                                ),
-
-                                                // Content of the bottom sheet
-                                                child: Column(
-                                                  mainAxisSize: MainAxisSize.min,
-                                                  children: <Widget>[
-                                                    ListTile(
-                                                      title: Column(
-                                                        children: [
-                                                          SizedBox(height: 10.sp),
-                                                          SizedBox(
-                                                            height: 5.sp,
-                                                            width: 130.sp,
-                                                            child: Divider(
-                                                              color: weatheredStone,
-                                                              thickness: 5.sp,
-                                                            ),
-                                                          ),
-                                                          SizedBox(height: 50.sp),
-
-                                                          // Reset Password
-                                                          Padding(
-                                                            padding: EdgeInsets.only(right: 135.sp),
-                                                            child: Text(
-                                                              DoctorHuntText.resetPassword,
-                                                              style: TextStyle(
-                                                                fontSize: 24.sp,
-                                                                fontWeight:FontWeight.w600,
-                                                                color: blackText,
-                                                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(height: 20.sp),
-                                                          SizedBox(
-                                                            width: 315.sp,
-                                                            child: Text(
-                                                              DoctorHuntText.setPassword,
-                                                              style: TextStyle(
-                                                                fontSize: 14.sp,
-                                                                fontWeight: FontWeight.w400,
-                                                                height: 1.8.sp,
-                                                                color: royalIntrigue,
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(height: 30.sp),
-
-                                                          // New Password TextFormField
-                                                          SizedBox(
-                                                            height: 54.sp,
-                                                            width: 320.sp,
-                                                            child: TextField(
-                                                              keyboardType: TextInputType.name,
-                                                              obscureText: true,
-                                                              decoration:
-                                                                  InputDecoration(
-                                                                focusedBorder: OutlineInputBorder(
-                                                                    borderRadius: BorderRadius.circular(12.r)),
-                                                                contentPadding:
-                                                                    EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
-                                                                isCollapsed: true,
-                                                                hintText: DoctorHuntText.newPassword,
-                                                                hintStyle:
-                                                                    TextStyle(
-                                                                  color: royalIntrigue,
-                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                                                  fontSize: 16.sp,
-                                                                  fontWeight: FontWeight.w300,
-                                                                ),
-                                                                filled: true,
-                                                                fillColor: whiteText,
-                                                                enabledBorder:
-                                                                    OutlineInputBorder(
-                                                                  borderRadius: BorderRadius.circular(12.r),
-                                                                  borderSide: BorderSide(color: royalIntrigue),
-                                                                ),
-                                                                suffixIcon:
-                                                                    Icon(Icons.visibility_off,
-                                                                  color: royalIntrigue,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(height: 20.sp),
-                                                          
-                                                          // Re-enter Password Field
-                                                          SizedBox(
-                                                            height: 54.sp,
-                                                            width: 320.sp,
-                                                            child: TextField(
-                                                              keyboardType: TextInputType.name,
-                                                              obscureText: true,
-                                                              decoration:
-                                                                  InputDecoration(
-                                                                focusedBorder: OutlineInputBorder(
-                                                                    borderRadius: BorderRadius.circular(12.r)),
-                                                                contentPadding:
-                                                                    EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
-                                                                isCollapsed: true,
-                                                                hintText: DoctorHuntText.reEnter,
-                                                                hintStyle:
-                                                                    TextStyle(
-                                                                  color: royalIntrigue,
-                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                                                  fontSize: 16.sp,
-                                                                  fontWeight: FontWeight.w300,
-                                                                ),
-                                                                filled: true,
-                                                                fillColor: whiteText,
-                                                                enabledBorder:
-                                                                    OutlineInputBorder(
-                                                                  borderRadius: BorderRadius.circular(12.r),
-                                                                  borderSide:
-                                                                      BorderSide(color: royalIntrigue),
-                                                                ),
-                                                                suffixIcon:
-                                                                    Icon(Icons.visibility_off,
-                                                                  color: royalIntrigue,
-                                                                ),
-                                                              ),
-                                                            ),
-                                                          ),
-                                                          SizedBox(height: 30.sp),
-
-                                                          // Update Password Button
-                                                          ElevatedButton(
-                                                            onPressed: () {
-                                                              Navigator.of(
-                                                                      context)
-                                                                  .push(MaterialPageRoute(
-                                                                      builder: (BuildContext
-                                                                              context) => const LoginScreen()));
-                                                            },
-                                                            child: Text(
-                                                              DoctorHuntText.updatePassword,
-                                                              style: TextStyle(
-                                                                  fontSize: 18.sp,
-                                                                  fontWeight: FontWeight.w600,
-                                                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                                                  color:
-                                                                      whiteText),
-                                                            ),
-                                                            style: ButtonStyle(
-                                                              backgroundColor:
-                                                                  MaterialStateProperty.all(greenTeal),
-                                                              shape: MaterialStateProperty
-                                                                  .all<
-                                                                      RoundedRectangleBorder>(
-                                                                RoundedRectangleBorder(
-                                                                  borderRadius: BorderRadius.circular(10.sp),
-                                                                ),
-                                                              ),
-                                                              fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
-                                                            ),
-                                                          ),
-                                                        ],
-                                                      ),
-                                                      onTap: () {
-                                                        // Handle option 2
-                                                        Navigator.pop(context);
-                                                      },
-                                                    ),
-                                                  ],
-                                                ),
-                                              );
+                                              return ResetPasswordBottomSheet();
                                             },
                                           );
                                         },
@@ -623,4 +449,213 @@ void _showBottomSheet(BuildContext context) {
       );
     },
   );
+}
+
+class ResetPasswordBottomSheet extends StatefulWidget {
+  const ResetPasswordBottomSheet({
+    super.key,
+  });
+
+  @override
+  State<ResetPasswordBottomSheet> createState() => _ResetPasswordBottomSheetState();
+}
+
+class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
+  bool passwordObscured = true;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 460.sp,
+      decoration: BoxDecoration(
+        color: whiteText,
+        borderRadius:
+            BorderRadius.only(
+          topLeft: Radius.circular(32.r),
+          topRight: Radius.circular(32.r),
+        ),
+      ),
+
+      // Content of the bottom sheet
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          ListTile(
+            title: Column(
+              children: [
+                SizedBox(height: 10.sp),
+                SizedBox(
+                  height: 5.sp,
+                  width: 130.sp,
+                  child: Divider(
+                    color: weatheredStone,
+                    thickness: 5.sp,
+                  ),
+                ),
+                SizedBox(height: 50.sp),
+
+                // Reset Password
+                Padding(
+                  padding: EdgeInsets.only(right: 135.sp),
+                  child: Text(
+                    DoctorHuntText.resetPassword,
+                    style: TextStyle(
+                      fontSize: 24.sp,
+                      fontWeight:FontWeight.w600,
+                      color: blackText,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.sp),
+                SizedBox(
+                  width: 315.sp,
+                  child: Text(
+                    DoctorHuntText.setPassword,
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w400,
+                      height: 1.8.sp,
+                      color: royalIntrigue,
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30.sp),
+
+                // New Password TextFormField
+                SizedBox(
+                  height: 54.sp,
+                  width: 320.sp,
+                  child: TextField(
+                    keyboardType: TextInputType.name,
+                    obscureText: passwordObscured,
+                    decoration:
+                        InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12.r)),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                      isCollapsed: true,
+                      hintText: DoctorHuntText.newPassword,
+                      hintStyle:
+                          TextStyle(
+                        color: royalIntrigue,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w300,
+                      ),
+                      filled: true,
+                      fillColor: whiteText,
+                      enabledBorder:
+                          OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                        borderSide: BorderSide(color: royalIntrigue),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: (){
+                          setState(() {
+                            passwordObscured = !passwordObscured;
+                          });
+                        },
+                        icon: Icon(
+                          passwordObscured
+                              ? Icons.visibility_off
+                              : Icons.visibility,
+                          color: royalIntrigue,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20.sp),
+                
+                // Re-enter Password Field
+                SizedBox(
+                  height: 54.sp,
+                  width: 320.sp,
+                  child: TextField(
+                    keyboardType: TextInputType.name,
+                    obscureText: passwordObscured,
+                    decoration:
+                        InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12.r)),
+                      contentPadding:
+                          EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                      isCollapsed: true,
+                      hintText: DoctorHuntText.reEnter,
+                      hintStyle:
+                          TextStyle(
+                        color: royalIntrigue,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        fontSize: 16.sp,
+                        fontWeight: FontWeight.w300,
+                      ),
+                      filled: true,
+                      fillColor: whiteText,
+                      enabledBorder:
+                          OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.r),
+                        borderSide:
+                            BorderSide(color: royalIntrigue),
+                      ),
+                      suffixIcon: IconButton(
+                        onPressed: () {
+                          setState(() {
+                            passwordObscured = !passwordObscured;
+                          });
+                        },
+                        icon: Icon(
+                          passwordObscured
+                              ? Icons.visibility_off
+                              : Icons.visibility,
+                          color: royalIntrigue,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 30.sp),
+
+                // Update Password Button
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(
+                            context)
+                        .push(MaterialPageRoute(
+                            builder: (BuildContext
+                                    context) => const LoginScreen()));
+                  },
+                  child: Text(
+                    DoctorHuntText.updatePassword,
+                    style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        color:
+                            whiteText),
+                  ),
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(greenTeal),
+                    shape: MaterialStateProperty
+                        .all<
+                            RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.sp),
+                      ),
+                    ),
+                    fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
+                  ),
+                ),
+              ],
+            ),
+            onTap: () {
+              // Handle option 2
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      ),
+    );
+  }
 }
