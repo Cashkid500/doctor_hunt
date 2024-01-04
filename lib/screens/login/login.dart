@@ -13,7 +13,7 @@ class LoginScreen extends StatefulWidget {
   @override
   State<LoginScreen> createState() => _LoginScreenState();
 }
-String newPasswordPath = "New Password";
+
 class _LoginScreenState extends State<LoginScreen> {
   bool passwordObscured = true;
   @override
@@ -206,9 +206,9 @@ class LoginButton extends StatelessWidget {
   }
 }
 
-// Bottom Sheet
+// Forgot Password Bottom Sheet
+
 void _showBottomSheet(BuildContext context) {
-  // Forgot Password Bottom Sheet
   showModalBottomSheet(
     backgroundColor: Colors.transparent,
     isDismissible: false,
