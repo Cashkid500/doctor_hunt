@@ -462,6 +462,7 @@ class ResetPasswordBottomSheet extends StatefulWidget {
 
 class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
   bool passwordObscured = true;
+  bool _isSecurePassword = true;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -574,7 +575,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   width: 320.sp,
                   child: TextField(
                     keyboardType: TextInputType.name,
-                    obscureText: passwordObscured,
+                    obscureText: _isSecurePassword,
                     decoration:
                         InputDecoration(
                       focusedBorder: OutlineInputBorder(
@@ -601,11 +602,11 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                       suffixIcon: IconButton(
                         onPressed: () {
                           setState(() {
-                            passwordObscured = !passwordObscured;
+                            _isSecurePassword = !_isSecurePassword;
                           });
                         },
                         icon: Icon(
-                          passwordObscured
+                          _isSecurePassword
                               ? Icons.visibility_off
                               : Icons.visibility,
                           color: royalIntrigue,
