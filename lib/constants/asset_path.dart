@@ -14,4 +14,11 @@ class DoctorHuntAssetsPath {
   static const onboarding3 = 'assets/images/Onboarding3.png';
   static const google = 'assets/images/Google.png';
   static const facebook = 'assets/images/Facebook.png';
+
+  // Navigation Images
+  static const book = "assets/images/Book.png";
+  static const chat = "assets/images/Chat.png";
+
+  // Dashboard Images
+  static const profile = "assets/images/Profile.png";
 }
