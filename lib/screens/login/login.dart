@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:doctor_hunt/screens/signup/sign_up.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -182,8 +183,8 @@ class LoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        // Navigator.of(context).push(MaterialPageRoute(
-        //     builder: (BuildContext context) => const LoginScreen()));
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => const NavigationScreen()));
       },
       child: Text(
         DoctorHuntText.login,

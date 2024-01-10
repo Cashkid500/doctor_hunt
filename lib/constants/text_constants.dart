@@ -45,5 +45,7 @@ class DoctorHuntText {
       "Enter your email for the verification proccesss, we will send 4 digits code to your email.";
   
 
-// Forgot Password Text
+// Dashboard Text
+  static const String hi = "Hi Handwerker!";
+  static const String findDoctor = "Find Your Doctor";
 }
