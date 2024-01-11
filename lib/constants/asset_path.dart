@@ -19,6 +19,9 @@ class DoctorHuntAssetsPath {
   static const book = "assets/images/Book.png";
   static const chat = "assets/images/Chat.png";
 
-  // Dashboard Images
+  // Home Screen Images
   static const profile = "assets/images/Profile.png";
+
+  // Live Chat Images
+  static const liveChatWallpaper = "assets/images/LiveChat.png";
 }
