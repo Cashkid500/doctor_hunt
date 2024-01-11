@@ -36,6 +36,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
           )
         ),
         child: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
          selectedItemColor: whiteText,
            unselectedItemColor:blackText,
           currentIndex: _selectedIndex,
