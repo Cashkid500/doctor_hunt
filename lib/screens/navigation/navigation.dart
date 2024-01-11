@@ -1,6 +1,9 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
-import 'package:doctor_hunt/screens/dashboard/dashboard.dart';
+import 'package:doctor_hunt/screens/home/home.dart';
+import 'package:doctor_hunt/screens/favourite%20doctor/favourite_doctor..dart';
+import 'package:doctor_hunt/screens/live%20chat/live_chat.dart';
+import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -14,10 +17,10 @@ class NavigationScreen extends StatefulWidget {
 class _NavigationScreenState extends State<NavigationScreen> {
   int _selectedIndex = 0;
   final List<Widget> _screens = [
-    const DashboardScreen(),
-    // const FavouriteDoctorScreen(),
-    // const BookScreen(),
-    // const ChatScreen(),
+    const HomeScreen(),
+    const FavouriteDoctorScreen(),
+    const MedicalRecordScreen(),
+    const LiveChatScreen(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,6 +45,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
             });
           },
           items: [
+            // Home 
             BottomNavigationBarItem(
               backgroundColor: whiteText,
               icon: Container(
@@ -51,11 +55,13 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 ),
                  padding: EdgeInsets.all(12.sp),
                 child: Icon(
-                  Icons.home,
+                  Icons.home, color: royalIntrigue,
                 ),
               ),
               label: "",
             ),
+
+            // Favourite Doctor
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
@@ -69,6 +75,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
               ),
               label: "",
             ),
+
+            // Medical Record
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
@@ -80,6 +88,8 @@ class _NavigationScreenState extends State<NavigationScreen> {
                 ),
               label: "",
             ),
+
+            // Live Chat
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
