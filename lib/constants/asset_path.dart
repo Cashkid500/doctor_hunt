@@ -24,4 +24,11 @@ class DoctorHuntAssetsPath {
 
   // Live Chat Images
   static const liveChatWallpaper = "assets/images/LiveChat.png";
+  static const liveChatProfile = "assets/images/LiveChatProfile.png";
+  static const mash = "assets/images/Mash.png";
+  static const tween = "assets/images/Tween.png";
+  static const message = "assets/images/Message.png";
+  static const emoji = "assets/images/Emoji.png";
+  static const love = "assets/images/Love.png";
+  static const wack = "assets/images/Wack.png";
 }

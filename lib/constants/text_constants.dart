@@ -43,9 +43,19 @@ class DoctorHuntText {
   static const String digitsCode = "Enter 4 Digits Code";
   static const String verification =
       "Enter your email for the verification proccesss, we will send 4 digits code to your email.";
-  
 
 // Dashboard Text
   static const String hi = "Hi Handwerker!";
   static const String findDoctor = "Find Your Doctor";
+
+// Live Chat Text
+  static const String everhart = "Everhart Tween";
+  static const String thanks = "Thanks for sharing doctor ❤️";
+  static const String mash = "Bonebrake Mash";
+  static const String treat = "They treat immune system disorders";
+  static const String wack = "Handler Wack";
+  static const String directory = "This is the largest directory 👍";
+  static const String comfort = "Comfort Love";
+  static const String education = "Depending on their education 🙂";
+  static const String comment = "Add a Comment......";
 }
