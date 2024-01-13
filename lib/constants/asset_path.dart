@@ -31,4 +31,7 @@ class DoctorHuntAssetsPath {
   static const emoji = "assets/images/Emoji.png";
   static const love = "assets/images/Love.png";
   static const wack = "assets/images/Wack.png";
+
+  // Medical Record Images
+  static const writingMaterials = "assets/images/Writing Materials.png";
 }
