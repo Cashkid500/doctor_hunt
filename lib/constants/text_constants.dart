@@ -65,4 +65,7 @@ class DoctorHuntText {
   static const String healthHistory =
       "A detailed health history helps a doctor diagnose you better.";
   static const String addRecord = "Add a record";
+  static const String photo = "Take a photo";
+  static const String upload = "Upload from gallery";
+  static const String files = "Upload files";
 }
