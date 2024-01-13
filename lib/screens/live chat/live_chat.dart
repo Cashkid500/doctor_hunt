@@ -57,7 +57,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(right: 60.sp),
+                            padding: EdgeInsets.only(right: 65.sp, left: 10.sp),
                             child: Text(
                               DoctorHuntText.everhart,
                               style: TextStyle(
@@ -93,7 +93,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(right: 100.sp),
+                            padding: EdgeInsets.only(right: 105.sp, left: 10.sp),
                             child: Text(
                               DoctorHuntText.mash,
                               style: TextStyle(
@@ -133,7 +133,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(right: 78.sp),
+                            padding: EdgeInsets.only(right: 84.sp, left: 10.sp),
                             child: Text(
                               DoctorHuntText.wack,
                               style: TextStyle(
@@ -148,7 +148,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           SizedBox(height: 5.sp),
 
                           Padding(
-                            padding: EdgeInsets.only(left: 5.sp),
+                            padding: EdgeInsets.only(left: 10.sp),
                             child: Text(
                               DoctorHuntText.directory,
                               style: TextStyle(
@@ -173,7 +173,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(right: 95.sp),
+                            padding: EdgeInsets.only(right: 95.sp, left: 6.sp),
                             child: Text(
                               DoctorHuntText.comfort,
                               style: TextStyle(
@@ -186,7 +186,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           ),
                           SizedBox(height: 5.sp),
                           Padding(
-                            padding: EdgeInsets.only(left: 8.sp),
+                            padding: EdgeInsets.only(left: 12.sp),
                             child: Text(
                               DoctorHuntText.education,
                               style: TextStyle(
