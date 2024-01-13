@@ -58,4 +58,11 @@ class DoctorHuntText {
   static const String comfort = "Comfort Love";
   static const String education = "Depending on their education 🙂";
   static const String comment = "Add a Comment......";
+
+// Medical Record Text
+  static const String medicalRecord = "Medical Records";
+  static const String addMedicalRecord = "Add a medical record.";
+  static const String healthHistory =
+      "A detailed health history helps a doctor diagnose you better.";
+  static const String addRecord = "Add a record";
 }
