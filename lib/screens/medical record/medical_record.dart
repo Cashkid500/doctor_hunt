@@ -87,7 +87,8 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 
                     // Button
                     ElevatedButtonWidget(textPath: DoctorHuntText.addRecord),
-                  ]),
+                  ]
+                ),
             ),
           ),
         ),
