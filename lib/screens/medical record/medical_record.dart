@@ -12,7 +12,6 @@ class MedicalRecordScreen extends StatefulWidget {
 }
 
 class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
-  // String textPath = "Add a record";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,33 +36,8 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Row(
-                        children: [
-
-                          // Back Arrow
-                          Container(
-                            height: 30.sp,
-                            width: 30.sp,
-                            decoration: BoxDecoration(
-                                color: whiteText,
-                                borderRadius: BorderRadius.circular(10.r)),
-                            child: Icon(Icons.keyboard_arrow_left,
-                                color: royalIntrigue),
-                          ),
-
-                          SizedBox(width: 20.sp),
-
-                          // Text
-                          Text(
-                            DoctorHuntText.medicalRecord,
-                            style: TextStyle(
-                                fontSize: 19.sp,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                color: blackText),
-                          ),
-                        ]
-                      ),
+                    // Back Arrow
+                    RowWidget(rowText: DoctorHuntText.medicalRecord),
 
                     SizedBox(height: 80.sp),
 
@@ -119,6 +93,44 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
         ),
       ),
     );
+  }
+}
+
+class RowWidget extends StatelessWidget {
+  const RowWidget({
+    super.key,
+    required this.rowText,
+  });
+
+  final String rowText;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+        children: [
+        Container(
+            height: 30.sp,
+            width: 30.sp,
+            decoration: BoxDecoration(
+                color: whiteText,
+                borderRadius: BorderRadius.circular(10.r)),
+            child: Icon(Icons.keyboard_arrow_left,
+                color: royalIntrigue),
+          ),
+
+          SizedBox(width: 20.sp),
+
+          // Text
+          Text(
+            rowText,
+            style: TextStyle(
+                fontSize: 19.sp,
+                fontWeight: FontWeight.w600,
+                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                color: blackText),
+          ),
+        ]
+      );
   }
 }
 
