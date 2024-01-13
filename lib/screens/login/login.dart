@@ -21,67 +21,82 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(height: 100.sp),
-
-              // Welcome Back
-              Center(
-                child: Text(
-                  DoctorHuntText.welcomeBack,
-                  style: TextStyle(
-                    fontSize: 24.sp,
-                    fontWeight: FontWeight.w600,
-                    color: blackText,
-                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                const Color.fromARGB(255, 166, 202, 167), // Top
+                whiteText, // Center
+                const Color.fromARGB(255, 166, 202, 167), // Bottom
+              ],
+            ),
+          ),
+          child: SafeArea(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(height: 100.sp),
+        
+                // Welcome Back
+                Center(
+                  child: Text(
+                    DoctorHuntText.welcomeBack,
+                    style: TextStyle(
+                      fontSize: 24.sp,
+                      fontWeight: FontWeight.w600,
+                      color: blackText,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    ),
                   ),
                 ),
-              ),
-              SizedBox(height: 10.sp),
-
-              // Search Course
-              SearchCourseText(),
-              SizedBox(height: 60.sp),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  // Google
-                  Google(),
-
-                  // Facebook
-                  Facebook(),
-                ],
-              ),
-              SizedBox(height: 20.sp),
-
-              // Email TextField
-              EmailTextFormField(),
-              SizedBox(height: 20.sp),
-
-              // PasswordField
-              PasswordField(
-                updateObscured: () {
-                  setState(() {
-                    passwordObscured = !passwordObscured;
-                  });
-                },
-                passwordObscured: passwordObscured,
-              ),
-              SizedBox(height: 20.sp),
-
-              // Login Button
-              LoginButton(),
-              SizedBox(height: 10.sp),
-
-              // Forgot Password
-              ForgotPasswordTextButton(),
-              SizedBox(height: 60.sp),
-
-              // Don’t have an account? Join us
-              JoinUsTextButton(),
-            ],
+                SizedBox(height: 10.sp),
+        
+                // Search Course
+                SearchCourseText(),
+                SizedBox(height: 60.sp),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Google
+                    Google(),
+        
+                    // Facebook
+                    Facebook(),
+                  ],
+                ),
+                SizedBox(height: 20.sp),
+        
+                // Email TextField
+                EmailTextFormField(),
+                SizedBox(height: 20.sp),
+        
+                // PasswordField
+                PasswordField(
+                  updateObscured: () {
+                    setState(() {
+                      passwordObscured = !passwordObscured;
+                    });
+                  },
+                  passwordObscured: passwordObscured,
+                ),
+                SizedBox(height: 20.sp),
+        
+                // Login Button
+                LoginButton(),
+                SizedBox(height: 10.sp),
+        
+                // Forgot Password
+                ForgotPasswordTextButton(),
+                SizedBox(height: 60.sp),
+        
+                // Don’t have an account? Join us
+                JoinUsTextButton(),
+              ],
+            ),
           ),
         ),
       ),
