@@ -22,8 +22,8 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
               colors: [
                 const Color.fromARGB(255, 166, 202, 167), // Top
                 whiteText, // Center
@@ -38,7 +38,6 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
 
                           // Back Arrow
@@ -82,13 +81,18 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
                     SizedBox(height: 30.sp),
 
                     // Text
-                    Text(
-                      DoctorHuntText.addMedicalRecord,
-                      style: TextStyle(
-                          fontSize: 22.sp,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          color: blackText),
+                    GestureDetector(
+                      onTap: () {
+                         _showBottomSheet(context);
+                      },
+                      child: Text(
+                        DoctorHuntText.addMedicalRecord,
+                        style: TextStyle(
+                            fontSize: 22.sp,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: blackText),
+                      ),
                     ),
 
                     SizedBox(height: 20.sp),
@@ -153,4 +157,134 @@ class ElevatedButtonWidget extends StatelessWidget {
       ),
     );
   }
+}
+
+// Bottom Sheet
+void _showBottomSheet(BuildContext context) {
+  showModalBottomSheet(
+    backgroundColor: Colors.transparent,
+    isDismissible: false,
+    context: context,
+    builder: (BuildContext context) {
+      return Container(
+        height: 250.sp,
+        decoration: BoxDecoration(
+          color: whiteText,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(32.r),
+            topRight: Radius.circular(32.r),
+          ),
+        ),
+
+        // Content of the bottom sheet
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            ListTile(
+              title: Column(
+                children: [
+                  SizedBox(height: 10.sp),
+                  SizedBox(
+                    height: 5.sp,
+                    width: 130.sp,
+                    child: Divider(
+                      color: weatheredStone,
+                      thickness: 5.sp,
+                    ),
+                  ),
+                  SizedBox(height: 40.sp),
+
+                  // Add a record
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        DoctorHuntText.addRecord,
+                        style: TextStyle(
+                          fontSize: 22.sp,
+                          fontWeight: FontWeight.w600,
+                          color: blackText,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20.sp),
+
+                  // Take a photo
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(Icons.camera_alt_outlined, color: royalIntrigue,),
+                      SizedBox(width: 10.sp),
+                      Text(
+                        DoctorHuntText.photo,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          color: royalIntrigue,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
+                      ),
+                    ],
+                  ),
+                  
+                  SizedBox(height: 10.sp),
+
+                  // Upload from gallery
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.image_outlined,
+                        color: royalIntrigue,
+                      ),
+                      SizedBox(width: 10.sp),
+                      Text(
+                        DoctorHuntText.upload,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          color: royalIntrigue,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 10.sp),
+
+                  // Upload files
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Icon(
+                        Icons.file_present_outlined,
+                        color: royalIntrigue,
+                      ),
+                      SizedBox(width: 10.sp),
+                      Text(
+                        DoctorHuntText.files,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          color: royalIntrigue,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
+                      ),
+                    ],
+                  ),
+                  
+                ],
+              ),
+              onTap: () {
+                // Handle option 2
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      );
+    },
+  );
 }
