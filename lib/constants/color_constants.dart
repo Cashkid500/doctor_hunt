@@ -6,3 +6,4 @@ Color blackOut = const Color(0xff222222);
 Color greenTeal = const Color(0xff0EBE7F);
 Color royalIntrigue = const Color(0xff677294);
 Color weatheredStone = const Color(0xffC4C4C4);
+Color deathVictorious = const Color(0xffC6EFE5);
