@@ -101,4 +101,10 @@ class DoctorHuntText {
   static const String order = "Order medicines";
   static const String noOrder = "No orders placed yet";
   static const String placeOrder = "Place your first order now.";
+
+// Location Text
+  static const String enableLocation = "Enable Location Services";
+  static const String location = "Location";
+  static const String yourLocation = "Your location services are switched off. Please enable location, to help us serve better.";
+  static const String enable = "Enable Location";
 }
