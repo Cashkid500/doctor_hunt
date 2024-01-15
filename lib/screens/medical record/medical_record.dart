@@ -87,7 +87,11 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
                     SizedBox(height: 30.sp),
 
                     // Button
-                    ElevatedButtonWidget(textPath: DoctorHuntText.addRecord),
+                    ElevatedButtonWidget(textPath: DoctorHuntText.addRecord, onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => const AddRecordScreen(),
+                    ));
+                    },),
                   ]
                 ),
             ),
@@ -139,19 +143,16 @@ class RowWidget extends StatelessWidget {
 class ElevatedButtonWidget extends StatelessWidget {
   const ElevatedButtonWidget({
     super.key,
+    required this.onPressed,
     required this.textPath,
   });
-
+  final VoidCallback onPressed;
   final String textPath;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (BuildContext context) => const AddRecordScreen(),
-        ));
-      },
+      onPressed: onPressed,
       child: Text(
         textPath,
         style: TextStyle(
