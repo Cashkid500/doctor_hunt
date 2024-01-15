@@ -54,50 +54,22 @@ class _AllRecordScreenState extends State<AllRecordScreen> {
                     // Third Box
                     ThirdContainer(),
                     SizedBox(height: 180.sp),
+                    
                     // Button
-                    AllRecord(),
+                    ElevatedButtonWidget(
+                      textPath: DoctorHuntText.addRecord,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const MedicineOrderScreen(),
+                        ));
+                      },
+                    ),
                   ]
                   ),
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class AllRecord extends StatelessWidget {
-  const AllRecord({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (BuildContext context) =>
-              const MedicineOrderScreen(),
-        ));
-      },
-      child: Text(
-        DoctorHuntText.addRecord,
-        style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w600,
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            color: whiteText),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape:
-            MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.sp),
-          ),
-        ),
-        fixedSize:
-            MaterialStateProperty.all(Size(270.sp, 54.sp)),
       ),
     );
   }
