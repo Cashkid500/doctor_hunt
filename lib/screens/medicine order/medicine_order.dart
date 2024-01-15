@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/location/location.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -82,8 +83,7 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
 
                     // Button,
                     OrderMedicines(),
-                  ]
-                  ),
+                  ]),
             ),
           ),
         ),
@@ -101,10 +101,10 @@ class OrderMedicines extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        // Navigator.of(context).push(MaterialPageRoute(
-        //   builder: (BuildContext context) =>
-        //       const AddRecordScreen(),
-        // ));
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (BuildContext context) =>
+              const LocationScreen(),
+        ));
       },
       child: Text(
         DoctorHuntText.order,
@@ -116,14 +116,12 @@ class OrderMedicines extends StatelessWidget {
       ),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape:
-            MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.sp),
           ),
         ),
-        fixedSize:
-            MaterialStateProperty.all(Size(270.sp, 54.sp)),
+        fixedSize: MaterialStateProperty.all(Size(270.sp, 54.sp)),
       ),
     );
   }
