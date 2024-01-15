@@ -43,4 +43,7 @@ class DoctorHuntAssetsPath {
 
   // Medicine Order Images
   static const calendar = "assets/images/Calendar.png";
+
+  // Location Images
+  static const location = "assets/images/Location.png";
 }
