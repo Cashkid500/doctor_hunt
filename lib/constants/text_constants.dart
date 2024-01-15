@@ -68,4 +68,37 @@ class DoctorHuntText {
   static const String photo = "Take a photo";
   static const String upload = "Upload from gallery";
   static const String files = "Upload files";
+
+// Add Record Text
+  static const String addRecords = "Add Records";
+  static const String moreImages = "Add more images";
+  static const String recordFor = "Record for";
+  static const String fullName = "Abdullah Mamun";
+  static const String recordType = "Type of record";
+  static const String report = "Report";
+  static const String prescription = "Prescription";
+  static const String invoice = "Invoice";
+  static const String recordCreated = "Record created on";
+  static const String dateCreated = "27 Feb, 2021";
+  static const String uploadRecord = "Upload record";
+
+// All Records Text
+  static const String allRecords = "All Records";
+  static const String firstDay = "01";
+  static const String day = "27";
+  static const String day2 = "28";
+  static const String month = "FEB";
+  static const String month2 = "MAR"; 
+  static const String recordsAddedByYou = "Records added by you";
+  static const String recordForAbdullahMamun = "Record for Abdullah mamun";
+  static const String recordForAbdullahShuvo = "Record for Abdullah shuvo";
+  static const String recordForShrutiKedia = "Record for Shruti Kedia";
+  static const String onePrescription = "1 Prescription";
+  static const String new1 = "NEW";
+
+// Medicine Order Text
+  static const String medicineOrder = "Medicine Orders";
+  static const String order = "Order medicines";
+  static const String noOrder = "No orders placed yet";
+  static const String placeOrder = "Place your first order now.";
 }
