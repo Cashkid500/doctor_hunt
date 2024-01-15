@@ -43,7 +43,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Spacer(),
 
                     // Get Started Button
-                    GetStartedButton(),
+                    ElevatedButtonWidget(
+                        elevatedButtonPath: DoctorHuntText.getStarted,
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SignupScreen()));
+                        }),
 
                     // Skip Button
                     SkipButton(),
@@ -82,7 +88,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Spacer(),
 
                     // Get Started Button
-                    GetStartedButton(),
+                    ElevatedButtonWidget(
+                        elevatedButtonPath: DoctorHuntText.getStarted,
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SignupScreen()));
+                        }),
 
                     // Skip Button
                     SkipButton(),
@@ -117,7 +129,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     Spacer(),
 
                     // Get Started Button
-                    GetStartedButton(),
+                    ElevatedButtonWidget(
+                        elevatedButtonPath: DoctorHuntText.getStarted,
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SignupScreen()));
+                        }),
 
                     // Skip Button
                     SkipButton(),
@@ -153,42 +171,6 @@ class SkipButton extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: royalIntrigue,
             fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
-      ),
-    );
-  }
-}
-
-class GetStartedButton extends StatelessWidget {
-  const GetStartedButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) =>
-                const SignupScreen()));
-      },
-      child: Text(
-        DoctorHuntText.getStarted,
-        style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w600,
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            color: whiteText),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape:
-            MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.sp),
-          ),
-        ),
-        fixedSize:
-            MaterialStateProperty.all(Size(290.sp, 50.sp)),
       ),
     );
   }
