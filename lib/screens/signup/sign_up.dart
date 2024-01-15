@@ -115,7 +115,13 @@ class _SignupScreenState extends State<SignupScreen> {
                 SizedBox(height: 60.sp),
         
                 // Sign Up Button
-                ElevatedButtonWidget(elevatedButtonPath: DoctorHuntText.signup),
+                ElevatedButtonWidget(elevatedButtonPath: DoctorHuntText.signup,
+                onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const LoginScreen()));
+                  },
+                ),
                 SizedBox(height: 10.sp),
         
                 // Have an account? Log In
@@ -183,20 +189,19 @@ class TextButtonWidget extends StatelessWidget {
 class ElevatedButtonWidget extends StatelessWidget {
   const ElevatedButtonWidget({
     super.key,
+    required this.onPressed,
     required this.elevatedButtonPath,
   });
 
+  final VoidCallback onPressed;
   final String elevatedButtonPath;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const LoginScreen()));
-      },
+      onPressed: onPressed,
       child: Text(
-        DoctorHuntText.signup,
+        elevatedButtonPath,
         style: TextStyle(
             fontSize: 18.sp,
             fontWeight: FontWeight.w600,
