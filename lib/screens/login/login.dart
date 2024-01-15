@@ -40,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 100.sp),
-        
+
                 // Welcome Back
                 Center(
                   child: Text(
@@ -54,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 SizedBox(height: 10.sp),
-        
+
                 // Search Course
                 SearchCourseText(),
                 SizedBox(height: 60.sp),
@@ -63,17 +63,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   children: [
                     // Google
                     Google(),
-        
+
                     // Facebook
                     Facebook(),
                   ],
                 ),
                 SizedBox(height: 20.sp),
-        
+
                 // Email TextField
                 EmailTextFormField(),
                 SizedBox(height: 20.sp),
-        
+
                 // PasswordField
                 PasswordField(
                   updateObscured: () {
@@ -84,15 +84,22 @@ class _LoginScreenState extends State<LoginScreen> {
                   passwordObscured: passwordObscured,
                 ),
                 SizedBox(height: 20.sp),
-        
+
                 // Login Button
-                LoginButton(),
+                // LoginButton(),
+                ElevatedButtonWidget(
+                    elevatedButtonPath: DoctorHuntText.login,
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const NavigationScreen()));
+                    }),
                 SizedBox(height: 10.sp),
-        
+
                 // Forgot Password
                 ForgotPasswordTextButton(),
                 SizedBox(height: 60.sp),
-        
+
                 // Don’t have an account? Join us
                 JoinUsTextButton(),
               ],
@@ -184,39 +191,6 @@ class JoinUsTextButton extends StatelessWidget {
             fontWeight: FontWeight.w400,
             color: greenTeal,
             fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
-      ),
-    );
-  }
-}
-
-class LoginButton extends StatelessWidget {
-  const LoginButton({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) => const NavigationScreen()));
-      },
-      child: Text(
-        DoctorHuntText.login,
-        style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w600,
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            color: whiteText),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.sp),
-          ),
-        ),
-        fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
       ),
     );
   }
@@ -360,18 +334,23 @@ void _showBottomSheet(BuildContext context) {
                                         margin: EdgeInsets.symmetric(
                                             horizontal: 20.sp),
                                         child: PinCodeTextField(
-                                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceEvenly,
                                           appContext: context,
                                           length: 4,
                                           cursorHeight: 19,
                                           enableActiveFill: true,
                                           textStyle: TextStyle(
                                             fontSize: 18.sp,
-                                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                            fontFamily: DoctorHuntAssetsPath
+                                                .doctorHuntFont,
                                             fontWeight: FontWeight.normal,
                                             color: greenTeal,
                                           ),
-                                          inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                                          inputFormatters: [
+                                            FilteringTextInputFormatter
+                                                .digitsOnly
+                                          ],
                                           pinTheme: PinTheme(
                                             shape: PinCodeFieldShape.box,
                                             fieldHeight: 45.17.sp,
@@ -382,7 +361,8 @@ void _showBottomSheet(BuildContext context) {
                                             activeFillColor: whiteText,
                                             selectedFillColor: whiteText,
                                             inactiveFillColor: whiteText,
-                                            borderRadius:BorderRadius.circular(10.r),
+                                            borderRadius:
+                                                BorderRadius.circular(10.r),
                                           ),
                                           onChanged: (value) {},
                                         ),
@@ -407,19 +387,23 @@ void _showBottomSheet(BuildContext context) {
                                           style: TextStyle(
                                               fontSize: 18.sp,
                                               fontWeight: FontWeight.w600,
-                                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                              fontFamily: DoctorHuntAssetsPath
+                                                  .doctorHuntFont,
                                               color: whiteText),
                                         ),
                                         style: ButtonStyle(
                                           backgroundColor:
-                                              MaterialStateProperty.all(greenTeal),
+                                              MaterialStateProperty.all(
+                                                  greenTeal),
                                           shape: MaterialStateProperty.all<
                                               RoundedRectangleBorder>(
                                             RoundedRectangleBorder(
-                                              borderRadius: BorderRadius.circular(10.sp),
+                                              borderRadius:
+                                                  BorderRadius.circular(10.sp),
                                             ),
                                           ),
-                                          fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
+                                          fixedSize: MaterialStateProperty.all(
+                                              Size(290.sp, 50.sp)),
                                         ),
                                       ),
                                     ],
@@ -473,7 +457,8 @@ class ResetPasswordBottomSheet extends StatefulWidget {
   });
 
   @override
-  State<ResetPasswordBottomSheet> createState() => _ResetPasswordBottomSheetState();
+  State<ResetPasswordBottomSheet> createState() =>
+      _ResetPasswordBottomSheetState();
 }
 
 class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
@@ -485,8 +470,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
       height: 460.sp,
       decoration: BoxDecoration(
         color: whiteText,
-        borderRadius:
-            BorderRadius.only(
+        borderRadius: BorderRadius.only(
           topLeft: Radius.circular(32.r),
           topRight: Radius.circular(32.r),
         ),
@@ -517,7 +501,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                     DoctorHuntText.resetPassword,
                     style: TextStyle(
                       fontSize: 24.sp,
-                      fontWeight:FontWeight.w600,
+                      fontWeight: FontWeight.w600,
                       color: blackText,
                       fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     ),
@@ -545,16 +529,14 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   child: TextField(
                     keyboardType: TextInputType.name,
                     obscureText: passwordObscured,
-                    decoration:
-                        InputDecoration(
+                    decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.r)),
-                      contentPadding:
-                          EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20.sp, vertical: 20.sp),
                       isCollapsed: true,
                       hintText: DoctorHuntText.newPassword,
-                      hintStyle:
-                          TextStyle(
+                      hintStyle: TextStyle(
                         color: royalIntrigue,
                         fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                         fontSize: 16.sp,
@@ -562,13 +544,12 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                       ),
                       filled: true,
                       fillColor: whiteText,
-                      enabledBorder:
-                          OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12.r),
                         borderSide: BorderSide(color: royalIntrigue),
                       ),
                       suffixIcon: IconButton(
-                        onPressed: (){
+                        onPressed: () {
                           setState(() {
                             passwordObscured = !passwordObscured;
                           });
@@ -584,7 +565,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   ),
                 ),
                 SizedBox(height: 20.sp),
-                
+
                 // Re-enter Password Field
                 SizedBox(
                   height: 54.sp,
@@ -592,16 +573,14 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   child: TextField(
                     keyboardType: TextInputType.name,
                     obscureText: _isSecurePassword,
-                    decoration:
-                        InputDecoration(
+                    decoration: InputDecoration(
                       focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(12.r)),
-                      contentPadding:
-                          EdgeInsets.symmetric(horizontal: 20.sp, vertical: 20.sp),
+                      contentPadding: EdgeInsets.symmetric(
+                          horizontal: 20.sp, vertical: 20.sp),
                       isCollapsed: true,
                       hintText: DoctorHuntText.reEnter,
-                      hintStyle:
-                          TextStyle(
+                      hintStyle: TextStyle(
                         color: royalIntrigue,
                         fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                         fontSize: 16.sp,
@@ -609,11 +588,9 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                       ),
                       filled: true,
                       fillColor: whiteText,
-                      enabledBorder:
-                          OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12.r),
-                        borderSide:
-                            BorderSide(color: royalIntrigue),
+                        borderSide: BorderSide(color: royalIntrigue),
                       ),
                       suffixIcon: IconButton(
                         onPressed: () {
@@ -634,36 +611,13 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 SizedBox(height: 30.sp),
 
                 // Update Password Button
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(
-                            context)
-                        .push(MaterialPageRoute(
-                            builder: (BuildContext
-                                    context) => const LoginScreen()));
-                  },
-                  child: Text(
-                    DoctorHuntText.updatePassword,
-                    style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w600,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                        color:
-                            whiteText),
-                  ),
-                  style: ButtonStyle(
-                    backgroundColor:
-                        MaterialStateProperty.all(greenTeal),
-                    shape: MaterialStateProperty
-                        .all<
-                            RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.sp),
-                      ),
-                    ),
-                    fixedSize: MaterialStateProperty.all(Size(290.sp, 50.sp)),
-                  ),
-                ),
+                ElevatedButtonWidget(
+                    elevatedButtonPath: DoctorHuntText.updatePassword,
+                    onPressed: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const LoginScreen()));
+                    }),
               ],
             ),
             onTap: () {
