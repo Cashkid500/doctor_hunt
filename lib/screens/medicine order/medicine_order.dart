@@ -81,9 +81,18 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
                     ),
                     SizedBox(height: 40.sp),
 
-                    // Button,
-                    OrderMedicines(),
-                  ]),
+                    // Button
+                    ElevatedButtonWidget(
+                      textPath: DoctorHuntText.order,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const LocationScreen(),
+                        ));
+                      },
+                    ),
+                  ]
+                ),
             ),
           ),
         ),
@@ -92,37 +101,4 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
   }
 }
 
-class OrderMedicines extends StatelessWidget {
-  const OrderMedicines({
-    super.key,
-  });
 
-  @override
-  Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: () {
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (BuildContext context) =>
-              const LocationScreen(),
-        ));
-      },
-      child: Text(
-        DoctorHuntText.order,
-        style: TextStyle(
-            fontSize: 18.sp,
-            fontWeight: FontWeight.w600,
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            color: whiteText),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(10.sp),
-          ),
-        ),
-        fixedSize: MaterialStateProperty.all(Size(270.sp, 54.sp)),
-      ),
-    );
-  }
-}
