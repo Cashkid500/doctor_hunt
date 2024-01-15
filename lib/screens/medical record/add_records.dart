@@ -1,5 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
+import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/medical%20record/all_records.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -37,7 +39,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: "Add Records"),
+                    RowWidget(rowText: DoctorHuntText.addRecords),
 
                     SizedBox(height: 30.sp),
 
@@ -49,15 +51,14 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6.r),
                         ),
-                        child: Image.asset("assets/images/Guy.png"),
+                        child: Image.asset(DoctorHuntAssetsPath.guy),
                       ),
                       SizedBox(width: 10.sp),
                       Container(
                         height: 125.sp,
                         width: 100.sp,
                         decoration: BoxDecoration(
-                          // color: Color(0xff0EBE7F),
-                          color: whiteText,
+                          color: deathVictorious,
                           borderRadius: BorderRadius.circular(6.r),
                         ),
                         child: Column(
@@ -69,11 +70,11 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                               child: SizedBox(
                                 width: 72.sp,
                                 child: Text(
-                                "Add more images",
-                                    style: TextStyle(
-                                        color: greenTeal,
-                                        fontSize: 16.sp,
-                                        fontWeight: FontWeight.w400),
+                                  DoctorHuntText.moreImages,
+                                  style: TextStyle(
+                                      color: greenTeal,
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w400),
                                 ),
                               ),
                             ),
@@ -81,42 +82,203 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         ),
                       ),
                     ]
-                  ),
+                    ),
 
-                  SizedBox(height: 80.sp),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        "Record for",
-                        style: TextStyle(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: blackText),
+                    SizedBox(height: 80.sp),
+
+                    // Text
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          DoctorHuntText.recordFor,
+                          style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              color: blackText),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.sp),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            DoctorHuntText.fullName,
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                color: greenTeal),
+                          ),
+                          Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
+                        ]),
+                    SizedBox(height: 20.sp),
+
+                    // Divider
+                    Divide(),
+
+                    SizedBox(height: 20.sp),
+
+                    // Text
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          DoctorHuntText.recordType,
+                          style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              color: blackText),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 20.sp),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start, children: [
+                      
+                      // Report Column
+                      Column(
+                        children: [
+                          Image.asset(DoctorHuntAssetsPath.report),
+                          SizedBox(height: 5.sp),
+                          Text(
+                            DoctorHuntText.report,
+                            style: TextStyle(
+                                color: royalIntrigue,
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily:
+                                    DoctorHuntAssetsPath.doctorHuntFont),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  SizedBox(height: 10.sp),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Abdullah Mamun",
+                      SizedBox(width: 60.sp),
+                      
+                      // Prescription Column
+                      Column(
+                        children: [
+                          Image.asset(DoctorHuntAssetsPath.prescription),
+                          SizedBox(height: 5.sp),
+                          Text(
+                            DoctorHuntText.prescription,
+                            style: TextStyle(
+                                color: greenTeal,
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily:
+                                    DoctorHuntAssetsPath.doctorHuntFont),
+                          ),
+                        ],
+                      ),
+                      SizedBox(width: 60.sp),
+                      
+                      // Invoice Column
+                      Column(
+                        children: [
+                          Image.asset(DoctorHuntAssetsPath.invoice),
+                          SizedBox(height: 5.sp),
+                          Text(
+                            DoctorHuntText.invoice,
+                            style: TextStyle(
+                                color: royalIntrigue,
+                                fontSize: 13.sp,
+                                fontWeight: FontWeight.w400,
+                                fontFamily:
+                                    DoctorHuntAssetsPath.doctorHuntFont),
+                          ),
+                        ],
+                      ),
+                    ]),
+                    SizedBox(height: 20.sp),
+                    Divide(),
+                    SizedBox(height: 20.sp),
+
+                    // Last Column
+                    // Text
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Text(
+                          DoctorHuntText.recordCreated,
+                          style: TextStyle(
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              color: blackText),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 10.sp),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            DoctorHuntText.dateCreated,
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                color: greenTeal),
+                          ),
+                          Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
+                        ]),
+                    SizedBox(height: 20.sp),
+                    Divide(),
+                    SizedBox(height: 20.sp),
+
+                    // Button
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const AllRecordScreen(),
+                        ));
+                      },
+                      child: Text(
+                        DoctorHuntText.uploadRecord,
                         style: TextStyle(
                             fontSize: 18.sp,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: greenTeal),
+                            color: whiteText),
+                      ),
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(greenTeal),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.sp),
+                          ),
+                        ),
+                        fixedSize:
+                            MaterialStateProperty.all(Size(270.sp, 54.sp)),
+                      ),
                     ),
-                    Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
-                    ]
-                  ),
                   ]
-                ),
+                  ),
             ),
           ),
         ),
+      ),
+    );
+  }
+}
+
+class Divide extends StatelessWidget {
+  const Divide({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      child: Divider(
+        color: blackText,
+        thickness: 0.1.sp,
       ),
     );
   }

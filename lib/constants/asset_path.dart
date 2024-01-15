@@ -34,4 +34,16 @@ class DoctorHuntAssetsPath {
 
   // Medical Record Images
   static const writingMaterials = "assets/images/Writing Materials.png";
+
+  // Add Record Images
+  static const guy = "assets/images/Guy.png";
+  static const report = "assets/images/Report.png";
+  static const prescription = "assets/images/Prescription.png";
+  static const invoice = "assets/images/Invoice.png";
+
+  // Medicine Order Images
+  static const calendar = "assets/images/Calendar.png";
+
+  // Location Images
+  static const location = "assets/images/Location.png";
 }
