@@ -191,7 +191,8 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ),
                         ],
                       ),
-                    ]),
+                    ]
+                    ),
                     SizedBox(height: 20.sp),
                     Divide(),
                     SizedBox(height: 20.sp),
@@ -230,32 +231,14 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                     SizedBox(height: 20.sp),
 
                     // Button
-                    ElevatedButton(
+                  ElevatedButtonWidget(
+                      textPath: DoctorHuntText.uploadRecord,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const AllRecordScreen(),
                         ));
                       },
-                      child: Text(
-                        DoctorHuntText.uploadRecord,
-                        style: TextStyle(
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: whiteText),
-                      ),
-                      style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(greenTeal),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10.sp),
-                          ),
-                        ),
-                        fixedSize:
-                            MaterialStateProperty.all(Size(270.sp, 54.sp)),
-                      ),
                     ),
                   ]
                   ),
