@@ -47,8 +47,8 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                         ]
                       ),
 
-                    // SizedBox(height: 280.sp),
-                    Spacer(),
+                    SizedBox(height: 280.sp),
+                    // Spacer(),
 
                     // First Row
                     Row(children: [
