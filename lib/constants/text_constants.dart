@@ -88,7 +88,7 @@ class DoctorHuntText {
   static const String day = "27";
   static const String day2 = "28";
   static const String month = "FEB";
-  static const String month2 = "MAR"; 
+  static const String month2 = "MAR";
   static const String recordsAddedByYou = "Records added by you";
   static const String recordForAbdullahMamun = "Record for Abdullah mamun";
   static const String recordForAbdullahShuvo = "Record for Abdullah shuvo";
@@ -101,10 +101,18 @@ class DoctorHuntText {
   static const String order = "Order medicines";
   static const String noOrder = "No orders placed yet";
   static const String placeOrder = "Place your first order now.";
+  static const String search2 = "Search";
+  static const String issues = "Prescription related issues";
+  static const String guide = "Guide to medicine order";
+  static const String payments = "Payments & Refunds";
+  static const String returns = "Order returns";
+  static const String delivery = "Order delivery";
+  static const String status = "Order status";
 
 // Location Text
   static const String enableLocation = "Enable Location Services";
   static const String location = "Location";
-  static const String yourLocation = "Your location services are switched off. Please enable location, to help us serve better.";
+  static const String yourLocation =
+      "Your location services are switched off. Please enable location, to help us serve better.";
   static const String enable = "Enable Location";
 }
