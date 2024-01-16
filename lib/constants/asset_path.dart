@@ -1,5 +1,4 @@
 class DoctorHuntAssetsPath {
-
   // Fonts //
   static const doctorHuntFont = 'Rubik';
 
@@ -43,6 +42,12 @@ class DoctorHuntAssetsPath {
 
   // Medicine Order Images
   static const calendar = "assets/images/Calendar.png";
+  static const medicine2 = "assets/images/Medicine2.png";
+  static const issues = "assets/images/Issues.png";
+  static const payment = "assets/images/Payment.png";
+  static const returns = "assets/images/Return.png";
+  static const delivery = "assets/images/Delivery.png";
+  static const cart = "assets/images/Cart.png";
 
   // Location Images
   static const location = "assets/images/Location.png";
