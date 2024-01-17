@@ -51,4 +51,7 @@ class DoctorHuntAssetsPath {
 
   // Location Images
   static const location = "assets/images/Location.png";
+
+  // Diagnostic Test Images
+  static const diagnostic = "assets/images/Diagnostic.png";
 }
