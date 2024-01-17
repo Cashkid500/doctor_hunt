@@ -148,4 +148,14 @@ class DoctorHuntText {
   static const String digit = "+8801000000000";
   static const String patientName = "Patient's Name";
   static const String step = "Step 1/4";
+
+// Privacy Policy Text
+  static const String privacyPolicy = "Privacy Policy";
+  static const String appPolicy = "Doctor Hunt Apps Privacy Policy";
+  static const String longWords = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words believable. It is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more ";
+
+
+// Settings Text
+  static const String settings = "Settings";
+  static const String accountSettings = "Account settings";
 }
