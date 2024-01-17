@@ -139,4 +139,13 @@ class DoctorHuntText {
   static const String patientDetails = "Patient Details";
   static const String emptyCart = "Your cart is empty";
   static const String addTests = "Add Tests";
+  static const String male = "Male";
+  static const String female = "Female";
+  static const String others = "Others";
+  static const String age = "Age";
+  static const String gender = "Gender";
+  static const String mobileNumber = "Mobile Number";
+  static const String digit = "+8801000000000";
+  static const String patientName = "Patient's Name";
+  static const String step = "Step 1/4";
 }
