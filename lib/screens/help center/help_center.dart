@@ -5,6 +5,8 @@ import 'package:doctor_hunt/screens/diagnostic%20tests/diagnostic_test.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
 import 'package:doctor_hunt/screens/patient%20details/patient_details.dart';
+import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
+import 'package:doctor_hunt/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -80,52 +82,90 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
 
                     // First Row
                     ExtractedRowWidget(textPath: DoctorHuntText.booking),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Second Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.existing),
-                    SizedBox(height: 30.sp,),
+                    ExtractedRowWidget(textPath: DoctorHuntText.existing,
+                    onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const SettingsScreen(),
+                        ));
+                      },),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Third Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.online),
-                    SizedBox(height: 30.sp,),
+                    ExtractedRowWidget(textPath: DoctorHuntText.online,
+                    onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const PrivacyPolicyScreen(),
+                        ));
+                      },),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Fourth Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.feedbacks,
-                    onTap:() {
-                      Navigator.of(context).push(MaterialPageRoute(
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.feedbacks,
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const PatientDetailsScreen(),
                         ));
-                    },),
-                    SizedBox(height: 30.sp,),
+                      },
+                    ),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Fifth Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.medOrders,
-                    onTap:() {
-                      Navigator.of(context).push(MaterialPageRoute(
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.medOrders,
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const MedicineOrderScreen(),
                         ));
-                    },),
-                    SizedBox(height: 30.sp,),
+                      },
+                    ),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Sixth Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.diagnosticTests,
-                    onTap:() {
-                    Navigator.of(context).push(MaterialPageRoute(
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.diagnosticTests,
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const DiagnosticTestScreen(),
                         ));
-                    },),
-                    SizedBox(height: 30.sp,),
+                      },
+                    ),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Seventh Row
                     ExtractedRowWidget(textPath: DoctorHuntText.healthPlans),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Eight Row
                     ExtractedRowWidget(textPath: DoctorHuntText.myAccount),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Nineth Row
                     ExtractedRowWidget(textPath: DoctorHuntText.feature),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                     // Tenth Row
                     ExtractedRowWidget(textPath: DoctorHuntText.otherIssues),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                   ]),
             ),
           ),
