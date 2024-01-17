@@ -133,7 +133,7 @@ class RowWidget extends StatelessWidget {
                 fontSize: 19.sp,
                 fontWeight: FontWeight.w600,
                 fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                color: blackText),
+                color: carbon),
           ),
         ]
       );
