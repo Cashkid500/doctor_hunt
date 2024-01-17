@@ -4,6 +4,7 @@ import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/diagnostic%20tests/diagnostic_test.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
+import 'package:doctor_hunt/screens/patient%20details/patient_details.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -87,7 +88,13 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                     ExtractedRowWidget(textPath: DoctorHuntText.online),
                     SizedBox(height: 30.sp,),
                     // Fourth Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.feedbacks),
+                    ExtractedRowWidget(textPath: DoctorHuntText.feedbacks,
+                    onTap:() {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const PatientDetailsScreen(),
+                        ));
+                    },),
                     SizedBox(height: 30.sp,),
                     // Fifth Row
                     ExtractedRowWidget(textPath: DoctorHuntText.medOrders,
