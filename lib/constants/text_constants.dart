@@ -115,4 +115,23 @@ class DoctorHuntText {
   static const String yourLocation =
       "Your location services are switched off. Please enable location, to help us serve better.";
   static const String enable = "Enable Location";
+
+// Help Center Text
+  static const String helpCenter = "Help center";
+  static const String issue = "I have an issue with";
+  static const String booking = "Booking a new Appointment";
+  static const String existing = "Existing Appointment";
+  static const String online = "Online consultations";
+  static const String feedbacks = "Feedbacks";
+  static const String medOrders = "Medicine orders";
+  static const String diagnosticTests = "Diagnostic Tests";
+  static const String healthPlans = "Health plans";
+  static const String myAccount = "My account and Practo Drive";
+  static const String feature = "Have a feature in mind";
+  static const String otherIssues = "Other issues";
+
+// Diagnostic Tests Text
+  static const String noBooking = "You haven’t booked any tests yet";
+  static const String checkup = "Get started with your first health checkup";
+  static const String bookNow = "Book Now";
 }
