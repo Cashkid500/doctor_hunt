@@ -134,4 +134,9 @@ class DoctorHuntText {
   static const String noBooking = "You haven’t booked any tests yet";
   static const String checkup = "Get started with your first health checkup";
   static const String bookNow = "Book Now";
+
+// Patient Details Text
+  static const String patientDetails = "Patient Details";
+  static const String emptyCart = "Your cart is empty";
+  static const String addTests = "Add Tests";
 }
