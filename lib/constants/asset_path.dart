@@ -57,4 +57,10 @@ class DoctorHuntAssetsPath {
 
   // Patient Details Images
   static const details = "assets/images/Details.png";
+
+  // Settings Images
+  static const password = "assets/images/Password.png";
+  static const notification = "assets/images/Notification.png";
+  static const statistics = "assets/images/Statistics.png";
+  static const about = "assets/images/About.png";
 }
