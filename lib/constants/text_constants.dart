@@ -154,6 +154,10 @@ class DoctorHuntText {
   static const String appPolicy = "Doctor Hunt Apps Privacy Policy";
   static const String longWords =
       "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words believable. It is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more ";
+  static const String theStandard =
+      "The standard chunk of lorem Ipsum used since  1500s is reproduced below for those \ninterested. \n\nSections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum. The point of using.\n\nLorem Ipsum is that it has a moreIt is a long established fact that reader will distracted. \n\nThe point of using Lorem Ipsum is that it has a moreIt is a long established fact that reader will distracted.";
+  static const String established =
+      "It is a long established fact that reader distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established.";
 
 // Settings Text
   static const String settings = "Settings";
