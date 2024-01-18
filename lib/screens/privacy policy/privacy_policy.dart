@@ -70,6 +70,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            height: 1.5.sp,
                             color: skyline),
                       ),
                     ),
@@ -77,8 +78,36 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                     SizedBox(height: 20.sp),
 
                     // Text
-
+                  SizedBox(
+                    width: 337.sp,
+                    child: Text(
+                      DoctorHuntText.theStandard,
+                      style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          height: 1.5.sp,
+                          color: skyline,
+                      ),
+                      ),
+                  ),
+                    
+                    SizedBox(height: 20.sp),
+                    
                     // Text
+                    SizedBox(
+                      width: 337.sp,
+                      child: Text(
+                        DoctorHuntText.established,
+                        style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          height: 1.5.sp,
+                          color: skyline,
+                        ),
+                      ),
+                    )
                   ]),
             ),
           ),
