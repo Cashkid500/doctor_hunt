@@ -152,10 +152,23 @@ class DoctorHuntText {
 // Privacy Policy Text
   static const String privacyPolicy = "Privacy Policy";
   static const String appPolicy = "Doctor Hunt Apps Privacy Policy";
-  static const String longWords = "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words believable. It is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more ";
-
+  static const String longWords =
+      "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words believable. It is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established fact that reader will distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more ";
 
 // Settings Text
   static const String settings = "Settings";
   static const String accountSettings = "Account settings";
+  static const String linkedAccounts = "Linked accounts";
+  static const String facebookGoogle = "Facebook, Google";
+  static const String currency = "Currency";
+  static const String usd = "\$-USD";
+  static const String languages = "Languages";
+  static const String english = "English";
+  static const String phone = "Phone calls";
+  static const String text = "Text messages";
+  static const String moreOptions = "More options";
+  static const String aboutUs = "About us";
+  static const String statistics = "Statistics";
+  static const String notifications = "Notifications";
+  static const String changePassword = "Change Password";
 }
