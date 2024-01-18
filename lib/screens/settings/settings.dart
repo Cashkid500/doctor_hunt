@@ -1,7 +1,6 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
-import 'package:doctor_hunt/screens/help%20center/help_center.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
