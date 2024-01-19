@@ -178,4 +178,13 @@ class DoctorHuntText {
   static const String statistics = "Statistics";
   static const String notifications = "Notifications";
   static const String changePassword = "Change Password";
+
+// Menu Text
+  static const String logout = "Logout";
+  static const String helpCenter2 = "Help Center";
+  static const String privacyPolicy2 = "Privacy & Policy";
+  static const String testBookings = "Test Bookings";
+  static const String payment = "Payments";
+  static const String myDoctor = "My Doctors";
+  static const String phoneNumber = " 01303-527300";
 }
