@@ -97,7 +97,8 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                     width: 335.sp,
                     decoration: BoxDecoration(
                         color: whiteText,
-                        borderRadius: BorderRadius.circular(10.r)),
+                        borderRadius: BorderRadius.circular(10.r),
+                        ),
                     child: Padding(
                       padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
                       child: Column(
@@ -112,7 +113,117 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                           // Age
                           Heading(headerPath: DoctorHuntText.age),
                           SizedBox(height: 15.sp),
-                          // FieldWidget(fieldPath: "+8801000000000"),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              // Day //
+                              Container(
+                                height: 54.sp,
+                                width: 94.sp,
+                                decoration: BoxDecoration(
+                                  color: whiteText,
+                                  borderRadius: BorderRadius.circular(6.r),
+                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid, width: 0.5.sp),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        DoctorHuntText.days,
+                                        style: TextStyle(
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily:
+                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          color: royalIntrigue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.expand_more,
+                                        color: royalIntrigue,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 10.sp),
+
+                              // Month //
+                              Container(
+                                height: 54.sp,
+                                width: 94.sp,
+                                decoration: BoxDecoration(
+                                  color: whiteText,
+                                  borderRadius: BorderRadius.circular(6.r),
+                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid,
+                                      width: 0.5.sp,
+                                  ),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        DoctorHuntText.months,
+                                        style: TextStyle(
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily:
+                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          color: royalIntrigue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.expand_more,
+                                        color: royalIntrigue,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              SizedBox(width: 10.sp),
+
+                              // Year //
+                              Container(
+                                height: 54.sp,
+                                width: 94.sp,
+                                decoration: BoxDecoration(
+                                  color: whiteText,
+                                  borderRadius: BorderRadius.circular(6.r),
+                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid,
+                                      width: 0.5.sp),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        DoctorHuntText.year,
+                                        style: TextStyle(
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily:
+                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          color: royalIntrigue,
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.expand_more,
+                                        color: royalIntrigue,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                           SizedBox(height: 15.sp),
                           // Gender
                           Heading(headerPath: DoctorHuntText.gender),
@@ -273,6 +384,7 @@ class FieldWidget extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
             borderSide: BorderSide(color: royalIntrigue),
+            
           ),
         ),
       ),

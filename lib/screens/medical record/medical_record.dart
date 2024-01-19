@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/add_records.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -38,7 +39,13 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.medicalRecord),
+                    RowWidget(rowText: DoctorHuntText.medicalRecord,
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const NavigationScreen(),
+                      ));
+                    },),
 
                     SizedBox(height: 80.sp),
 
@@ -105,10 +112,12 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 class RowWidget extends StatelessWidget {
   const RowWidget({
     super.key,
+    this.onTap,
     required this.rowText,
   });
 
   final String rowText;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -120,8 +129,11 @@ class RowWidget extends StatelessWidget {
             decoration: BoxDecoration(
                 color: whiteText,
                 borderRadius: BorderRadius.circular(10.r)),
-            child: Icon(Icons.keyboard_arrow_left,
-                color: royalIntrigue),
+            child: GestureDetector(
+              onTap: onTap,
+              child: Icon(Icons.keyboard_arrow_left,
+                  color: royalIntrigue),
+            ),
           ),
 
           SizedBox(width: 20.sp),
