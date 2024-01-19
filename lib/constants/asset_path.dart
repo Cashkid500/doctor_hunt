@@ -63,4 +63,16 @@ class DoctorHuntAssetsPath {
   static const notification = "assets/images/Notification.png";
   static const statistics = "assets/images/Statistics.png";
   static const about = "assets/images/About.png";
+
+  // Menu Images
+  static const menu = "assets/images/Menu.png";
+  static const person = "assets/images/Person.png";
+  static const record = "assets/images/Record.png";
+  static const payments = "assets/images/PaymentII.png";
+  static const order = "assets/images/Order.png";
+  static const bookings = "assets/images/Bookings.png";
+  static const privacy = "assets/images/PrivacyII.png";
+  static const help = "assets/images/HelpCenter.png";
+  static const settings = "assets/images/Settings.png";
+  static const logout = "assets/images/Logout.png";
 }
