@@ -9,3 +9,6 @@ Color weatheredStone = const Color(0xffC4C4C4);
 Color deathVictorious = const Color(0xffC6EFE5);
 Color skyline = const Color(0xff959CB4);
 Color carbon = const Color(0xff333333);
+Color englishManor = const Color(0xff6F7FA1);
+Color luxeBlue = const Color(0xff536184);
+Color redText = const Color(0xffFF0000);
