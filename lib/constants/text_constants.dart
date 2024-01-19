@@ -148,6 +148,9 @@ class DoctorHuntText {
   static const String digit = "+8801000000000";
   static const String patientName = "Patient's Name";
   static const String step = "Step 1/4";
+  static const String days = "Day";
+  static const String months = "Month";
+  static const String year = "Year";
 
 // Privacy Policy Text
   static const String privacyPolicy = "Privacy Policy";
