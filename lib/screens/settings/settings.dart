@@ -252,7 +252,8 @@ class AccountSettingsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
+    return Row(
+      children: [
       Image.asset(DoctorHuntAssetsPath.password),
       SizedBox(width: 20.sp),
       Text(
