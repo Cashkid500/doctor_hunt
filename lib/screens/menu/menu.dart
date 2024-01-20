@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/help%20center/help_center.dart';
+import 'package:doctor_hunt/screens/login/login.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
 import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
@@ -154,13 +155,19 @@ class _MenuScreenState extends State<MenuScreen> {
                     children: [
                       Image.asset(DoctorHuntAssetsPath.logout),
                       SizedBox(width: 20.sp),
-                      Text(
-                        DoctorHuntText.logout,
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          color: whiteText,
+                      GestureDetector(
+                         onTap: () {
+                        // Navigator.of(context).pop();
+                        _showOrderDialog(context);
+                      },
+                        child: Text(
+                          DoctorHuntText.logout,
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: whiteText,
+                          ),
                         ),
                       ),
                     ]
@@ -210,3 +217,93 @@ class MenuRowWidget extends StatelessWidget {
     );
   }
 }
+
+// Alert Dialog
+  void _showOrderDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            DoctorHuntText.logOut,
+            style: TextStyle(
+              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+              fontSize: 26.sp,
+              fontWeight: FontWeight.w700,
+              color: blackText,
+            ),
+          ),
+          content: Container(
+            height: 86.sp,
+            width: 360.sp,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8.r),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Text(
+                      DoctorHuntText.logoutConfirmation,
+                      style: TextStyle(
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w400,
+                        color: royalIntrigue,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                SizedBox(
+                  height: 20.sp,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    // Cancel button
+                    TextButton(
+                      onPressed: () {
+                        // Add your action for Cancel here
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                MenuScreen()));
+                      },
+                      child: Text(
+                        DoctorHuntText.cancel,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: greenTeal
+                        ),
+                      ),
+                    ),
+
+                    // Okay button
+                    TextButton(
+                      onPressed: () {
+                        // Add your action for OK here
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => LoginScreen()));
+                      },
+                      child: Text(
+                        DoctorHuntText.ok,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          color: greenTeal,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
