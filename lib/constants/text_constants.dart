@@ -187,4 +187,8 @@ class DoctorHuntText {
   static const String payment = "Payments";
   static const String myDoctor = "My Doctors";
   static const String phoneNumber = " 01303-527300";
+  static const String logOut = "Log Out";
+  static const String logoutConfirmation = "Are you sure you want to logout?";
+  static const String cancel = "Cancel";
+  static const String ok = "Ok";
 }
