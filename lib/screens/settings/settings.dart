@@ -13,7 +13,6 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
-  String imagePath = "assets/images/Password.png";
   bool _switchValue = true;
   bool _switchValue1 = true;
   @override
