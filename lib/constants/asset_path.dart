@@ -75,4 +75,10 @@ class DoctorHuntAssetsPath {
   static const help = "assets/images/HelpCenter.png";
   static const settings = "assets/images/Settings.png";
   static const logout = "assets/images/Logout.png";
+
+  // My Doctor Images
+  static const tranquilli = "assets/images/Tranquilli.png";
+  static const boneBrake = "assets/images/BoneBrake.png";
+  static const luke = "assets/images/Luke.png";
+  static const shoemaker = "assets/images/Shoemaker.png";
 }
