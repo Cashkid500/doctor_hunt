@@ -5,6 +5,7 @@ import 'package:doctor_hunt/screens/help%20center/help_center.dart';
 import 'package:doctor_hunt/screens/login/login.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
+import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
 import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
 import 'package:doctor_hunt/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
@@ -92,8 +93,16 @@ class _MenuScreenState extends State<MenuScreen> {
                   SizedBox(height: 70.sp),
 
                   // Row
-                  MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.person, menuTextPath: DoctorHuntText.myDoctor),
+                  // My Doctor
+                  MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.person, menuTextPath: DoctorHuntText.myDoctor,
+                  onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const MyDoctorsScreen(),
+                        ));
+                      },),
                   SizedBox(height: 30.sp),
+
                   // Medical Records
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.record, menuTextPath: DoctorHuntText.medicalRecord,
                  onTap: () {
@@ -104,9 +113,11 @@ class _MenuScreenState extends State<MenuScreen> {
                       },
                   ),
                   SizedBox(height: 30.sp),
+
                   // Payments
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.payments, menuTextPath: DoctorHuntText.payment),
                   SizedBox(height: 30.sp),
+
                   // Medicine Orders
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.order, menuTextPath: DoctorHuntText.medicineOrder,
                   onTap: () {
@@ -116,10 +127,13 @@ class _MenuScreenState extends State<MenuScreen> {
                         ));
                       },
                   ),
+
                   SizedBox(height: 30.sp),
+
                   // Test Bookings
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.bookings, menuTextPath: DoctorHuntText.testBookings),
                   SizedBox(height: 30.sp),
+
                   // Privacy & Policy
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.privacy, menuTextPath: DoctorHuntText.privacyPolicy2,
                   onTap: () {
@@ -130,6 +144,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       },
                   ),
                   SizedBox(height: 30.sp),
+
                   // Help Center
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.help, menuTextPath: DoctorHuntText.helpCenter2,
                   onTap: () {
@@ -140,6 +155,7 @@ class _MenuScreenState extends State<MenuScreen> {
                       },
                   ),
                   SizedBox(height: 30.sp),
+
                   // Settings
                   MenuRowWidget(menuAssetPath: DoctorHuntAssetsPath.settings, menuTextPath: DoctorHuntText.settings,
                   onTap: () {
@@ -150,6 +166,8 @@ class _MenuScreenState extends State<MenuScreen> {
                       },
                   ),
                   SizedBox(height: 80.sp),
+
+
                   // Logout
                   Row(
                     children: [
