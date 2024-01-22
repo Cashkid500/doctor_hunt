@@ -13,6 +13,7 @@ class SettingsScreen extends StatefulWidget {
 }
 
 class _SettingsScreenState extends State<SettingsScreen> {
+  String imagePath = "assets/images/Password.png";
   bool _switchValue = true;
   bool _switchValue1 = true;
   @override
@@ -63,7 +64,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // Change Password
                   AccountSettingsRow(
-                    textPath: DoctorHuntText.changePassword,
+                    textPath: DoctorHuntText.changePassword, imagePath: DoctorHuntAssetsPath.password,
                     // onTap: () {
                     //   Navigator.of(context).push(MaterialPageRoute(
                     //       builder: (BuildContext context) =>
@@ -73,15 +74,16 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SizedBox(height: 20.sp),
 
                   // Notifications
-                  AccountSettingsRow(textPath: DoctorHuntText.notifications),
+                  AccountSettingsRow(textPath: DoctorHuntText.notifications, imagePath: DoctorHuntAssetsPath.notification),
                   SizedBox(height: 20.sp),
 
                   // Statistics
-                  AccountSettingsRow(textPath: DoctorHuntText.statistics),
+                  AccountSettingsRow(textPath: DoctorHuntText.statistics, imagePath: DoctorHuntAssetsPath.statistics),
                   SizedBox(height: 20.sp),
 
                   // About Us
-                  AccountSettingsRow(textPath: DoctorHuntText.aboutUs),
+                  AccountSettingsRow(textPath: DoctorHuntText.aboutUs, imagePath: DoctorHuntAssetsPath.about),
+                  SizedBox(height: 20.sp),
 
                   SizedBox(height: 40.sp),
                   // Text
@@ -244,17 +246,19 @@ class AccountSettingsRow extends StatelessWidget {
   const AccountSettingsRow({
     super.key,
     this.onTap,
+    required this.imagePath,
     required this.textPath,
   });
 
   final String textPath;
+  final String imagePath;
   final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-      Image.asset(DoctorHuntAssetsPath.password),
+      Image.asset(imagePath),
       SizedBox(width: 20.sp),
       Text(
         textPath,
