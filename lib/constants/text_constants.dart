@@ -191,4 +191,30 @@ class DoctorHuntText {
   static const String logoutConfirmation = "Are you sure you want to logout?";
   static const String cancel = "Cancel";
   static const String ok = "Ok";
+
+// My Doctors Text
+  static const String myDoctors = "My Doctors";
+  static const String tranquilli = "Dr. Tranquilli";
+  static const String boneBrake = "Dr. Bonebrake";
+  static const String luke = "Dr. Luke Whitesell";
+  static const String shoemaker = "Dr. Shoemaker";
+  static const String medicine = "Specialist medicine";
+  static const String dentist = "Specialist Dentist";
+  static const String cardiology = "Specialist Cardiology";
+  static const String patheology = "Specialist Patheology";
+  static const String sixYears = "6 Years experience";
+  static const String eightYears = "8 Years experience";
+  static const String sevenYears = "7 Years experience";
+  static const String fiveYears = "5 Years experience";
+  static const String eightySeven = "87%";
+  static const String fiftyNine = "59%";
+  static const String fiftySeven = "57%"; 
+  static const String ten = "10:00";
+  static const String eleven = "11:00";
+  static const String twelve = "12:00";
+  static const String sixtyNinePatients = "69 Patient Stories";
+  static const String eightyTwoPatients = "82 Patient Stories";
+  static const String seventySixPatients = "76 Patient Stories";
+  static const String nextAvailable = "Next Available";
+  static const String am = " AM tomorrow";
 }
