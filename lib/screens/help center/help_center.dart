@@ -71,7 +71,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                           fillColor: whiteText,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12.r),
-                            borderSide: BorderSide(color: royalIntrigue),
+                            borderSide: BorderSide(color: whiteText, width: 0.5.sp, style: BorderStyle.solid),
                           ),
                         ),
                       ),

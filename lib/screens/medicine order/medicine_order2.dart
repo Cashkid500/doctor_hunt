@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/help%20center/help_center.dart';
+import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -74,35 +75,7 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
                     SizedBox(height: 30.sp),
 
                     // Search Box
-                    SizedBox(
-                      height: 54.sp,
-                      width: 320.sp,
-                      child: TextField(
-                        keyboardType: TextInputType.name,
-                        decoration: InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12.r)),
-                          contentPadding: EdgeInsets.symmetric(
-                              horizontal: 20.sp, vertical: 20.sp),
-                          isCollapsed: true,
-                          hintText: DoctorHuntText.search2,
-                          hintStyle: TextStyle(
-                            color: royalIntrigue,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w300,
-                          ),
-                          filled: true,
-                          fillColor: whiteText,
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(12.r),
-                            borderSide: BorderSide(color: royalIntrigue),
-                          ),
-                          prefixIcon: Icon(Icons.search, color: royalIntrigue),
-                          suffixIcon: Icon(Icons.close, color: royalIntrigue),
-                        ),
-                      ),
-                    ),
+                    SearchField(searchPath: DoctorHuntText.search2),
 
                     SizedBox(
                       height: 30.sp,

@@ -96,9 +96,9 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                     height: 518.sp,
                     width: 335.sp,
                     decoration: BoxDecoration(
-                        color: whiteText,
-                        borderRadius: BorderRadius.circular(10.r),
-                        ),
+                      color: whiteText,
+                      borderRadius: BorderRadius.circular(10.r),
+                    ),
                     child: Padding(
                       padding: EdgeInsets.only(left: 8.sp, right: 8.sp),
                       child: Column(
@@ -123,10 +123,14 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 decoration: BoxDecoration(
                                   color: whiteText,
                                   borderRadius: BorderRadius.circular(6.r),
-                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid, width: 0.5.sp),
+                                  border: Border.all(
+                                      color: royalIntrigue,
+                                      style: BorderStyle.solid,
+                                      width: 0.5.sp),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  padding:
+                                      EdgeInsets.only(left: 5.sp, right: 5.sp),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -136,8 +140,8 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w400,
-                                          fontFamily:
-                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          fontFamily: DoctorHuntAssetsPath
+                                              .doctorHuntFont,
                                           color: royalIntrigue,
                                         ),
                                       ),
@@ -158,12 +162,15 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 decoration: BoxDecoration(
                                   color: whiteText,
                                   borderRadius: BorderRadius.circular(6.r),
-                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid,
-                                      width: 0.5.sp,
+                                  border: Border.all(
+                                    color: royalIntrigue,
+                                    style: BorderStyle.solid,
+                                    width: 0.5.sp,
                                   ),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  padding:
+                                      EdgeInsets.only(left: 5.sp, right: 5.sp),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -173,8 +180,8 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w400,
-                                          fontFamily:
-                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          fontFamily: DoctorHuntAssetsPath
+                                              .doctorHuntFont,
                                           color: royalIntrigue,
                                         ),
                                       ),
@@ -195,11 +202,14 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 decoration: BoxDecoration(
                                   color: whiteText,
                                   borderRadius: BorderRadius.circular(6.r),
-                                  border: Border.all(color: royalIntrigue, style: BorderStyle.solid,
+                                  border: Border.all(
+                                      color: royalIntrigue,
+                                      style: BorderStyle.solid,
                                       width: 0.5.sp),
                                 ),
                                 child: Padding(
-                                  padding: EdgeInsets.only(left: 5.sp, right: 5.sp),
+                                  padding:
+                                      EdgeInsets.only(left: 5.sp, right: 5.sp),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -209,8 +219,8 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                         style: TextStyle(
                                           fontSize: 16.sp,
                                           fontWeight: FontWeight.w400,
-                                          fontFamily:
-                                              DoctorHuntAssetsPath.doctorHuntFont,
+                                          fontFamily: DoctorHuntAssetsPath
+                                              .doctorHuntFont,
                                           color: royalIntrigue,
                                         ),
                                       ),
@@ -383,8 +393,8 @@ class FieldWidget extends StatelessWidget {
           fillColor: whiteText,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(12.r),
-            borderSide: BorderSide(color: royalIntrigue),
-            
+            borderSide: BorderSide(
+                color: Colors.grey, width: 0.1.sp, style: BorderStyle.solid),
           ),
         ),
       ),
