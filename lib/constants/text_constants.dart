@@ -208,7 +208,7 @@ class DoctorHuntText {
   static const String fiveYears = "5 Years experience";
   static const String eightySeven = "87%";
   static const String fiftyNine = "59%";
-  static const String fiftySeven = "57%"; 
+  static const String fiftySeven = "57%";
   static const String ten = "10:00";
   static const String eleven = "11:00";
   static const String twelve = "12:00";
@@ -217,4 +217,18 @@ class DoctorHuntText {
   static const String seventySixPatients = "76 Patient Stories";
   static const String nextAvailable = "Next Available";
   static const String am = " AM tomorrow";
+  static const String search3 = "search";
+
+// Find Doctors Text
+  static const String findDoctors = "Find Doctors";
+  static const String dentist2 = "Dentist";
+  static const String shruti = "Dr. Shruti Kedia";
+  static const String watamaniuk = "Dr. Watamaniuk";
+  static const String crownover = "Dr. Crownover";
+  static const String balestra = "Dr. Balestra";
+  static const String toothDentist = "Tooths Dentist";
+  static const String nineYears = "9 Years experience";
+  static const String seventyFour = "74%";
+  static const String eightySixPatients = "86 Patient Stories";
+  static const String seventyEightPatients = "78 Patient Stories";
 }
