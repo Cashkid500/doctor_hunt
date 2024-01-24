@@ -17,77 +17,89 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start, 
-          children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Stack(
+            alignment: AlignmentDirectional.bottomStart,
             children: [
-              Container(
-                height: 156.sp,
-                width: 375.sp,
-                decoration: BoxDecoration(
-                  color: greenTeal,
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30.r),
-                    bottomRight: Radius.circular(30.r),
-                  ),
-                ),
-                child: SafeArea(
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    DoctorHuntText.hi,
-                                    style: TextStyle(
-                                        fontSize: 20.sp,
-                                        color: whiteText,
-                                        fontFamily:
-                                            DoctorHuntAssetsPath.doctorHuntFont,
-                                        fontWeight: FontWeight.w300),
-                                  ),
-                                  SizedBox(height: 10.sp),
-                                  Text(
-                                    DoctorHuntText.findDoctor,
-                                    style: TextStyle(
-                                        fontSize: 25.sp,
-                                        color: whiteText,
-                                        fontFamily:
-                                            DoctorHuntAssetsPath.doctorHuntFont,
-                                        fontWeight: FontWeight.w700),
-                                  ),
-                                ],
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const ProfileScreen(),
-                                  ));
-                                },
-                                child: CircleAvatar(
-                                  radius: 30.r,
-                                  backgroundImage: AssetImage(
-                                    DoctorHuntAssetsPath.profile,
-                                  ),
+              SizedBox(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 156.sp,
+                      width: 375.sp,
+                      decoration: BoxDecoration(
+                        color: greenTeal,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(30.r),
+                          bottomRight: Radius.circular(30.r),
+                        ),
+                      ),
+                      child: SafeArea(
+                        child: Padding(
+                          padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
+                          child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Text(
+                                          DoctorHuntText.hi,
+                                          style: TextStyle(
+                                              fontSize: 20.sp,
+                                              color: whiteText,
+                                              fontFamily: DoctorHuntAssetsPath
+                                                  .doctorHuntFont,
+                                              fontWeight: FontWeight.w300),
+                                        ),
+                                        SizedBox(height: 10.sp),
+                                        Text(
+                                          DoctorHuntText.findDoctor,
+                                          style: TextStyle(
+                                              fontSize: 25.sp,
+                                              color: whiteText,
+                                              fontFamily: DoctorHuntAssetsPath
+                                                  .doctorHuntFont,
+                                              fontWeight: FontWeight.w700),
+                                        ),
+                                      ],
+                                    ),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.of(context)
+                                            .push(MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              const ProfileScreen(),
+                                        ));
+                                      },
+                                      child: CircleAvatar(
+                                        radius: 30.r,
+                                        backgroundImage: AssetImage(
+                                          DoctorHuntAssetsPath.profile,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                              ),
-                            ],
-                          ),
-                        ]),
-                  ),
+                              ]),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20.sp),
+                  ],
                 ),
               ),
-              Positioned(
-                bottom: -20.sp,
-                right: 20.sp,
+              Padding(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 20.sp,
+                ),
                 child: SizedBox(
                   height: 54.sp,
                   width: 320.sp,
@@ -126,14 +138,15 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(height: 40.sp),
           Padding(
             padding: EdgeInsets.only(left: 20.sp),
-            child: Text(DoctorHuntText.liveDoctors,
-                style: TextStyle(
-                  fontSize: 24.sp,
-                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                  fontWeight: FontWeight.w700,
-                  color: blackText,
-                ),
-             ),
+            child: Text(
+              DoctorHuntText.liveDoctors,
+              style: TextStyle(
+                fontSize: 24.sp,
+                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                fontWeight: FontWeight.w700,
+                color: blackText,
+              ),
+            ),
           ),
         ]),
       ),

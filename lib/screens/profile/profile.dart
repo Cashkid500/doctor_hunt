@@ -31,7 +31,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             child: SafeArea(
               child: Padding(
-                padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
+                padding: EdgeInsets.only(left: 20.sp),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -48,9 +48,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                       SizedBox(height: 15.sp),
                       SizedBox(
-                        width: 310.sp,
+                        width: 335.sp,
                         child: Text(
                           DoctorHuntText.updateProfile,
+                          textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 15.sp,
                             fontWeight: FontWeight.w400,
@@ -63,25 +64,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       SizedBox(height: 20.sp),
                       Center(
                         child: Stack(
+                          alignment: AlignmentDirectional.bottomEnd,
                           children: [
                             CircleAvatar(
                               radius: 60.r,
                               backgroundImage: const AssetImage(
                                   DoctorHuntAssetsPath.profilePic),
                             ),
-                            Positioned(
-                              bottom: 8.sp,
-                              right: -5.sp,
-                              child: Container(
-                                  height: 36.sp,
-                                  width: 36.sp,
-                                  decoration: BoxDecoration(
-                                    color: royalIntrigue,
-                                    borderRadius: BorderRadius.circular(100.r),
-                                  ),
-                                  child:
-                                      Image.asset(DoctorHuntAssetsPath.camera)),
-                            ),
+                            Container(
+                                height: 36.sp,
+                                width: 36.sp,
+                                decoration: BoxDecoration(
+                                  color: royalIntrigue,
+                                  borderRadius: BorderRadius.circular(100.r),
+                                ),
+                                child:
+                                    Image.asset(DoctorHuntAssetsPath.camera)),
                           ],
                         ),
                       ),
@@ -102,7 +100,52 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
-          SizedBox(height: 70.sp),
+          SizedBox(height: 20.sp),
+          Container(
+            child:
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+              Text(
+                "Name",
+                style: TextStyle(
+                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                  fontSize: 10.sp,
+                  fontWeight: FontWeight.w500,
+                  color: greenTeal,
+                ),
+              ),
+              SizedBox(height: 10.sp),
+              SizedBox(
+                height: 54.sp,
+                width: 320.sp,
+                child: TextField(
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.r)),
+                    contentPadding: EdgeInsets.symmetric(
+                        horizontal: 20.sp, vertical: 20.sp),
+                    isCollapsed: true,
+                    hintText: DoctorHuntText.fullName,
+                    hintStyle: TextStyle(
+                      color: royalIntrigue,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w300,
+                    ),
+                    filled: true,
+                    fillColor: whiteText,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12.r),
+                      borderSide: BorderSide(
+                          color: whiteText,
+                          width: 0.5.sp,
+                          style: BorderStyle.solid),
+                    ),
+                  ),
+                ),
+              ),
+            ]),
+          ),
 
           // Button
           Center(

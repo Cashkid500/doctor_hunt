@@ -147,6 +147,7 @@ class SearchCourseText extends StatelessWidget {
       width: 299.sp,
       child: Text(
         DoctorHuntText.search,
+        textAlign: TextAlign.center,
         style: TextStyle(
           fontSize: 14.sp,
           fontWeight: FontWeight.w400,
