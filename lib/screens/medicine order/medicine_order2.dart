@@ -151,6 +151,7 @@ class FirstRowSecondBox extends StatelessWidget {
           width: 135.sp,
           child: Text(
             DoctorHuntText.issues,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w400,
@@ -195,6 +196,7 @@ class FirstRowFirstBox extends StatelessWidget {
           width: 120.sp,
           child: Text(
             DoctorHuntText.guide,
+            textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w400,
