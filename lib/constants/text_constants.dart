@@ -237,5 +237,8 @@ class DoctorHuntText {
 // Profile Text
   static const String profile = "Profile";
   static const String profileSetup = "Set up your profile";
-  static const String updateProfile = "Update your profile to connect your doctor with better impression.";
+  static const String updateProfile =
+      "Update your profile to connect your doctor with better impression.";
+  static const String personalInformation = "Personal Information";
+  static const String yourName = "What is your name?";
 }
