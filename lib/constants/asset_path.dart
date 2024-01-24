@@ -81,4 +81,8 @@ class DoctorHuntAssetsPath {
   static const boneBrake = "assets/images/BoneBrake.png";
   static const luke = "assets/images/Luke.png";
   static const shoemaker = "assets/images/Shoemaker.png";
+
+  // Profile Images
+  static const profilePic = "assets/images/ProfileImage.png";
+  static const camera = "assets/images/Camera.png";
 }
