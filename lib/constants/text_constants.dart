@@ -47,6 +47,8 @@ class DoctorHuntText {
 // Dashboard Text
   static const String hi = "Hi Handwerker!";
   static const String findDoctor = "Find Your Doctor";
+  static const String homeSearch = "Search.....";
+  static const String liveDoctors = "Live Doctors";
 
 // Live Chat Text
   static const String everhart = "Everhart Tween";
@@ -231,4 +233,9 @@ class DoctorHuntText {
   static const String seventyFour = "74%";
   static const String eightySixPatients = "86 Patient Stories";
   static const String seventyEightPatients = "78 Patient Stories";
+
+// Profile Text
+  static const String profile = "Profile";
+  static const String profileSetup = "Set up your profile";
+  static const String updateProfile = "Update your profile to connect your doctor with better impression.";
 }
