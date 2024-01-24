@@ -63,7 +63,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // Change Password
                   AccountSettingsRow(
-                    textPath: DoctorHuntText.changePassword, imagePath: DoctorHuntAssetsPath.password,
+                    textPath: DoctorHuntText.changePassword,
+                    imagePath: DoctorHuntAssetsPath.password,
                     // onTap: () {
                     //   Navigator.of(context).push(MaterialPageRoute(
                     //       builder: (BuildContext context) =>
@@ -73,15 +74,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SizedBox(height: 20.sp),
 
                   // Notifications
-                  AccountSettingsRow(textPath: DoctorHuntText.notifications, imagePath: DoctorHuntAssetsPath.notification),
+                  AccountSettingsRow(
+                      textPath: DoctorHuntText.notifications,
+                      imagePath: DoctorHuntAssetsPath.notification),
                   SizedBox(height: 20.sp),
 
                   // Statistics
-                  AccountSettingsRow(textPath: DoctorHuntText.statistics, imagePath: DoctorHuntAssetsPath.statistics),
+                  AccountSettingsRow(
+                      textPath: DoctorHuntText.statistics,
+                      imagePath: DoctorHuntAssetsPath.statistics),
                   SizedBox(height: 20.sp),
 
                   // About Us
-                  AccountSettingsRow(textPath: DoctorHuntText.aboutUs, imagePath: DoctorHuntAssetsPath.about),
+                  AccountSettingsRow(
+                      textPath: DoctorHuntText.aboutUs,
+                      imagePath: DoctorHuntAssetsPath.about),
                   SizedBox(height: 20.sp),
 
                   SizedBox(height: 40.sp),
@@ -160,7 +167,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             value: _switchValue1,
                             onChanged: (value) {
                               setState(() {
-                                _switchValue = value;
+                                _switchValue1 = value;
                               });
                             },
                           ),
@@ -169,23 +176,29 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   SizedBox(height: 20.sp),
 
                   // Languages
-                  MoreOptionsRow(textPath1: DoctorHuntText.languages, textPath2: DoctorHuntText.english,
-                      // onTap: () {
-                      //   Navigator.of(context).push(
-                      //     MaterialPageRoute(
-                      //       builder: (BuildContext context) =>const HelpCenterScreen(),
-                      //     ),
-                      //   );
-                      // },
-                    ),
+                  MoreOptionsRow(
+                    textPath1: DoctorHuntText.languages,
+                    textPath2: DoctorHuntText.english,
+                    // onTap: () {
+                    //   Navigator.of(context).push(
+                    //     MaterialPageRoute(
+                    //       builder: (BuildContext context) =>const HelpCenterScreen(),
+                    //     ),
+                    //   );
+                    // },
+                  ),
                   SizedBox(height: 20.sp),
 
                   // Currency
-                  MoreOptionsRow(textPath1: DoctorHuntText.currency, textPath2: DoctorHuntText.usd),
+                  MoreOptionsRow(
+                      textPath1: DoctorHuntText.currency,
+                      textPath2: DoctorHuntText.usd),
                   SizedBox(height: 20.sp),
 
                   // Linked Accounts
-                  MoreOptionsRow(textPath1: DoctorHuntText.linkedAccounts, textPath2: DoctorHuntText.facebookGoogle),
+                  MoreOptionsRow(
+                      textPath1: DoctorHuntText.linkedAccounts,
+                      textPath2: DoctorHuntText.facebookGoogle),
                 ],
               ),
             ),
@@ -255,8 +268,7 @@ class AccountSettingsRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
+    return Row(children: [
       Image.asset(imagePath),
       SizedBox(width: 20.sp),
       Text(
