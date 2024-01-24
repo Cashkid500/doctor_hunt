@@ -54,6 +54,10 @@ class DoctorHuntAssetsPath {
 
   // Diagnostic Test Images
   static const diagnostic = "assets/images/Diagnostic.png";
+  static const diagnostic1 = "assets/images/diagnostic1.png";
+  static const followUp = "assets/images/follow_up.png";
+  static const report2 = "assets/images/Report2.png";
+  static const agent = "assets/images/agent.png";
 
   // Patient Details Images
   static const details = "assets/images/Details.png";
@@ -75,6 +79,7 @@ class DoctorHuntAssetsPath {
   static const help = "assets/images/HelpCenter.png";
   static const settings = "assets/images/Settings.png";
   static const logout = "assets/images/Logout.png";
+  static const menuBackground = "assets/images/menu_background.png";
 
   // My Doctor Images
   static const tranquilli = "assets/images/Tranquilli.png";
