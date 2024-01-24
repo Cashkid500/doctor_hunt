@@ -18,147 +18,166 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          Container(
-            height: 357.sp,
-            width: 375.sp,
-            decoration: BoxDecoration(
-              color: greenTeal,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30.r),
-                bottomRight: Radius.circular(30.r),
+        child: Container(
+           height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              const Color.fromARGB(255, 166, 202, 167), // Top
+              whiteText, // Center
+              const Color.fromARGB(255, 166, 202, 167), // Bottom
+            ],
+          ),
+        ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start, 
+            children: [
+            Container(
+              height: 357.sp,
+              width: 375.sp,
+              decoration: BoxDecoration(
+                color: greenTeal,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30.r),
+                  bottomRight: Radius.circular(30.r),
+                ),
               ),
-            ),
-            child: SafeArea(
-              child: Padding(
-                padding: EdgeInsets.only(left: 20.sp),
-                child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      ProfileHeader(),
-                      SizedBox(height: 40.sp),
-                      Text(
-                        DoctorHuntText.profileSetup,
-                        style: TextStyle(
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          color: whiteText,
-                        ),
-                      ),
-                      SizedBox(height: 15.sp),
-                      SizedBox(
-                        width: 335.sp,
-                        child: Text(
-                          DoctorHuntText.updateProfile,
-                          textAlign: TextAlign.center,
+              child: SafeArea(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 20.sp),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        ProfileHeader(),
+                        SizedBox(height: 40.sp),
+                        Text(
+                          DoctorHuntText.profileSetup,
                           style: TextStyle(
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.w400,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w700,
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             color: whiteText,
-                            height: 1.5.sp,
                           ),
                         ),
-                      ),
-                      SizedBox(height: 20.sp),
-                      Center(
-                        child: Stack(
-                          alignment: AlignmentDirectional.bottomEnd,
-                          children: [
-                            CircleAvatar(
-                              radius: 60.r,
-                              backgroundImage: const AssetImage(
-                                  DoctorHuntAssetsPath.profilePic),
+                        SizedBox(height: 15.sp),
+                        SizedBox(
+                          width: 335.sp,
+                          child: Text(
+                            DoctorHuntText.updateProfile,
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 15.sp,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              color: whiteText,
+                              height: 1.5.sp,
                             ),
-                            Container(
-                                height: 36.sp,
-                                width: 36.sp,
-                                decoration: BoxDecoration(
-                                  color: royalIntrigue,
-                                  borderRadius: BorderRadius.circular(100.r),
-                                ),
-                                child:
-                                    Image.asset(DoctorHuntAssetsPath.camera)),
-                          ],
+                          ),
                         ),
-                      ),
-                    ]),
+                        SizedBox(height: 20.sp),
+                        Center(
+                          child: Stack(
+                            alignment: AlignmentDirectional.bottomEnd,
+                            children: [
+                              CircleAvatar(
+                                radius: 60.r,
+                                backgroundImage: const AssetImage(
+                                    DoctorHuntAssetsPath.profilePic),
+                              ),
+                              Container(
+                                  height: 36.sp,
+                                  width: 36.sp,
+                                  decoration: BoxDecoration(
+                                    color: royalIntrigue,
+                                    borderRadius: BorderRadius.circular(100.r),
+                                  ),
+                                  child:
+                                      Image.asset(DoctorHuntAssetsPath.camera)),
+                            ],
+                          ),
+                        ),
+                      ]),
+                ),
               ),
             ),
-          ),
-          SizedBox(height: 20.sp),
-          Padding(
-            padding: EdgeInsets.only(left: 20.sp),
-            child: Text(
-              DoctorHuntText.personalInformation,
-              style: TextStyle(
-                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w700,
-                color: blackText,
-              ),
-            ),
-          ),
-          SizedBox(height: 20.sp),
-          Container(
-            child:
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-              Text(
-                "Name",
+            SizedBox(height: 20.sp),
+            Padding(
+              padding: EdgeInsets.only(left: 20.sp),
+              child: Text(
+                DoctorHuntText.personalInformation,
                 style: TextStyle(
                   fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                  fontSize: 10.sp,
-                  fontWeight: FontWeight.w500,
-                  color: greenTeal,
+                  fontSize: 18.sp,
+                  fontWeight: FontWeight.w700,
+                  color: blackText,
                 ),
               ),
-              SizedBox(height: 10.sp),
-              SizedBox(
-                height: 54.sp,
-                width: 320.sp,
-                child: TextField(
-                  keyboardType: TextInputType.name,
-                  decoration: InputDecoration(
-                    focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12.r)),
-                    contentPadding: EdgeInsets.symmetric(
-                        horizontal: 20.sp, vertical: 20.sp),
-                    isCollapsed: true,
-                    hintText: DoctorHuntText.fullName,
-                    hintStyle: TextStyle(
-                      color: royalIntrigue,
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w300,
-                    ),
-                    filled: true,
-                    fillColor: whiteText,
-                    enabledBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12.r),
-                      borderSide: BorderSide(
-                          color: whiteText,
-                          width: 0.5.sp,
-                          style: BorderStyle.solid),
-                    ),
-                  ),
-                ),
-              ),
-            ]),
-          ),
-
-          // Button
-          Center(
-            child: ElevatedButtonWidget(
-              textPath: DoctorHuntText.continue1,
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => const Profile2Screen(),
-                ));
-              },
             ),
-          ),
-        ]),
+            SizedBox(height: 20.sp),
+            Padding(
+              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+              child: Container(
+                height: 60.sp,
+                width: 320.sp,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(
+                      color: royalIntrigue,
+                      width: 0.5.sp,
+                      style: BorderStyle.solid),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Name",
+                          style: TextStyle(
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w500,
+                            color: greenTeal,
+                          ),
+                        ),
+                        SizedBox(height: 5.sp),
+                        TextField(
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            isCollapsed: true,
+                            hintText: DoctorHuntText.fullName,
+                            hintStyle: TextStyle(
+                              color: royalIntrigue,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w300,
+                            ),
+                            // filled: true,
+                            // fillColor: whiteText,
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
+            SizedBox(height: 10.sp),
+            // Button
+            Center(
+              child: ElevatedButtonWidget(
+                textPath: DoctorHuntText.continue1,
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (BuildContext context) => const Profile2Screen(),
+                  ));
+                },
+              ),
+            ),
+          ]),
+        ),
       ),
     );
   }
