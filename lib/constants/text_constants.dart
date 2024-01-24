@@ -136,6 +136,21 @@ class DoctorHuntText {
   static const String noBooking = "You haven’t booked any tests yet";
   static const String checkup = "Get started with your first health checkup";
   static const String bookNow = "Book Now";
+  static const String fullBody =
+      "Get Full body health checkups from the comfort of your home.";
+  static const String discount = "Upto 45% off + get 10% healthcash back";
+  static const String pickup = "Free home Sample pickup";
+  static const String practo = "Practo asociate labs";
+  static const String electronicReport = "E-Reports in 24-72 hours";
+  static const String followUp = "Free follow-up with a doctor";
+  static const String recommend = "Recommend for you";
+  static const String advanced = "Advanced Young Indian Health Checkup";
+  static const String ideal = "Ideal for individuals aged 21-40 years";
+  static const String tests = "69 tests included";
+  static const String dollar = "\$ 358 ";
+  static const String dollar2 = "\$ 330 ";
+  static const String off = "35% off\n";
+  static const String cashback = "+ 10% Health cashback T&C";
 
 // Patient Details Text
   static const String patientDetails = "Patient Details";
