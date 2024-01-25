@@ -30,15 +30,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
         height: 78.sp,
         // width: 375.sp,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30.r),
-            topRight: Radius.circular(30.r),
-          )
-        ),
+            borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(30.r),
+          topRight: Radius.circular(30.r),
+        )),
         child: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
-         selectedItemColor: whiteText,
-           unselectedItemColor:blackText,
+          selectedItemColor: whiteText,
+          unselectedItemColor: blackText,
           currentIndex: _selectedIndex,
           onTap: (index) {
             setState(() {
@@ -46,17 +45,18 @@ class _NavigationScreenState extends State<NavigationScreen> {
             });
           },
           items: [
-            // Home 
+            // Home
             BottomNavigationBarItem(
               backgroundColor: whiteText,
               icon: Container(
                 decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _selectedIndex == 0 ? greenTeal : whiteText,
+                  shape: BoxShape.circle,
+                  color: _selectedIndex == 0 ? greenTeal : whiteText,
                 ),
-                 padding: EdgeInsets.all(12.sp),
+                padding: EdgeInsets.all(12.sp),
                 child: Icon(
-                  Icons.home, color: royalIntrigue,
+                  Icons.home,
+                  color: _selectedIndex == 0 ? whiteText : royalIntrigue,
                 ),
               ),
               label: "",
@@ -66,12 +66,13 @@ class _NavigationScreenState extends State<NavigationScreen> {
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _selectedIndex == 1 ? greenTeal : whiteText,
+                  shape: BoxShape.circle,
+                  color: _selectedIndex == 1 ? greenTeal : whiteText,
                 ),
-                 padding: EdgeInsets.all(12.sp),
+                padding: EdgeInsets.all(12.sp),
                 child: Icon(
-                  Icons.favorite, color: royalIntrigue,
+                  Icons.favorite,
+                  color: _selectedIndex == 1 ? whiteText : royalIntrigue,
                 ),
               ),
               label: "",
@@ -81,12 +82,15 @@ class _NavigationScreenState extends State<NavigationScreen> {
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _selectedIndex == 2 ? greenTeal : whiteText,
+                  shape: BoxShape.circle,
+                  color: _selectedIndex == 2 ? greenTeal : whiteText,
                 ),
-                 padding: EdgeInsets.all(12.sp),
-                child: Image.asset(DoctorHuntAssetsPath.book),
+                padding: EdgeInsets.all(12.sp),
+                child: Image.asset(
+                  DoctorHuntAssetsPath.book,
+                  color: _selectedIndex == 2 ? whiteText : royalIntrigue,
                 ),
+              ),
               label: "",
             ),
 
@@ -94,12 +98,15 @@ class _NavigationScreenState extends State<NavigationScreen> {
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _selectedIndex == 3 ? greenTeal : whiteText,
+                  shape: BoxShape.circle,
+                  color: _selectedIndex == 3 ? greenTeal : whiteText,
                 ),
-                 padding: EdgeInsets.all(12.sp),
-                child: Image.asset(DoctorHuntAssetsPath.chat),
+                padding: EdgeInsets.all(12.sp),
+                child: Image.asset(
+                  DoctorHuntAssetsPath.chat,
+                  color: _selectedIndex == 3 ? whiteText : royalIntrigue,
                 ),
+              ),
               label: "",
             ),
           ],
