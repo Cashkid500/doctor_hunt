@@ -54,16 +54,16 @@ class _Profile2ScreenState extends State<Profile2Screen> {
                   // TextForm Field
                   TextFormField(
                     decoration: InputDecoration(
+                      enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: whiteText)),
                       labelText: DoctorHuntText.fullName,
-                      // focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: whiteText)),
                       labelStyle: TextStyle(
                         fontSize: 22.sp,
                         fontWeight: FontWeight.w700,
                         fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                         color: whiteText,
                       ),
-                    )
-                  )
+                    ),
+                  ),
                 ],
               ),
             ),
