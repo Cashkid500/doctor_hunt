@@ -141,7 +141,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: greenTeal,
                           ),
                         ),
@@ -189,7 +189,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: greenTeal,
                           ),
                         ),
@@ -238,7 +238,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: greenTeal,
                           ),
                         ),
@@ -287,7 +287,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w700,
                             color: greenTeal,
                           ),
                         ),
