@@ -232,11 +232,16 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                     SizedBox(height: 20.sp),
 
                     // First Container
-                    DiagnosticTest2Container(headerTextPath: "Advanced Young Indian Health Checkup", testsPath: "69 tests included", imagePath: "assets/images/diagnostic1.png", dollarPath: "\$ 358 ", dollar2Path: "\$ 330 "),
-                  SizedBox(height: 10.sp),
+                    DiagnosticTest2Container(
+                        headerTextPath: "Advanced Young Indian Health Checkup",
+                        testsPath: "69 tests included",
+                        imagePath: "assets/images/diagnostic1.png",
+                        dollarPath: "\$ 358 ",
+                        dollar2Path: "\$ 330 "),
+                    SizedBox(height: 10.sp),
 
-                  // Second Container
-                  Padding(
+                    // Second Container
+                    Padding(
                       padding: EdgeInsets.only(right: 20.sp),
                       child: Container(
                         height: 427.sp,
@@ -405,13 +410,13 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                         ),
                       ),
                     ),
-                  // DiagnosticTest2Container(
-                  //       headerTextPath: "Working Women’s Health Checkup",
-                  //       testsPath: "119 tests included",
-                  //       imagePath: "assets/images/diagnostic2.png",
-                  //       dollarPath: "\$ 387 ",
-                  //       dollar2Path: "\$ 345 "),
-                    SizedBox(height: 10.sp),
+                    // DiagnosticTest2Container(
+                    //     headerTextPath: "Working Women’s Health Checkup",
+                    //     testsPath: "119 tests included",
+                    //     imagePath: "assets/images/diagnostic2.png",
+                    //     dollarPath: "\$ 387 ",
+                    //     dollar2Path: "\$ 345 "),
+                    // SizedBox(height: 10.sp),
 
                     // Third Container
                     Padding(
@@ -591,8 +596,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                     //       dollar2Path: "\$ 411 "),
 
                     SizedBox(height: 20.sp),
-                  ]
-                ),
+                  ]),
             ),
           ),
         ),
@@ -628,9 +632,7 @@ class DiagnosticTest2Container extends StatelessWidget {
           color: whiteText,
           borderRadius: BorderRadius.circular(6.sp),
           border: Border.all(
-              width: 1.sp,
-              color: whiteText,
-              style: BorderStyle.solid),
+              width: 1.sp, color: whiteText, style: BorderStyle.solid),
         ),
         child: Column(
           children: [
@@ -641,8 +643,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16.sp,
                   fontWeight: FontWeight.w700,
-                  fontFamily:
-                      DoctorHuntAssetsPath.doctorHuntFont,
+                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                   color: blackText,
                 ),
               ),
@@ -657,8 +658,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14.sp,
                       fontWeight: FontWeight.w300,
-                      fontFamily:
-                          DoctorHuntAssetsPath.doctorHuntFont,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                       color: royalIntrigue,
                     ),
                   ),
@@ -683,8 +683,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
-                            fontFamily: DoctorHuntAssetsPath
-                                .doctorHuntFont,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             color: greenTeal),
                       ),
                     ),
@@ -709,8 +708,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath
-                              .doctorHuntFont,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           color: blackText,
                         ),
                       ),
@@ -719,8 +717,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath
-                              .doctorHuntFont,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           color: royalIntrigue,
                         ),
                       ),
@@ -729,8 +726,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
-                          fontFamily: DoctorHuntAssetsPath
-                              .doctorHuntFont,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           color: greenTeal,
                         ),
                       ),
@@ -739,8 +735,7 @@ class DiagnosticTest2Container extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 16.sp,
                           fontWeight: FontWeight.w500,
-                          fontFamily: DoctorHuntAssetsPath
-                              .doctorHuntFont,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           color: royalIntrigue,
                         ),
                       ),
@@ -761,21 +756,17 @@ class DiagnosticTest2Container extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w500,
-                      fontFamily:
-                          DoctorHuntAssetsPath.doctorHuntFont,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                       color: whiteText),
                 ),
                 style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(greenTeal),
-                  shape: MaterialStateProperty.all<
-                      RoundedRectangleBorder>(
+                  backgroundColor: MaterialStateProperty.all(greenTeal),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.sp),
                     ),
                   ),
-                  fixedSize: MaterialStateProperty.all(
-                      Size(112.sp, 34.sp)),
+                  fixedSize: MaterialStateProperty.all(Size(112.sp, 34.sp)),
                 ),
               ),
             ]),
