@@ -116,7 +116,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20.sp),
+            SizedBox(height: 10.sp),
+
+            // First Textfield
             Padding(
               padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
               child: Container(
@@ -156,8 +158,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               fontSize: 16.sp,
                               fontWeight: FontWeight.w300,
                             ),
-                            // filled: true,
-                            // fillColor: whiteText,
                           ),
                         ),
                       ]),
@@ -165,6 +165,152 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
             SizedBox(height: 10.sp),
+
+            // Second Textfield
+            Padding(
+              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+              child: Container(
+                height: 60.sp,
+                width: 320.sp,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(
+                      color: royalIntrigue,
+                      width: 0.5.sp,
+                      style: BorderStyle.solid),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Contact Number",
+                          style: TextStyle(
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w500,
+                            color: greenTeal,
+                          ),
+                        ),
+                        SizedBox(height: 5.sp),
+                        TextField(
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            isCollapsed: true,
+                            hintText: "+8801800000000",
+                            hintStyle: TextStyle(
+                              color: royalIntrigue,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w300,
+                            ),
+                            // suffixIcon: Image.asset("assets/images/edit.png"),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
+            SizedBox(height: 10.sp,),
+
+            // Third Textfield
+            Padding(
+              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+              child: Container(
+                height: 60.sp,
+                width: 320.sp,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(
+                      color: royalIntrigue,
+                      width: 0.5.sp,
+                      style: BorderStyle.solid),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Date of birth",
+                          style: TextStyle(
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w500,
+                            color: greenTeal,
+                          ),
+                        ),
+                        SizedBox(height: 5.sp),
+                        TextField(
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            isCollapsed: true,
+                            hintText: "DD MM YYYY",
+                            hintStyle: TextStyle(
+                              color: royalIntrigue,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w300,
+                            ),
+                            // suffixIcon: Image.asset("assets/images/edit.png"),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
+            SizedBox(height: 10.sp),
+
+            // Fourth Textfield
+            Padding(
+              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+              child: Container(
+                height: 60.sp,
+                width: 320.sp,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12.r),
+                  border: Border.all(
+                      color: royalIntrigue,
+                      width: 0.5.sp,
+                      style: BorderStyle.solid),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Location",
+                          style: TextStyle(
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            fontSize: 10.sp,
+                            fontWeight: FontWeight.w500,
+                            color: greenTeal,
+                          ),
+                        ),
+                        SizedBox(height: 5.sp),
+                        TextField(
+                          keyboardType: TextInputType.name,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            isCollapsed: true,
+                            hintText: "Add Details",
+                            hintStyle: TextStyle(
+                              color: royalIntrigue,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              fontSize: 16.sp,
+                              fontWeight: FontWeight.w300,
+                            ),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ),
+            SizedBox(height: 20.sp),
             // Button
             Center(
               child: ElevatedButtonWidget(
