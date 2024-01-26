@@ -90,4 +90,12 @@ class DoctorHuntAssetsPath {
   // Profile Images
   static const profilePic = "assets/images/ProfileImage.png";
   static const camera = "assets/images/Camera.png";
+
+  // Favourite Doctors Images
+  static const shouey = "assets/images/shouey.png";
+  static const christenfeld = "assets/images/Christenfeld.png";
+  static const dentist = "assets/images/dentist.png";
+  static const strain = "assets/images/strain.png";
+  static const lachinet = "assets/images/lachinet.png";
+  static const star = "assets/images/star.png";
 }
