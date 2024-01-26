@@ -19,22 +19,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
-           height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              const Color.fromARGB(255, 166, 202, 167), // Top
-              whiteText, // Center
-              const Color.fromARGB(255, 166, 202, 167), // Bottom
-            ],
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                const Color.fromARGB(255, 166, 202, 167), // Top
+                whiteText, // Center
+                const Color.fromARGB(255, 166, 202, 167), // Bottom
+              ],
+            ),
           ),
-        ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start, 
-            children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Container(
               height: 357.sp,
               width: 375.sp,
@@ -94,8 +93,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     color: royalIntrigue,
                                     borderRadius: BorderRadius.circular(100.r),
                                   ),
-                                  child:
-                                      Image.asset(DoctorHuntAssetsPath.camera)),
+                                  child: Image.asset(DoctorHuntAssetsPath.camera),
+                                      ),
                             ],
                           ),
                         ),
@@ -137,7 +136,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Name",
+                          DoctorHuntText.name2,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
@@ -185,7 +184,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Contact Number",
+                          DoctorHuntText.contactNumber,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
@@ -199,7 +198,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             isCollapsed: true,
-                            hintText: "+8801800000000",
+                            hintText: DoctorHuntText.internationalNumber,
                             hintStyle: TextStyle(
                               color: royalIntrigue,
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
@@ -213,7 +212,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10.sp,),
+            SizedBox(
+              height: 10.sp,
+            ),
 
             // Third Textfield
             Padding(
@@ -234,7 +235,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Date of birth",
+                          DoctorHuntText.dateOfBirth,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
@@ -248,7 +249,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             isCollapsed: true,
-                            hintText: "DD MM YYYY",
+                            hintText: DoctorHuntText.dateOrder,
                             hintStyle: TextStyle(
                               color: royalIntrigue,
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
@@ -283,7 +284,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Location",
+                          DoctorHuntText.location2,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 10.sp,
@@ -297,7 +298,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           decoration: InputDecoration(
                             border: InputBorder.none,
                             isCollapsed: true,
-                            hintText: "Add Details",
+                            hintText: DoctorHuntText.addDetails,
                             hintStyle: TextStyle(
                               color: royalIntrigue,
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
