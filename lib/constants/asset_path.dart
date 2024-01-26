@@ -104,4 +104,5 @@ class DoctorHuntAssetsPath {
   static const mistry = "assets/images/mistry.png";
   static const ether = "assets/images/ether.png";
   static const johan = "assets/images/johan.png";
+  static const rating = "assets/images/rating.png";
 }
