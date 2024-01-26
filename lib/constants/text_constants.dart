@@ -284,4 +284,12 @@ class DoctorHuntText {
   static const String featureDoctor = "Feature Doctor";
   static const String see = "See all>";
   static const String dollarSymbol = "\$ ";
+
+// Doctors Text
+  static const String doctors = "Doctors";
+  static const String pediatrician = "Dr. Pediatrician";
+  static const String mistry = "Dr. Mistry Brick";
+  static const String ether = "Dr. Ether Wall";
+  static const String johan = "Dr. Johan smith";
+  static const String cardiologistSpecialist = "Specialist Cardiologist";
 }
