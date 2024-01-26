@@ -292,4 +292,6 @@ class DoctorHuntText {
   static const String ether = "Dr. Ether Wall";
   static const String johan = "Dr. Johan smith";
   static const String cardiologistSpecialist = "Specialist Cardiologist";
+  static const String views = "(2821 views)";
+  static const String twoPointEight = "2.8 ";
 }
