@@ -98,4 +98,10 @@ class DoctorHuntAssetsPath {
   static const strain = "assets/images/strain.png";
   static const lachinet = "assets/images/lachinet.png";
   static const star = "assets/images/star.png";
+
+  // Doctors Screen Images
+  static const pediatrician = "assets/images/pediatrician.png";
+  static const mistry = "assets/images/mistry.png";
+  static const ether = "assets/images/ether.png";
+  static const johan = "assets/images/johan.png";
 }
