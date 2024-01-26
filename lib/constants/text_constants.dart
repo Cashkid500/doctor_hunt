@@ -256,4 +256,25 @@ class DoctorHuntText {
       "Update your profile to connect your doctor with better impression.";
   static const String personalInformation = "Personal Information";
   static const String yourName = "What is your name?";
+
+// Favourite Doctors Text
+  static const String favouriteDoctors = "Favourite Doctors";
+  static const String shouey = "Dr. Shouey";
+  static const String christenfeld = "Dr. Christenfeld N";
+  static const String cardiologySpecialist = "Specialist Cardiology";
+  static const String dentistSpecialist = "Specialist Dentist";
+  static const String dentistMedicine = "Specialist Medicine";
+  static const String dentistCancer = "Specialist Cancer";
+  static const String twentyFiveHours = "25.00/ hours";
+  static const String twentyNineHours = "29.00/ hours";
+  static const String twentyTwoHours = "22.00/ hours";
+  static const String lachinet = "Dr. Lachinet";
+  static const String crick = "Dr. Crick";
+  static const String strain = "Dr. Strain";
+  static const String threePointSeven = "3.7";
+  static const String threePointZero = "3.0";
+  static const String twoPointNine = "2.9";
+  static const String featureDoctor = "Feature Doctor";
+  static const String see = "See all>";
+  static const String dollarSymbol = "\$ ";
 }
