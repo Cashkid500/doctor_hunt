@@ -256,6 +256,13 @@ class DoctorHuntText {
       "Update your profile to connect your doctor with better impression.";
   static const String personalInformation = "Personal Information";
   static const String yourName = "What is your name?";
+  static const String name2 = "Name";
+  static const String contactNumber = "Contact Number";
+  static const String internationalNumber = "+8801800000000";
+  static const String dateOfBirth = "Date of birth";
+  static const String dateOrder = "DD MM YYYY";
+  static const String location2 = "Location";
+  static const String addDetails = "Add Details";
 
 // Favourite Doctors Text
   static const String favouriteDoctors = "Favourite Doctors";
