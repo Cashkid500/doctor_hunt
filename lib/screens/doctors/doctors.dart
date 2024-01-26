@@ -50,7 +50,101 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                     SizedBox(height: 30.sp,),
 
                     // Tab Bar View
-
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          // First Tab
+                          Container(
+                            height: 36.sp,
+                            width: 51.sp,
+                            decoration: BoxDecoration(
+                              color: greenTeal,
+                              borderRadius: BorderRadius.circular(6.sp),
+                            ),
+                            child: Center(
+                              child: Text(
+                                DoctorHuntText.all,
+                                style: TextStyle(
+                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w700,
+                                  color: whiteText,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(width: 5.sp),
+                    
+                          // Second Tab
+                          Container(
+                            height: 36.sp,
+                            width: 76.sp,
+                            decoration: BoxDecoration(
+                              color: deathVictorious,
+                              borderRadius: BorderRadius.circular(6.sp),
+                            ),
+                            child: Center(
+                              child: Text(
+                                DoctorHuntText.dentist2,
+                                style: TextStyle(
+                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w300,
+                                  color: greenTeal,
+                                ),
+                              ),
+                            ),
+                          ),
+                    
+                          SizedBox(width: 5.sp),
+                    
+                          // Third Tab
+                          Container(
+                            height: 36.sp,
+                            width: 97.sp,
+                            decoration: BoxDecoration(
+                              color: deathVictorious,
+                              borderRadius: BorderRadius.circular(6.sp),
+                            ),
+                            child: Center(
+                              child: Text(
+                                DoctorHuntText.cardiology2,
+                                style: TextStyle(
+                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w300,
+                                  color: greenTeal,
+                                ),
+                              ),
+                            ),
+                          ),
+                    
+                           SizedBox(width: 5.sp),
+                    
+                          // Fourth Tab
+                          Container(
+                            height: 36.sp,
+                            width: 124.sp,
+                            decoration: BoxDecoration(
+                              color: deathVictorious,
+                              borderRadius: BorderRadius.circular(6.sp),
+                            ),
+                            child: Center(
+                              child: Text(
+                                DoctorHuntText.physioTheraphy,
+                                style: TextStyle(
+                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontSize: 14.sp,
+                                  fontWeight: FontWeight.w300,
+                                  color: greenTeal,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ]
+                      ),
+                    ),
                     SizedBox(height: 20.sp),
                     DoctorsScreenWidget(imagePath: DoctorHuntAssetsPath.pediatrician, namePath: DoctorHuntText.pediatrician, isFavorite: isFavorite = true, specializationPath: DoctorHuntText.cardiologistSpecialist),
 
@@ -98,7 +192,6 @@ class DoctorsScreenWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 104.sp,
-      // width: 335.sp,
       decoration: BoxDecoration(
         color: whiteText,
         borderRadius: BorderRadius.circular(8.sp),
