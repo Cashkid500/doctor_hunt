@@ -15,10 +15,6 @@ class FavouriteDoctorsScreen extends StatefulWidget {
 
 class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
   bool isFavorite = false;
-  bool isFavourite = false;
-  String starTextPath = "3.7";
-  String doctorsNamePath = "Dr. Crick";
-  String hourPath = "25.00/ hours";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +40,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: "Favourite Doctors"),
+                    RowWidget(rowText: DoctorHuntText.favouriteDoctors),
 
                     SizedBox(height: 30.sp),
 
@@ -61,9 +57,9 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       // First Row First Container
                       FirstContainer(
                           isFavorite: isFavorite = false,
-                          imagePath: "assets/images/shouey.png",
-                          namePath: "Dr. Shouey",
-                          specializationPath: "Specialist Cardiology"),
+                          imagePath: DoctorHuntAssetsPath.shouey,
+                          namePath: DoctorHuntText.shouey,
+                          specializationPath: DoctorHuntText.cardiologySpecialist),
 
                       SizedBox(width: 10.sp),
 
@@ -71,9 +67,9 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       Expanded(
                           child: FirstContainer(
                               isFavorite: isFavorite = true,
-                              imagePath: "assets/images/Christenfeld.png",
-                              namePath: "Dr. Christenfeld N",
-                              specializationPath: "Specialist Cancer")),
+                              imagePath: DoctorHuntAssetsPath.christenfeld,
+                              namePath: DoctorHuntText.christenfeld,
+                              specializationPath: DoctorHuntText.dentistCancer)),
                     ]),
                     SizedBox(height: 20.sp),
 
@@ -83,9 +79,9 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       // First Row First Container
                       FirstContainer(
                           isFavorite: isFavorite,
-                          imagePath: "assets/images/shouey.png",
-                          namePath: "Dr. Shouey",
-                          specializationPath: "Specialist Medicine"),
+                          imagePath: DoctorHuntAssetsPath.shouey,
+                          namePath: DoctorHuntText.shouey,
+                          specializationPath: DoctorHuntText.dentistMedicine),
 
                       SizedBox(width: 10.sp),
 
@@ -93,9 +89,9 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       Expanded(
                           child: FirstContainer(
                               isFavorite: isFavorite = false,
-                              imagePath: "assets/images/dentist.png",
-                              namePath: "Dr. Shouey",
-                              specializationPath: "Specialist Dentist")),
+                              imagePath: DoctorHuntAssetsPath.dentist,
+                              namePath: DoctorHuntText.shouey,
+                              specializationPath: DoctorHuntText.dentistSpecialist)),
                     ]),
 
                     SizedBox(height: 40.sp),
@@ -103,7 +99,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Feature Doctor",
+                            DoctorHuntText.featureDoctor,
                             style: TextStyle(
                                 fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                                 fontSize: 18.sp,
@@ -111,7 +107,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                                 color: blackText),
                           ),
                           Text(
-                            "See all>",
+                            DoctorHuntText.see,
                             style: TextStyle(
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                               fontSize: 14.sp,
@@ -129,302 +125,20 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                        LastRowContainer(isFavourite: isFavourite, starTextPath: "3.7", doctorsNamePath: "Dr. Crick", hourPath: "25.00/ hours", doctorImagePath: "assets/images/shouey.png",),
+                        LastRowContainer(isFavorite: isFavorite, starTextPath: DoctorHuntText.threePointSeven, doctorsNamePath: DoctorHuntText.crick, hourPath: DoctorHuntText.twentyFiveHours, doctorImagePath: DoctorHuntAssetsPath.shouey),
 
-                        SizedBox(
-                          width: 5.sp,
-                        ),
+                        SizedBox(width: 5.sp,),
 
                         // Second Container
-                        // Container(
-                        //   height: 135.sp,
-                        //   width: 106.sp,
-                        //   decoration: BoxDecoration(
-                        //     color: whiteText,
-                        //     borderRadius: BorderRadius.circular(6.r),
-                        //     border: Border.all(
-                        //         color: whiteText,
-                        //         width: 1.0.sp,
-                        //         style: BorderStyle.solid),
-                        //   ),
-                        //   child: Padding(
-                        //     padding: EdgeInsets.only(
-                        //         left: 10.sp, right: 10.sp, top: 10.sp),
-                        //     child: Column(
-                        //       children: [
-                        //         Row(children: [
-                        //           Icon(
-                        //             !isFavourite
-                        //                 ? Icons.favorite_border_sharp
-                        //                 : Icons.favorite,
-                        //             color:
-                        //                 !isFavourite ? Colors.grey : Colors.red,
-                        //             size: 20.sp,
-                        //           ),
-                        //           Spacer(),
-                        //           Image.asset("assets/images/star.png"),
-                        //           SizedBox(
-                        //             width: 5.sp,
-                        //           ),
-                        //           Text(
-                        //             "3.0",
-                        //             style: TextStyle(
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 fontSize: 14.sp,
-                        //                 fontWeight: FontWeight.w700,
-                        //                 color: blackText),
-                        //           ),
-                        //         ]),
-                        //         SizedBox(
-                        //           height: 2.sp,
-                        //         ),
-                        //         Container(
-                        //             height: 54.sp,
-                        //             width: 54.sp,
-                        //             child: Image.asset(
-                        //                 "assets/images/strain.png")),
-                        //         SizedBox(
-                        //           height: 10.sp,
-                        //         ),
-                        //         Text(
-                        //           "Dr. Strain",
-                        //           style: TextStyle(
-                        //             fontSize: 12.sp,
-                        //             fontWeight: FontWeight.w700,
-                        //             fontFamily:
-                        //                 DoctorHuntAssetsPath.doctorHuntFont,
-                        //             color: blackText,
-                        //           ),
-                        //         ),
-                        //         SizedBox(
-                        //           height: 5.sp,
-                        //         ),
-                        //         RichText(
-                        //           text: TextSpan(children: [
-                        //             TextSpan(
-                        //               text: "\$ ",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w500,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: greenTeal,
-                        //               ),
-                        //             ),
-                        //             TextSpan(
-                        //               text: "22.00/ hours",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w300,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: royalIntrigue,
-                        //               ),
-                        //             ),
-                        //           ]),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // ),
-                        LastRowContainer(isFavourite: isFavourite = true, starTextPath: "3.0", doctorsNamePath: "Dr. Strain", hourPath: "22.00/ hours", doctorImagePath: "assets/images/strain.png",),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
+                        LastRowContainer(isFavorite: isFavorite = true, starTextPath: DoctorHuntText.threePointZero, doctorsNamePath: DoctorHuntText.strain, hourPath: DoctorHuntText.twentyTwoHours, doctorImagePath: DoctorHuntAssetsPath.strain),
+                        SizedBox(width: 5.sp,),
 
                         // Third Container
-                        // Container(
-                        //   height: 135.sp,
-                        //   width: 106.sp,
-                        //   decoration: BoxDecoration(
-                        //     color: whiteText,
-                        //     borderRadius: BorderRadius.circular(6.r),
-                        //     border: Border.all(
-                        //         color: whiteText,
-                        //         width: 1.0.sp,
-                        //         style: BorderStyle.solid),
-                        //   ),
-                        //   child: Padding(
-                        //     padding: EdgeInsets.only(
-                        //         left: 10.sp, right: 10.sp, top: 10.sp),
-                        //     child: Column(
-                        //       children: [
-                        //         Row(children: [
-                        //           Icon(
-                        //             !isFavourite
-                        //                 ? Icons.favorite_border_sharp
-                        //                 : Icons.favorite,
-                        //             color:
-                        //                 !isFavourite ? Colors.grey : Colors.red,
-                        //             size: 20.sp,
-                        //           ),
-                        //           Spacer(),
-                        //           Image.asset("assets/images/star.png"),
-                        //           SizedBox(
-                        //             width: 5.sp,
-                        //           ),
-                        //           Text(
-                        //             "2.9",
-                        //             style: TextStyle(
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 fontSize: 14.sp,
-                        //                 fontWeight: FontWeight.w700,
-                        //                 color: blackText),
-                        //           ),
-                        //         ]),
-                        //         SizedBox(
-                        //           height: 2.sp,
-                        //         ),
-                        //         Container(
-                        //             height: 54.sp,
-                        //             width: 54.sp,
-                        //             child: Image.asset(
-                        //                 "assets/images/lachinet.png")),
-                        //         SizedBox(
-                        //           height: 10.sp,
-                        //         ),
-                        //         Text(
-                        //           "Dr. Lachinet",
-                        //           style: TextStyle(
-                        //             fontSize: 12.sp,
-                        //             fontWeight: FontWeight.w700,
-                        //             fontFamily:
-                        //                 DoctorHuntAssetsPath.doctorHuntFont,
-                        //             color: blackText,
-                        //           ),
-                        //         ),
-                        //         SizedBox(
-                        //           height: 5.sp,
-                        //         ),
-                        //         RichText(
-                        //           text: TextSpan(children: [
-                        //             TextSpan(
-                        //               text: "\$ ",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w500,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: greenTeal,
-                        //               ),
-                        //             ),
-                        //             TextSpan(
-                        //               text: "29.00/ hours",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w300,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: royalIntrigue,
-                        //               ),
-                        //             ),
-                        //           ]),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // ),
-                        LastRowContainer(isFavourite: isFavourite, starTextPath: "2.9", doctorsNamePath: "Dr. Lachinet", hourPath: "29.00/ hours", doctorImagePath: "assets/images/lachinet.png",),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
+                        LastRowContainer(isFavorite: isFavorite = false, starTextPath: DoctorHuntText.twoPointNine, doctorsNamePath: DoctorHuntText.lachinet, hourPath: DoctorHuntText.twentyNineHours, doctorImagePath: DoctorHuntAssetsPath.lachinet),
+                        SizedBox(width: 5.sp,),
 
                         // Fourth Container
-                        // Container(
-                        //   height: 135.sp,
-                        //   width: 106.sp,
-                        //   decoration: BoxDecoration(
-                        //     color: whiteText,
-                        //     borderRadius: BorderRadius.circular(6.r),
-                        //     border: Border.all(
-                        //         color: whiteText,
-                        //         width: 1.0.sp,
-                        //         style: BorderStyle.solid),
-                        //   ),
-                        //   child: Padding(
-                        //     padding: EdgeInsets.only(
-                        //         left: 10.sp, right: 10.sp, top: 10.sp),
-                        //     child: Column(
-                        //       children: [
-                        //         Row(children: [
-                        //           Icon(
-                        //             !isFavourite
-                        //                 ? Icons.favorite_border_sharp
-                        //                 : Icons.favorite,
-                        //             color:
-                        //                 !isFavourite ? Colors.grey : Colors.red,
-                        //             size: 20.sp,
-                        //           ),
-                        //           Spacer(),
-                        //           Image.asset("assets/images/star.png"),
-                        //           SizedBox(
-                        //             width: 5.sp,
-                        //           ),
-                        //           Text(
-                        //             "3.0",
-                        //             style: TextStyle(
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 fontSize: 14.sp,
-                        //                 fontWeight: FontWeight.w700,
-                        //                 color: blackText),
-                        //           ),
-                        //         ]),
-                        //         SizedBox(
-                        //           height: 2.sp,
-                        //         ),
-                        //         Container(
-                        //             height: 54.sp,
-                        //             width: 54.sp,
-                        //             child: Image.asset(
-                        //                 "assets/images/shouey.png")),
-                        //         SizedBox(
-                        //           height: 10.sp,
-                        //         ),
-                        //         Text(
-                        //           "Dr. Crick",
-                        //           style: TextStyle(
-                        //             fontSize: 12.sp,
-                        //             fontWeight: FontWeight.w700,
-                        //             fontFamily:
-                        //                 DoctorHuntAssetsPath.doctorHuntFont,
-                        //             color: blackText,
-                        //           ),
-                        //         ),
-                        //         SizedBox(
-                        //           height: 5.sp,
-                        //         ),
-                        //         RichText(
-                        //           text: TextSpan(children: [
-                        //             TextSpan(
-                        //               text: "\$ ",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w500,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: greenTeal,
-                        //               ),
-                        //             ),
-                        //             TextSpan(
-                        //               text: "25.00/ hours",
-                        //               style: TextStyle(
-                        //                 fontSize: 11.sp,
-                        //                 fontWeight: FontWeight.w300,
-                        //                 fontFamily:
-                        //                     DoctorHuntAssetsPath.doctorHuntFont,
-                        //                 color: royalIntrigue,
-                        //               ),
-                        //             ),
-                        //           ]),
-                        //         ),
-                        //       ],
-                        //     ),
-                        //   ),
-                        // ),
-                        LastRowContainer(isFavourite: isFavourite, starTextPath: "3.0", doctorsNamePath: "Dr. Crick", hourPath: "25.00/ hours", doctorImagePath: "assets/images/shouey.png",),
+                        LastRowContainer(isFavorite: isFavorite = true, starTextPath: DoctorHuntText.threePointZero, doctorsNamePath: DoctorHuntText.crick, hourPath: DoctorHuntText.twentyFiveHours, doctorImagePath: DoctorHuntAssetsPath.shouey),
                       ]),
                     ),
 
@@ -443,14 +157,14 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
 class LastRowContainer extends StatelessWidget {
   const LastRowContainer({
     super.key,
-    required this.isFavourite,
+    required this.isFavorite,
     required this.starTextPath,
     required this.doctorsNamePath,
     required this.hourPath,
     required this.doctorImagePath,
   });
 
-  final bool isFavourite;
+  final bool isFavorite;
   final String starTextPath;
   final String doctorsNamePath;
   final String hourPath;
@@ -477,15 +191,15 @@ class LastRowContainer extends StatelessWidget {
             Row(
               children: [
               Icon(
-                !isFavourite
+                !isFavorite
                     ? Icons.favorite_border_sharp
                     : Icons.favorite,
                 color:
-                    !isFavourite ? Colors.grey : Colors.red,
+                    !isFavorite ? Colors.grey : Colors.red,
                 size: 20.sp,
               ),
               Spacer(),
-              Image.asset("assets/images/star.png"),
+              Image.asset(DoctorHuntAssetsPath.star),
               SizedBox(
                 width: 5.sp,
               ),
@@ -526,7 +240,7 @@ class LastRowContainer extends StatelessWidget {
             RichText(
               text: TextSpan(children: [
                 TextSpan(
-                  text: "\$ ",
+                  text: DoctorHuntText.dollarSymbol,
                   style: TextStyle(
                     fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
