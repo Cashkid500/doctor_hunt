@@ -294,4 +294,7 @@ class DoctorHuntText {
   static const String cardiologistSpecialist = "Specialist Cardiologist";
   static const String views = "(2821 views)";
   static const String twoPointEight = "2.8 ";
+  static const String cardiology2 = "Cardiology";
+  static const String all = "All";
+  static const String physioTheraphy = "physio Therapy";
 }
