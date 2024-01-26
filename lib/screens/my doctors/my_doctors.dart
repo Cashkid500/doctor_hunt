@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/doctors/doctors.dart';
 import 'package:doctor_hunt/screens/find%20doctors/find_doctors.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:flutter/material.dart';
@@ -78,7 +79,13 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                         percentagePath: DoctorHuntText.fiftyNine,
                         patientPath: DoctorHuntText.eightyTwoPatients,
                         isFavorite: isFavorite = true,
-                        timePath: DoctorHuntText.twelve),
+                        timePath: DoctorHuntText.twelve,
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                DoctorsScreen(),
+                          ));
+                        }),
                     SizedBox(
                       height: 20.sp,
                     ),
@@ -197,7 +204,8 @@ class DoctorWidget extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 20.sp),
-        child: Column(children: [
+        child: Column(
+          children: [
           // First Row
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
