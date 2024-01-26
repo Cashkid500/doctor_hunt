@@ -82,8 +82,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                         timePath: DoctorHuntText.twelve,
                         onPressed: () {
                           Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                DoctorsScreen(),
+                            builder: (BuildContext context) => DoctorsScreen(),
                           ));
                         }),
                     SizedBox(
@@ -204,8 +203,7 @@ class DoctorWidget extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 20.sp),
-        child: Column(
-          children: [
+        child: Column(children: [
           // First Row
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
