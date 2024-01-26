@@ -163,13 +163,15 @@ class DoctorsScreenWidget extends StatelessWidget {
                     color: royalIntrigue),
               ),
               SizedBox(height: 10.sp),
-              Row(children: [
-                Image.asset("assets/images/rating.png"),
+              Row(
+                children: [
+                Image.asset(DoctorHuntAssetsPath.rating),
                 SizedBox(width: 30.sp),
                 RichText(
-                  text: TextSpan(children: [
+                  text: TextSpan(
+                    children: [
                     TextSpan(
-                      text: "2.8 ",
+                      text: DoctorHuntText.twoPointEight,
                       style: TextStyle(
                         fontFamily:
                             DoctorHuntAssetsPath.doctorHuntFont,
@@ -179,7 +181,7 @@ class DoctorsScreenWidget extends StatelessWidget {
                       ),
                     ),
                     TextSpan(
-                      text: "(2821 views)",
+                      text: DoctorHuntText.views,
                       style: TextStyle(
                         fontFamily:
                             DoctorHuntAssetsPath.doctorHuntFont,
