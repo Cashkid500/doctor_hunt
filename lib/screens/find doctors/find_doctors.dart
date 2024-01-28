@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
+import 'package:doctor_hunt/screens/select%20time/select_time.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -53,14 +54,20 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
 
                     // First Container
                     DoctorWidget(
-                        imagePath: DoctorHuntAssetsPath.tranquilli,
-                        namePath: DoctorHuntText.shruti,
-                        specializationPath: DoctorHuntText.toothDentist,
-                        experiencePath: DoctorHuntText.sevenYears,
-                        percentagePath: DoctorHuntText.eightySeven,
-                        patientPath: DoctorHuntText.sixtyNinePatients,
-                        isFavorite: isFavorite = true,
-                        timePath: DoctorHuntText.ten),
+                      imagePath: DoctorHuntAssetsPath.tranquilli,
+                      namePath: DoctorHuntText.shruti,
+                      specializationPath: DoctorHuntText.toothDentist,
+                      experiencePath: DoctorHuntText.sevenYears,
+                      percentagePath: DoctorHuntText.eightySeven,
+                      patientPath: DoctorHuntText.sixtyNinePatients,
+                      isFavorite: isFavorite = true,
+                      timePath: DoctorHuntText.ten,
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const SelectTimeScreen()));
+                      },
+                    ),
                     SizedBox(height: 20.sp),
 
                     // Second Container
