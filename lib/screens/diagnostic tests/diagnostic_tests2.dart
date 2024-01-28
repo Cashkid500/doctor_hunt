@@ -76,7 +76,8 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 30.sp),
 
-                    Row(children: [
+                    Row(
+                      children: [
                       // Light Blue Container
                       Container(
                         height: 55.sp,
@@ -146,8 +147,9 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                     SizedBox(height: 40.sp),
 
                     // Second Row
-                    Row(children: [
-                      // Light Blue Container
+                    Row(
+                      children: [
+                      // Yellow Container
                       Container(
                         height: 55.sp,
                         width: 50.sp,
