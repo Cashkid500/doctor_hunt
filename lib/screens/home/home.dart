@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/favourite%20doctor/favourite_doctors.dart';
+import 'package:doctor_hunt/screens/popular%20doctor/popular_doctor.dart';
 import 'package:doctor_hunt/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      height: 156.sp,
+                      height: 176.sp,
                       width: 375.sp,
                       decoration: BoxDecoration(
                         color: greenTeal,
@@ -40,7 +41,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       child: SafeArea(
                         child: Padding(
-                          padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
+                          padding: EdgeInsets.only(
+                              left: 20.sp, right: 20.sp, top: 20.sp),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -157,185 +159,151 @@ class _HomeScreenState extends State<HomeScreen> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 10.sp),
-                  child: Container(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(left: 10.sp),
+                    // Live Doctor 1
+                    child: Container(
+                      height: 168.sp,
+                      width: 116.sp,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            DoctorHuntAssetsPath.liveDoctor1,
+                          ),
+                          fit: BoxFit.cover,
+                        ),
+                        borderRadius: BorderRadius.circular(6.r),
+                      ),
+                      child: Column(
+                        children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 30.sp, left: 40.sp),
+                          child: Image.asset(
+                            DoctorHuntAssetsPath.live,
+                            height: 12.sp,
+                          ),
+                        ),
+                      ]),
+                    ),
+                  ),
+
+                  // Live Doctor 2
+                  Container(
                     height: 168.sp,
                     width: 116.sp,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          "assets/images/live_doctor1.png", 
+                          DoctorHuntAssetsPath.liveDoctor2,
                         ),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.circular(6.r),
                     ),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 30.sp, left: 40.sp),
-                          child: Image.asset("assets/images/live.png", height: 12.sp,),
+                  ),
+
+                  // Live Doctor 3
+                  Container(
+                    height: 138.sp,
+                    width: 116.sp,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          DoctorHuntAssetsPath.liveDoctor3,
                         ),
-                      ]
+                        fit: BoxFit.cover,
+                      ),
+                      borderRadius: BorderRadius.circular(6.r),
                     ),
-                  ),
-                ),
-                // SizedBox(width: 5.sp),
-                Container(
-                  height: 168.sp,
-                width: 116.sp,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/images/live_doctor2.png",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(6.r),
-                ),
-                ),
-          
-                // SizedBox(width: 5.sp),
-              Container(
-                height: 138.sp,
-                width: 116.sp,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage(
-                      "assets/images/live_doctor3.png",
-                    ),
-                    fit: BoxFit.cover,
-                  ),
-                  borderRadius: BorderRadius.circular(6.r),
-                ),
-                child: Column(children: [
-                  Padding(
-                    padding: EdgeInsets.only(top: 10.sp, left: 70.sp),
-                    child: Image.asset(
-                      "assets/images/live.png",
-                      height: 12.sp,
-                    ),
+                    child: Column(children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.sp, left: 70.sp),
+                        child: Image.asset(
+                          DoctorHuntAssetsPath.live,
+                          height: 12.sp,
+                        ),
+                      ),
+                    ]),
                   ),
                 ]),
-              ),
-              ]
-            ),
           ),
           SizedBox(height: 10.sp),
 
-        // Containers with Images Row
+          // Containers with Images Row
           Padding(
             padding: EdgeInsets.only(left: 15.sp),
-            child: Row(
-              children: [
-                // Light Blue Container
-                Container(
-                  height: 90.sp,
-                width: 80.sp,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      yimnBlue, // Top
-                      venetianNights, // Bottom
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(8.r),
+            child: Row(children: [
+              // Light Blue Container
+              ContainerWidget(
+                imagePath: DoctorHuntAssetsPath.tooth,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    yimnBlue, // Top
+                    venetianNights, // Bottom
+                  ],
                 ),
-                child: Image.asset("assets/images/tooth.png"),
-                ),
-          
-                SizedBox(width: 5.sp),
-          
-                // Green Container
-                Container(
-                height: 90.sp,
-                width: 80.sp,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      greenTeal, // Top
-                      markerGreen, // Bottom
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(8.r),
-                ),
-                child: Image.asset("assets/images/green_image.png"),
               ),
-              
+
               SizedBox(width: 5.sp),
-          
+
+              // Green Container
+              ContainerWidget(
+                imagePath: DoctorHuntAssetsPath.greenImage,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    greenTeal, // Top
+                    markerGreen, // Bottom
+                  ],
+                ),
+              ),
+
+              SizedBox(width: 5.sp),
+
               // Yellow Container
-              Container(
-                height: 90.sp,
-                width: 80.sp,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      mangoTango, // Top
-                      fadedSunlight,  // Bottom
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(8.r),
+              ContainerWidget(
+                imagePath: DoctorHuntAssetsPath.eye,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    mangoTango, // Top
+                    fadedSunlight, // Bottom
+                  ],
                 ),
-                child: Image.asset("assets/images/eye.png"),
               ),
-          
+
               SizedBox(width: 5.sp),
-          
+
               // Red Container
-              Container(
-                height: 90.sp,
-                width: 80.sp,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [
-                      bloodBurst, // Top
-                      livingCoral, // Bottom
-                    ],
-                  ),
-                  borderRadius: BorderRadius.circular(8.r),
+              ContainerWidget(
+                imagePath: DoctorHuntAssetsPath.redImage,
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    bloodBurst, // Top
+                    livingCoral, // Bottom
+                  ],
                 ),
-                child: Image.asset("assets/images/red_image.png"),
               ),
-              ]
-            ),
+            ]),
           ),
 
           // Popular Doctor Row
           SizedBox(height: 30.sp),
-          Padding(
-            padding: EdgeInsets.only(left: 15.sp, right: 15.sp),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-              Text(
-                "Popular Doctor",
-                style: TextStyle(
-                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.w700,
-                    color: blackText),
-              ),
-              Text(
-                DoctorHuntText.see,
-                style: TextStyle(
-                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
-                  color: royalIntrigue,
-                ),
-              ),
-            ]),
+          PopularDoctorWidget(
+            popularDoctorTextPath: DoctorHuntText.popularDoctor,
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                      const PopularDoctorScreen()));
+            },
           ),
           SizedBox(height: 20.sp),
 
@@ -346,110 +314,39 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 15.sp),
-                  child: Container(
-                    height: 264.sp,
-                    width:190.sp,
-                    decoration: BoxDecoration(
-                      border: Border.all(color: whiteText, width: 1.0.sp, style: BorderStyle.solid),
-                      borderRadius: BorderRadius.circular(12.sp),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset("assets/images/fillerup.png"),
-                        SizedBox(height: 20.sp,),
-                        Text(
-                          "Dr. Fillerup Grab",
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w700,
-                            color: blackText
-                          ),
-                        ),
-                        SizedBox(height: 5.sp,),
-                        Text(
-                          "Medicine Specialist",
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 13.sp,
-                            fontWeight: FontWeight.w300,
-                            color: royalIntrigue
-                          ),
-                        ),
-                        SizedBox(height: 5.sp,),
-                        Image.asset(DoctorHuntAssetsPath.rating),
-                      ]
+                  child: FemaleDoctorWidget(
+                    femaleDoctorImagePath: DoctorHuntAssetsPath.fillerup,
+                    femaleDoctorName: DoctorHuntText.fillerup,
+                    femaleDoctorSpecializationPath:
+                        DoctorHuntText.medicineSpecialist,
+                    border: Border.all(
+                      color: whiteText,
+                      width: 1.0.sp,
+                      style: BorderStyle.solid,
                     ),
                   ),
                 ),
                 SizedBox(width: 5.sp),
-          
+
                 // Second Container
-                Container(
-                  height: 264.sp,
-                  width: 190.sp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.sp),
+                FemaleDoctorWidget(
+                    femaleDoctorImagePath: DoctorHuntAssetsPath.blessing,
+                    femaleDoctorName: DoctorHuntText.blessing,
+                    femaleDoctorSpecializationPath:
+                        DoctorHuntText.dentistSpecialist2,
                   ),
-                  child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset("assets/images/blessing.png"),
-                        SizedBox(height: 20.sp,),
-                        Text(
-                          "Dr. Blessing",
-                          style: TextStyle(
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              color: blackText),
-                        ),
-                        SizedBox( height: 5.sp,),
-                        Text(
-                          "Dentist Specialist",
-                          style: TextStyle(
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 13.sp,
-                              fontWeight: FontWeight.w300,
-                              color: royalIntrigue),
-                        ),
-                        SizedBox(height: 5.sp,),
-                        Image.asset(DoctorHuntAssetsPath.rating),
-                      ]),
-                ),
               ],
             ),
           ),
 
           // Feature Doctor Row
           SizedBox(height: 30.sp),
-          Padding(
-            padding: EdgeInsets.only(left: 15.sp, right: 15.sp),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    DoctorHuntText.featureDoctor,
-                    style: TextStyle(
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w700,
-                        color: blackText),
-                  ),
-                  Text(
-                    DoctorHuntText.see,
-                    style: TextStyle(
-                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      fontSize: 14.sp,
-                      fontWeight: FontWeight.w400,
-                      color: royalIntrigue,
-                    ),
-                  ),
-                ]),
-          ),
+          PopularDoctorWidget(
+              popularDoctorTextPath: DoctorHuntText.featureDoctor),
 
-          SizedBox(height: 20.sp,),
+          SizedBox(
+            height: 20.sp,
+          ),
 
           // Last Row Horizontal Scroll View
           SingleChildScrollView(
@@ -463,9 +360,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     doctorsNamePath: DoctorHuntText.crick,
                     hourPath: DoctorHuntText.twentyFiveHours,
                     doctorImagePath: DoctorHuntAssetsPath.shouey),
-            
-                SizedBox(width: 5.sp,),
-            
+
+                SizedBox(
+                  width: 5.sp,
+                ),
+
                 // Second Container
                 LastRowContainer(
                     isFavorite: isFavorite = true,
@@ -473,8 +372,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     doctorsNamePath: DoctorHuntText.strain,
                     hourPath: DoctorHuntText.twentyTwoHours,
                     doctorImagePath: DoctorHuntAssetsPath.strain),
-                SizedBox(width: 5.sp,),
-            
+                SizedBox(
+                  width: 5.sp,
+                ),
+
                 // Third Container
                 LastRowContainer(
                     isFavorite: isFavorite = false,
@@ -482,8 +383,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     doctorsNamePath: DoctorHuntText.lachinet,
                     hourPath: DoctorHuntText.twentyNineHours,
                     doctorImagePath: DoctorHuntAssetsPath.lachinet),
-                SizedBox(width: 5.sp,),
-            
+                SizedBox(
+                  width: 5.sp,
+                ),
+
                 // Fourth Container
                 LastRowContainer(
                     isFavorite: isFavorite = true,
@@ -494,9 +397,131 @@ class _HomeScreenState extends State<HomeScreen> {
               ]),
             ),
           ),
-          SizedBox(height: 20.sp,),
+          SizedBox(
+            height: 20.sp,
+          ),
         ]),
       ),
+    );
+  }
+}
+
+class FemaleDoctorWidget extends StatelessWidget {
+  const FemaleDoctorWidget({
+    super.key,
+    this.border,
+    required this.femaleDoctorImagePath,
+    required this.femaleDoctorName,
+    required this.femaleDoctorSpecializationPath,
+  });
+
+  final String femaleDoctorImagePath;
+  final String femaleDoctorName;
+  final String femaleDoctorSpecializationPath;
+  final BoxBorder? border;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 264.sp,
+      width: 190.sp,
+      decoration: BoxDecoration(
+        border: border,
+        borderRadius: BorderRadius.circular(12.sp),
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
+        Image.asset(femaleDoctorImagePath),
+        SizedBox(
+          height: 20.sp,
+        ),
+        Text(
+          femaleDoctorName,
+          style: TextStyle(
+              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w700,
+              color: blackText),
+        ),
+        SizedBox(
+          height: 5.sp,
+        ),
+        Text(
+          femaleDoctorSpecializationPath,
+          style: TextStyle(
+              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+              fontSize: 13.sp,
+              fontWeight: FontWeight.w300,
+              color: royalIntrigue),
+        ),
+        SizedBox(
+          height: 5.sp,
+        ),
+        Image.asset(DoctorHuntAssetsPath.rating),
+      ]),
+    );
+  }
+}
+
+class ContainerWidget extends StatelessWidget {
+  const ContainerWidget({
+    super.key,
+    required this.imagePath,
+    this.gradient,
+  });
+
+  final String imagePath;
+  final Gradient? gradient;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 90.sp,
+      width: 80.sp,
+      decoration: BoxDecoration(
+        gradient: gradient,
+        borderRadius: BorderRadius.circular(8.r),
+      ),
+      child: Image.asset(imagePath),
+    );
+  }
+}
+
+class PopularDoctorWidget extends StatelessWidget {
+  const PopularDoctorWidget({
+    super.key,
+    this.onTap,
+    required this.popularDoctorTextPath,
+  });
+
+  final String popularDoctorTextPath;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 15.sp, right: 15.sp),
+      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        GestureDetector(
+          onTap: onTap,
+          child: Text(
+            popularDoctorTextPath,
+            style: TextStyle(
+                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                fontSize: 18.sp,
+                fontWeight: FontWeight.w700,
+                color: blackText),
+          ),
+        ),
+        Text(
+          DoctorHuntText.see,
+          style: TextStyle(
+            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+            fontSize: 14.sp,
+            fontWeight: FontWeight.w400,
+            color: royalIntrigue,
+          ),
+        ),
+      ]),
     );
   }
 }
