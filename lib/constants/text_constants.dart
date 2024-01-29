@@ -44,11 +44,14 @@ class DoctorHuntText {
   static const String verification =
       "Enter your email for the verification proccesss, we will send 4 digits code to your email.";
 
-// Dashboard Text
+// Home Screen Text
   static const String hi = "Hi Handwerker!";
   static const String findDoctor = "Find Your Doctor";
   static const String homeSearch = "Search.....";
   static const String liveDoctors = "Live Doctors";
+  static const String fillerup = "Dr. Fillerup Grab";
+  static const String blessing = "Dr. Blessing";
+  static const String dentistSpecialist2 = "Dentist Specialist";
 
 // Live Chat Text
   static const String everhart = "Everhart Tween";
@@ -297,4 +300,17 @@ class DoctorHuntText {
   static const String cardiology2 = "Cardiology";
   static const String all = "All";
   static const String physioTheraphy = "physio Therapy";
+
+// Popular Doctor Text
+  static const String popularDoctor = "Popular Doctor";
+  static const String twoPointFour = "2.4 ";
+  static const String twoPointSeven = "2.7 ";
+  static const String views1 = "(2475 views)";
+  static const String views2 = "(2891 views)";
+  static const String views3 = "(2754 views)";
+  static const String views4 = "(2475 views)";
+  static const String truluck = "Dr. Truluck Nik";
+  static const String medicineSpecialist = "Medicine Specialist";
+  static const String patheologySpecialist = "Patheology Specialist";
+  static const String category = "Category";
 }
