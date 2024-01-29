@@ -105,4 +105,20 @@ class DoctorHuntAssetsPath {
   static const ether = "assets/images/ether.png";
   static const johan = "assets/images/johan.png";
   static const rating = "assets/images/rating.png";
+
+  // Home Screen Images
+  static const tooth = "assets/images/tooth.png";
+  static const eye = "assets/images/eye.png";
+  static const greenImage = "assets/images/green_image.png";
+  static const redImage = "assets/images/red_image.png";
+  static const fillerup = "assets/images/fillerup.png";
+  static const blessing = "assets/images/blessing.png";
+  static const liveDoctor1 = "assets/images/live_doctor1.png";
+  static const live = "assets/images/live.png";
+  static const liveDoctor2 = "assets/images/live_doctor2.png";
+  static const liveDoctor3 = "assets/images/live_doctor3.png";
+
+  // Popular Doctors Images
+  static const truluck = "assets/images/truluck.png";
+  static const tranquilli2 = "assets/images/tranquilli2.png";
 }
