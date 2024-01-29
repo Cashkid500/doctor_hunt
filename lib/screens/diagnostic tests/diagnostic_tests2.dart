@@ -37,7 +37,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
         ),
         child: SafeArea(
           child: Padding(
-            padding: EdgeInsets.only(left: 20.sp),
+            padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
             child: SingleChildScrollView(
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
