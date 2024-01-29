@@ -34,7 +34,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
           ),
           child: SafeArea(
             child: Padding(
-              padding: EdgeInsets.only(left: 20.sp),
+              padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
