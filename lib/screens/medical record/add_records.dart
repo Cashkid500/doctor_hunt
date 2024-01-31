@@ -81,8 +81,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ],
                         ),
                       ),
-                    ]
-                    ),
+                    ]),
 
                     SizedBox(height: 80.sp),
 
@@ -100,7 +99,9 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         ),
                       ],
                     ),
+
                     SizedBox(height: 10.sp),
+
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -114,6 +115,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ),
                           Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
                         ]),
+
                     SizedBox(height: 20.sp),
 
                     // Divider
@@ -135,10 +137,10 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         ),
                       ],
                     ),
+
                     SizedBox(height: 20.sp),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start, children: [
-                      
+
+                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
                       // Report Column
                       Column(
                         children: [
@@ -155,8 +157,9 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ),
                         ],
                       ),
+
                       SizedBox(width: 60.sp),
-                      
+
                       // Prescription Column
                       Column(
                         children: [
@@ -173,8 +176,9 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ),
                         ],
                       ),
+
                       SizedBox(width: 60.sp),
-                      
+
                       // Invoice Column
                       Column(
                         children: [
@@ -191,10 +195,10 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                           ),
                         ],
                       ),
-                    ]
-                    ),
+                    ]),
                     SizedBox(height: 20.sp),
                     Divide(),
+
                     SizedBox(height: 20.sp),
 
                     // Last Column
@@ -212,26 +216,30 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         ),
                       ],
                     ),
+
                     SizedBox(height: 10.sp),
+
                     Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            DoctorHuntText.dateCreated,
-                            style: TextStyle(
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                color: greenTeal),
-                          ),
-                          Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
-                        ]),
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          DoctorHuntText.dateCreated,
+                          style: TextStyle(
+                              fontSize: 18.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                              color: greenTeal),
+                        ),
+                        Icon(Icons.edit, color: royalIntrigue, size: 20.sp),
+                      ],
+                    ),
+                    
                     SizedBox(height: 20.sp),
                     Divide(),
                     SizedBox(height: 20.sp),
 
                     // Button
-                  ElevatedButtonWidget(
+                    ElevatedButtonWidget(
                       textPath: DoctorHuntText.uploadRecord,
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -240,8 +248,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                         ));
                       },
                     ),
-                  ]
-                  ),
+                  ]),
             ),
           ),
         ),
