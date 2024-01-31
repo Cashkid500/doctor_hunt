@@ -121,4 +121,7 @@ class DoctorHuntAssetsPath {
   // Popular Doctors Images
   static const truluck = "assets/images/truluck.png";
   static const tranquilli2 = "assets/images/tranquilli2.png";
+
+  // Doctor Appointment Images
+  static const child = "assets/images/child.png";
 }
