@@ -53,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                 ),
+
                 SizedBox(height: 10.sp),
 
                 // Search Course
@@ -68,6 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     Facebook(),
                   ],
                 ),
+
                 SizedBox(height: 20.sp),
 
                 // Email TextField
@@ -83,17 +85,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                   passwordObscured: passwordObscured,
                 ),
+
                 SizedBox(height: 20.sp),
 
                 // Login Button
-                // LoginButton(),
                 ElevatedButtonWidget(
-                    elevatedButtonPath: DoctorHuntText.login,
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
+                  elevatedButtonPath: DoctorHuntText.login,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
                           builder: (BuildContext context) =>
-                              const NavigationScreen()));
-                    }),
+                              const NavigationScreen()),
+                    );
+                  },
+                ),
+                
                 SizedBox(height: 10.sp),
 
                 // Forgot Password
