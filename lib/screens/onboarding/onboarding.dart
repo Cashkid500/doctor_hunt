@@ -13,7 +13,6 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -35,7 +34,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     SizedBox(height: 60.sp),
 
                     // Onboarding1 Text
-                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding1),
+                    OnboardingText(
+                        onboardingtextpath: DoctorHuntText.onboarding1),
                     SizedBox(height: 10.sp),
 
                     // Dummy Text
@@ -44,12 +44,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     // Get Started Button
                     ElevatedButtonWidget(
-                        elevatedButtonPath: DoctorHuntText.getStarted,
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
+                      elevatedButtonPath: DoctorHuntText.getStarted,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SignupScreen()));
-                        }),
+                                  const SignupScreen()),
+                        );
+                      },
+                    ),
 
                     // Skip Button
                     SkipButton(),
@@ -80,7 +83,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     SizedBox(height: 60.sp),
 
                     // Onboarding2 Text
-                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding2),
+                    OnboardingText(
+                        onboardingtextpath: DoctorHuntText.onboarding2),
                     SizedBox(height: 10.sp),
 
                     // Dummy Text
@@ -89,12 +93,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     // Get Started Button
                     ElevatedButtonWidget(
-                        elevatedButtonPath: DoctorHuntText.getStarted,
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
+                      elevatedButtonPath: DoctorHuntText.getStarted,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SignupScreen()));
-                        }),
+                                  const SignupScreen()),
+                        );
+                      },
+                    ),
 
                     // Skip Button
                     SkipButton(),
@@ -121,7 +128,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     SizedBox(height: 60.sp),
 
                     // Onboarding3 Text
-                    OnboardingText(onboardingtextpath: DoctorHuntText.onboarding3),
+                    OnboardingText(
+                        onboardingtextpath: DoctorHuntText.onboarding3),
                     SizedBox(height: 10.sp),
 
                     // Dummy Text
@@ -130,12 +138,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     // Get Started Button
                     ElevatedButtonWidget(
-                        elevatedButtonPath: DoctorHuntText.getStarted,
-                        onPressed: () {
-                          Navigator.of(context).push(MaterialPageRoute(
+                      elevatedButtonPath: DoctorHuntText.getStarted,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const SignupScreen()));
-                        }),
+                                  const SignupScreen()),
+                        );
+                      },
+                    ),
 
                     // Skip Button
                     SkipButton(),
@@ -161,8 +172,7 @@ class SkipButton extends StatelessWidget {
     return TextButton(
       onPressed: () {
         Navigator.of(context).push(MaterialPageRoute(
-            builder: (BuildContext context) =>
-                const SignupScreen()));
+            builder: (BuildContext context) => const SignupScreen()));
       },
       child: Text(
         DoctorHuntText.skip,
