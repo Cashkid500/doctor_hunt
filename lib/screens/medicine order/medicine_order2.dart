@@ -36,11 +36,11 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
             child: Padding(
               padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 10.sp),
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    Row(
-                      children: [
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  Row(
+                    children: [
                       Container(
                         height: 30.sp,
                         width: 30.sp,
@@ -70,48 +70,56 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
                               color: blackText),
                         ),
                       ),
-                    ]),
+                    ],
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Search Box
-                    SearchField(searchPath: DoctorHuntText.search2),
+                  // Search Box
+                  SearchField(searchPath: DoctorHuntText.search2),
 
-                    SizedBox(
-                      height: 30.sp,
-                    ),
+                  SizedBox(
+                    height: 30.sp,
+                  ),
 
-                    // First Row First Box
-                    Row(children: [
-                      FirstRowFirstBox(),
-                      SizedBox(width: 10.sp),
+                  // First Row First Box
+                  Row(children: [
+                    FirstRowFirstBox(),
+                    SizedBox(width: 10.sp),
 
-                      // First Row Second Box
-                      FirstRowSecondBox(),
-                    ]),
+                    // First Row Second Box
+                    FirstRowSecondBox(),
+                  ]),
 
-                    SizedBox(height: 20.sp),
+                  SizedBox(height: 20.sp),
 
-                    // Second Row First Box
-                    Row(children: [
+                  // Second Row First Box
+                  Row(
+                    children: [
                       SecondRowFirstBox(),
                       SizedBox(width: 10.sp),
+
                       // Second Row Second Box
                       SecondRowSecondBox(),
-                    ]),
-                    SizedBox(
-                      height: 20.sp,
-                    ),
+                    ],
+                  ),
 
-                    // Third Row First Box
-                    Row(children: [
+                  SizedBox(
+                    height: 20.sp,
+                  ),
+
+                  // Third Row First Box
+                  Row(
+                    children: [
                       ThirdRowFirstBox(),
                       SizedBox(width: 10.sp),
 
                       // Third Row Second Box
                       ThirdRowSecondBox(),
-                    ]),
-                  ]),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
