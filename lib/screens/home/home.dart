@@ -139,7 +139,9 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
+
           SizedBox(height: 40.sp),
+
           Padding(
             padding: EdgeInsets.only(left: 20.sp),
             child: Text(
@@ -159,59 +161,18 @@ class _HomeScreenState extends State<HomeScreen> {
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Padding(
-                    padding: EdgeInsets.only(left: 10.sp),
-                    // Live Doctor 1
-                    child: Container(
-                      height: 168.sp,
-                      width: 116.sp,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage(
-                            DoctorHuntAssetsPath.liveDoctor1,
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: BorderRadius.circular(6.r),
-                      ),
-                      child: Column(
-                        children: [
-                        Padding(
-                          padding: EdgeInsets.only(top: 30.sp, left: 40.sp),
-                          child: Image.asset(
-                            DoctorHuntAssetsPath.live,
-                            height: 12.sp,
-                          ),
-                        ),
-                      ]),
-                    ),
-                  ),
-
-                  // Live Doctor 2
-                  Container(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 10.sp),
+                  // Live Doctor 1
+                  child: Container(
                     height: 168.sp,
                     width: 116.sp,
                     decoration: BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(
-                          DoctorHuntAssetsPath.liveDoctor2,
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                      borderRadius: BorderRadius.circular(6.r),
-                    ),
-                  ),
-
-                  // Live Doctor 3
-                  Container(
-                    height: 138.sp,
-                    width: 116.sp,
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(
-                          DoctorHuntAssetsPath.liveDoctor3,
+                          DoctorHuntAssetsPath.liveDoctor1,
                         ),
                         fit: BoxFit.cover,
                       ),
@@ -219,7 +180,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     child: Column(children: [
                       Padding(
-                        padding: EdgeInsets.only(top: 10.sp, left: 70.sp),
+                        padding: EdgeInsets.only(top: 30.sp, left: 40.sp),
                         child: Image.asset(
                           DoctorHuntAssetsPath.live,
                           height: 12.sp,
@@ -227,8 +188,52 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ]),
                   ),
-                ]),
+                ),
+
+                // Live Doctor 2
+                Container(
+                  height: 168.sp,
+                  width: 116.sp,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        DoctorHuntAssetsPath.liveDoctor2,
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.circular(6.r),
+                  ),
+                ),
+
+                // Live Doctor 3
+                Container(
+                  height: 138.sp,
+                  width: 116.sp,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        DoctorHuntAssetsPath.liveDoctor3,
+                      ),
+                      fit: BoxFit.cover,
+                    ),
+                    borderRadius: BorderRadius.circular(6.r),
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: EdgeInsets.only(top: 10.sp, left: 70.sp),
+                        child: Image.asset(
+                          DoctorHuntAssetsPath.live,
+                          height: 12.sp,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
+
           SizedBox(height: 10.sp),
 
           // Containers with Images Row
@@ -300,11 +305,14 @@ class _HomeScreenState extends State<HomeScreen> {
           PopularDoctorWidget(
             popularDoctorTextPath: DoctorHuntText.popularDoctor,
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) =>
-                      const PopularDoctorScreen()));
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const PopularDoctorScreen()),
+              );
             },
           ),
+
           SizedBox(height: 20.sp),
 
           // Two Female Doctors Row
@@ -326,15 +334,16 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                 ),
+
                 SizedBox(width: 5.sp),
 
                 // Second Container
                 FemaleDoctorWidget(
-                    femaleDoctorImagePath: DoctorHuntAssetsPath.blessing,
-                    femaleDoctorName: DoctorHuntText.blessing,
-                    femaleDoctorSpecializationPath:
-                        DoctorHuntText.dentistSpecialist2,
-                  ),
+                  femaleDoctorImagePath: DoctorHuntAssetsPath.blessing,
+                  femaleDoctorName: DoctorHuntText.blessing,
+                  femaleDoctorSpecializationPath:
+                      DoctorHuntText.dentistSpecialist2,
+                ),
               ],
             ),
           ),
@@ -372,6 +381,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     doctorsNamePath: DoctorHuntText.strain,
                     hourPath: DoctorHuntText.twentyTwoHours,
                     doctorImagePath: DoctorHuntAssetsPath.strain),
+
                 SizedBox(
                   width: 5.sp,
                 ),
@@ -383,6 +393,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     doctorsNamePath: DoctorHuntText.lachinet,
                     hourPath: DoctorHuntText.twentyNineHours,
                     doctorImagePath: DoctorHuntAssetsPath.lachinet),
+
                 SizedBox(
                   width: 5.sp,
                 ),
@@ -397,6 +408,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ]),
             ),
           ),
+
           SizedBox(
             height: 20.sp,
           ),
