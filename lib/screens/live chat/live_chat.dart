@@ -48,10 +48,10 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                       ),
 
                     SizedBox(height: 280.sp),
-                    // Spacer(),
 
                     // First Row
-                    Row(children: [
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.tween),
                       SizedBox(width: 5.sp),
                       Column(
@@ -87,7 +87,8 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                     SizedBox(height: 20.sp),
 
                     // Second Row
-                    Row(children: [
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.mash),
                       SizedBox(width: 5.sp),
                       Column(
@@ -127,7 +128,8 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                     SizedBox(height: 20.sp),
 
                     // Third Row
-                    Row(children: [
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.wack),
                       SizedBox(width: 5.sp),
                       Column(
@@ -167,7 +169,8 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                     SizedBox(height: 20.sp),
 
                     // Fourth Row
-                    Row(children: [
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.love),
                       SizedBox(width: 5.sp),
                       Column(
@@ -184,7 +187,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
+
                           SizedBox(height: 5.sp),
+                          
                           Padding(
                             padding: EdgeInsets.only(left: 12.sp),
                             child: Text(
