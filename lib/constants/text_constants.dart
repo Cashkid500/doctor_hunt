@@ -327,12 +327,9 @@ class DoctorHuntText {
   static const String one = "1.";
   static const String two = "2.";
   static const String three = "3.";
-  static const String priority =
-      "Patient care should be the number one priority.";
-  static const String frustrating =
-      "If you run your practice you know how frustrating.";
-  static const String reminderSystem =
-      "That’s why some of appointment reminder system.";
+  static const String priority = "Patient care should be the number one priority.";
+  static const String frustrating = "If you run your practice you know how frustrating.";
+  static const String reminderSystem = "That’s why some of appointment reminder system.";
 
 // Doctor Appointment Texts
   static const String appointment = "Appointment";
