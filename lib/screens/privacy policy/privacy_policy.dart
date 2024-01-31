@@ -35,79 +35,79 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
             child: Padding(
               padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.privacyPolicy),
-                  
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  RowWidget(rowText: DoctorHuntText.privacyPolicy),
 
-                    SizedBox(height: 15.sp),
+                  SizedBox(height: 15.sp),
 
-                    // Text
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          DoctorHuntText.appPolicy,
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: royalIntrigue),
-                        ),
-                      ],
-                    ),
-
-                    SizedBox(height: 20.sp),
-
-                    // Text
-                    SizedBox(
-                      width: 337.sp,
-                      child: Text(
-                        DoctorHuntText.longWords,
+                  // Text
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        DoctorHuntText.appPolicy,
                         style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w700,
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            height: 1.5.sp,
-                            color: skyline),
+                            color: royalIntrigue),
                       ),
-                    ),
+                    ],
+                  ),
 
-                    SizedBox(height: 20.sp),
+                  SizedBox(height: 20.sp),
 
-                    // Text
+                  // Text
                   SizedBox(
                     width: 337.sp,
                     child: Text(
-                      DoctorHuntText.theStandard,
+                      DoctorHuntText.longWords,
                       style: TextStyle(
                           fontSize: 14.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           height: 1.5.sp,
-                          color: skyline,
-                      ),
-                      ),
+                          color: skyline),
+                    ),
                   ),
-                    
-                    SizedBox(height: 20.sp),
-                    
-                    // Text
-                    SizedBox(
-                      width: 337.sp,
-                      child: Text(
-                        DoctorHuntText.established,
-                        style: TextStyle(
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          height: 1.5.sp,
-                          color: skyline,
-                        ),
+
+                  SizedBox(height: 20.sp),
+
+                  // Text
+                  SizedBox(
+                    width: 337.sp,
+                    child: Text(
+                      DoctorHuntText.theStandard,
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        height: 1.5.sp,
+                        color: skyline,
                       ),
-                    )
-                  ]),
+                    ),
+                  ),
+
+                  SizedBox(height: 20.sp),
+
+                  // Text
+                  SizedBox(
+                    width: 337.sp,
+                    child: Text(
+                      DoctorHuntText.established,
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        height: 1.5.sp,
+                        color: skyline,
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
           ),
         ),
