@@ -52,30 +52,30 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                     ),
 
                     // First Row
-                    Row(
-                      children: [
+                    Row(children: [
                       // First Row First Container
                       FirstContainer(
                           isFavorite: isFavorite = false,
                           imagePath: DoctorHuntAssetsPath.shouey,
                           namePath: DoctorHuntText.shouey,
-                          specializationPath: DoctorHuntText.cardiologySpecialist),
+                          specializationPath:
+                              DoctorHuntText.cardiologySpecialist),
 
                       SizedBox(width: 10.sp),
 
                       // First Row Second Container
                       Expanded(
-                          child: FirstContainer(
-                              isFavorite: isFavorite = true,
-                              imagePath: DoctorHuntAssetsPath.christenfeld,
-                              namePath: DoctorHuntText.christenfeld,
-                              specializationPath: DoctorHuntText.dentistCancer)),
+                        child: FirstContainer(
+                            isFavorite: isFavorite = true,
+                            imagePath: DoctorHuntAssetsPath.christenfeld,
+                            namePath: DoctorHuntText.christenfeld,
+                            specializationPath: DoctorHuntText.dentistCancer),
+                      ),
                     ]),
                     SizedBox(height: 20.sp),
 
                     // Second Row
-                    Row(
-                      children: [
+                    Row(children: [
                       // First Row First Container
                       FirstContainer(
                           isFavorite: isFavorite,
@@ -87,11 +87,13 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
 
                       // First Row Second Container
                       Expanded(
-                          child: FirstContainer(
-                              isFavorite: isFavorite = false,
-                              imagePath: DoctorHuntAssetsPath.dentist,
-                              namePath: DoctorHuntText.shouey,
-                              specializationPath: DoctorHuntText.dentistSpecialist)),
+                        child: FirstContainer(
+                            isFavorite: isFavorite = false,
+                            imagePath: DoctorHuntAssetsPath.dentist,
+                            namePath: DoctorHuntText.shouey,
+                            specializationPath:
+                                DoctorHuntText.dentistSpecialist),
+                      ),
                     ]),
 
                     SizedBox(height: 40.sp),
@@ -116,6 +118,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                             ),
                           ),
                         ]),
+
                     SizedBox(
                       height: 30.sp,
                     ),
@@ -123,22 +126,49 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                     // Last Row
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                        LastRowContainer(isFavorite: isFavorite, starTextPath: DoctorHuntText.threePointSeven, doctorsNamePath: DoctorHuntText.crick, hourPath: DoctorHuntText.twentyFiveHours, doctorImagePath: DoctorHuntAssetsPath.shouey),
+                      child: Row(children: [
+                        LastRowContainer(
+                            isFavorite: isFavorite,
+                            starTextPath: DoctorHuntText.threePointSeven,
+                            doctorsNamePath: DoctorHuntText.crick,
+                            hourPath: DoctorHuntText.twentyFiveHours,
+                            doctorImagePath: DoctorHuntAssetsPath.shouey),
 
-                        SizedBox(width: 5.sp,),
+                        SizedBox(
+                          width: 5.sp,
+                        ),
 
                         // Second Container
-                        LastRowContainer(isFavorite: isFavorite = true, starTextPath: DoctorHuntText.threePointZero, doctorsNamePath: DoctorHuntText.strain, hourPath: DoctorHuntText.twentyTwoHours, doctorImagePath: DoctorHuntAssetsPath.strain),
-                        SizedBox(width: 5.sp,),
+                        LastRowContainer(
+                            isFavorite: isFavorite = true,
+                            starTextPath: DoctorHuntText.threePointZero,
+                            doctorsNamePath: DoctorHuntText.strain,
+                            hourPath: DoctorHuntText.twentyTwoHours,
+                            doctorImagePath: DoctorHuntAssetsPath.strain),
+                        
+                        SizedBox(
+                          width: 5.sp,
+                        ),
 
                         // Third Container
-                        LastRowContainer(isFavorite: isFavorite = false, starTextPath: DoctorHuntText.twoPointNine, doctorsNamePath: DoctorHuntText.lachinet, hourPath: DoctorHuntText.twentyNineHours, doctorImagePath: DoctorHuntAssetsPath.lachinet),
-                        SizedBox(width: 5.sp,),
+                        LastRowContainer(
+                            isFavorite: isFavorite = false,
+                            starTextPath: DoctorHuntText.twoPointNine,
+                            doctorsNamePath: DoctorHuntText.lachinet,
+                            hourPath: DoctorHuntText.twentyNineHours,
+                            doctorImagePath: DoctorHuntAssetsPath.lachinet),
+                        
+                        SizedBox(
+                          width: 5.sp,
+                        ),
 
                         // Fourth Container
-                        LastRowContainer(isFavorite: isFavorite = true, starTextPath: DoctorHuntText.threePointZero, doctorsNamePath: DoctorHuntText.crick, hourPath: DoctorHuntText.twentyFiveHours, doctorImagePath: DoctorHuntAssetsPath.shouey),
+                        LastRowContainer(
+                            isFavorite: isFavorite = true,
+                            starTextPath: DoctorHuntText.threePointZero,
+                            doctorsNamePath: DoctorHuntText.crick,
+                            hourPath: DoctorHuntText.twentyFiveHours,
+                            doctorImagePath: DoctorHuntAssetsPath.shouey),
                       ]),
                     ),
 
@@ -179,23 +209,16 @@ class LastRowContainer extends StatelessWidget {
         color: whiteText,
         borderRadius: BorderRadius.circular(6.r),
         border: Border.all(
-            color: whiteText,
-            width: 1.0.sp,
-            style: BorderStyle.solid),
+            color: whiteText, width: 1.0.sp, style: BorderStyle.solid),
       ),
       child: Padding(
-        padding: EdgeInsets.only(
-            left: 10.sp, right: 10.sp, top: 10.sp),
+        padding: EdgeInsets.only(left: 10.sp, right: 10.sp, top: 10.sp),
         child: Column(
           children: [
-            Row(
-              children: [
+            Row(children: [
               Icon(
-                !isFavorite
-                    ? Icons.favorite_border_sharp
-                    : Icons.favorite,
-                color:
-                    !isFavorite ? Colors.grey : Colors.red,
+                !isFavorite ? Icons.favorite_border_sharp : Icons.favorite,
+                color: !isFavorite ? Colors.grey : Colors.red,
                 size: 20.sp,
               ),
               Spacer(),
@@ -206,8 +229,7 @@ class LastRowContainer extends StatelessWidget {
               Text(
                 starTextPath,
                 style: TextStyle(
-                    fontFamily:
-                        DoctorHuntAssetsPath.doctorHuntFont,
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     fontSize: 14.sp,
                     fontWeight: FontWeight.w700,
                     color: blackText),
@@ -219,8 +241,7 @@ class LastRowContainer extends StatelessWidget {
             Container(
                 height: 54.sp,
                 width: 54.sp,
-                child: Image.asset(
-                    doctorImagePath)),
+                child: Image.asset(doctorImagePath)),
             SizedBox(
               height: 10.sp,
             ),
@@ -229,8 +250,7 @@ class LastRowContainer extends StatelessWidget {
               style: TextStyle(
                 fontSize: 12.sp,
                 fontWeight: FontWeight.w700,
-                fontFamily:
-                    DoctorHuntAssetsPath.doctorHuntFont,
+                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                 color: blackText,
               ),
             ),
@@ -244,8 +264,7 @@ class LastRowContainer extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 11.sp,
                     fontWeight: FontWeight.w500,
-                    fontFamily:
-                        DoctorHuntAssetsPath.doctorHuntFont,
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     color: greenTeal,
                   ),
                 ),
@@ -254,8 +273,7 @@ class LastRowContainer extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 11.sp,
                     fontWeight: FontWeight.w300,
-                    fontFamily:
-                        DoctorHuntAssetsPath.doctorHuntFont,
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     color: royalIntrigue,
                   ),
                 ),
