@@ -63,9 +63,11 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                       isFavorite: isFavorite = true,
                       timePath: DoctorHuntText.ten,
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const SelectTimeScreen()));
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SelectTimeScreen()),
+                        );
                       },
                     ),
                     SizedBox(height: 20.sp),
@@ -80,6 +82,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                         patientPath: DoctorHuntText.seventyEightPatients,
                         isFavorite: isFavorite = false,
                         timePath: DoctorHuntText.twelve),
+                    
                     SizedBox(
                       height: 20.sp,
                     ),
@@ -94,6 +97,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                         patientPath: DoctorHuntText.eightySixPatients,
                         isFavorite: isFavorite = true,
                         timePath: DoctorHuntText.eleven),
+                    
                     SizedBox(
                       height: 20.sp,
                     ),
@@ -108,6 +112,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                         patientPath: DoctorHuntText.sixtyNinePatients,
                         isFavorite: isFavorite = false,
                         timePath: DoctorHuntText.ten),
+                    
                     SizedBox(height: 20.sp),
                   ]),
             ),
