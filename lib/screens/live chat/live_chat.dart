@@ -27,7 +27,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
           ),
           child: SafeArea(
             child: Padding(
-              padding: EdgeInsets.only(right: 20.sp, left: 20.sp),
+              padding: EdgeInsets.only(right: 20.sp, left: 20.sp, top: 10.sp),
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
