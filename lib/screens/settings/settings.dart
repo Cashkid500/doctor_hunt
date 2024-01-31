@@ -71,27 +71,32 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     //           const HelpCenterScreen()));
                     // },
                   ),
+
                   SizedBox(height: 20.sp),
 
                   // Notifications
                   AccountSettingsRow(
                       textPath: DoctorHuntText.notifications,
                       imagePath: DoctorHuntAssetsPath.notification),
+
                   SizedBox(height: 20.sp),
 
                   // Statistics
                   AccountSettingsRow(
                       textPath: DoctorHuntText.statistics,
                       imagePath: DoctorHuntAssetsPath.statistics),
+
                   SizedBox(height: 20.sp),
 
                   // About Us
                   AccountSettingsRow(
                       textPath: DoctorHuntText.aboutUs,
                       imagePath: DoctorHuntAssetsPath.about),
+
                   SizedBox(height: 20.sp),
 
                   SizedBox(height: 40.sp),
+
                   // Text
                   Row(
                     children: [
@@ -111,68 +116,74 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // Text Messages
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          DoctorHuntText.text,
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: royalIntrigue,
-                          ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        DoctorHuntText.text,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          color: royalIntrigue,
                         ),
-                        Container(
-                          width: 40.sp,
-                          height: 20.sp,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.r),
-                          ),
-                          child: Switch(
-                            activeTrackColor: greenTeal,
-                            activeColor: whiteText,
-                            value: _switchValue,
-                            onChanged: (value) {
-                              setState(() {
-                                _switchValue = value;
-                              });
-                            },
-                          ),
+                      ),
+                      Container(
+                        width: 40.sp,
+                        height: 20.sp,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.r),
                         ),
-                      ]),
+                        child: Switch(
+                          activeTrackColor: greenTeal,
+                          activeColor: whiteText,
+                          value: _switchValue,
+                          onChanged: (value) {
+                            setState(() {
+                              _switchValue = value;
+                            });
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+
                   SizedBox(height: 20.sp),
 
                   // Phone calls
                   Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          DoctorHuntText.phone,
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: royalIntrigue,
-                          ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        DoctorHuntText.phone,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          color: royalIntrigue,
                         ),
-                        Container(
-                          width: 40.sp,
-                          height: 20.sp,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8.r),
-                          ),
-                          child: Switch(
-                            activeTrackColor: greenTeal,
-                            activeColor: whiteText,
-                            value: _switchValue1,
-                            onChanged: (value) {
-                              setState(() {
+                      ),
+                      Container(
+                        width: 40.sp,
+                        height: 20.sp,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8.r),
+                        ),
+                        child: Switch(
+                          activeTrackColor: greenTeal,
+                          activeColor: whiteText,
+                          value: _switchValue1,
+                          onChanged: (value) {
+                            setState(
+                              () {
                                 _switchValue1 = value;
-                              });
-                            },
-                          ),
+                              },
+                            );
+                          },
                         ),
-                      ]),
+                      ),
+                    ],
+                  ),
+
                   SizedBox(height: 20.sp),
 
                   // Languages
@@ -187,12 +198,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     //   );
                     // },
                   ),
+
                   SizedBox(height: 20.sp),
 
                   // Currency
                   MoreOptionsRow(
                       textPath1: DoctorHuntText.currency,
                       textPath2: DoctorHuntText.usd),
+                      
                   SizedBox(height: 20.sp),
 
                   // Linked Accounts
