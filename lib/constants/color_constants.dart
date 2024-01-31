@@ -20,3 +20,4 @@ Color markerGreen = const Color(0xff07D9AD);
 Color mangoTango = const Color(0xffFE7F44);
 Color fadedSunlight = const Color(0xffFFCF68);
 Color skyan = const Color(0xff61CEFF);
+Color silverback = const Color(0xffCBCBCB);
