@@ -37,6 +37,7 @@ class _Profile2ScreenState extends State<Profile2Screen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ProfileHeader(),
+
                   SizedBox(height: 200.sp),
 
                   // Text
@@ -49,6 +50,7 @@ class _Profile2ScreenState extends State<Profile2Screen> {
                       color: whiteText,
                     ),
                   ),
+                  
                   SizedBox(height: 40.sp),
 
                   // TextForm Field

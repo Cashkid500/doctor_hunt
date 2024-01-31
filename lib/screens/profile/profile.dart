@@ -32,22 +32,23 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
-          child:
-              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Container(
-              height: 357.sp,
-              width: 375.sp,
-              decoration: BoxDecoration(
-                color: greenTeal,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30.r),
-                  bottomRight: Radius.circular(30.r),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                height: 357.sp,
+                width: 375.sp,
+                decoration: BoxDecoration(
+                  color: greenTeal,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(30.r),
+                    bottomRight: Radius.circular(30.r),
+                  ),
                 ),
-              ),
-              child: SafeArea(
-                child: Padding(
-                  padding: EdgeInsets.only(left: 20.sp),
-                  child: Column(
+                child: SafeArea(
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20.sp),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         ProfileHeader(),
@@ -87,52 +88,56 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                     DoctorHuntAssetsPath.profilePic),
                               ),
                               Container(
-                                  height: 36.sp,
-                                  width: 36.sp,
-                                  decoration: BoxDecoration(
-                                    color: royalIntrigue,
-                                    borderRadius: BorderRadius.circular(100.r),
-                                  ),
-                                  child: Image.asset(DoctorHuntAssetsPath.camera),
-                                      ),
+                                height: 36.sp,
+                                width: 36.sp,
+                                decoration: BoxDecoration(
+                                  color: royalIntrigue,
+                                  borderRadius: BorderRadius.circular(100.r),
+                                ),
+                                child: Image.asset(DoctorHuntAssetsPath.camera),
+                              ),
                             ],
                           ),
                         ),
-                      ]),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20.sp),
-            Padding(
-              padding: EdgeInsets.only(left: 20.sp),
-              child: Text(
-                DoctorHuntText.personalInformation,
-                style: TextStyle(
-                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                  fontSize: 18.sp,
-                  fontWeight: FontWeight.w700,
-                  color: blackText,
-                ),
-              ),
-            ),
-            SizedBox(height: 10.sp),
 
-            // First Textfield
-            Padding(
-              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-              child: Container(
-                height: 60.sp,
-                width: 320.sp,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.r),
-                  border: Border.all(
-                      color: royalIntrigue,
-                      width: 0.5.sp,
-                      style: BorderStyle.solid),
+              SizedBox(height: 20.sp),
+
+              Padding(
+                padding: EdgeInsets.only(left: 20.sp),
+                child: Text(
+                  DoctorHuntText.personalInformation,
+                  style: TextStyle(
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    fontSize: 18.sp,
+                    fontWeight: FontWeight.w700,
+                    color: blackText,
+                  ),
                 ),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                  child: Column(
+              ),
+
+              SizedBox(height: 10.sp),
+
+              // First Textfield
+              Padding(
+                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+                child: Container(
+                  height: 60.sp,
+                  width: 320.sp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.r),
+                    border: Border.all(
+                        color: royalIntrigue,
+                        width: 0.5.sp,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -159,28 +164,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                         ),
-                      ]),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 10.sp),
 
-            // Second Textfield
-            Padding(
-              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-              child: Container(
-                height: 60.sp,
-                width: 320.sp,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.r),
-                  border: Border.all(
-                      color: royalIntrigue,
-                      width: 0.5.sp,
-                      style: BorderStyle.solid),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                  child: Column(
+              SizedBox(height: 10.sp),
+
+              // Second Textfield
+              Padding(
+                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+                child: Container(
+                  height: 60.sp,
+                  width: 320.sp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.r),
+                    border: Border.all(
+                        color: royalIntrigue,
+                        width: 0.5.sp,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -208,30 +215,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             // suffixIcon: Image.asset("assets/images/edit.png"),
                           ),
                         ),
-                      ]),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              height: 10.sp,
-            ),
 
-            // Third Textfield
-            Padding(
-              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-              child: Container(
-                height: 60.sp,
-                width: 320.sp,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.r),
-                  border: Border.all(
-                      color: royalIntrigue,
-                      width: 0.5.sp,
-                      style: BorderStyle.solid),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                  child: Column(
+              SizedBox(
+                height: 10.sp,
+              ),
+
+              // Third Textfield
+              Padding(
+                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+                child: Container(
+                  height: 60.sp,
+                  width: 320.sp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.r),
+                    border: Border.all(
+                        color: royalIntrigue,
+                        width: 0.5.sp,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -259,28 +268,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             // suffixIcon: Image.asset("assets/images/edit.png"),
                           ),
                         ),
-                      ]),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 10.sp),
+              SizedBox(height: 10.sp),
 
-            // Fourth Textfield
-            Padding(
-              padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-              child: Container(
-                height: 60.sp,
-                width: 320.sp,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12.r),
-                  border: Border.all(
-                      color: royalIntrigue,
-                      width: 0.5.sp,
-                      style: BorderStyle.solid),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                  child: Column(
+              // Fourth Textfield
+              Padding(
+                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+                child: Container(
+                  height: 60.sp,
+                  width: 320.sp,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.r),
+                    border: Border.all(
+                        color: royalIntrigue,
+                        width: 0.5.sp,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+                    child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
@@ -307,23 +317,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                         ),
-                      ]),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-            ),
-            SizedBox(height: 20.sp),
-            // Button
-            Center(
-              child: ElevatedButtonWidget(
-                textPath: DoctorHuntText.continue1,
-                onPressed: () {
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => const Profile2Screen(),
-                  ));
-                },
+
+              SizedBox(height: 20.sp),
+
+              // Button
+              Center(
+                child: ElevatedButtonWidget(
+                  textPath: DoctorHuntText.continue1,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const Profile2Screen(),
+                      ),
+                    );
+                  },
+                ),
               ),
-            ),
-          ]),
+            ],
+          ),
         ),
       ),
     );
