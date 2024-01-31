@@ -79,20 +79,22 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
                             color: royalIntrigue),
                       ),
                     ),
+
                     SizedBox(height: 40.sp),
 
                     // Button
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.order,
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const LocationScreen(),
-                        ));
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const LocationScreen(),
+                          ),
+                        );
                       },
                     ),
-                  ]
-                ),
+                  ]),
             ),
           ),
         ),
@@ -100,5 +102,3 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
     );
   }
 }
-
-
