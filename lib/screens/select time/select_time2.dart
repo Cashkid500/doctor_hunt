@@ -1,5 +1,6 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
+import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/select%20time/select_time.dart';
 import 'package:flutter/material.dart';
@@ -36,23 +37,24 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
             padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
             child: SingleChildScrollView(
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    RowWidget(rowText: "Select Time"),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  RowWidget(rowText: DoctorHuntText.selectTime),
 
-                    SizedBox(height: 50.sp),
+                  SizedBox(height: 50.sp),
 
-                    // Dr Shruti Kedia
-                    ShrutiKediaContainer(isFavorite: isFavorite = true),
+                  // Dr Shruti Kedia
+                  ShrutiKediaContainer(isFavorite: isFavorite = true),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Scroll View
+                  // Scroll View
 
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
                         // First Row First Container
                         Container(
                           height: 54.sp,
@@ -69,7 +71,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Today, 23 Feb",
+                                DoctorHuntText.today,
                                 style: TextStyle(
                                   color: blackText,
                                   fontSize: 16.sp,
@@ -78,11 +80,13 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                                       DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
+
                               SizedBox(
                                 height: 5.sp,
                               ),
+
                               Text(
-                                "No slots available",
+                                DoctorHuntText.noSlots,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 10.sp,
@@ -96,6 +100,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
 
                         SizedBox(width: 10.sp),
+
                         // First Row Second Container
                         Container(
                           height: 54.sp,
@@ -109,7 +114,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Tomorrow, 24 Feb",
+                                DoctorHuntText.tomorrow,
                                 style: TextStyle(
                                   color: whiteText,
                                   fontSize: 16.sp,
@@ -122,7 +127,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                                 height: 5.sp,
                               ),
                               Text(
-                                "9 slots available",
+                                DoctorHuntText.nineSlots,
                                 style: TextStyle(
                                   color: whiteText,
                                   fontSize: 10.sp,
@@ -136,6 +141,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
 
                         SizedBox(width: 10.sp),
+
                         // First Row Third Container
                         Container(
                           height: 54.sp,
@@ -152,7 +158,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Thu, 25 Feb",
+                                DoctorHuntText.thur,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 16.sp,
@@ -161,11 +167,13 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                                       DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
+
                               SizedBox(
                                 height: 5.sp,
                               ),
+
                               Text(
-                                "10 slots available",
+                                DoctorHuntText.tenSlots,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 10.sp,
@@ -177,126 +185,31 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                             ],
                           ),
                         ),
-                      ]),
+                      ],
                     ),
+                  ),
 
-                    SizedBox(height: 50.sp),
-                    Text(
-                      "Today, 23 Feb",
-                      style: TextStyle(
-                        color: blackText,
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      ),
+                  SizedBox(height: 50.sp),
+
+                  Text(
+                    DoctorHuntText.today,
+                    style: TextStyle(
+                      color: blackText,
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     ),
+                  ),
 
-                    SizedBox(height: 30.sp),
-                    SlotWidget(slotTextPath: "Afternoon 7 slots"),
+                  SizedBox(height: 30.sp),
 
-                    SizedBox(height: 20.sp),
+                  SlotWidget(slotTextPath: DoctorHuntText.afternoon),
 
-                    // Row
-                    Row(
-                        children: [
-                          // First Container
-                          Container(
-                            height: 40.sp,
-                            width: 76.sp,
-                            decoration: BoxDecoration(
-                              color: deathVictorious,
-                              borderRadius: BorderRadius.circular(6.sp),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "1:00 PM",
-                                style: TextStyle(
-                                  color: greenTeal,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ),
-                          ),
+                  SizedBox(height: 20.sp),
 
-                          SizedBox(width: 5.sp),
-                          // Second Container
-                          Container(
-                            height: 40.sp,
-                            width: 76.sp,
-                            decoration: BoxDecoration(
-                              color: deathVictorious,
-                              borderRadius: BorderRadius.circular(6.sp),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "1:30 PM",
-                                style: TextStyle(
-                                  color: greenTeal,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ),
-                          ),
-                          
-                          SizedBox(width: 5.sp),
-                          // Third Container
-                          Container(
-                            height: 40.sp,
-                            width: 76.sp,
-                            decoration: BoxDecoration(
-                              color: greenTeal,
-                              borderRadius: BorderRadius.circular(6.sp),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "2:00 PM",
-                                style: TextStyle(
-                                  color: whiteText,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ),
-                          ),
-
-                          SizedBox(width: 5.sp),
-                          // Fourth Container
-                          Container(
-                            height: 40.sp,
-                            width: 76.sp,
-                            decoration: BoxDecoration(
-                              color: deathVictorious,
-                              borderRadius: BorderRadius.circular(6.sp),
-                            ),
-                            child: Center(
-                              child: Text(
-                                "2:30 PM",
-                                style: TextStyle(
-                                  color: greenTeal,
-                                  fontSize: 14.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ]
-                      ),
-
-                      SizedBox(height: 20.sp),
-
-                      // Row
-                      Row(
-                        children: [
+                  // Row
+                  Row(
+                    children: [
                       // First Container
                       Container(
                         height: 40.sp,
@@ -307,7 +220,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "3:00 PM",
+                            DoctorHuntText.onePM,
                             style: TextStyle(
                               color: greenTeal,
                               fontSize: 14.sp,
@@ -319,6 +232,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                       ),
 
                       SizedBox(width: 5.sp),
+
                       // Second Container
                       Container(
                         height: 40.sp,
@@ -329,7 +243,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "3:30 PM",
+                            DoctorHuntText.oneThirty,
                             style: TextStyle(
                               color: greenTeal,
                               fontSize: 14.sp,
@@ -341,62 +255,8 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                       ),
 
                       SizedBox(width: 5.sp),
+
                       // Third Container
-                      Container(
-                        height: 40.sp,
-                        width: 76.sp,
-                        decoration: BoxDecoration(
-                          color: deathVictorious,
-                          borderRadius: BorderRadius.circular(6.sp),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "4:00 PM",
-                            style: TextStyle(
-                              color: greenTeal,
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ]
-                    ),
-
-                    SizedBox(height: 20.sp),
-
-                    // Evening Slots
-                    SlotWidget(slotTextPath: "Evening 5 slots"),
-
-                    SizedBox(height: 20.sp),
-
-                    // Row
-                    Row(
-                      children: [
-                      // First Container
-                      Container(
-                        height: 40.sp,
-                        width: 76.sp,
-                        decoration: BoxDecoration(
-                          color: deathVictorious,
-                          borderRadius: BorderRadius.circular(6.sp),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "5:00 PM",
-                            style: TextStyle(
-                              color: greenTeal,
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            ),
-                          ),
-                        ),
-                      ),
-
-                      SizedBox(width: 5.sp),
-                      // Second Container
                       Container(
                         height: 40.sp,
                         width: 76.sp,
@@ -406,7 +266,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "5:30 PM",
+                            DoctorHuntText.twoPM,
                             style: TextStyle(
                               color: whiteText,
                               fontSize: 14.sp,
@@ -418,7 +278,8 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                       ),
 
                       SizedBox(width: 5.sp),
-                      // Third Container
+
+                      // Fourth Container
                       Container(
                         height: 40.sp,
                         width: 76.sp,
@@ -428,7 +289,35 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "6:00 PM",
+                            DoctorHuntText.twoThirty,
+                            style: TextStyle(
+                              color: greenTeal,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 20.sp),
+
+                  // Row
+                  Row(
+                    children: [
+                      // First Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: deathVictorious,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.threePM,
                             style: TextStyle(
                               color: greenTeal,
                               fontSize: 14.sp,
@@ -440,7 +329,8 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                       ),
 
                       SizedBox(width: 5.sp),
-                      // Fourth Container
+
+                      // Second Container
                       Container(
                         height: 40.sp,
                         width: 76.sp,
@@ -450,7 +340,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "6:30 PM",
+                            DoctorHuntText.threeThirty,
                             style: TextStyle(
                               color: greenTeal,
                               fontSize: 14.sp,
@@ -460,14 +350,42 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                           ),
                         ),
                       ),
-                    ]),
 
-                    SizedBox(height: 20.sp),
+                      SizedBox(width: 5.sp),
 
-                    // Row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
+                      // Third Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: deathVictorious,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.fourPM,
+                            style: TextStyle(
+                              color: greenTeal,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 20.sp),
+
+                  // Evening Slots
+                  SlotWidget(slotTextPath: DoctorHuntText.evening),
+
+                  SizedBox(height: 20.sp),
+
+                  // Row
+                  Row(
+                    children: [
                       // First Container
                       Container(
                         height: 40.sp,
@@ -478,7 +396,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                         ),
                         child: Center(
                           child: Text(
-                            "7:00 PM",
+                            DoctorHuntText.fivePM,
                             style: TextStyle(
                               color: greenTeal,
                               fontSize: 14.sp,
@@ -488,8 +406,108 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                           ),
                         ),
                       ),
-                    ]),
-                  ]),
+
+                      SizedBox(width: 5.sp),
+
+                      // Second Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: greenTeal,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.fiveThirty,
+                            style: TextStyle(
+                              color: whiteText,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(width: 5.sp),
+
+                      // Third Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: deathVictorious,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.sixPM,
+                            style: TextStyle(
+                              color: greenTeal,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+
+                      SizedBox(width: 5.sp),
+
+                      // Fourth Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: deathVictorious,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.sixThirty,
+                            style: TextStyle(
+                              color: greenTeal,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  SizedBox(height: 20.sp),
+
+                  // Row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      // First Container
+                      Container(
+                        height: 40.sp,
+                        width: 76.sp,
+                        decoration: BoxDecoration(
+                          color: deathVictorious,
+                          borderRadius: BorderRadius.circular(6.sp),
+                        ),
+                        child: Center(
+                          child: Text(
+                            DoctorHuntText.sevenPM,
+                            style: TextStyle(
+                              color: greenTeal,
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
