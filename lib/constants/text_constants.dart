@@ -154,6 +154,15 @@ class DoctorHuntText {
   static const String dollar2 = "\$ 330 ";
   static const String off = "35% off\n";
   static const String cashback = "+ 10% Health cashback T&C";
+  static const String advance = "Advanced Young Indian Health Checkup";
+  static const String workingWomen = "Working Women's Health Checkup";
+  static const String tests2 = "119 tests included";
+  static const String tests3 = "100 tests included";
+  static const String active = "Active Professional Health Checkup";
+  static const String dollar21 = "\$ 387 ";
+  static const String dollar22 = "\$ 345 ";
+  static const String dollar23 = "\$ 457 ";
+  static const String dollar24 = "\$ 411 ";
 
 // Patient Details Texts
   static const String patientDetails = "Patient Details";
@@ -327,9 +336,12 @@ class DoctorHuntText {
   static const String one = "1.";
   static const String two = "2.";
   static const String three = "3.";
-  static const String priority = "Patient care should be the number one priority.";
-  static const String frustrating = "If you run your practice you know how frustrating.";
-  static const String reminderSystem = "That’s why some of appointment reminder system.";
+  static const String priority =
+      "Patient care should be the number one priority.";
+  static const String frustrating =
+      "If you run your practice you know how frustrating.";
+  static const String reminderSystem =
+      "That’s why some of appointment reminder system.";
 
 // Doctor Appointment Texts
   static const String appointment = "Appointment";
@@ -354,4 +366,34 @@ class DoctorHuntText {
   static const String thirtyFiveMins = "35 Mins";
   static const String fortyMins = "40 Mins";
   static const String confirm2 = "Confirm";
+  static const String done = "Done";
+  static const String edit = "Edit your appointment";
+  static const String appointmentBooking =
+      "You booked an appointment with Dr. Pediatrician Purpieson on February 21, at 02:00 PM";
+  static const String successfulAppointment = "Your Appointment Successful";
+  static const String thankYou = "Thank You !";
+
+// Select Time Texts
+  static const String selectTime = "Select Time";
+  static const String today = "Today, 23 Feb";
+  static const String noSlots = "No slots available";
+  static const String tomorrow = "Tomorrow, 24 Feb";
+  static const String nineSlots = "9 slots available";
+  static const String thur = "Thu, 25 Feb";
+  static const String tenSlots = "10 slots available";
+  static const String nextAvailability = "Next availability on wed, 24 Feb";
+  static const String or = "OR";
+  static const String contactClinic = "Contact Clinic";
+  static const String upasana = "Upasana Dental Clinic, salt lake";
+  static const String afternoon = "Afternoon 7 slots";
+  static const String onePM = "1:00 PM";
+  static const String oneThirty = "1:30 PM";
+  static const String twoThirty = "2:30 PM";
+  static const String threeThirty = "3:30 PM";
+  static const String fivePM = "5:00 PM";
+  static const String fiveThirty = "5:30 PM";
+  static const String sixPM = "6:00 PM";
+  static const String sixThirty = "6:30 PM";
+  static const String sevenPM = "7:00 PM";
+  static const String evening = "Evening 5 slots";
 }
