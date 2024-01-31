@@ -42,53 +42,57 @@ class _MenuScreenState extends State<MenuScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    CircleAvatar(
-                      radius: 25.r,
-                      backgroundImage: AssetImage(
-                        DoctorHuntAssetsPath.menu,
-                      ),
-                    ),
-                    SizedBox(width: 10.sp),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          DoctorHuntText.fullName,
-                          style: TextStyle(
-                            fontSize: 16.sp,
-                            color: whiteText,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontWeight: FontWeight.w700,
-                          ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      CircleAvatar(
+                        radius: 25.r,
+                        backgroundImage: AssetImage(
+                          DoctorHuntAssetsPath.menu,
                         ),
-                        SizedBox(height: 10.sp),
-                        Row(children: [
-                          Icon(Icons.phone, color: whiteText, size: 12.sp),
-                          SizedBox(width: 3.sp),
+                      ),
+                      SizedBox(width: 10.sp),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
                           Text(
-                            DoctorHuntText.phoneNumber,
+                            DoctorHuntText.fullName,
                             style: TextStyle(
-                              fontSize: 12.sp,
+                              fontSize: 16.sp,
                               color: whiteText,
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
-                        ]),
-                      ],
-                    ),
-                    Spacer(),
-                    Container(
-                      height: 30.sp,
-                      width: 30.sp,
-                      decoration: BoxDecoration(
-                        color: redText,
-                        borderRadius: BorderRadius.circular(10.sp),
+                          SizedBox(height: 10.sp),
+                          Row(children: [
+                            Icon(Icons.phone, color: whiteText, size: 12.sp),
+                            SizedBox(width: 3.sp),
+                            Text(
+                              DoctorHuntText.phoneNumber,
+                              style: TextStyle(
+                                fontSize: 12.sp,
+                                color: whiteText,
+                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                          ]),
+                        ],
                       ),
-                      child: Icon(Icons.close, color: whiteText, size: 20.sp),
-                    ),
-                  ]),
+                      Spacer(),
+                      Container(
+                        height: 30.sp,
+                        width: 30.sp,
+                        decoration: BoxDecoration(
+                          color: redText,
+                          borderRadius: BorderRadius.circular(10.sp),
+                        ),
+                        child: Icon(Icons.close, color: whiteText, size: 20.sp),
+                      ),
+                    ],
+                  ),
+
                   SizedBox(height: 70.sp),
 
                   // Row
@@ -99,7 +103,6 @@ class _MenuScreenState extends State<MenuScreen> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          // width: MediaQuery.of(context).size.width * 0.55,
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -108,12 +111,15 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.person,
                                 menuTextPath: DoctorHuntText.myDoctor,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const MyDoctorsScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const MyDoctorsScreen(),
+                                    ),
+                                  );
                                 },
                               ),
+
                               SizedBox(height: 30.sp),
 
                               // Medical Records
@@ -121,18 +127,22 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.record,
                                 menuTextPath: DoctorHuntText.medicalRecord,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const MedicalRecordScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const MedicalRecordScreen(),
+                                    ),
+                                  );
                                 },
                               ),
+
                               SizedBox(height: 30.sp),
 
                               // Payments
                               MenuRowWidget(
                                   menuAssetPath: DoctorHuntAssetsPath.payments,
                                   menuTextPath: DoctorHuntText.payment),
+
                               SizedBox(height: 30.sp),
 
                               // Medicine Orders
@@ -140,10 +150,12 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.order,
                                 menuTextPath: DoctorHuntText.medicineOrder,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const MedicineOrderScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const MedicineOrderScreen(),
+                                    ),
+                                  );
                                 },
                               ),
 
@@ -153,6 +165,7 @@ class _MenuScreenState extends State<MenuScreen> {
                               MenuRowWidget(
                                   menuAssetPath: DoctorHuntAssetsPath.bookings,
                                   menuTextPath: DoctorHuntText.testBookings),
+
                               SizedBox(height: 30.sp),
 
                               // Privacy & Policy
@@ -160,12 +173,15 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.privacy,
                                 menuTextPath: DoctorHuntText.privacyPolicy2,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const PrivacyPolicyScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const PrivacyPolicyScreen(),
+                                    ),
+                                  );
                                 },
                               ),
+
                               SizedBox(height: 30.sp),
 
                               // Help Center
@@ -173,12 +189,15 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.help,
                                 menuTextPath: DoctorHuntText.helpCenter2,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const HelpCenterScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const HelpCenterScreen(),
+                                    ),
+                                  );
                                 },
                               ),
+
                               SizedBox(height: 30.sp),
 
                               // Settings
@@ -186,10 +205,12 @@ class _MenuScreenState extends State<MenuScreen> {
                                 menuAssetPath: DoctorHuntAssetsPath.settings,
                                 menuTextPath: DoctorHuntText.settings,
                                 onTap: () {
-                                  Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (BuildContext context) =>
-                                        const SettingsScreen(),
-                                  ));
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          const SettingsScreen(),
+                                    ),
+                                  );
                                 },
                               ),
                             ],
@@ -207,28 +228,31 @@ class _MenuScreenState extends State<MenuScreen> {
                       ],
                     ),
                   ),
+
                   SizedBox(height: 30.sp),
 
                   // Logout
-                  Row(children: [
-                    Image.asset(DoctorHuntAssetsPath.logout),
-                    SizedBox(width: 20.sp),
-                    GestureDetector(
-                      onTap: () {
-                        // Navigator.of(context).pop();
-                        _showOrderDialog(context);
-                      },
-                      child: Text(
-                        DoctorHuntText.logout,
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          color: whiteText,
+                  Row(
+                    children: [
+                      Image.asset(DoctorHuntAssetsPath.logout),
+                      SizedBox(width: 20.sp),
+                      GestureDetector(
+                        onTap: () {
+                          // Navigator.of(context).pop();
+                          _showOrderDialog(context);
+                        },
+                        child: Text(
+                          DoctorHuntText.logout,
+                          style: TextStyle(
+                            fontSize: 20.sp,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: whiteText,
+                          ),
                         ),
                       ),
-                    ),
-                  ]),
+                    ],
+                  ),
                 ],
               ),
             ),
