@@ -80,6 +80,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
                             color: royalIntrigue),
                       ),
                     ),
+                    
                     SizedBox(height: 30.sp),
 
                     // Button
