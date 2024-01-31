@@ -54,9 +54,9 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                       child: Container(
                         width: 330.sp,
                         decoration: BoxDecoration(
-                            color: whiteText,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(20.r))),
+                          color: whiteText,
+                          borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                        ),
                         child: Column(
                           children: [
                             TableCalendar(
