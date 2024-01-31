@@ -37,7 +37,7 @@ class _SignupScreenState extends State<SignupScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 100.sp),
-        
+
                 // Join us to start searching
                 Center(
                   child: Text(
@@ -50,31 +50,37 @@ class _SignupScreenState extends State<SignupScreen> {
                     ),
                   ),
                 ),
+
                 SizedBox(height: 10.sp),
-                
+
                 // Search Course
                 SearchCourseText(),
+
                 SizedBox(height: 60.sp),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     // Google
                     Google(),
-        
+
                     // Facebook
                     Facebook(),
                   ],
                 ),
+
                 SizedBox(height: 20.sp),
-        
+
                 // Name TextField
                 TextFieldWidget(hintTextPath: DoctorHuntText.name),
+
                 SizedBox(height: 20.sp),
-        
+
                 // Email TextField
                 TextFieldWidget(hintTextPath: DoctorHuntText.email),
+
                 SizedBox(height: 20.sp),
-        
+
                 // PasswordField
                 PasswordField(
                   updateObscured: () {
@@ -84,46 +90,55 @@ class _SignupScreenState extends State<SignupScreen> {
                   },
                   passwordObscured: passwordObscured,
                 ),
+
                 SizedBox(height: 10.sp),
-        
+
                 // Row
-                Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-                  // Circular Box
-                  Container(
-                    height: 16.sp,
-                    width: 16.sp,
-                    decoration: BoxDecoration(
-                      color: royalIntrigue,
-                      borderRadius: BorderRadius.circular(10.r),
-                    ),
-                  ),
-        
-                  // I agree with the Terms of Service & Privacy Policy
-                  Padding(
-                    padding: EdgeInsets.only(right: 23.sp),
-                    child: Text(
-                      DoctorHuntText.agree,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                        fontWeight: FontWeight.w400,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Circular Box
+                    Container(
+                      height: 16.sp,
+                      width: 16.sp,
+                      decoration: BoxDecoration(
                         color: royalIntrigue,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        borderRadius: BorderRadius.circular(10.r),
                       ),
                     ),
-                  ),
-                ]),
+
+                    // I agree with the Terms of Service & Privacy Policy
+                    Padding(
+                      padding: EdgeInsets.only(right: 23.sp),
+                      child: Text(
+                        DoctorHuntText.agree,
+                        style: TextStyle(
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w400,
+                          color: royalIntrigue,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+
                 SizedBox(height: 60.sp),
-        
+
                 // Sign Up Button
-                ElevatedButtonWidget(elevatedButtonPath: DoctorHuntText.signup,
-                onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const LoginScreen()));
+                ElevatedButtonWidget(
+                  elevatedButtonPath: DoctorHuntText.signup,
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const LoginScreen()),
+                    );
                   },
                 ),
+
                 SizedBox(height: 10.sp),
-        
+
                 // Have an account? Log In
                 TextButtonWidget(
                     textButtonPath: DoctorHuntText.accountConfirmation),
