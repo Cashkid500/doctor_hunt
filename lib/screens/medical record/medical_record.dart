@@ -36,71 +36,82 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
             child: Padding(
               padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.medicalRecord,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  RowWidget(
+                    rowText: DoctorHuntText.medicalRecord,
                     onTap: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            const NavigationScreen(),
-                      ));
-                    },),
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const NavigationScreen(),
+                        ),
+                      );
+                    },
+                  ),
 
-                    SizedBox(height: 80.sp),
+                  SizedBox(height: 80.sp),
 
-                    // Circular Box
-                    Container(
-                      height: 214.sp,
-                      width: 214.sp,
-                      decoration: BoxDecoration(
-                        color: deathVictorious,
-                        borderRadius: BorderRadius.circular(100.r),
-                      ),
-                      child: Image.asset(DoctorHuntAssetsPath.writingMaterials),
+                  // Circular Box
+                  Container(
+                    height: 214.sp,
+                    width: 214.sp,
+                    decoration: BoxDecoration(
+                      color: deathVictorious,
+                      borderRadius: BorderRadius.circular(100.r),
                     ),
+                    child: Image.asset(DoctorHuntAssetsPath.writingMaterials),
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Text
-                    GestureDetector(
-                      onTap: () {
-                         _showBottomSheet(context);
-                      },
-                      child: Text(
-                        DoctorHuntText.addMedicalRecord,
-                        style: TextStyle(
-                            fontSize: 22.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: blackText),
-                      ),
+                  // Text
+                  GestureDetector(
+                    onTap: () {
+                      _showBottomSheet(context);
+                    },
+                    child: Text(
+                      DoctorHuntText.addMedicalRecord,
+                      style: TextStyle(
+                          fontSize: 22.sp,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          color: blackText),
                     ),
+                  ),
 
-                    SizedBox(height: 20.sp),
+                  SizedBox(height: 20.sp),
 
-                    // Text
-                    SizedBox(
-                      width: 330.sp,
-                      child: Text(
-                        DoctorHuntText.healthHistory,
-                        style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            color: royalIntrigue),
-                      ),
+                  // Text
+                  SizedBox(
+                    width: 330.sp,
+                    child: Text(
+                      DoctorHuntText.healthHistory,
+                      style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          color: royalIntrigue),
                     ),
-                    SizedBox(height: 30.sp),
+                  ),
 
-                    // Button
-                    ElevatedButtonWidget(textPath: DoctorHuntText.addRecord, onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => const AddRecordScreen(),
-                    ));
-                    },),
-                  ]
-                ),
+                  SizedBox(height: 30.sp),
+
+                  // Button
+                  ElevatedButtonWidget(
+                    textPath: DoctorHuntText.addRecord,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const AddRecordScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -121,34 +132,30 @@ class RowWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-        children: [
-        Container(
-            height: 30.sp,
-            width: 30.sp,
-            decoration: BoxDecoration(
-                color: whiteText,
-                borderRadius: BorderRadius.circular(10.r)),
-            child: GestureDetector(
-              onTap: onTap,
-              child: Icon(Icons.keyboard_arrow_left,
-                  color: royalIntrigue),
-            ),
-          ),
+    return Row(children: [
+      Container(
+        height: 30.sp,
+        width: 30.sp,
+        decoration: BoxDecoration(
+            color: whiteText, borderRadius: BorderRadius.circular(10.r)),
+        child: GestureDetector(
+          onTap: onTap,
+          child: Icon(Icons.keyboard_arrow_left, color: royalIntrigue),
+        ),
+      ),
 
-          SizedBox(width: 20.sp),
+      SizedBox(width: 20.sp),
 
-          // Text
-          Text(
-            rowText,
-            style: TextStyle(
-                fontSize: 19.sp,
-                fontWeight: FontWeight.w600,
-                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                color: carbon),
-          ),
-        ]
-      );
+      // Text
+      Text(
+        rowText,
+        style: TextStyle(
+            fontSize: 19.sp,
+            fontWeight: FontWeight.w600,
+            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+            color: carbon),
+      ),
+    ]);
   }
 }
 
@@ -175,14 +182,12 @@ class ElevatedButtonWidget extends StatelessWidget {
       ),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape:
-            MaterialStateProperty.all<RoundedRectangleBorder>(
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.sp),
           ),
         ),
-        fixedSize:
-            MaterialStateProperty.all(Size(270.sp, 54.sp)),
+        fixedSize: MaterialStateProperty.all(Size(270.sp, 54.sp)),
       ),
     );
   }
@@ -244,7 +249,10 @@ void _showBottomSheet(BuildContext context) {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Icon(Icons.camera_alt_outlined, color: royalIntrigue,),
+                      Icon(
+                        Icons.camera_alt_outlined,
+                        color: royalIntrigue,
+                      ),
                       SizedBox(width: 10.sp),
                       Text(
                         DoctorHuntText.photo,
@@ -257,7 +265,7 @@ void _showBottomSheet(BuildContext context) {
                       ),
                     ],
                   ),
-                  
+
                   SizedBox(height: 10.sp),
 
                   // Upload from gallery
@@ -303,7 +311,6 @@ void _showBottomSheet(BuildContext context) {
                       ),
                     ],
                   ),
-                  
                 ],
               ),
               onTap: () {
