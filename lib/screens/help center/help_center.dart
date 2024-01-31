@@ -72,7 +72,10 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                           fillColor: whiteText,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(12.r),
-                            borderSide: BorderSide(color: whiteText, width: 0.5.sp, style: BorderStyle.solid),
+                            borderSide: BorderSide(
+                                color: whiteText,
+                                width: 0.5.sp,
+                                style: BorderStyle.solid),
                           ),
                         ),
                       ),
@@ -83,38 +86,49 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                     ),
 
                     // First Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.booking,
-                    onTap: () {
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.booking,
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const MenuScreen(),
+                          builder: (BuildContext context) => const MenuScreen(),
                         ));
-                      },),
+                      },
+                    ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Second Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.existing,
-                    onTap: () {
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.existing,
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const SettingsScreen(),
                         ));
-                      },),
+                      },
+                    ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Third Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.online,
-                    onTap: () {
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.online,
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const PrivacyPolicyScreen(),
                         ));
-                      },),
+                      },
+                    ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Fourth Row
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.feedbacks,
@@ -125,9 +139,11 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         ));
                       },
                     ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Fifth Row
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.medOrders,
@@ -138,9 +154,11 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         ));
                       },
                     ),
+                    
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Sixth Row
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.diagnosticTests,
@@ -151,33 +169,43 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                         ));
                       },
                     ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Seventh Row
-                    ExtractedRowWidget(textPath: DoctorHuntText.healthPlans,
-                    onTap: () {
+                    ExtractedRowWidget(
+                      textPath: DoctorHuntText.healthPlans,
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const DoctorDetailsScreen(),
                         ));
                       },
                     ),
+                    
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Eight Row
                     ExtractedRowWidget(textPath: DoctorHuntText.myAccount),
+                    
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Nineth Row
                     ExtractedRowWidget(textPath: DoctorHuntText.feature),
+
                     SizedBox(
                       height: 30.sp,
                     ),
+
                     // Tenth Row
                     ExtractedRowWidget(textPath: DoctorHuntText.otherIssues),
+
                     SizedBox(
                       height: 30.sp,
                     ),
