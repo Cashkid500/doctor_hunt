@@ -55,6 +55,8 @@ class DoctorHuntAssetsPath {
   // Diagnostic Test Images
   static const diagnostic = "assets/images/Diagnostic.png";
   static const diagnostic1 = "assets/images/diagnostic1.png";
+  static const diagnostic2 = "assets/images/diagnostic2.png";
+  static const diagnostic3 = "assets/images/diagnostic3.png";
   static const followUp = "assets/images/follow_up.png";
   static const report2 = "assets/images/Report2.png";
   static const agent = "assets/images/agent.png";
@@ -124,4 +126,5 @@ class DoctorHuntAssetsPath {
 
   // Doctor Appointment Images
   static const child = "assets/images/child.png";
+  static const like = "assets/images/like.png";
 }
