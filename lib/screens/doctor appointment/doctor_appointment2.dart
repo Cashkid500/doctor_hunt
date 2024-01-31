@@ -17,6 +17,8 @@ class DoctorAppointment2Screen extends StatefulWidget {
 
 class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
   bool isFavorite = false;
+  int currentTab = 0;
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +49,7 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                       child: RowWidget(rowText: DoctorHuntText.appointment),
                     ),
 
-                    SizedBox(height: 30.sp),
+                    SizedBox(height: 20.sp),
 
                     // Calender
                     Center(
@@ -121,285 +123,114 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
 
                           // Available Time Row
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                // First Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.tenAM,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
+                                // Tab Bar
+                                ...List.generate(
+                                  5, (index) => Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                GestureDetector(
+                                   onTap: () {
+                                    setState(() {
+                                      currentTab = index;
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 60.sp,
+                                    width: 60.sp,
+                                    decoration: BoxDecoration(
+                                      color: currentTab == index
+                                          ? greenTeal
+                                          : deathVictorious,
+                                      borderRadius: BorderRadius.circular(40.sp),
+                                    ),
+                                    child: Center(
+                                      child: SizedBox(
+                                        width: 35.sp,
+                                        child: Text(
+                                          index == 0 ? DoctorHuntText.tenAM : (index == 1) ? DoctorHuntText.twelveAM : (index == 2) ? DoctorHuntText.twoPM : (index == 3) ? DoctorHuntText.threePM : DoctorHuntText.fourPM,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: DoctorHuntAssetsPath
+                                                .doctorHuntFont,
+                                            fontSize: 13.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: currentTab == index ? whiteText : greenTeal,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-
-                                // Second Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.twelveAM,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                 if (index != 4) SizedBox(width: 10.sp),
+                                 ],
                                 ),
-
-                                // Third Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: greenTeal,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.twoPM,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: whiteText,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
                                 ),
-
-                                // Fourth Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.threePM,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-
-                                // Fifth Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.fourPM,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ]),
+                              ],
+                              ),
 
                           SizedBox(height: 30.sp),
+                         
                           // Text
                           TextRow(rowTextPath: DoctorHuntText.reminder),
                           SizedBox(height: 20.sp),
 
                           // Reminder Me Before Row
                           Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                // First Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.thirtyMins,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
+                                // Tab Bar
+                                ...List.generate(
+                                  5, (index) => Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                children: [
+                                GestureDetector(
+                                   onTap: () {
+                                    setState(() {
+                                      currentIndex = index;
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 60.sp,
+                                    width: 60.sp,
+                                    decoration: BoxDecoration(
+                                      color: currentIndex == index
+                                          ? greenTeal
+                                          : deathVictorious,
+                                      borderRadius: BorderRadius.circular(40.sp),
+                                    ),
+                                    child: Center(
+                                      child: SizedBox(
+                                        width: 35.sp,
+                                        child: Text(
+                                          index == 0 ? DoctorHuntText.thirtyMins : (index == 1) ? DoctorHuntText.fortyMins : (index == 2) ? DoctorHuntText.twentyFiveMins : (index == 3) ? DoctorHuntText.tenMins : DoctorHuntText.thirtyFiveMins,
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: DoctorHuntAssetsPath
+                                                .doctorHuntFont,
+                                            fontSize: 13.sp,
+                                            fontWeight: FontWeight.w400,
+                                            color: currentIndex == index ? whiteText : greenTeal,
+                                          ),
                                         ),
                                       ),
                                     ),
                                   ),
                                 ),
-
-                                // Second Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.fortyMins,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                 if (index != 4) SizedBox(width: 10.sp),
+                                 ],
                                 ),
-
-                                // Third Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: greenTeal,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.twentyFiveMins,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: whiteText,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
                                 ),
-
-                                // Fourth Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.tenMins,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-
-                                // Fifth Container
-                                Container(
-                                  height: 60.sp,
-                                  width: 60.sp,
-                                  decoration: BoxDecoration(
-                                    color: deathVictorious,
-                                    borderRadius: BorderRadius.circular(40.sp),
-                                  ),
-                                  child: Center(
-                                    child: SizedBox(
-                                      width: 35.sp,
-                                      child: Text(
-                                        DoctorHuntText.thirtyFiveMins,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w400,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ]),
+                              ],
+                            ),
                           SizedBox(
                             height: 30.sp,
                           ),
 
                           // Confirm
                           ElevatedButtonWidget(
-                              onPressed: () {},
+                              onPressed: () {
+                                _showOrderDialog(context);
+                              },
                               textPath: DoctorHuntText.confirm2),
                         ]),
                       ),
@@ -411,4 +242,114 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
       ),
     );
   }
+}
+
+// Alert Dialog
+void _showOrderDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text(
+          "",
+        ),
+        content: Container(
+          height: 520.sp,
+          width: 335.sp,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(16.r),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 156.sp,
+                width: 156.sp,
+                decoration: BoxDecoration(
+                  color: deathVictorious,
+                  borderRadius: BorderRadius.circular(100.sp),
+                ),
+                child: Image.asset(DoctorHuntAssetsPath.like),
+              ),
+
+              SizedBox(
+                height: 20.sp,
+              ),
+
+              // Thank You Text
+              Text(
+                DoctorHuntText.thankYou,
+                style: TextStyle(
+                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                  fontSize: 38.sp,
+                  fontWeight: FontWeight.w700,
+                  color: blackText,
+                ),
+              ),
+
+              SizedBox(
+                height: 15.sp,
+              ),
+
+              // Successful Appointment Text
+              Text(
+                DoctorHuntText.successfulAppointment,
+                style: TextStyle(
+                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                  fontSize: 16.5.sp,
+                  fontWeight: FontWeight.w400,
+                  color: royalIntrigue,
+                ),
+              ),
+
+              SizedBox(
+                height: 30.sp,
+              ),
+              SizedBox(
+                width: 265.sp,
+                child: Text(
+                  DoctorHuntText.appointmentBooking,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w400,
+                    color: royalIntrigue,
+                    height: 1.5.sp,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30.sp,
+              ),
+
+              // Done
+              ElevatedButtonWidget(onPressed: () {}, textPath: DoctorHuntText.done),
+
+              SizedBox(
+                height: 20.sp,
+              ),
+
+              // Edit your appointment
+              TextButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (BuildContext context) =>
+                          const DoctorAppointment2Screen()));
+                },
+                child: Text(
+                  DoctorHuntText.edit,
+                  style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w400,
+                      color: royalIntrigue,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
