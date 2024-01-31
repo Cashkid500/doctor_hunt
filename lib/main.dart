@@ -55,9 +55,11 @@ class _SplashScreenState extends State<SplashScreen> {
             Image.asset(
               DoctorHuntAssetsPath.logo,
             ),
+
             SizedBox(
               height: 10.sp,
             ),
+            
             Text(DoctorHuntText.doctorHunt,
                 style: TextStyle(
                     fontSize: 25.sp,
