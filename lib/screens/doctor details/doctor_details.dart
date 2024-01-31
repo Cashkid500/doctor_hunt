@@ -40,7 +40,6 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                   children: [
                     // Back Arrow
                     Row(
-                        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             height: 30.sp,
@@ -51,6 +50,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                             child: Icon(Icons.keyboard_arrow_left,
                                 color: royalIntrigue),
                           ),
+                          
                           SizedBox(
                             width: 30.sp,
                           ),
