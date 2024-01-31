@@ -13,11 +13,6 @@ class DiagnosticTest2Screen extends StatefulWidget {
 }
 
 class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
-  String imagePath = "assets/images/diagnostic1.png";
-  String headerTextPath = "Advanced Young Indian Health Checkup";
-  String testsPath = "69 tests included";
-  String dollarPath = "\$ 358 ";
-  String dollar2Path = "\$ 330 ";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -235,372 +230,213 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     // First Container
                     DiagnosticTest2Container(
-                        headerTextPath: "Advanced Young Indian Health Checkup",
-                        testsPath: "69 tests included",
-                        imagePath: "assets/images/diagnostic1.png",
-                        dollarPath: "\$ 358 ",
-                        dollar2Path: "\$ 330 "),
+                        headerTextPath: DoctorHuntText.advance,
+                        testsPath: DoctorHuntText.tests,
+                        imagePath: DoctorHuntAssetsPath.diagnostic1,
+                        dollarPath: DoctorHuntText.dollar,
+                        dollar2Path: DoctorHuntText.dollar2),
+                    
                     SizedBox(height: 10.sp),
 
                     // Second Container
-                    Padding(
-                      padding: EdgeInsets.only(right: 20.sp),
-                      child: Container(
-                        height: 427.sp,
-                        width: 335.sp,
-                        decoration: BoxDecoration(
-                          color: whiteText,
-                          borderRadius: BorderRadius.circular(6.sp),
-                          border: Border.all(
-                              width: 1.sp,
-                              color: whiteText,
-                              style: BorderStyle.solid),
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 13.sp, top: 10.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Working Women's Health Checkup",
-                                    style: TextStyle(
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: blackText,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 10.sp),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15.sp),
-                                  child: Text(
-                                    DoctorHuntText.ideal,
-                                    style: TextStyle(
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w300,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: royalIntrigue,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20.sp),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15.sp),
-                                  child: Container(
-                                    height: 32.sp,
-                                    width: 130.sp,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6.sp),
-                                      border: Border.all(color: greenTeal),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        "119 tests included",
-                                        style: TextStyle(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w400,
-                                            fontFamily: DoctorHuntAssetsPath
-                                                .doctorHuntFont,
-                                            color: greenTeal),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20.sp),
-                            Image.asset("assets/images/diagnostic2.png"),
-                            SizedBox(height: 10.sp),
-                            Row(children: [
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 10.sp,
-                                ),
-                                width: 175.sp,
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "\$ 387 ",
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: blackText,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "\$ 345 ",
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: royalIntrigue,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: DoctorHuntText.off,
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: DoctorHuntText.cashback,
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: royalIntrigue,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 10.sp),
-                              ElevatedButton(
-                                onPressed: () {
-                                  // Navigator.of(context).push(MaterialPageRoute(
-                                  //   builder: (BuildContext context) =>
-                                  //       const DiagnosticTest2Screen(),
-                                  // ));
-                                },
-                                child: Text(
-                                  DoctorHuntText.bookNow,
-                                  style: TextStyle(
-                                      fontSize: 12.sp,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: whiteText),
-                                ),
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(greenTeal),
-                                  shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(4.sp),
-                                    ),
-                                  ),
-                                  fixedSize: MaterialStateProperty.all(
-                                      Size(112.sp, 34.sp)),
-                                ),
-                              ),
-                            ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                    // DiagnosticTest2Container(
-                    //     headerTextPath: "Working Women’s Health Checkup",
-                    //     testsPath: "119 tests included",
-                    //     imagePath: "assets/images/diagnostic2.png",
-                    //     dollarPath: "\$ 387 ",
-                    //     dollar2Path: "\$ 345 "),
-                    // SizedBox(height: 10.sp),
+                    DiagnosticTest2SecondContainer(headerTextPath: DoctorHuntText.workingWomen, testsPath: DoctorHuntText.tests2, imagePath: DoctorHuntAssetsPath.diagnostic2, dollarPath: DoctorHuntText.dollar21, dollar2Path: DoctorHuntText.dollar22),
+                   
+                    SizedBox(height: 10.sp),
 
                     // Third Container
-                    Padding(
-                      padding: EdgeInsets.only(right: 20.sp),
-                      child: Container(
-                        height: 427.sp,
-                        width: 335.sp,
-                        decoration: BoxDecoration(
-                          color: whiteText,
-                          borderRadius: BorderRadius.circular(6.sp),
-                          border: Border.all(
-                              width: 1.sp,
-                              color: whiteText,
-                              style: BorderStyle.solid),
-                        ),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: EdgeInsets.only(left: 15.sp, top: 10.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Active Professional Health Checkup",
-                                    style: TextStyle(
-                                      fontSize: 16.sp,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: blackText,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            SizedBox(height: 10.sp),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15.sp),
-                                  child: Text(
-                                    DoctorHuntText.ideal,
-                                    style: TextStyle(
-                                      fontSize: 14.sp,
-                                      fontWeight: FontWeight.w300,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: royalIntrigue,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20.sp),
-                            Row(
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15.sp),
-                                  child: Container(
-                                    height: 32.sp,
-                                    width: 130.sp,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(6.sp),
-                                      border: Border.all(color: greenTeal),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        "100 tests included",
-                                        style: TextStyle(
-                                            fontSize: 12.sp,
-                                            fontWeight: FontWeight.w400,
-                                            fontFamily: DoctorHuntAssetsPath
-                                                .doctorHuntFont,
-                                            color: greenTeal),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20.sp),
-                            Image.asset("assets/images/diagnostic3.png"),
-                            SizedBox(height: 10.sp),
-                            Row(children: [
-                              Container(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 10.sp,
-                                ),
-                                width: 175.sp,
-                                child: RichText(
-                                  text: TextSpan(
-                                    children: [
-                                      TextSpan(
-                                        text: "\$ 457 ",
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: blackText,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: "\$ 411 ",
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w700,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: royalIntrigue,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: DoctorHuntText.off,
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: greenTeal,
-                                        ),
-                                      ),
-                                      TextSpan(
-                                        text: DoctorHuntText.cashback,
-                                        style: TextStyle(
-                                          fontSize: 16.sp,
-                                          fontWeight: FontWeight.w500,
-                                          fontFamily: DoctorHuntAssetsPath
-                                              .doctorHuntFont,
-                                          color: royalIntrigue,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 10.sp),
-                              ElevatedButton(
-                                onPressed: () {
-                                  // Navigator.of(context).push(MaterialPageRoute(
-                                  //   builder: (BuildContext context) =>
-                                  //       const DiagnosticTest2Screen(),
-                                  // ));
-                                },
-                                child: Text(
-                                  DoctorHuntText.bookNow,
-                                  style: TextStyle(
-                                      fontSize: 12.sp,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily:
-                                          DoctorHuntAssetsPath.doctorHuntFont,
-                                      color: whiteText),
-                                ),
-                                style: ButtonStyle(
-                                  backgroundColor:
-                                      MaterialStateProperty.all(greenTeal),
-                                  shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                    RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(4.sp),
-                                    ),
-                                  ),
-                                  fixedSize: MaterialStateProperty.all(
-                                      Size(112.sp, 34.sp)),
-                                ),
-                              ),
-                            ]),
-                          ],
-                        ),
-                      ),
-                    ),
-                    // DiagnosticTest2Container(
-                    //       headerTextPath: "Active Professional Health Checkup",
-                    //       testsPath: "100 tests included",
-                    //       imagePath: "assets/images/diagnostic3.png",
-                    //       dollarPath: "\$ 457 ",
-                    //       dollar2Path: "\$ 411 "),
-
+                    DiagnosticTest2SecondContainer(headerTextPath: DoctorHuntText.active, testsPath: DoctorHuntText.tests3, imagePath: DoctorHuntAssetsPath.diagnostic3, dollarPath: DoctorHuntText.dollar23, dollar2Path: DoctorHuntText.dollar24),
+                    
                     SizedBox(height: 20.sp),
                   ]),
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class DiagnosticTest2SecondContainer extends StatelessWidget {
+  const DiagnosticTest2SecondContainer({
+    super.key,
+    this.onPressed,
+    required this.headerTextPath,
+    required this.testsPath,
+    required this.imagePath,
+    required this.dollarPath,
+    required this.dollar2Path,
+  });
+
+  final String headerTextPath;
+  final String testsPath;
+  final String imagePath;
+  final String dollarPath;
+  final String dollar2Path;
+  final VoidCallback? onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(right: 20.sp),
+      child: Container(
+        height: 427.sp,
+        width: 335.sp,
+        decoration: BoxDecoration(
+          color: whiteText,
+          borderRadius: BorderRadius.circular(6.sp),
+          border: Border.all(
+              width: 1.sp,
+              color: whiteText,
+              style: BorderStyle.solid),
+        ),
+        child: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(left: 15.sp, top: 10.sp),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    headerTextPath,
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: FontWeight.w700,
+                      fontFamily:
+                          DoctorHuntAssetsPath.doctorHuntFont,
+                      color: blackText,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 10.sp),
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 15.sp),
+                  child: Text(
+                    DoctorHuntText.ideal,
+                    style: TextStyle(
+                      fontSize: 14.sp,
+                      fontWeight: FontWeight.w300,
+                      fontFamily:
+                          DoctorHuntAssetsPath.doctorHuntFont,
+                      color: royalIntrigue,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20.sp),
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 15.sp),
+                  child: Container(
+                    height: 32.sp,
+                    width: 130.sp,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6.sp),
+                      border: Border.all(color: greenTeal),
+                    ),
+                    child: Center(
+                      child: Text(
+                        testsPath,
+                        style: TextStyle(
+                            fontSize: 12.sp,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: DoctorHuntAssetsPath
+                                .doctorHuntFont,
+                            color: greenTeal),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 20.sp),
+            Image.asset(imagePath),
+            SizedBox(height: 10.sp),
+            Row(children: [
+              Container(
+                padding: EdgeInsets.symmetric(
+                  horizontal: 10.sp,
+                ),
+                width: 175.sp,
+                child: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: dollarPath,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: DoctorHuntAssetsPath
+                              .doctorHuntFont,
+                          color: blackText,
+                        ),
+                      ),
+                      TextSpan(
+                        text: dollar2Path,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: DoctorHuntAssetsPath
+                              .doctorHuntFont,
+                          color: royalIntrigue,
+                        ),
+                      ),
+                      TextSpan(
+                        text: DoctorHuntText.off,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: DoctorHuntAssetsPath
+                              .doctorHuntFont,
+                          color: greenTeal,
+                        ),
+                      ),
+                      TextSpan(
+                        text: DoctorHuntText.cashback,
+                        style: TextStyle(
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                          fontFamily: DoctorHuntAssetsPath
+                              .doctorHuntFont,
+                          color: royalIntrigue,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(width: 10.sp),
+              ElevatedButton(
+                onPressed: onPressed,
+                child: Text(
+                  DoctorHuntText.bookNow,
+                  style: TextStyle(
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
+                      fontFamily:
+                          DoctorHuntAssetsPath.doctorHuntFont,
+                      color: whiteText),
+                ),
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all(greenTeal),
+                  shape: MaterialStateProperty.all<
+                      RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4.sp),
+                    ),
+                  ),
+                  fixedSize: MaterialStateProperty.all(
+                      Size(112.sp, 34.sp)),
+                ),
+              ),
+            ]),
+          ],
         ),
       ),
     );
