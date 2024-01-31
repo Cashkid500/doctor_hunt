@@ -52,26 +52,27 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Padding(
                       padding: EdgeInsets.only(left: 10.sp, right: 10.sp),
-                      child: Row(children: [
-                        Text(
-                          DoctorHuntText.step,
-                          style: TextStyle(
-                            fontSize: 14.sp,
-                            fontWeight: FontWeight.w700,
-                            color: blackText,
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                      child: Row(
+                        children: [
+                          Text(
+                            DoctorHuntText.step,
+                            style: TextStyle(
+                              fontSize: 14.sp,
+                              fontWeight: FontWeight.w700,
+                              color: blackText,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            ),
                           ),
-                        ),
-                        SizedBox(width: 10.sp),
-                        Container(
-                          width: 234.0,
-                          height: 7.0,
-                          decoration: BoxDecoration(
-                            color: deathVictorious,
-                            borderRadius: BorderRadius.circular(16.r),
-                            border: Border.all(color: whiteText),
-                          ),
-                          child: Row(
+                          SizedBox(width: 10.sp),
+                          Container(
+                            width: 234.0,
+                            height: 7.0,
+                            decoration: BoxDecoration(
+                              color: deathVictorious,
+                              borderRadius: BorderRadius.circular(16.r),
+                              border: Border.all(color: whiteText),
+                            ),
+                            child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -83,9 +84,11 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                     borderRadius: BorderRadius.circular(16.r),
                                   ),
                                 ),
-                              ]),
-                        ),
-                      ]),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
 
@@ -105,14 +108,18 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(height: 20.sp),
+
                           // Patient Name
                           Heading(headerPath: DoctorHuntText.patientName),
                           SizedBox(height: 15.sp),
+
                           FieldWidget(fieldPath: DoctorHuntText.fullName),
                           SizedBox(height: 15.sp),
+
                           // Age
                           Heading(headerPath: DoctorHuntText.age),
                           SizedBox(height: 15.sp),
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
@@ -153,6 +160,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                   ),
                                 ),
                               ),
+
                               SizedBox(width: 10.sp),
 
                               // Month //
@@ -193,6 +201,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                   ),
                                 ),
                               ),
+
                               SizedBox(width: 10.sp),
 
                               // Year //
@@ -234,10 +243,14 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                               ),
                             ],
                           ),
+
                           SizedBox(height: 15.sp),
+
                           // Gender
                           Heading(headerPath: DoctorHuntText.gender),
+
                           SizedBox(height: 15.sp),
+
                           // Radio Button
                           Row(
                             children: [
@@ -246,9 +259,11 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 activeColor: greenTeal,
                                 groupValue: selectedGender,
                                 onChanged: (value) {
-                                  setState(() {
-                                    selectedGender = value.toString();
-                                  });
+                                  setState(
+                                    () {
+                                      selectedGender = value.toString();
+                                    },
+                                  );
                                 },
                               ),
                               Text(
@@ -266,9 +281,11 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 activeColor: greenTeal,
                                 groupValue: selectedGender,
                                 onChanged: (value) {
-                                  setState(() {
-                                    selectedGender = value.toString();
-                                  });
+                                  setState(
+                                    () {
+                                      selectedGender = value.toString();
+                                    },
+                                  );
                                 },
                               ),
                               Text(
@@ -286,9 +303,11 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                                 activeColor: greenTeal,
                                 groupValue: selectedGender,
                                 onChanged: (value) {
-                                  setState(() {
-                                    selectedGender = value.toString();
-                                  });
+                                  setState(
+                                    () {
+                                      selectedGender = value.toString();
+                                    },
+                                  );
                                 },
                               ),
                               Text(
@@ -303,20 +322,26 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                               ),
                             ],
                           ),
+
                           SizedBox(height: 15.sp),
+
                           // Mobile Number
                           Heading(headerPath: DoctorHuntText.mobileNumber),
                           SizedBox(height: 15.sp),
+
                           FieldWidget(fieldPath: DoctorHuntText.digit),
                           SizedBox(height: 15.sp),
+
                           // Email
                           Heading(headerPath: DoctorHuntText.email),
                           SizedBox(height: 15.sp),
+
                           FieldWidget(fieldPath: DoctorHuntText.emailAddress),
                         ],
                       ),
                     ),
                   ),
+                  
                   SizedBox(height: 25.sp),
 
                   // Button
