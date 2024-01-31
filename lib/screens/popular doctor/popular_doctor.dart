@@ -35,110 +35,154 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
             padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 10.sp),
             child: SingleChildScrollView(
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            height: 30.sp,
-                            width: 30.sp,
-                            decoration: BoxDecoration(
-                                color: whiteText,
-                                borderRadius: BorderRadius.circular(10.r)),
-                            child: Icon(Icons.keyboard_arrow_left,
-                                color: royalIntrigue),
-                          ),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        height: 30.sp,
+                        width: 30.sp,
+                        decoration: BoxDecoration(
+                            color: whiteText,
+                            borderRadius: BorderRadius.circular(10.r)),
+                        child: Icon(Icons.keyboard_arrow_left,
+                            color: royalIntrigue),
+                      ),
 
-                          // Search Icon
-                          Icon(Icons.search, color: royalIntrigue),
-                        ]),
+                      // Search Icon
+                      Icon(Icons.search, color: royalIntrigue),
+                    ],
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            DoctorHuntText.popularDoctor,
-                            style: TextStyle(
-                                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                                fontSize: 18.sp,
-                                fontWeight: FontWeight.w700,
-                                color: blackText),
-                          ),
-                          Text(
-                            DoctorHuntText.see,
-                            style: TextStyle(
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 14.sp,
-                              fontWeight: FontWeight.w400,
-                              color: royalIntrigue,
-                            ),
-                          ),
-                        ]),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        DoctorHuntText.popularDoctor,
+                        style: TextStyle(
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w700,
+                            color: blackText),
+                      ),
+                      Text(
+                        DoctorHuntText.see,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w400,
+                          color: royalIntrigue,
+                        ),
+                      ),
+                    ],
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Scrollable View
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(children: [
+                  // Scrollable View
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
                         // Doctor 1
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.truluck,
                             doctorNamePath: DoctorHuntText.truluck,
-                            specializationPath: DoctorHuntText.medicineSpecialist),
+                            specializationPath:
+                                DoctorHuntText.medicineSpecialist),
+
                         SizedBox(width: 10.sp),
+
                         // Doctor 2
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.tranquilli2,
                             doctorNamePath: DoctorHuntText.tranquilli,
-                            specializationPath: DoctorHuntText.patheologySpecialist),
+                            specializationPath:
+                                DoctorHuntText.patheologySpecialist),
+
                         SizedBox(width: 10.sp),
+
                         // Doctor 3
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.truluck,
                             doctorNamePath: DoctorHuntText.truluck,
-                            specializationPath: DoctorHuntText.medicineSpecialist),
-                      ]),
-                    ),
-
-                    SizedBox(height: 40.sp),
-
-                    // Text
-                    Row(
-                      children: [
-                        Text(
-                          DoctorHuntText.category,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w700,
-                            color: blackText,
-                          ),
-                        ),
+                            specializationPath:
+                                DoctorHuntText.medicineSpecialist),
                       ],
                     ),
+                  ),
 
-                    SizedBox(height: 40.sp),
-                    // Dr Pediatrician
-                    Doctors(doctorsImagePath: DoctorHuntAssetsPath.pediatrician, namePath: DoctorHuntText.pediatrician, isFavorite: isFavorite = true, doctorSpecializationPath: DoctorHuntText.cardiologistSpecialist, digitPath: DoctorHuntText.twoPointFour, viewsPath: DoctorHuntText.views1),
+                  SizedBox(height: 40.sp),
 
-                    SizedBox(height: 20.sp),
-                    // Dr. Mistry
-                    Doctors(doctorsImagePath: DoctorHuntAssetsPath.mistry, namePath: DoctorHuntText.mistry, isFavorite: isFavorite = false, doctorSpecializationPath: DoctorHuntText.dentistSpecialist, digitPath: DoctorHuntText.twoPointEight, viewsPath: DoctorHuntText.views2),
+                  // Text
+                  Row(
+                    children: [
+                      Text(
+                        DoctorHuntText.category,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                          color: blackText,
+                        ),
+                      ),
+                    ],
+                  ),
 
-                    SizedBox(height: 20.sp),
-                    // Dr. Ether Wall
-                    Doctors(doctorsImagePath: DoctorHuntAssetsPath.ether, namePath: DoctorHuntText.ether, isFavorite: isFavorite = true, doctorSpecializationPath: DoctorHuntText.dentistCancer, digitPath: DoctorHuntText.twoPointSeven, viewsPath: DoctorHuntText.views3),
+                  SizedBox(height: 40.sp),
 
-                    SizedBox(height: 20.sp),
-                    // Dr. Johan
-                    Doctors(doctorsImagePath: DoctorHuntAssetsPath.johan, namePath: DoctorHuntText.johan, isFavorite: isFavorite = false, doctorSpecializationPath: DoctorHuntText.cardiologistSpecialist, digitPath: DoctorHuntText.twoPointFour, viewsPath: DoctorHuntText.views4),
-                    SizedBox(height: 10.sp),
-                  ]),
+                  // Dr Pediatrician
+                  Doctors(
+                      doctorsImagePath: DoctorHuntAssetsPath.pediatrician,
+                      namePath: DoctorHuntText.pediatrician,
+                      isFavorite: isFavorite = true,
+                      doctorSpecializationPath:
+                          DoctorHuntText.cardiologistSpecialist,
+                      digitPath: DoctorHuntText.twoPointFour,
+                      viewsPath: DoctorHuntText.views1),
+
+                  SizedBox(height: 20.sp),
+
+                  // Dr. Mistry
+                  Doctors(
+                      doctorsImagePath: DoctorHuntAssetsPath.mistry,
+                      namePath: DoctorHuntText.mistry,
+                      isFavorite: isFavorite = false,
+                      doctorSpecializationPath:
+                          DoctorHuntText.dentistSpecialist,
+                      digitPath: DoctorHuntText.twoPointEight,
+                      viewsPath: DoctorHuntText.views2),
+
+                  SizedBox(height: 20.sp),
+
+                  // Dr. Ether Wall
+                  Doctors(
+                      doctorsImagePath: DoctorHuntAssetsPath.ether,
+                      namePath: DoctorHuntText.ether,
+                      isFavorite: isFavorite = true,
+                      doctorSpecializationPath: DoctorHuntText.dentistCancer,
+                      digitPath: DoctorHuntText.twoPointSeven,
+                      viewsPath: DoctorHuntText.views3),
+
+                  SizedBox(height: 20.sp),
+
+                  // Dr. Johan
+                  Doctors(
+                      doctorsImagePath: DoctorHuntAssetsPath.johan,
+                      namePath: DoctorHuntText.johan,
+                      isFavorite: isFavorite = false,
+                      doctorSpecializationPath:
+                          DoctorHuntText.cardiologistSpecialist,
+                      digitPath: DoctorHuntText.twoPointFour,
+                      viewsPath: DoctorHuntText.views4),
+
+                  SizedBox(height: 10.sp),
+                ],
+              ),
             ),
           ),
         ),
@@ -172,10 +216,8 @@ class Doctors extends StatelessWidget {
       decoration: BoxDecoration(
         color: whiteText,
         borderRadius: BorderRadius.circular(8.sp),
-        border: Border.all(
-            width: 1.sp,
-            color: whiteText,
-            style: BorderStyle.solid),
+        border:
+            Border.all(width: 1.sp, color: whiteText, style: BorderStyle.solid),
       ),
       child: Padding(
         padding: EdgeInsets.only(
@@ -195,10 +237,8 @@ class Doctors extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: 10.sp),
                     child: Row(
-                      mainAxisAlignment:
-                          MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment:
-                          CrossAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: [
                         SizedBox(
                           width: 185.sp,
@@ -207,8 +247,7 @@ class Doctors extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 18.sp,
                               fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath
-                                  .doctorHuntFont,
+                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                               color: blackText,
                             ),
                           ),
@@ -217,9 +256,7 @@ class Doctors extends StatelessWidget {
                           !isFavorite
                               ? Icons.favorite_border_sharp
                               : Icons.favorite,
-                          color: !isFavorite
-                              ? Colors.grey
-                              : Colors.red,
+                          color: !isFavorite ? Colors.grey : Colors.red,
                           size: 20.sp,
                         ),
                       ],
@@ -229,25 +266,21 @@ class Doctors extends StatelessWidget {
                   Text(
                     doctorSpecializationPath,
                     style: TextStyle(
-                        fontFamily:
-                            DoctorHuntAssetsPath.doctorHuntFont,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400,
                         color: royalIntrigue),
                   ),
                   SizedBox(height: 10.sp),
-                  Row(
-                    children: [
+                  Row(children: [
                     Image.asset(DoctorHuntAssetsPath.rating),
                     SizedBox(width: 29.sp),
                     RichText(
-                      text: TextSpan(
-                        children: [
+                      text: TextSpan(children: [
                         TextSpan(
                           text: digitPath,
                           style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath
-                                .doctorHuntFont,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w700,
                             color: blackText,
@@ -256,8 +289,7 @@ class Doctors extends StatelessWidget {
                         TextSpan(
                           text: viewsPath,
                           style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath
-                                .doctorHuntFont,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 12.sp,
                             fontWeight: FontWeight.w400,
                             color: royalIntrigue,
