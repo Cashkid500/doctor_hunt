@@ -36,49 +36,52 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
             child: Padding(
               padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.patientDetails),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  RowWidget(rowText: DoctorHuntText.patientDetails),
 
-                    SizedBox(height: 80.sp),
+                  SizedBox(height: 80.sp),
 
-                    // Circular Box
-                    Container(
-                      height: 214.sp,
-                      width: 214.sp,
-                      decoration: BoxDecoration(
-                        color: deathVictorious,
-                        borderRadius: BorderRadius.circular(100.r),
-                      ),
-                      child: Image.asset(DoctorHuntAssetsPath.details),
+                  // Circular Box
+                  Container(
+                    height: 214.sp,
+                    width: 214.sp,
+                    decoration: BoxDecoration(
+                      color: deathVictorious,
+                      borderRadius: BorderRadius.circular(100.r),
                     ),
+                    child: Image.asset(DoctorHuntAssetsPath.details),
+                  ),
 
-                    SizedBox(height: 50.sp),
+                  SizedBox(height: 50.sp),
 
-                    // Text
-                    Text(
-                      DoctorHuntText.emptyCart,
-                      style: TextStyle(
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w700,
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          color: blackText),
-                    ),
+                  // Text
+                  Text(
+                    DoctorHuntText.emptyCart,
+                    style: TextStyle(
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        color: blackText),
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Button
-                    ElevatedButtonWidget(
-                      textPath: DoctorHuntText.addTests,
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
+                  // Button
+                  ElevatedButtonWidget(
+                    textPath: DoctorHuntText.addTests,
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
                           builder: (BuildContext context) =>
                               const PatientDetails2Screen(),
-                        ));
-                      },
-                    ),
-                  ]),
+                        ),
+                      );
+                    },
+                  ),
+                ],
+              ),
             ),
           ),
         ),
