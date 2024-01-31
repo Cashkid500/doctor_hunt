@@ -119,7 +119,10 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                         ],
                       ),
                     ),
+
                     SizedBox(height: 20.sp),
+
+                    
                     DoctorsScreenWidget(
                         imagePath: DoctorHuntAssetsPath.pediatrician,
                         namePath: DoctorHuntText.pediatrician,
