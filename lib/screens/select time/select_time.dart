@@ -37,60 +37,69 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
             padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
             child: SingleChildScrollView(
               child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    // Back Arrow
-                    RowWidget(rowText: "Select Time"),
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  // Back Arrow
+                  RowWidget(rowText: DoctorHuntText.selectTime),
 
-                    SizedBox(height: 50.sp),
+                  SizedBox(height: 50.sp),
 
-                    // Dr Shruti Kedia
-                    ShrutiKediaContainer(isFavorite: isFavorite = true),
+                  // Dr Shruti Kedia
+                  ShrutiKediaContainer(isFavorite: isFavorite = true),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    // Scroll View
-
+                  // Scroll View
                     SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
                         // First Row First Container
                         Container(
                           height: 54.sp,
                           width: 130.sp,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4.sp),
-                            border: Border.all(color: royalIntrigue, width: 1.sp, style: BorderStyle.solid),
+                            border: Border.all(
+                                color: royalIntrigue,
+                                width: 1.sp,
+                                style: BorderStyle.solid),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Today, 23 Feb",
+                                DoctorHuntText.today,
                                 style: TextStyle(
                                   color: blackText,
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w700,
-                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontFamily:
+                                      DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
-                              SizedBox(height: 5.sp,),
+
+                              SizedBox(
+                                height: 5.sp,
+                              ),
+
                               Text(
-                                "No slots available",
+                                 DoctorHuntText.noSlots,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w300,
-                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontFamily:
+                                      DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
                             ],
                           ),
                         ),
-                    
+
                         SizedBox(width: 10.sp),
+
                         // First Row Second Container
                         Container(
                           height: 54.sp,
@@ -104,22 +113,28 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Tomorrow, 24 Feb",
+                                DoctorHuntText.tomorrow,
                                 style: TextStyle(
                                   color: whiteText,
                                   fontSize: 16.sp,
                                   fontWeight: FontWeight.w700,
-                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontFamily:
+                                      DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
-                              SizedBox(height: 5.sp,),
+
+                              SizedBox(
+                                height: 5.sp,
+                              ),
+
                               Text(
-                                "9 slots available",
+                                DoctorHuntText.nineSlots,
                                 style: TextStyle(
                                   color: whiteText,
                                   fontSize: 10.sp,
                                   fontWeight: FontWeight.w300,
-                                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                                  fontFamily:
+                                      DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
                             ],
@@ -127,20 +142,24 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
                         ),
 
                         SizedBox(width: 10.sp),
+
                         // First Row Third Container
                         Container(
                           height: 54.sp,
                           width: 123.sp,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(4.sp),
-                            border: Border.all(color: royalIntrigue, width: 1.sp, style: BorderStyle.solid),
+                            border: Border.all(
+                                color: royalIntrigue,
+                                width: 1.sp,
+                                style: BorderStyle.solid),
                           ),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                "Thu, 25 Feb",
+                                DoctorHuntText.thur,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 16.sp,
@@ -149,9 +168,13 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
                                       DoctorHuntAssetsPath.doctorHuntFont,
                                 ),
                               ),
-                              SizedBox(height: 5.sp,),
+
+                              SizedBox(
+                                height: 5.sp,
+                              ),
+                              
                               Text(
-                                "10 slots available",
+                                DoctorHuntText.tenSlots,
                                 style: TextStyle(
                                   color: royalIntrigue,
                                   fontSize: 10.sp,
@@ -163,45 +186,93 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
                             ],
                           ),
                         ),
-                      ]),
+                      ],
                     ),
+                  ),
 
-                    SizedBox(height: 50.sp),
-                    Text(
-                      "Today, 23 Feb",
-                      style: TextStyle(
-                        color: blackText,
-                        fontSize: 20.sp,
-                        fontWeight: FontWeight.w700,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                  SizedBox(height: 50.sp),
+
+                  Text(
+                    DoctorHuntText.today,
+                    style: TextStyle(
+                      color: blackText,
+                      fontSize: 20.sp,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    ),
+                  ),
+
+                  SizedBox(height: 30.sp),
+
+                  Text(
+                    DoctorHuntText.noSlots,
+                    style: TextStyle(
+                      color: royalIntrigue,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    ),
+                  ),
+
+                  SizedBox(height: 30.sp),
+
+                  Container(
+                    height: 54.sp,
+                    width: 306.sp,
+                    decoration: BoxDecoration(
+                      color: greenTeal,
+                      borderRadius: BorderRadius.circular(4.sp),
+                    ),
+                    child: Center(
+                      child: Text(
+                        DoctorHuntText.nextAvailability,
+                        style: TextStyle(
+                          color: whiteText,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        ),
                       ),
                     ),
+                  ),
 
-                    SizedBox(height: 30.sp),
-                    Text(
-                      "No slots available",
-                      style: TextStyle(
-                        color: royalIntrigue,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      ),
+                  SizedBox(height: 30.sp),
+
+                  Text(
+                    DoctorHuntText.or,
+                    style: TextStyle(
+                      color: royalIntrigue,
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.w400,
+                      fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                     ),
+                  ),
 
-                    SizedBox(height: 30.sp),
+                  SizedBox(height: 30.sp),
 
-                    Container(
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SelectTime2Screen()),
+                      );
+                    },
+                    child: Container(
                       height: 54.sp,
                       width: 306.sp,
                       decoration: BoxDecoration(
-                        color: greenTeal,
                         borderRadius: BorderRadius.circular(4.sp),
+                        border: Border.all(
+                            color: royalIntrigue,
+                            width: 1.sp,
+                            style: BorderStyle.solid),
                       ),
                       child: Center(
                         child: Text(
-                          "Next availability on wed, 24 Feb",
+                          DoctorHuntText.contactClinic,
                           style: TextStyle(
-                            color: whiteText,
+                            color: greenTeal,
                             fontSize: 18.sp,
                             fontWeight: FontWeight.w700,
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
@@ -209,46 +280,9 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
                         ),
                       ),
                     ),
-
-                    SizedBox(height: 30.sp),
-                    Text(
-                      "OR",
-                      style: TextStyle(
-                        color: royalIntrigue,
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.w400,
-                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      ),
-                    ),
-
-                    SizedBox(height: 30.sp),
-
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) => const SelectTime2Screen()));
-                      },
-                      child: Container(
-                        height: 54.sp,
-                        width: 306.sp,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(4.sp),
-                          border: Border.all(color: royalIntrigue, width: 1.sp, style: BorderStyle.solid),
-                        ),
-                        child: Center(
-                          child: Text(
-                            "Contact Clinic",
-                            style: TextStyle(
-                              color: greenTeal,
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ]),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
@@ -313,7 +347,7 @@ class ShrutiKediaContainer extends StatelessWidget {
                 height: 5.sp,
               ),
               Text(
-                "Upasana Dental Clinic, salt lake",
+                DoctorHuntText.upasana,
                 style: TextStyle(
                   fontSize: 14.sp,
                   fontWeight: FontWeight.w400,
