@@ -121,10 +121,9 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                           TextRow(rowTextPath: DoctorHuntText.availableTime),
                           SizedBox(height: 20.sp),
 
-                          // Available Time Row
+                          // Available Time Row Tab Bar
                           Row(
                               children: [
-                                // Tab Bar
                                 ...List.generate(
                                   5, (index) => Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -175,10 +174,9 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                           TextRow(rowTextPath: DoctorHuntText.reminder),
                           SizedBox(height: 20.sp),
 
-                          // Reminder Me Before Row
+                          // Reminder Me Before Row Tab Bar
                           Row(
                               children: [
-                                // Tab Bar
                                 ...List.generate(
                                   5, (index) => Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
