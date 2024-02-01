@@ -51,7 +51,7 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Calender
+                    // Calendar
                     Center(
                       child: Container(
                         width: 330.sp,
