@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/favourite%20doctor/favourite_doctors.dart';
+import 'package:doctor_hunt/screens/menu/menu.dart';
 import 'package:doctor_hunt/screens/popular%20doctor/popular_doctor.dart';
 import 'package:doctor_hunt/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
@@ -16,9 +17,16 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   bool isFavorite = false;
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: MenuScreen(
+        onClose: () {
+          scaffoldKey.currentState!.closeDrawer();
+        },
+      ),
       body: SingleChildScrollView(
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Stack(
@@ -131,7 +139,11 @@ class _HomeScreenState extends State<HomeScreen> {
                             width: 0.5.sp,
                             style: BorderStyle.solid),
                       ),
-                      prefixIcon: Icon(Icons.menu, color: royalIntrigue),
+                      prefixIcon: GestureDetector(
+                          onTap: () {
+                            scaffoldKey.currentState?.openDrawer();
+                          },
+                          child: Icon(Icons.menu, color: royalIntrigue)),
                       suffixIcon: Icon(Icons.close, color: royalIntrigue),
                     ),
                   ),
@@ -513,24 +525,24 @@ class PopularDoctorWidget extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: 15.sp, right: 15.sp),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+        Text(
+          popularDoctorTextPath,
+          style: TextStyle(
+              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+              fontSize: 18.sp,
+              fontWeight: FontWeight.w700,
+              color: blackText),
+        ),
         GestureDetector(
           onTap: onTap,
           child: Text(
-            popularDoctorTextPath,
+            DoctorHuntText.see,
             style: TextStyle(
-                fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                fontSize: 18.sp,
-                fontWeight: FontWeight.w700,
-                color: blackText),
-          ),
-        ),
-        Text(
-          DoctorHuntText.see,
-          style: TextStyle(
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            fontSize: 14.sp,
-            fontWeight: FontWeight.w400,
-            color: royalIntrigue,
+              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
+              color: royalIntrigue,
+            ),
           ),
         ),
       ]),
