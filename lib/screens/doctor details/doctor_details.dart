@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart';
+import 'package:doctor_hunt/screens/doctors/doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,37 +40,46 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    Row(
-                        children: [
-                          Container(
-                            height: 30.sp,
-                            width: 30.sp,
-                            decoration: BoxDecoration(
-                                color: whiteText,
-                                borderRadius: BorderRadius.circular(10.r)),
-                            child: Icon(Icons.keyboard_arrow_left,
-                                color: royalIntrigue),
-                          ),
-                          
-                          SizedBox(
-                            width: 30.sp,
-                          ),
-
-                          // Text
-                          Text(
-                            DoctorHuntText.doctorDetails,
-                            style: TextStyle(
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              color: blackText,
+                    Row(children: [
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const DoctorsScreen(),
                             ),
-                          ),
-                          Spacer(),
+                          );
+                        },
+                        child: Container(
+                          height: 30.sp,
+                          width: 30.sp,
+                          decoration: BoxDecoration(
+                              color: whiteText,
+                              borderRadius: BorderRadius.circular(10.r)),
+                          child: Icon(Icons.keyboard_arrow_left,
+                              color: royalIntrigue),
+                        ),
+                      ),
 
-                          // Search Icon
-                          Icon(Icons.search, color: royalIntrigue),
-                        ]),
+                      SizedBox(
+                        width: 30.sp,
+                      ),
+
+                      // Text
+                      Text(
+                        DoctorHuntText.doctorDetails,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                          color: blackText,
+                        ),
+                      ),
+                      Spacer(),
+
+                      // Search Icon
+                      Icon(Icons.search, color: royalIntrigue),
+                    ]),
 
                     SizedBox(height: 30.sp),
 
@@ -126,21 +136,24 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
 
                     // First Services Row Texts
                     ServicesRow(
-                        servicesNumberingPath: DoctorHuntText.one,
-                        servicesTextPath: DoctorHuntText.priority, fontSize: 13.sp,),
+                      servicesNumberingPath: DoctorHuntText.one,
+                      servicesTextPath: DoctorHuntText.priority,
+                      fontSize: 13.sp,
+                    ),
 
                     SizedBox(height: 30.sp),
 
                     // Second Services Row Texts
                     ServicesRow(
-                        servicesNumberingPath: DoctorHuntText.two,
-                        servicesTextPath: DoctorHuntText.frustrating, fontSize: 12.7.sp,),
+                      servicesNumberingPath: DoctorHuntText.two,
+                      servicesTextPath: DoctorHuntText.frustrating,
+                      fontSize: 12.7.sp,
+                    ),
 
                     SizedBox(height: 30.sp),
 
                     // Third Services Row Texts
-                    Row(
-                      children: [
+                    Row(children: [
                       // First Text
                       Text(
                         DoctorHuntText.three,
@@ -152,7 +165,9 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         ),
                       ),
 
-                      SizedBox(width: 10.sp,),
+                      SizedBox(
+                        width: 10.sp,
+                      ),
 
                       // Second Text
                       Text(
@@ -165,7 +180,9 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         ),
                       ),
                     ]),
-                    SizedBox(height: 30.sp,),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
 
                     // Map
                   ]),
