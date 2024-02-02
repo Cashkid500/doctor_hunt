@@ -1,9 +1,9 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
-import 'package:doctor_hunt/screens/doctors/doctors.dart';
 import 'package:doctor_hunt/screens/find%20doctors/find_doctors.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -41,7 +41,14 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Back Arrow
-                  RowWidget(rowText: DoctorHuntText.myDoctors),
+                  RowWidget(rowText: DoctorHuntText.myDoctors,
+                  onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const NavigationScreen(),
+                        ));
+                      },
+                  ),
 
                   SizedBox(height: 30.sp),
 
@@ -52,7 +59,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                     height: 30.sp,
                   ),
 
-                  // First Container
+                  // Dr. Tranquilli
                   DoctorWidget(
                     imagePath: DoctorHuntAssetsPath.tranquilli,
                     namePath: DoctorHuntText.tranquilli,
@@ -74,7 +81,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Second Container
+                  // Dr. Bonebrake
                   DoctorWidget(
                     imagePath: DoctorHuntAssetsPath.boneBrake,
                     namePath: DoctorHuntText.boneBrake,
@@ -87,7 +94,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                     onPressed: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (BuildContext context) => DoctorsScreen(),
+                          builder: (BuildContext context) => FindDoctorsScreen(),
                         ),
                       );
                     },
@@ -97,7 +104,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                     height: 20.sp,
                   ),
 
-                  // Third Container
+                  // Dr Luke Whitesell
                   DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.luke,
                       namePath: DoctorHuntText.luke,
@@ -106,13 +113,21 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                       percentagePath: DoctorHuntText.fiftySeven,
                       patientPath: DoctorHuntText.seventySixPatients,
                       isFavorite: isFavorite = false,
-                      timePath: DoctorHuntText.eleven),
+                      timePath: DoctorHuntText.eleven,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const FindDoctorsScreen(),
+                          ),
+                        );
+                      }),
 
                   SizedBox(
                     height: 20.sp,
                   ),
 
-                  // Fourth Container
+                  // Dr Shoemaker
                   DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.shoemaker,
                       namePath: DoctorHuntText.shoemaker,
@@ -121,7 +136,15 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                       percentagePath: DoctorHuntText.eightySeven,
                       patientPath: DoctorHuntText.sixtyNinePatients,
                       isFavorite: isFavorite = true,
-                      timePath: DoctorHuntText.ten),
+                      timePath: DoctorHuntText.ten,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                                const FindDoctorsScreen(),
+                          ),
+                        );
+                      }),
 
                   SizedBox(height: 20.sp),
                 ],
