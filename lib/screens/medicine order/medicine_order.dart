@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/location/location.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,7 +40,14 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.medicineOrder),
+                    RowWidget(rowText: DoctorHuntText.medicineOrder,
+                    onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const NavigationScreen(),
+                        ));
+                      },
+                    ),
 
                     SizedBox(height: 80.sp),
 
