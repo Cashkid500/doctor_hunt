@@ -41,7 +41,16 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.findDoctors),
+                    RowWidget(rowText: DoctorHuntText.findDoctors,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const MyDoctorsScreen(),
+                        ),
+                      );
+                    },
+                    ),
 
                     SizedBox(height: 30.sp),
 
@@ -74,45 +83,69 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
 
                     // Second Container
                     DoctorWidget(
-                        imagePath: DoctorHuntAssetsPath.boneBrake,
-                        namePath: DoctorHuntText.watamaniuk,
-                        specializationPath: DoctorHuntText.toothDentist,
-                        experiencePath: DoctorHuntText.nineYears,
-                        percentagePath: DoctorHuntText.seventyFour,
-                        patientPath: DoctorHuntText.seventyEightPatients,
-                        isFavorite: isFavorite = false,
-                        timePath: DoctorHuntText.twelve),
-                    
+                      imagePath: DoctorHuntAssetsPath.boneBrake,
+                      namePath: DoctorHuntText.watamaniuk,
+                      specializationPath: DoctorHuntText.toothDentist,
+                      experiencePath: DoctorHuntText.nineYears,
+                      percentagePath: DoctorHuntText.seventyFour,
+                      patientPath: DoctorHuntText.seventyEightPatients,
+                      isFavorite: isFavorite = false,
+                      timePath: DoctorHuntText.twelve,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SelectTimeScreen()),
+                        );
+                      },
+                    ),
+
                     SizedBox(
                       height: 20.sp,
                     ),
 
                     // Third Container
                     DoctorWidget(
-                        imagePath: DoctorHuntAssetsPath.luke,
-                        namePath: DoctorHuntText.crownover,
-                        specializationPath: DoctorHuntText.toothDentist,
-                        experiencePath: DoctorHuntText.fiveYears,
-                        percentagePath: DoctorHuntText.fiftyNine,
-                        patientPath: DoctorHuntText.eightySixPatients,
-                        isFavorite: isFavorite = true,
-                        timePath: DoctorHuntText.eleven),
-                    
+                      imagePath: DoctorHuntAssetsPath.luke,
+                      namePath: DoctorHuntText.crownover,
+                      specializationPath: DoctorHuntText.toothDentist,
+                      experiencePath: DoctorHuntText.fiveYears,
+                      percentagePath: DoctorHuntText.fiftyNine,
+                      patientPath: DoctorHuntText.eightySixPatients,
+                      isFavorite: isFavorite = true,
+                      timePath: DoctorHuntText.eleven,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SelectTimeScreen()),
+                        );
+                      },
+                    ),
+
                     SizedBox(
                       height: 20.sp,
                     ),
 
                     // Fourth Container
                     DoctorWidget(
-                        imagePath: DoctorHuntAssetsPath.shoemaker,
-                        namePath: DoctorHuntText.balestra,
-                        specializationPath: DoctorHuntText.toothDentist,
-                        experiencePath: DoctorHuntText.sixYears,
-                        percentagePath: DoctorHuntText.eightySeven,
-                        patientPath: DoctorHuntText.sixtyNinePatients,
-                        isFavorite: isFavorite = false,
-                        timePath: DoctorHuntText.ten),
-                    
+                      imagePath: DoctorHuntAssetsPath.shoemaker,
+                      namePath: DoctorHuntText.balestra,
+                      specializationPath: DoctorHuntText.toothDentist,
+                      experiencePath: DoctorHuntText.sixYears,
+                      percentagePath: DoctorHuntText.eightySeven,
+                      patientPath: DoctorHuntText.sixtyNinePatients,
+                      isFavorite: isFavorite = false,
+                      timePath: DoctorHuntText.ten,
+                      onPressed: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const SelectTimeScreen()),
+                        );
+                      },
+                    ),
+
                     SizedBox(height: 20.sp),
                   ]),
             ),
