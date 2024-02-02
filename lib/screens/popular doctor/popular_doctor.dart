@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -41,14 +42,23 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        height: 30.sp,
-                        width: 30.sp,
-                        decoration: BoxDecoration(
-                            color: whiteText,
-                            borderRadius: BorderRadius.circular(10.r)),
-                        child: Icon(Icons.keyboard_arrow_left,
-                            color: royalIntrigue),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NavigationScreen()));
+                        },
+                        child: Container(
+                          height: 30.sp,
+                          width: 30.sp,
+                          decoration: BoxDecoration(
+                              color: whiteText,
+                              borderRadius: BorderRadius.circular(10.r)),
+                          child: Icon(Icons.keyboard_arrow_left,
+                              color: royalIntrigue),
+                        ),
                       ),
 
                       // Search Icon
