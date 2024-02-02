@@ -1,7 +1,8 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
-import 'package:doctor_hunt/screens/help%20center/help_center.dart';
+import 'package:doctor_hunt/screens/location/location.dart';
+import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,38 +40,13 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Back Arrow
-                  Row(
-                    children: [
-                      Container(
-                        height: 30.sp,
-                        width: 30.sp,
-                        decoration: BoxDecoration(
-                            color: whiteText,
-                            borderRadius: BorderRadius.circular(10.r)),
-                        child: Icon(Icons.keyboard_arrow_left,
-                            color: royalIntrigue),
-                      ),
-
-                      SizedBox(width: 20.sp),
-
-                      // Text
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (BuildContext context) =>
-                                const HelpCenterScreen(),
-                          ));
-                        },
-                        child: Text(
-                          DoctorHuntText.medicineOrder,
-                          style: TextStyle(
-                              fontSize: 19.sp,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: blackText),
-                        ),
-                      ),
-                    ],
+                  RowWidget(rowText: DoctorHuntText.medicinesOrder,
+                  onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const LocationScreen(),
+                        ));
+                      },
                   ),
 
                   SizedBox(height: 30.sp),
