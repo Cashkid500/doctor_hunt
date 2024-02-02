@@ -2,13 +2,10 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/diagnostic%20tests/diagnostic_test.dart';
-import 'package:doctor_hunt/screens/doctor%20details/doctor_details.dart';
+import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
-import 'package:doctor_hunt/screens/menu/menu.dart';
-import 'package:doctor_hunt/screens/patient%20details/patient_details.dart';
-import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
-import 'package:doctor_hunt/screens/settings/settings.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -45,7 +42,16 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.helpCenter),
+                    RowWidget(rowText: DoctorHuntText.helpCenter,
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const NavigationScreen(),
+                        ),
+                      );
+                    },
+                    ),
 
                     SizedBox(height: 30.sp),
 
@@ -85,12 +91,12 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 20.sp,
                     ),
 
-                    // First Row
+                    // Booking a new appointment
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.booking,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => const MenuScreen(),
+                          builder: (BuildContext context) => const DoctorAppointmentScreen(),
                         ));
                       },
                     ),
@@ -99,52 +105,34 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Second Row
+                    // Existing Appointment
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.existing,
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const SettingsScreen(),
-                        ));
-                      },
                     ),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Third Row
+                    // Online consultations
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.online,
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const PrivacyPolicyScreen(),
-                        ));
-                      },
                     ),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Fourth Row
+                    // Feedbacks
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.feedbacks,
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const PatientDetailsScreen(),
-                        ));
-                      },
                     ),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Fifth Row
+                    // Medicine Orders
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.medOrders,
                       onTap: () {
@@ -159,7 +147,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Sixth Row
+                    // Diagnostic Tests
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.diagnosticTests,
                       onTap: () {
@@ -174,36 +162,30 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Seventh Row
+                    // Health Plans
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.healthPlans,
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              const DoctorDetailsScreen(),
-                        ));
-                      },
                     ),
                     
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Eight Row
+                    // My account and practo drive
                     ExtractedRowWidget(textPath: DoctorHuntText.myAccount),
                     
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Nineth Row
+                    // Have a feature in mind
                     ExtractedRowWidget(textPath: DoctorHuntText.feature),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Tenth Row
+                    // Other issues
                     ExtractedRowWidget(textPath: DoctorHuntText.otherIssues),
 
                     SizedBox(
