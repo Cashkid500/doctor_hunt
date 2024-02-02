@@ -103,6 +103,7 @@ class DoctorHuntText {
 
 // Medicine Order Texts
   static const String medicineOrder = "Medicine Orders";
+  static const String medicinesOrder = "Medicines Orders";
   static const String order = "Order medicines";
   static const String noOrder = "No orders placed yet";
   static const String placeOrder = "Place your first order now.";
