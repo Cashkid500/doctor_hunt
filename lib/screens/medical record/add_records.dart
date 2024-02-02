@@ -39,7 +39,14 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.addRecords),
+                    RowWidget(rowText: DoctorHuntText.addRecords,
+                    onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const MedicalRecordScreen(),
+                        ));
+                      },
+                    ),
 
                     SizedBox(height: 30.sp),
 
