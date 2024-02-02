@@ -16,6 +16,7 @@ class SelectTime2Screen extends StatefulWidget {
 class _SelectTime2ScreenState extends State<SelectTime2Screen> {
   bool isFavorite = false;
   int currentTab = 0;
+  int currentTab1 = 0;
   int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
@@ -42,7 +43,15 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   // Back Arrow
-                  RowWidget(rowText: DoctorHuntText.selectTime),
+                  RowWidget(rowText: DoctorHuntText.selectTime,
+                      onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SelectTimeScreen(),
+                      ),
+                    );
+                  }),
 
                   SizedBox(height: 50.sp),
 
@@ -51,137 +60,88 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Scroll View
-
+                  // Horizontal Scroll View
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        // First Row First Container
-                        Container(
-                          height: 54.sp,
-                          width: 130.sp,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4.sp),
-                            border: Border.all(
-                                color: royalIntrigue,
-                                width: 1.sp,
-                                style: BorderStyle.solid),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                        ...List.generate(
+                          3,
+                          (index) => Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Text(
-                                DoctorHuntText.today,
-                                style: TextStyle(
-                                  color: blackText,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
+                              GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    currentTab1 = index;
+                                  });
+                                },
+                                child: Container(
+                                  height: 54.sp,
+                                  width: index == 2
+                                      ? 123.sp
+                                      : index == 1
+                                          ? 150.sp
+                                          : 130.sp,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        currentTab1 == index ? greenTeal : null,
+                                    borderRadius: BorderRadius.circular(4.sp),
+                                    border: currentTab1 == index
+                                        ? null
+                                        : Border.all(
+                                            color: royalIntrigue,
+                                            width: 1.sp,
+                                            style: BorderStyle.solid),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        index == 0
+                                            ? DoctorHuntText.today
+                                            : (index == 1)
+                                                ? DoctorHuntText.tomorrow
+                                                : DoctorHuntText.thur,
+                                        style: TextStyle(
+                                          color: currentTab1 == index
+                                              ? whiteText
+                                              : blackText,
+                                          fontSize: 16.sp,
+                                          fontWeight: FontWeight.w700,
+                                          fontFamily: DoctorHuntAssetsPath
+                                              .doctorHuntFont,
+                                        ),
+                                      ),
+
+                                      SizedBox(
+                                        height: 5.sp,
+                                      ),
+
+                                      Text(
+                                        index == 0
+                                            ? DoctorHuntText.noSlots
+                                            : (index == 1)
+                                                ? DoctorHuntText.nineSlots
+                                                : DoctorHuntText.tenSlots,
+                                        style: TextStyle(
+                                          color: currentTab1 == index
+                                              ? whiteText
+                                              : royalIntrigue,
+                                          fontSize: 10.sp,
+                                          fontWeight: FontWeight.w300,
+                                          fontFamily: DoctorHuntAssetsPath
+                                              .doctorHuntFont,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              SizedBox(
-                                height: 5.sp,
-                              ),
-                              Text(
-                                DoctorHuntText.noSlots,
-                                style: TextStyle(
-                                  color: royalIntrigue,
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w300,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        SizedBox(width: 10.sp),
-
-                        // First Row Second Container
-                        Container(
-                          height: 54.sp,
-                          width: 150.sp,
-                          decoration: BoxDecoration(
-                            color: greenTeal,
-                            borderRadius: BorderRadius.circular(4.sp),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                DoctorHuntText.tomorrow,
-                                style: TextStyle(
-                                  color: whiteText,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                              SizedBox(
-                                height: 5.sp,
-                              ),
-                              Text(
-                                DoctorHuntText.nineSlots,
-                                style: TextStyle(
-                                  color: whiteText,
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w300,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        SizedBox(width: 10.sp),
-
-                        // First Row Third Container
-                        Container(
-                          height: 54.sp,
-                          width: 123.sp,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4.sp),
-                            border: Border.all(
-                                color: royalIntrigue,
-                                width: 1.sp,
-                                style: BorderStyle.solid),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                DoctorHuntText.thur,
-                                style: TextStyle(
-                                  color: royalIntrigue,
-                                  fontSize: 16.sp,
-                                  fontWeight: FontWeight.w700,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
-
-                              SizedBox(
-                                height: 5.sp,
-                              ),
-
-                              Text(
-                                DoctorHuntText.tenSlots,
-                                style: TextStyle(
-                                  color: royalIntrigue,
-                                  fontSize: 10.sp,
-                                  fontWeight: FontWeight.w300,
-                                  fontFamily:
-                                      DoctorHuntAssetsPath.doctorHuntFont,
-                                ),
-                              ),
+                              if (index != 2) SizedBox(width: 10.sp),
                             ],
                           ),
                         ),
