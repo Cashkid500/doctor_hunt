@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:doctor_hunt/screens/profile/profile2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,11 +48,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
                 child: SafeArea(
                   child: Padding(
-                    padding: EdgeInsets.only(left: 20.sp),
+                    padding: EdgeInsets.only(left: 20.sp, top: 10.sp),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        ProfileHeader(),
+                        ProfileHeader(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const NavigationScreen(),
+                            ));
+                          },
+                        ),
                         SizedBox(height: 40.sp),
                         Text(
                           DoctorHuntText.profileSetup,

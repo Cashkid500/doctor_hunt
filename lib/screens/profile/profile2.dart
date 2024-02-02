@@ -32,11 +32,18 @@ class _Profile2ScreenState extends State<Profile2Screen> {
           ),
           child: SafeArea(
             child: Padding(
-              padding: EdgeInsets.only(left: 20.sp, right: 20.sp),
+              padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 10.sp),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ProfileHeader(),
+                  ProfileHeader(
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            const ProfileScreen(),
+                      ));
+                    },
+                  ),
 
                   SizedBox(height: 200.sp),
 
@@ -50,13 +57,14 @@ class _Profile2ScreenState extends State<Profile2Screen> {
                       color: whiteText,
                     ),
                   ),
-                  
+
                   SizedBox(height: 40.sp),
 
                   // TextForm Field
                   TextFormField(
                     decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(borderSide: BorderSide(color: whiteText)),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: whiteText)),
                       labelText: DoctorHuntText.fullName,
                       labelStyle: TextStyle(
                         fontSize: 22.sp,
