@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -40,7 +41,14 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     // Back Arrow
-                    RowWidget(rowText: DoctorHuntText.favouriteDoctors),
+                    RowWidget(
+                      rowText: DoctorHuntText.favouriteDoctors,
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => const NavigationScreen(),
+                        ));
+                      },
+                    ),
 
                     SizedBox(height: 30.sp),
 
@@ -145,7 +153,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                             doctorsNamePath: DoctorHuntText.strain,
                             hourPath: DoctorHuntText.twentyTwoHours,
                             doctorImagePath: DoctorHuntAssetsPath.strain),
-                        
+
                         SizedBox(
                           width: 5.sp,
                         ),
@@ -157,7 +165,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                             doctorsNamePath: DoctorHuntText.lachinet,
                             hourPath: DoctorHuntText.twentyNineHours,
                             doctorImagePath: DoctorHuntAssetsPath.lachinet),
-                        
+
                         SizedBox(
                           width: 5.sp,
                         ),
