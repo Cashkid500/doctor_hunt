@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
@@ -46,7 +47,17 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                     // Back Arrow
                     Padding(
                       padding: EdgeInsets.only(left: 20.sp),
-                      child: RowWidget(rowText: DoctorHuntText.appointment),
+                      child: RowWidget(
+                        rowText: DoctorHuntText.appointment,
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (BuildContext context) =>
+                                  const DoctorAppointmentScreen(),
+                            ),
+                          );
+                        },
+                      ),
                     ),
 
                     SizedBox(height: 20.sp),
@@ -123,103 +134,134 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
 
                           // Available Time Row Tab Bar
                           Row(
-                              children: [
-                                ...List.generate(
-                                  5, (index) => Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                GestureDetector(
-                                   onTap: () {
-                                    setState(() {
-                                      currentTab = index;
-                                    });
-                                  },
-                                  child: Container(
-                                    height: 60.sp,
-                                    width: 60.sp,
-                                    decoration: BoxDecoration(
-                                      color: currentTab == index
-                                          ? greenTeal
-                                          : deathVictorious,
-                                      borderRadius: BorderRadius.circular(40.sp),
-                                    ),
-                                    child: Center(
-                                      child: SizedBox(
-                                        width: 35.sp,
-                                        child: Text(
-                                          index == 0 ? DoctorHuntText.tenAM : (index == 1) ? DoctorHuntText.twelveAM : (index == 2) ? DoctorHuntText.twoPM : (index == 3) ? DoctorHuntText.threePM : DoctorHuntText.fourPM,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: DoctorHuntAssetsPath
-                                                .doctorHuntFont,
-                                            fontSize: 13.sp,
-                                            fontWeight: FontWeight.w400,
-                                            color: currentTab == index ? whiteText : greenTeal,
+                            children: [
+                              ...List.generate(
+                                5,
+                                (index) => Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          currentTab = index;
+                                        });
+                                      },
+                                      child: Container(
+                                        height: 60.sp,
+                                        width: 60.sp,
+                                        decoration: BoxDecoration(
+                                          color: currentTab == index
+                                              ? greenTeal
+                                              : deathVictorious,
+                                          borderRadius:
+                                              BorderRadius.circular(40.sp),
+                                        ),
+                                        child: Center(
+                                          child: SizedBox(
+                                            width: 35.sp,
+                                            child: Text(
+                                              index == 0
+                                                  ? DoctorHuntText.tenAM
+                                                  : (index == 1)
+                                                      ? DoctorHuntText.twelveAM
+                                                      : (index == 2)
+                                                          ? DoctorHuntText.twoPM
+                                                          : (index == 3)
+                                                              ? DoctorHuntText
+                                                                  .threePM
+                                                              : DoctorHuntText
+                                                                  .fourPM,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: DoctorHuntAssetsPath
+                                                    .doctorHuntFont,
+                                                fontSize: 13.sp,
+                                                fontWeight: FontWeight.w400,
+                                                color: currentTab == index
+                                                    ? whiteText
+                                                    : greenTeal,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                    if (index != 4) SizedBox(width: 10.sp),
+                                  ],
                                 ),
-                                 if (index != 4) SizedBox(width: 10.sp),
-                                 ],
-                                ),
-                                ),
-                              ],
                               ),
+                            ],
+                          ),
 
                           SizedBox(height: 30.sp),
-                         
+
                           // Text
                           TextRow(rowTextPath: DoctorHuntText.reminder),
                           SizedBox(height: 20.sp),
 
                           // Reminder Me Before Row Tab Bar
                           Row(
-                              children: [
-                                ...List.generate(
-                                  5, (index) => Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                children: [
-                                GestureDetector(
-                                   onTap: () {
-                                    setState(() {
-                                      currentIndex = index;
-                                    });
-                                  },
-                                  child: Container(
-                                    height: 60.sp,
-                                    width: 60.sp,
-                                    decoration: BoxDecoration(
-                                      color: currentIndex == index
-                                          ? greenTeal
-                                          : deathVictorious,
-                                      borderRadius: BorderRadius.circular(40.sp),
-                                    ),
-                                    child: Center(
-                                      child: SizedBox(
-                                        width: 35.sp,
-                                        child: Text(
-                                          index == 0 ? DoctorHuntText.thirtyMins : (index == 1) ? DoctorHuntText.fortyMins : (index == 2) ? DoctorHuntText.twentyFiveMins : (index == 3) ? DoctorHuntText.tenMins : DoctorHuntText.thirtyFiveMins,
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                            fontFamily: DoctorHuntAssetsPath
-                                                .doctorHuntFont,
-                                            fontSize: 13.sp,
-                                            fontWeight: FontWeight.w400,
-                                            color: currentIndex == index ? whiteText : greenTeal,
+                            children: [
+                              ...List.generate(
+                                5,
+                                (index) => Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    GestureDetector(
+                                      onTap: () {
+                                        setState(() {
+                                          currentIndex = index;
+                                        });
+                                      },
+                                      child: Container(
+                                        height: 60.sp,
+                                        width: 60.sp,
+                                        decoration: BoxDecoration(
+                                          color: currentIndex == index
+                                              ? greenTeal
+                                              : deathVictorious,
+                                          borderRadius:
+                                              BorderRadius.circular(40.sp),
+                                        ),
+                                        child: Center(
+                                          child: SizedBox(
+                                            width: 35.sp,
+                                            child: Text(
+                                              index == 0
+                                                  ? DoctorHuntText.thirtyMins
+                                                  : (index == 1)
+                                                      ? DoctorHuntText.fortyMins
+                                                      : (index == 2)
+                                                          ? DoctorHuntText
+                                                              .twentyFiveMins
+                                                          : (index == 3)
+                                                              ? DoctorHuntText
+                                                                  .tenMins
+                                                              : DoctorHuntText
+                                                                  .thirtyFiveMins,
+                                              textAlign: TextAlign.center,
+                                              style: TextStyle(
+                                                fontFamily: DoctorHuntAssetsPath
+                                                    .doctorHuntFont,
+                                                fontSize: 13.sp,
+                                                fontWeight: FontWeight.w400,
+                                                color: currentIndex == index
+                                                    ? whiteText
+                                                    : greenTeal,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                       ),
                                     ),
-                                  ),
+                                    if (index != 4) SizedBox(width: 10.sp),
+                                  ],
                                 ),
-                                 if (index != 4) SizedBox(width: 10.sp),
-                                 ],
-                                ),
-                                ),
-                              ],
-                            ),
+                              ),
+                            ],
+                          ),
                           SizedBox(
                             height: 30.sp,
                           ),
@@ -322,7 +364,15 @@ void _showOrderDialog(BuildContext context) {
               ),
 
               // Done
-              ElevatedButtonWidget(onPressed: () {}, textPath: DoctorHuntText.done),
+              ElevatedButtonWidget(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const NavigationScreen(),
+                      ),
+                    );
+                  },
+                  textPath: DoctorHuntText.done),
 
               SizedBox(
                 height: 20.sp,
