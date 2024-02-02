@@ -1,6 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
+import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -34,24 +35,30 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 30.sp,
-                            width: 30.sp,
-                            decoration: BoxDecoration(
-                                color: whiteText,
-                                borderRadius: BorderRadius.circular(10.r)),
-                            child: Icon(Icons.keyboard_arrow_left,
-                                color: royalIntrigue),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    const NavigationScreen(),
+                              ));
+                            },
+                            child: Container(
+                              height: 30.sp,
+                              width: 30.sp,
+                              decoration: BoxDecoration(
+                                  color: whiteText,
+                                  borderRadius: BorderRadius.circular(10.r)),
+                              child: Icon(Icons.keyboard_arrow_left,
+                                  color: royalIntrigue),
+                            ),
                           ),
                           Image.asset(DoctorHuntAssetsPath.liveChatProfile),
-                        ]
-                      ),
+                        ]),
 
                     SizedBox(height: 280.sp),
 
                     // First Row
-                    Row(
-                      children: [
+                    Row(children: [
                       Image.asset(DoctorHuntAssetsPath.tween),
                       SizedBox(width: 5.sp),
                       Column(
@@ -68,9 +75,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
-
                           SizedBox(height: 5.sp),
-
                           Text(
                             DoctorHuntText.thanks,
                             style: TextStyle(
@@ -81,20 +86,19 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           ),
                         ],
                       ),
-                    ]
-                    ),
+                    ]),
 
                     SizedBox(height: 20.sp),
 
                     // Second Row
-                    Row(
-                      children: [
+                    Row(children: [
                       Image.asset(DoctorHuntAssetsPath.mash),
                       SizedBox(width: 5.sp),
                       Column(
                         children: [
                           Padding(
-                            padding: EdgeInsets.only(right: 105.sp, left: 10.sp),
+                            padding:
+                                EdgeInsets.only(right: 105.sp, left: 10.sp),
                             child: Text(
                               DoctorHuntText.mash,
                               style: TextStyle(
@@ -105,9 +109,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
-
                           SizedBox(height: 5.sp),
-
                           Padding(
                             padding: EdgeInsets.only(left: 5.sp),
                             child: Text(
@@ -122,14 +124,12 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           ),
                         ],
                       ),
-                    ]
-                    ),
+                    ]),
 
                     SizedBox(height: 20.sp),
 
                     // Third Row
-                    Row(
-                      children: [
+                    Row(children: [
                       Image.asset(DoctorHuntAssetsPath.wack),
                       SizedBox(width: 5.sp),
                       Column(
@@ -146,9 +146,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
-
                           SizedBox(height: 5.sp),
-
                           Padding(
                             padding: EdgeInsets.only(left: 10.sp),
                             child: Text(
@@ -163,14 +161,12 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           ),
                         ],
                       ),
-                    ]
-                    ),
+                    ]),
 
                     SizedBox(height: 20.sp),
 
                     // Fourth Row
-                    Row(
-                      children: [
+                    Row(children: [
                       Image.asset(DoctorHuntAssetsPath.love),
                       SizedBox(width: 5.sp),
                       Column(
@@ -187,9 +183,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
-
                           SizedBox(height: 5.sp),
-                          
                           Padding(
                             padding: EdgeInsets.only(left: 12.sp),
                             child: Text(
@@ -204,53 +198,50 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
                           ),
                         ],
                       ),
-                    ]
-                  ),
+                    ]),
 
-                  SizedBox(height: 30.sp),
+                    SizedBox(height: 30.sp),
 
-                  // Add a comment
-                  SizedBox(
-                    width: 335.sp,
-                    child: TextField(
-                      keyboardType: TextInputType.multiline,
-                      decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(27.r)),
-                        contentPadding: EdgeInsets.symmetric(
-                            horizontal: 20.sp, vertical: 20.sp),
-                        isCollapsed: true,
-                        hintText: DoctorHuntText.comment,
-                        hintStyle: TextStyle(
+                    // Add a comment
+                    SizedBox(
+                      width: 335.sp,
+                      child: TextField(
+                        keyboardType: TextInputType.multiline,
+                        decoration: InputDecoration(
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(27.r)),
+                          contentPadding: EdgeInsets.symmetric(
+                              horizontal: 20.sp, vertical: 20.sp),
+                          isCollapsed: true,
+                          hintText: DoctorHuntText.comment,
+                          hintStyle: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             fontSize: 14.sp,
                             fontWeight: FontWeight.w300,
                             color: royalIntrigue,
-                            ),
-                        filled: true,
-                        fillColor: whiteText,
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(27.r),
-                        ),
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.only(left: 5.sp),
-                          child: Container(
-                            height: 44.sp,
-                            width: 44.sp,
-                            decoration: BoxDecoration(
-                              color: greenTeal,
-                              borderRadius: BorderRadius.circular(30.r),
-                            ),
-                            child: Image.asset(DoctorHuntAssetsPath.message),
                           ),
+                          filled: true,
+                          fillColor: whiteText,
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(27.r),
+                          ),
+                          prefixIcon: Padding(
+                            padding: EdgeInsets.only(left: 5.sp),
+                            child: Container(
+                              height: 44.sp,
+                              width: 44.sp,
+                              decoration: BoxDecoration(
+                                color: greenTeal,
+                                borderRadius: BorderRadius.circular(30.r),
+                              ),
+                              child: Image.asset(DoctorHuntAssetsPath.message),
+                            ),
+                          ),
+                          suffixIcon: Image.asset(DoctorHuntAssetsPath.emoji),
                         ),
-                        suffixIcon: Image.asset(DoctorHuntAssetsPath.emoji),
-                        ),
-                        
                       ),
                     ),
-                  ]
-                ),
+                  ]),
             ),
           ),
         ),
