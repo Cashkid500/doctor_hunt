@@ -83,19 +83,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                         ),
                                       ],
                                     ),
-                                    GestureDetector(
-                                      onTap: () {
-                                        Navigator.of(context)
-                                            .push(MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                              const ProfileScreen(),
-                                        ));
-                                      },
-                                      child: CircleAvatar(
-                                        radius: 30.r,
-                                        backgroundImage: AssetImage(
-                                          DoctorHuntAssetsPath.profile,
-                                        ),
+                                    CircleAvatar(
+                                      radius: 30.r,
+                                      backgroundImage: AssetImage(
+                                        DoctorHuntAssetsPath.profile,
                                       ),
                                     ),
                                   ],
