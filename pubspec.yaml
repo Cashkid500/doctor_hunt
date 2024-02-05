@@ -38,6 +38,8 @@ dependencies:
   flutter_screenutil: ^5.9.0
   pin_code_fields: ^8.0.1
   table_calendar: ^3.0.9
+  google_maps_flutter: ^2.2.8
+  flutter_polyline_points: ^2.0.0
 
 dev_dependencies:
   flutter_test:
