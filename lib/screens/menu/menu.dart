@@ -7,6 +7,7 @@ import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
 import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
+import 'package:doctor_hunt/screens/profile/profile.dart';
 import 'package:doctor_hunt/screens/settings/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -46,10 +47,18 @@ class _MenuScreenState extends State<MenuScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    CircleAvatar(
-                      radius: 25.r,
-                      backgroundImage: AssetImage(
-                        DoctorHuntAssetsPath.menu,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const ProfileScreen(),
+                        ));
+                      },
+                      child: CircleAvatar(
+                        radius: 25.r,
+                        backgroundImage: AssetImage(
+                          DoctorHuntAssetsPath.menu,
+                        ),
                       ),
                     ),
                     SizedBox(width: 10.sp),
