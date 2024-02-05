@@ -110,7 +110,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ],
                 ),
 
-                SizedBox(height: 70.sp),
+                SizedBox(height: 10.sp),
 
                 // Row
                 // My Doctor
@@ -246,7 +246,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                 ),
 
-                SizedBox(height: 30.sp),
+                SizedBox(height: 20.sp),
 
                 // Logout
                 Row(
