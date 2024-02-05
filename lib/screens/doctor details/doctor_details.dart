@@ -5,6 +5,7 @@ import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart
 import 'package:doctor_hunt/screens/doctors/doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class DoctorDetailsScreen extends StatefulWidget {
   const DoctorDetailsScreen({super.key});
@@ -14,6 +15,19 @@ class DoctorDetailsScreen extends StatefulWidget {
 }
 
 class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
+  static const _initialCameraPosition =
+  CameraPosition(target: LatLng(37.773972, -122.431297), zoom: 11.5);
+  // static const LatLng sourceLocation = LatLng(37.33500926, -122.03272188);
+  // static const LatLng destination = LatLng(37.33429383, -122.06600055);
+  // late GoogleMapController _googleMapController;
+  // Marker _origin;
+  // Marker _destination;
+  // @override
+  // void dispose() {
+  //   _googleMapController.dispose();
+  //   super.dispose();
+  // }
+
   bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
@@ -180,11 +194,40 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         ),
                       ),
                     ]),
+
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Map
+                    // Google Map
+                    SizedBox(
+                      height: 210.sp,
+                      width: 335.sp,
+                      child: GoogleMap(
+                        myLocationButtonEnabled: false,
+                        zoomControlsEnabled: false,
+                        initialCameraPosition: _initialCameraPosition,
+                        // initialCameraPosition: CameraPosition(
+                        //   target: sourceLocation,
+                        //   zoom: 11.5,
+                        // ),
+                        // onMapCreated: (controller) =>
+                        //     _googleMapController = controller,
+                        // markers: {
+                        //   const Marker(
+                        //     markerId: MarkerId("source"),
+                        //     position: sourceLocation,
+                        //   ),
+                        //   const Marker(
+                        //     markerId: MarkerId("destination"),
+                        //     position: sourceLocation,
+                        //   ),
+                        // },
+                      ),
+                    ),
+                    SizedBox(
+                      height: 30.sp,
+                    ),
                   ]),
             ),
           ),
