@@ -5,6 +5,7 @@ import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart
 import 'package:doctor_hunt/screens/doctors/doctors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class DoctorDetailsScreen extends StatefulWidget {
@@ -15,8 +16,9 @@ class DoctorDetailsScreen extends StatefulWidget {
 }
 
 class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
-  static const _initialCameraPosition =
-  CameraPosition(target: LatLng(37.773972, -122.431297), zoom: 11.5);
+  CameraPosition? _initialCameraPosition;
+  // static const _initialCameraPosition =
+  //     CameraPosition(target: LatLng(position., -122.431297), zoom: 11.5);
   // static const LatLng sourceLocation = LatLng(37.33500926, -122.03272188);
   // static const LatLng destination = LatLng(37.33429383, -122.06600055);
   // late GoogleMapController _googleMapController;
@@ -27,6 +29,37 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
   //   _googleMapController.dispose();
   //   super.dispose();
   // }
+  static final Polyline _dPolyline = Polyline(
+    polylineId: PolylineId("_dPolyline"),
+    color: Colors.blue,
+    width: 5,
+    points: [
+      const LatLng(37.773972, -122.431297),
+      const LatLng(37.33429383, -122.06600055),
+    ],
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      getCameraPosition();
+    });
+  }
+
+  void getCameraPosition() async {
+    final position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+
+    setState(() {
+      _initialCameraPosition = CameraPosition(
+        target: LatLng(position.latitude, position.longitude),
+        zoom: 11.5,
+      );
+    });
+  }
+
+  Geolocator geolocator = Geolocator();
 
   bool isFavorite = false;
   @override
@@ -204,27 +237,35 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                       height: 210.sp,
                       width: 335.sp,
                       child: GoogleMap(
+                        mapType: MapType.normal,
                         myLocationButtonEnabled: false,
-                        zoomControlsEnabled: false,
-                        initialCameraPosition: _initialCameraPosition,
+                        zoomControlsEnabled: true,
+                        initialCameraPosition: _initialCameraPosition ??
+                            CameraPosition(
+                              target: LatLng(37.773972, -122.431297),
+                              zoom: 11.5,
+                            ),
                         // initialCameraPosition: CameraPosition(
                         //   target: sourceLocation,
                         //   zoom: 11.5,
                         // ),
                         // onMapCreated: (controller) =>
                         //     _googleMapController = controller,
-                        // markers: {
-                        //   const Marker(
-                        //     markerId: MarkerId("source"),
-                        //     position: sourceLocation,
-                        //   ),
-                        //   const Marker(
-                        //     markerId: MarkerId("destination"),
-                        //     position: sourceLocation,
-                        //   ),
-                        // },
+                        markers: {
+                          const Marker(
+                            markerId: MarkerId("source"),
+                            position: LatLng(37.773972, -122.431297),
+                            icon: BitmapDescriptor.defaultMarker,
+                          ),
+                          const Marker(
+                            markerId: MarkerId("destination"),
+                            position: LatLng(37.773972, -122.431297),
+                          ),
+                        },
+                        polylines: {_dPolyline},
                       ),
                     ),
+
                     SizedBox(
                       height: 30.sp,
                     ),
