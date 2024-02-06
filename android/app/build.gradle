@@ -76,3 +76,9 @@ android {
         minSdkVersion 20
     }
 }
+
+android {
+  compileSdkVersion 33
+
+  ...
+}
