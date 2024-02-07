@@ -44,7 +44,7 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //********* Back Arrow **********
                     Padding(
                       padding: EdgeInsets.only(left: 20.sp),
                       child: RowWidget(
@@ -62,7 +62,7 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Calendar
+                    //************ Calendar ***********
                     Center(
                       child: Container(
                         width: 330.sp,
@@ -102,9 +102,11 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                                 ),
                               ),
                             ),
+
                             SizedBox(
                               height: 20.sp,
                             ),
+
                           ],
                         ),
                       ),
@@ -132,7 +134,7 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                           TextRow(rowTextPath: DoctorHuntText.availableTime),
                           SizedBox(height: 20.sp),
 
-                          // Available Time Row Tab Bar
+                          //************ Available Time Row Tab Bar ************
                           Row(
                             children: [
                               ...List.generate(
@@ -196,11 +198,11 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
 
                           SizedBox(height: 30.sp),
 
-                          // Text
+                          //************ Text *************
                           TextRow(rowTextPath: DoctorHuntText.reminder),
                           SizedBox(height: 20.sp),
 
-                          // Reminder Me Before Row Tab Bar
+                          //************* Reminder Me Before Row Tab Bar ************
                           Row(
                             children: [
                               ...List.generate(
@@ -262,11 +264,12 @@ class _DoctorAppointment2ScreenState extends State<DoctorAppointment2Screen> {
                               ),
                             ],
                           ),
+
                           SizedBox(
                             height: 30.sp,
                           ),
 
-                          // Confirm
+                          //********** Confirm Button ************
                           ElevatedButtonWidget(
                               onPressed: () {
                                 _showOrderDialog(context);
@@ -316,7 +319,7 @@ void _showOrderDialog(BuildContext context) {
                 height: 20.sp,
               ),
 
-              // Thank You Text
+              //********* Thank You Text ********
               Text(
                 DoctorHuntText.thankYou,
                 style: TextStyle(
@@ -331,7 +334,7 @@ void _showOrderDialog(BuildContext context) {
                 height: 15.sp,
               ),
 
-              // Successful Appointment Text
+              //********* Successful Appointment Text *************
               Text(
                 DoctorHuntText.successfulAppointment,
                 style: TextStyle(
@@ -363,7 +366,7 @@ void _showOrderDialog(BuildContext context) {
                 height: 30.sp,
               ),
 
-              // Done
+              //********** Done *********
               ElevatedButtonWidget(
                   onPressed: () {
                     Navigator.of(context).push(
@@ -378,7 +381,7 @@ void _showOrderDialog(BuildContext context) {
                 height: 20.sp,
               ),
 
-              // Edit your appointment
+              //******** Edit your appointment **************
               TextButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
