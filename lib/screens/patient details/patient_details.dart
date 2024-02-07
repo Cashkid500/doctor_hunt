@@ -39,7 +39,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.patientDetails,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -51,7 +51,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
 
                   SizedBox(height: 80.sp),
 
-                  // Circular Box
+                  //***************** Circular Box *****************
                   Container(
                     height: 214.sp,
                     width: 214.sp,
@@ -64,7 +64,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
 
                   SizedBox(height: 50.sp),
 
-                  // Text
+                  //***************** Text *****************
                   Text(
                     DoctorHuntText.emptyCart,
                     style: TextStyle(
@@ -76,7 +76,7 @@ class _PatientDetailsScreenState extends State<PatientDetailsScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Button
+                  //***************** Button *****************
                   ElevatedButtonWidget(
                     textPath: DoctorHuntText.addTests,
                     onPressed: () {
