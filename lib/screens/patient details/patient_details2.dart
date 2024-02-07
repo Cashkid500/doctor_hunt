@@ -40,7 +40,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.patientDetails,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -52,7 +52,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Box
+                  //***************** Box *****************
                   Container(
                     height: 38.sp,
                     width: 335.sp,
@@ -103,7 +103,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                   SizedBox(height: 20.sp),
 
-                  // User Data
+                  //***************** User Data *****************
                   Container(
                     height: 518.sp,
                     width: 335.sp,
@@ -118,21 +118,21 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                         children: [
                           SizedBox(height: 20.sp),
 
-                          // Patient Name
+                          //***************** Patient Name *****************
                           Heading(headerPath: DoctorHuntText.patientName),
                           SizedBox(height: 15.sp),
 
                           FieldWidget(fieldPath: DoctorHuntText.fullName),
                           SizedBox(height: 15.sp),
 
-                          // Age
+                          //***************** Age *****************
                           Heading(headerPath: DoctorHuntText.age),
                           SizedBox(height: 15.sp),
 
                           Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              // Day //
+                              //***************** Day *****************
                               Container(
                                 height: 54.sp,
                                 width: 94.sp,
@@ -172,7 +172,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                               SizedBox(width: 10.sp),
 
-                              // Month //
+                              //***************** Month *****************
                               Container(
                                 height: 54.sp,
                                 width: 94.sp,
@@ -213,7 +213,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                               SizedBox(width: 10.sp),
 
-                              // Year //
+                              //***************** Year *****************
                               Container(
                                 height: 54.sp,
                                 width: 94.sp,
@@ -255,12 +255,12 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                           SizedBox(height: 15.sp),
 
-                          // Gender
+                          //***************** Gender *****************
                           Heading(headerPath: DoctorHuntText.gender),
 
                           SizedBox(height: 15.sp),
 
-                          // Radio Button
+                          //***************** Radio Button *****************
                           Row(
                             children: [
                               Radio(
@@ -334,14 +334,14 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                           SizedBox(height: 15.sp),
 
-                          // Mobile Number
+                          //***************** Mobile Number *****************
                           Heading(headerPath: DoctorHuntText.mobileNumber),
                           SizedBox(height: 15.sp),
 
                           FieldWidget(fieldPath: DoctorHuntText.digit),
                           SizedBox(height: 15.sp),
 
-                          // Email
+                          //***************** Email *****************
                           Heading(headerPath: DoctorHuntText.email),
                           SizedBox(height: 15.sp),
 
@@ -353,7 +353,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                   
                   SizedBox(height: 25.sp),
 
-                  // Button
+                  //***************** Button *****************
                   ElevatedButtonWidget(
                     textPath: DoctorHuntText.continue1,
                     onPressed: () {
