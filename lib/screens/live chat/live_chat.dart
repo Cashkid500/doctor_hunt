@@ -57,8 +57,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
 
                     SizedBox(height: 280.sp),
 
-                    // First Row
-                    Row(children: [
+                    //***************** First Row *****************
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.tween),
                       SizedBox(width: 5.sp),
                       Column(
@@ -90,8 +91,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Second Row
-                    Row(children: [
+                    //***************** Second Row *****************
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.mash),
                       SizedBox(width: 5.sp),
                       Column(
@@ -128,8 +130,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Third Row
-                    Row(children: [
+                    //***************** Third Row *****************
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.wack),
                       SizedBox(width: 5.sp),
                       Column(
@@ -165,8 +168,9 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Fourth Row
-                    Row(children: [
+                    //***************** Fourth Row *****************
+                    Row(
+                      children: [
                       Image.asset(DoctorHuntAssetsPath.love),
                       SizedBox(width: 5.sp),
                       Column(
@@ -202,7 +206,7 @@ class _LiveChatScreenState extends State<LiveChatScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Add a comment
+                    //***************** Add a comment *****************
                     SizedBox(
                       width: 335.sp,
                       child: TextField(
