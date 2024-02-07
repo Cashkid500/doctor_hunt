@@ -112,7 +112,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         width: 30.sp,
                       ),
 
-                      // Text
+                      //***************  Text ************
                       Text(
                         DoctorHuntText.doctorDetails,
                         style: TextStyle(
@@ -130,12 +130,12 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Container
+                    //********* Container **********
                     DoctorPediatricianContainer(isFavorite: isFavorite = true),
 
                     SizedBox(height: 30.sp),
 
-                    // Second Container
+                    //********** Second Container ***********
                     Container(
                       height: 84.sp,
                       width: 305.sp,
@@ -150,12 +150,12 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                 textPath: DoctorHuntText.hundred,
                                 text2Path: DoctorHuntText.running),
 
-                            // Second Container
+                            //****** Second Container ********  
                             SecondRowContainer(
                                 textPath: DoctorHuntText.fiveHundred,
                                 text2Path: DoctorHuntText.ongoing),
 
-                            // Third Container
+                            //********** Third Container ********
                             SecondRowContainer(
                                 textPath: DoctorHuntText.sevenHundred,
                                 text2Path: DoctorHuntText.patient),
@@ -181,7 +181,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                       height: 30.sp,
                     ),
 
-                    // First Services Row Texts
+                    //********** First Services Row Texts ***********
                     ServicesRow(
                       servicesNumberingPath: DoctorHuntText.one,
                       servicesTextPath: DoctorHuntText.priority,
@@ -190,7 +190,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Second Services Row Texts
+                    //***************** Second Services Row Texts ***********
                     ServicesRow(
                       servicesNumberingPath: DoctorHuntText.two,
                       servicesTextPath: DoctorHuntText.frustrating,
@@ -199,9 +199,10 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Third Services Row Texts
-                    Row(children: [
-                      // First Text
+                    //***************** Third Services Row Texts ***********
+                    Row(
+                      children: [
+                      //************** First Text **************
                       Text(
                         DoctorHuntText.three,
                         style: TextStyle(
@@ -216,7 +217,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         width: 10.sp,
                       ),
 
-                      // Second Text
+                      //***************** Second Text *************
                       Text(
                         DoctorHuntText.reminderSystem,
                         style: TextStyle(
@@ -232,7 +233,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                       height: 30.sp,
                     ),
 
-                    // Google Map
+                    //***************** Google Map ******************
                     SizedBox(
                       height: 210.sp,
                       width: 335.sp,
@@ -352,7 +353,8 @@ class DoctorPediatricianContainer extends StatelessWidget {
                         color: royalIntrigue),
                   ),
                   SizedBox(height: 10.sp),
-                  Row(children: [
+                  Row(
+                    children: [
                     Image.asset(DoctorHuntAssetsPath.rating),
                     SizedBox(width: 40.sp),
                     RichText(
@@ -380,7 +382,7 @@ class DoctorPediatricianContainer extends StatelessWidget {
                   ]),
                   SizedBox(height: 10.sp),
 
-                  // Button
+                  //***************** Button ******************
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).push(MaterialPageRoute(
@@ -429,7 +431,7 @@ class ServicesRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      // First Text
+      //***************** First Text ******************
       Text(
         servicesNumberingPath,
         style: TextStyle(
@@ -439,10 +441,12 @@ class ServicesRow extends StatelessWidget {
           color: greenTeal,
         ),
       ),
+
       SizedBox(
         width: 10.sp,
       ),
-      // Second Text
+
+      //***************** Second Text ******************
       Text(
         servicesTextPath,
         style: TextStyle(
@@ -476,7 +480,7 @@ class SecondRowContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.sp),
       ),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        // First Text
+        //***************** First Text ******************
         Text(
           textPath,
           style: TextStyle(
@@ -486,10 +490,12 @@ class SecondRowContainer extends StatelessWidget {
             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
           ),
         ),
+
         SizedBox(
           height: 5.sp,
         ),
-        // Second Text
+
+        //***************** Second Text ******************
         Text(
           text2Path,
           style: TextStyle(
