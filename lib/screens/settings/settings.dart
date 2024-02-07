@@ -40,7 +40,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.settings,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -52,7 +52,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text
+                  //***************** Text *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -69,7 +69,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Change Password
+                  //***************** Change Password *****************
                   AccountSettingsRow(
                     textPath: DoctorHuntText.changePassword,
                     imagePath: DoctorHuntAssetsPath.password,
@@ -82,21 +82,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Notifications
+                  //***************** Notifications *****************
                   AccountSettingsRow(
                       textPath: DoctorHuntText.notifications,
                       imagePath: DoctorHuntAssetsPath.notification),
 
                   SizedBox(height: 20.sp),
 
-                  // Statistics
+                  //***************** Statistics *****************
                   AccountSettingsRow(
                       textPath: DoctorHuntText.statistics,
                       imagePath: DoctorHuntAssetsPath.statistics),
 
                   SizedBox(height: 20.sp),
 
-                  // About Us
+                  //***************** About Us *****************
                   AccountSettingsRow(
                       textPath: DoctorHuntText.aboutUs,
                       imagePath: DoctorHuntAssetsPath.about),
@@ -105,7 +105,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 40.sp),
 
-                  // Text
+                  //***************** Text *****************
                   Row(
                     children: [
                       Text(
@@ -122,7 +122,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text Messages
+                  //***************** Text Messages *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -157,7 +157,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Phone calls
+                  //***************** Phone calls *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -194,7 +194,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Languages
+                  //***************** Languages *****************
                   MoreOptionsRow(
                     textPath1: DoctorHuntText.languages,
                     textPath2: DoctorHuntText.english,
@@ -209,14 +209,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Currency
+                  //***************** Currency *****************
                   MoreOptionsRow(
                       textPath1: DoctorHuntText.currency,
                       textPath2: DoctorHuntText.usd),
                       
                   SizedBox(height: 20.sp),
 
-                  // Linked Accounts
+                  //***************** Linked Accounts *****************
                   MoreOptionsRow(
                       textPath1: DoctorHuntText.linkedAccounts,
                       textPath2: DoctorHuntText.facebookGoogle),
