@@ -38,7 +38,7 @@ class _AllRecordScreenState extends State<AllRecordScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(rowText: DoctorHuntText.allRecords,
                     onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -50,19 +50,19 @@ class _AllRecordScreenState extends State<AllRecordScreen> {
 
                     SizedBox(height: 50.sp),
 
-                    // First Box
+                    //***************** First Box *****************
                     FirstContainer(),
                     SizedBox(height: 10.sp),
 
-                    // Second Box
+                    //***************** Second Box *****************
                     SecondContainer(),
                     SizedBox(height: 10.sp),
 
-                    // Third Box
+                    //***************** Third Box *****************
                     ThirdContainer(),
                     SizedBox(height: 180.sp),
                     
-                    // Button
+                    //***************** Button *****************
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.addRecord,
                       onPressed: () {
