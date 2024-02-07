@@ -38,7 +38,7 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(
                     rowText: DoctorHuntText.medicalRecord,
                     onTap: () {
@@ -53,7 +53,7 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 
                   SizedBox(height: 80.sp),
 
-                  // Circular Box
+                  //***************** Circular Box *****************
                   Container(
                     height: 214.sp,
                     width: 214.sp,
@@ -66,7 +66,7 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Text
+                  //***************** Text *****************
                   GestureDetector(
                     onTap: () {
                       _showBottomSheet(context);
@@ -83,7 +83,7 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text
+                  //***************** Text *****************
                   SizedBox(
                     width: 330.sp,
                     child: Text(
@@ -98,7 +98,7 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Button
+                  //***************** Button *****************
                   ElevatedButtonWidget(
                     textPath: DoctorHuntText.addRecord,
                     onPressed: () {
@@ -146,7 +146,7 @@ class RowWidget extends StatelessWidget {
 
       SizedBox(width: 20.sp),
 
-      // Text
+      //***************** Text *****************
       Text(
         rowText,
         style: TextStyle(
@@ -210,7 +210,7 @@ void _showBottomSheet(BuildContext context) {
           ),
         ),
 
-        // Content of the bottom sheet
+        //***************** Content of the bottom sheet *****************
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -228,7 +228,7 @@ void _showBottomSheet(BuildContext context) {
                   ),
                   SizedBox(height: 40.sp),
 
-                  // Add a record
+                  //***************** Add a record *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -245,7 +245,7 @@ void _showBottomSheet(BuildContext context) {
                   ),
                   SizedBox(height: 20.sp),
 
-                  // Take a photo
+                  //***************** Take a photo *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -268,7 +268,7 @@ void _showBottomSheet(BuildContext context) {
 
                   SizedBox(height: 10.sp),
 
-                  // Upload from gallery
+                  //***************** Upload from gallery *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -291,7 +291,7 @@ void _showBottomSheet(BuildContext context) {
 
                   SizedBox(height: 10.sp),
 
-                  // Upload files
+                  //***************** Upload files *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -314,7 +314,7 @@ void _showBottomSheet(BuildContext context) {
                 ],
               ),
               onTap: () {
-                // Handle option 2
+                //***************** Handle option 2 *****************
                 Navigator.pop(context);
               },
             ),
