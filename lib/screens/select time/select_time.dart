@@ -41,7 +41,7 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(
                     rowText: DoctorHuntText.selectTime,
                     onTap: () {
@@ -56,12 +56,12 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
 
                   SizedBox(height: 50.sp),
 
-                  // Dr Shruti Kedia
+                  //***************** Dr Shruti Kedia *****************
                   ShrutiKediaContainer(isFavorite: isFavorite = true),
 
                   SizedBox(height: 30.sp),
 
-                  // Horizontal Scroll View
+                  //***************** Horizontal Scroll View *****************
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -150,6 +150,7 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
 
                   SizedBox(height: 50.sp),
 
+                  //***************** Today *****************
                   Text(
                     DoctorHuntText.today,
                     style: TextStyle(
@@ -162,6 +163,7 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
 
                   SizedBox(height: 30.sp),
 
+                  //***************** No Slots *****************
                   Text(
                     DoctorHuntText.noSlots,
                     style: TextStyle(
@@ -196,6 +198,7 @@ class _SelectTimeScreenState extends State<SelectTimeScreen> {
 
                   SizedBox(height: 30.sp),
 
+                  //***************** Or *****************
                   Text(
                     DoctorHuntText.or,
                     style: TextStyle(
@@ -282,6 +285,7 @@ class ShrutiKediaContainer extends StatelessWidget {
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Row(
                 children: [
+                  //***************** Shruti Kedia *****************
                   Text(
                     DoctorHuntText.shruti,
                     style: TextStyle(
@@ -301,9 +305,12 @@ class ShrutiKediaContainer extends StatelessWidget {
                   ),
                 ],
               ),
+
               SizedBox(
                 height: 5.sp,
               ),
+
+              // ***************** Upasana *****************
               Text(
                 DoctorHuntText.upasana,
                 style: TextStyle(
@@ -313,9 +320,12 @@ class ShrutiKediaContainer extends StatelessWidget {
                   color: royalIntrigue,
                 ),
               ),
+
               SizedBox(
                 height: 5.sp,
               ),
+
+              //***************** Rating *****************
               Image.asset(DoctorHuntAssetsPath.rating)
             ]),
           ),
