@@ -38,7 +38,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.privacyPolicy,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -50,7 +50,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 
                   SizedBox(height: 15.sp),
 
-                  // Text
+                  //***************** Text *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -67,7 +67,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text
+                  //***************** Text *****************
                   SizedBox(
                     width: 337.sp,
                     child: Text(
@@ -83,7 +83,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text
+                  //***************** Text *****************
                   SizedBox(
                     width: 337.sp,
                     child: Text(
@@ -100,7 +100,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Text
+                  //***************** Text *****************
                   SizedBox(
                     width: 337.sp,
                     child: Text(
