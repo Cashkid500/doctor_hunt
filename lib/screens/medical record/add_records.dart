@@ -38,7 +38,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(rowText: DoctorHuntText.addRecords,
                     onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -50,7 +50,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Row
+                    //***************** Row *****************
                     Row(children: [
                       Container(
                         height: 125.sp,
@@ -92,7 +92,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     SizedBox(height: 80.sp),
 
-                    // Text
+                    //***************** Text *****************
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -125,12 +125,12 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Divider
+                    //***************** Divider *****************
                     Divide(),
 
                     SizedBox(height: 20.sp),
 
-                    // Text
+                    //***************** Text *****************
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -147,8 +147,9 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    Row(mainAxisAlignment: MainAxisAlignment.start, children: [
-                      // Report Column
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start, children: [
+                      //***************** Report Column *****************
                       Column(
                         children: [
                           Image.asset(DoctorHuntAssetsPath.report),
@@ -167,7 +168,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                       SizedBox(width: 60.sp),
 
-                      // Prescription Column
+                      //***************** Prescription Column *****************
                       Column(
                         children: [
                           Image.asset(DoctorHuntAssetsPath.prescription),
@@ -186,7 +187,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                       SizedBox(width: 60.sp),
 
-                      // Invoice Column
+                      //***************** Invoice Column *****************
                       Column(
                         children: [
                           Image.asset(DoctorHuntAssetsPath.invoice),
@@ -208,8 +209,8 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Last Column
-                    // Text
+                    //***************** Last Column *****************
+                    //***************** Text *****************
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -245,7 +246,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                     Divide(),
                     SizedBox(height: 20.sp),
 
-                    // Button
+                    //***************** Button *****************
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.uploadRecord,
                       onPressed: () {
