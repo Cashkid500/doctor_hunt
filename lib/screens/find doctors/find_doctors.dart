@@ -40,7 +40,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(rowText: DoctorHuntText.findDoctors,
                     onTap: () {
                       Navigator.of(context).push(
@@ -54,14 +54,14 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Search Box
+                    //***************** Search Box *****************
                     SearchField(searchPath: DoctorHuntText.dentist2),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // First Container
+                    //***************** First Container *****************
                     DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.tranquilli,
                       namePath: DoctorHuntText.shruti,
@@ -79,9 +79,10 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                         );
                       },
                     ),
+
                     SizedBox(height: 20.sp),
 
-                    // Second Container
+                    //***************** Second Container *****************
                     DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.boneBrake,
                       namePath: DoctorHuntText.watamaniuk,
@@ -104,7 +105,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                       height: 20.sp,
                     ),
 
-                    // Third Container
+                    //***************** Third Container *****************
                     DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.luke,
                       namePath: DoctorHuntText.crownover,
@@ -127,7 +128,7 @@ class _FindDoctorsScreenState extends State<FindDoctorsScreen> {
                       height: 20.sp,
                     ),
 
-                    // Fourth Container
+                    //***************** Fourth Container *****************
                     DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.shoemaker,
                       namePath: DoctorHuntText.balestra,
