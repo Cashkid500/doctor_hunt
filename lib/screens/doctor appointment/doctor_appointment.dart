@@ -41,17 +41,17 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //****** Back Arrow *********
                     RowWidget(rowText: DoctorHuntText.appointment),
 
                     SizedBox(height: 30.sp),
 
-                    // Container
+                    //*********** Container ***********
                     AppointmentDetails(isFavorite: isFavorite = true),
 
                     SizedBox(height: 30.sp),
 
-                    // Appointment For
+                    //************ Appointment For *********
                     Row(
                       children: [
                         Text(
@@ -68,11 +68,11 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Patient Name TextField
+                    //************** Patient Name TextField ****************
                     TextFieldWidget(hintTextPath: DoctorHuntText.patientName2),
                     SizedBox(height: 20.sp),
 
-                    // Contact Number TextField
+                    //************** Contact Number TextField ****************
                     TextFieldWidget(hintTextPath: DoctorHuntText.contactNumber),
                     SizedBox(height: 20.sp),
 
@@ -82,8 +82,9 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
 
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Row(children: [
-                        // First Container
+                      child: Row(
+                        children: [
+                        //********* First Container **********
                         Container(
                           height: 145.sp,
                           width: 100.sp,
@@ -111,21 +112,21 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
 
                         SizedBox(width: 5.sp),
 
-                        // Second Container
+                        //********** Second Container *************
                         RowContainerWidget(
                             imagePath: DoctorHuntAssetsPath.guy,
                             textPath: DoctorHuntText.mySelf),
 
                         SizedBox(width: 5.sp),
 
-                        // Third Container
+                        //********** Third Container ************
                         RowContainerWidget(
                             imagePath: DoctorHuntAssetsPath.child,
                             textPath: DoctorHuntText.myChild),
 
                         SizedBox(width: 5.sp),
 
-                        // Fourth Container
+                        //************ Fourth Container ***********
                         RowContainerWidget(
                             imagePath: DoctorHuntAssetsPath.child,
                             textPath: DoctorHuntText.myWife),
@@ -136,7 +137,7 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                       height: 40.sp,
                     ),
 
-                    // Next
+                    //************* Next *************
                     ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).push(
