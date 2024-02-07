@@ -4,7 +4,6 @@ import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/favourite%20doctor/favourite_doctors.dart';
 import 'package:doctor_hunt/screens/menu/menu.dart';
 import 'package:doctor_hunt/screens/popular%20doctor/popular_doctor.dart';
-import 'package:doctor_hunt/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -160,7 +159,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           SizedBox(height: 10.sp),
 
-          // Playlist
+          //***************** Playlist *****************
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -168,7 +167,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: 10.sp),
-                  // Live Doctor 1
+                  //***************** Live Doctor 1 *****************
                   child: Container(
                     height: 168.sp,
                     width: 116.sp,
@@ -193,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
-                // Live Doctor 2
+                //***************** Live Doctor 2 *****************
                 Container(
                   height: 168.sp,
                   width: 116.sp,
@@ -208,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
-                // Live Doctor 3
+                //***************** Live Doctor 3 *****************
                 Container(
                   height: 138.sp,
                   width: 116.sp,
@@ -239,7 +238,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           SizedBox(height: 10.sp),
 
-          // Containers with Images Row
+          //***************** Containers with Images Row *****************
           Padding(
             padding: EdgeInsets.only(left: 15.sp),
             child: Row(children: [
@@ -258,7 +257,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(width: 5.sp),
 
-              // Green Container
+              //***************** Green Container *****************
               ContainerWidget(
                 imagePath: DoctorHuntAssetsPath.greenImage,
                 gradient: LinearGradient(
@@ -273,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(width: 5.sp),
 
-              // Yellow Container
+              //***************** Yellow Container *****************
               ContainerWidget(
                 imagePath: DoctorHuntAssetsPath.eye,
                 gradient: LinearGradient(
@@ -288,7 +287,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
               SizedBox(width: 5.sp),
 
-              // Red Container
+              //***************** Red Container *****************
               ContainerWidget(
                 imagePath: DoctorHuntAssetsPath.redImage,
                 gradient: LinearGradient(
@@ -303,7 +302,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ]),
           ),
 
-          // Popular Doctor Row
+          //***************** Popular Doctor Row  *****************
           SizedBox(height: 30.sp),
           PopularDoctorWidget(
             popularDoctorTextPath: DoctorHuntText.popularDoctor,
@@ -318,7 +317,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           SizedBox(height: 20.sp),
 
-          // Two Female Doctors Row
+          //***************** Two Female Doctors Row *****************
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
@@ -340,7 +339,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                 SizedBox(width: 5.sp),
 
-                // Second Container
+                //***************** Second Container *****************
                 FemaleDoctorWidget(
                   femaleDoctorImagePath: DoctorHuntAssetsPath.blessing,
                   femaleDoctorName: DoctorHuntText.blessing,
@@ -351,7 +350,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          // Feature Doctor Row
+          //***************** Feature Doctor Row *****************
           SizedBox(height: 30.sp),
           PopularDoctorWidget(
               popularDoctorTextPath: DoctorHuntText.featureDoctor),
@@ -360,7 +359,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 20.sp,
           ),
 
-          // Last Row Horizontal Scroll View
+          //***************** Last Row Horizontal Scroll View *****************
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Padding(
@@ -377,7 +376,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 5.sp,
                 ),
 
-                // Second Container
+                //***************** Second Container *****************
                 LastRowContainer(
                     isFavorite: isFavorite = true,
                     starTextPath: DoctorHuntText.threePointZero,
@@ -389,7 +388,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 5.sp,
                 ),
 
-                // Third Container
+                //***************** Third Container *****************
                 LastRowContainer(
                     isFavorite: isFavorite = false,
                     starTextPath: DoctorHuntText.twoPointNine,
@@ -401,7 +400,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   width: 5.sp,
                 ),
 
-                // Fourth Container
+                //***************** Fourth Container *****************
                 LastRowContainer(
                     isFavorite: isFavorite = true,
                     starTextPath: DoctorHuntText.threePointZero,
