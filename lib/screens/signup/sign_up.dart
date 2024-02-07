@@ -38,7 +38,7 @@ class _SignupScreenState extends State<SignupScreen> {
               children: [
                 SizedBox(height: 100.sp),
 
-                // Join us to start searching
+                //***************** Join us to start searching *****************
                 Center(
                   child: Text(
                     DoctorHuntText.join,
@@ -53,7 +53,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 SizedBox(height: 10.sp),
 
-                // Search Course
+                //***************** Search Course *****************
                 SearchCourseText(),
 
                 SizedBox(height: 60.sp),
@@ -61,27 +61,27 @@ class _SignupScreenState extends State<SignupScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // Google
+                    //***************** Google *****************
                     Google(),
 
-                    // Facebook
+                    //***************** Facebook *****************
                     Facebook(),
                   ],
                 ),
 
                 SizedBox(height: 20.sp),
 
-                // Name TextField
+                //***************** Name TextField *****************
                 TextFieldWidget(hintTextPath: DoctorHuntText.name),
 
                 SizedBox(height: 20.sp),
 
-                // Email TextField
+                //***************** Email TextField *****************
                 TextFieldWidget(hintTextPath: DoctorHuntText.email),
 
                 SizedBox(height: 20.sp),
 
-                // PasswordField
+                //***************** PasswordField *****************
                 PasswordField(
                   updateObscured: () {
                     setState(() {
@@ -93,11 +93,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 SizedBox(height: 10.sp),
 
-                // Row
+                //***************** Row *****************
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // Circular Box
+                    //***************** Circular Box *****************
                     Container(
                       height: 16.sp,
                       width: 16.sp,
@@ -107,7 +107,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       ),
                     ),
 
-                    // I agree with the Terms of Service & Privacy Policy
+                    //***************** I agree with the Terms of Service & Privacy Policy *****************
                     Padding(
                       padding: EdgeInsets.only(right: 23.sp),
                       child: Text(
@@ -125,7 +125,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 SizedBox(height: 60.sp),
 
-                // Sign Up Button
+                //***************** Sign Up Button *****************
                 ElevatedButtonWidget(
                   elevatedButtonPath: DoctorHuntText.signup,
                   onPressed: () {
@@ -139,7 +139,7 @@ class _SignupScreenState extends State<SignupScreen> {
 
                 SizedBox(height: 10.sp),
 
-                // Have an account? Log In
+                //***************** Have an account? Log In *****************
                 TextButtonWidget(
                     textButtonPath: DoctorHuntText.accountConfirmation),
               ],
