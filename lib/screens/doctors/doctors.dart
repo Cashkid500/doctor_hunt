@@ -45,7 +45,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow ****************
                     RowWidget(
                       rowText: DoctorHuntText.doctors,
                       onTap: () {
@@ -58,14 +58,14 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Search Box
+                    //***************** Search Box ****************
                     SearchField(searchPath: DoctorHuntText.search3),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Tab Bar View
+                    //***************** Tab Bar View *****************
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -132,7 +132,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Dr Pediatrician
+                    //***************** Dr Pediatrician *****************
                     DoctorsScreenWidget(
                       imagePath: DoctorHuntAssetsPath.pediatrician,
                       namePath: DoctorHuntText.pediatrician,
@@ -146,7 +146,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                       },
                     ),
 
-                    // Dr Mistry Brick
+                    //***************** Dr Mistry Brick *****************
                     SizedBox(height: 20.sp),
                     DoctorsScreenWidget(
                         imagePath: DoctorHuntAssetsPath.mistry,
@@ -154,7 +154,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                         isFavorite: isFavorite = true,
                         specializationPath: DoctorHuntText.dentistSpecialist),
 
-                    // Dr Ether Wall
+                    //***************** Dr Ether Wall *****************
                     SizedBox(height: 20.sp),
                     DoctorsScreenWidget(
                         imagePath: DoctorHuntAssetsPath.ether,
@@ -162,7 +162,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                         isFavorite: isFavorite = true,
                         specializationPath: DoctorHuntText.dentistCancer),
 
-                    // Dr Johan Smith
+                    //***************** Dr Johan Smith *****************
                     SizedBox(height: 20.sp),
                     DoctorsScreenWidget(
                         imagePath: DoctorHuntAssetsPath.johan,
@@ -171,7 +171,7 @@ class _DoctorsScreenState extends State<DoctorsScreen> {
                         specializationPath:
                             DoctorHuntText.cardiologistSpecialist),
 
-                    // Dr Johan Smith
+                    //***************** Dr Johan Smith *****************
                     SizedBox(height: 20.sp),
                     DoctorsScreenWidget(
                         imagePath: DoctorHuntAssetsPath.johan,
