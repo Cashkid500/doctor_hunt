@@ -47,7 +47,7 @@ class _Profile2ScreenState extends State<Profile2Screen> {
 
                   SizedBox(height: 200.sp),
 
-                  // Text
+                  //***************** Name *****************
                   Text(
                     DoctorHuntText.yourName,
                     style: TextStyle(
@@ -60,7 +60,7 @@ class _Profile2ScreenState extends State<Profile2Screen> {
 
                   SizedBox(height: 40.sp),
 
-                  // TextForm Field
+                  //***************** TextForm Field *****************
                   TextFormField(
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(

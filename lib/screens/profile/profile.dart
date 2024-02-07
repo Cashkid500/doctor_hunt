@@ -60,7 +60,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ));
                           },
                         ),
+
                         SizedBox(height: 40.sp),
+
+                        //***************** Profile Setup *****************
                         Text(
                           DoctorHuntText.profileSetup,
                           style: TextStyle(
@@ -70,7 +73,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: whiteText,
                           ),
                         ),
+
                         SizedBox(height: 15.sp),
+
+                        //***************** Update Profile Text *****************
                         SizedBox(
                           width: 335.sp,
                           child: Text(
@@ -85,7 +91,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ),
                           ),
                         ),
+
                         SizedBox(height: 20.sp),
+
+                        //***************** Profile Picture *****************
                         Center(
                           child: Stack(
                             alignment: AlignmentDirectional.bottomEnd,
@@ -115,6 +124,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               SizedBox(height: 20.sp),
 
+              //***************** Personal Information *****************
               Padding(
                 padding: EdgeInsets.only(left: 20.sp),
                 child: Text(
@@ -130,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               SizedBox(height: 10.sp),
 
-              // First Textfield
+              //***************** First Textfield *****************
               Padding(
                 padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
                 child: Container(
@@ -148,6 +158,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        //***************** Name Text *****************
                         Text(
                           DoctorHuntText.name2,
                           style: TextStyle(
@@ -157,7 +168,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: greenTeal,
                           ),
                         ),
+
                         SizedBox(height: 5.sp),
+
                         TextField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
@@ -180,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               SizedBox(height: 10.sp),
 
-              // Second Textfield
+              //***************** Second Textfield *****************
               Padding(
                 padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
                 child: Container(
@@ -198,6 +211,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        //***************** Contact Number *****************
                         Text(
                           DoctorHuntText.contactNumber,
                           style: TextStyle(
@@ -207,7 +221,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: greenTeal,
                           ),
                         ),
+
                         SizedBox(height: 5.sp),
+
                         TextField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
@@ -233,7 +249,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 height: 10.sp,
               ),
 
-              // Third Textfield
+              //***************** Third Textfield *****************
               Padding(
                 padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
                 child: Container(
@@ -252,6 +268,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          //***************** Date of Birth *****************
                           DoctorHuntText.dateOfBirth,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
@@ -260,7 +277,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: greenTeal,
                           ),
                         ),
+
                         SizedBox(height: 5.sp),
+
                         TextField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
@@ -283,7 +302,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               SizedBox(height: 10.sp),
 
-              // Fourth Textfield
+              //***************** Fourth Textfield *****************
               Padding(
                 padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
                 child: Container(
@@ -302,6 +321,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
+                          //***************** Location *****************
                           DoctorHuntText.location2,
                           style: TextStyle(
                             fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
@@ -310,7 +330,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             color: greenTeal,
                           ),
                         ),
+
                         SizedBox(height: 5.sp),
+
                         TextField(
                           keyboardType: TextInputType.name,
                           decoration: InputDecoration(
@@ -333,7 +355,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               SizedBox(height: 20.sp),
 
-              // Button
+              //***************** Button *****************
               Center(
                 child: ElevatedButtonWidget(
                   textPath: DoctorHuntText.continue1,
@@ -377,7 +399,7 @@ class ProfileHeader extends StatelessWidget {
 
       SizedBox(width: 20.sp),
 
-      // Text
+      //***************** Profile *****************
       Text(
         DoctorHuntText.profile,
         style: TextStyle(
