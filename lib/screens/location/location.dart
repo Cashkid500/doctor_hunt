@@ -39,7 +39,7 @@ class _LocationScreenState extends State<LocationScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(rowText: DoctorHuntText.enableLocation,
                     onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -51,7 +51,7 @@ class _LocationScreenState extends State<LocationScreen> {
 
                     SizedBox(height: 80.sp),
 
-                    // Circular Box
+                    //***************** Circular Box *****************
                     Container(
                       height: 214.sp,
                       width: 214.sp,
@@ -64,7 +64,7 @@ class _LocationScreenState extends State<LocationScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Text
+                    //***************** Text *****************
                     Text(
                       DoctorHuntText.location,
                       style: TextStyle(
@@ -76,7 +76,7 @@ class _LocationScreenState extends State<LocationScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Text
+                    //***************** Text *****************
                     SizedBox(
                       width: 310.sp,
                       child: Text(
@@ -92,7 +92,7 @@ class _LocationScreenState extends State<LocationScreen> {
                     
                     SizedBox(height: 40.sp),
 
-                    // Button
+                    //***************** Button *****************
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.enable,
                       onPressed: () {
