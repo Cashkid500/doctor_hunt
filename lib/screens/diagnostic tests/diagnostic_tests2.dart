@@ -39,7 +39,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //*************** Back Arrow ****************
                     RowWidget(
                       rowText: DoctorHuntText.diagnosticTests,
                       onTap: () {
@@ -81,8 +81,9 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 30.sp),
 
-                    Row(children: [
-                      // Light Blue Container
+                    Row(
+                      children: [
+                      //******** Light Blue Container ********
                       Container(
                         height: 55.sp,
                         width: 50.sp,
@@ -115,7 +116,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                       ),
                       SizedBox(width: 10.sp),
 
-                      // Red Container
+                      //******* Red Container ********
                       Container(
                         height: 55.sp,
                         width: 50.sp,
@@ -132,7 +133,9 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                         ),
                         child: Image.asset(DoctorHuntAssetsPath.agent),
                       ),
+
                       SizedBox(width: 5.sp),
+
                       SizedBox(
                         width: 110.sp,
                         child: Text(
@@ -150,9 +153,10 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 40.sp),
 
-                    // Second Row
-                    Row(children: [
-                      // Yellow Container
+                    //********* Second Row ***************
+                    Row(
+                      children: [
+                      //********* Yellow Container ***********
                       Container(
                         height: 55.sp,
                         width: 50.sp,
@@ -169,7 +173,9 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                         ),
                         child: Image.asset(DoctorHuntAssetsPath.report2),
                       ),
+
                       SizedBox(width: 5.sp),
+
                       SizedBox(
                         width: 110.sp,
                         child: Text(
@@ -185,7 +191,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                       ),
                       SizedBox(width: 10.sp),
 
-                      // Green Container
+                      //******** Green Container ***********
                       Container(
                         height: 55.sp,
                         width: 50.sp,
@@ -202,7 +208,9 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                         ),
                         child: Image.asset(DoctorHuntAssetsPath.followUp),
                       ),
+
                       SizedBox(width: 5.sp),
+
                       SizedBox(
                         width: 110.sp,
                         child: Text(
@@ -220,7 +228,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 40.sp),
 
-                    // Recommended
+                    //********** Recommended **************
                     Row(
                       children: [
                         Text(
@@ -236,7 +244,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 20.sp),
 
-                    // First Container
+                    //********** First Container *************
                     DiagnosticTest2Container(
                       headerTextPath: DoctorHuntText.advance,
                       testsPath: DoctorHuntText.tests,
@@ -253,7 +261,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 10.sp),
 
-                    // Second Container
+                    //********** Second Container **********
                     DiagnosticTest2SecondContainer(
                       headerTextPath: DoctorHuntText.workingWomen,
                       testsPath: DoctorHuntText.tests2,
@@ -270,7 +278,7 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
 
                     SizedBox(height: 10.sp),
 
-                    // Third Container
+                    //************ Third Container ************
                     DiagnosticTest2SecondContainer(
                       headerTextPath: DoctorHuntText.active,
                       testsPath: DoctorHuntText.tests3,
