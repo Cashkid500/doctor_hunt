@@ -39,7 +39,7 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.medicinesOrder,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -51,31 +51,31 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Search Box
+                  //***************** Search Box *****************
                   SearchField(searchPath: DoctorHuntText.search2),
 
                   SizedBox(
                     height: 30.sp,
                   ),
 
-                  // First Row First Box
+                  //***************** First Row First Box *****************
                   Row(children: [
                     FirstRowFirstBox(),
                     SizedBox(width: 10.sp),
 
-                    // First Row Second Box
+                    //***************** First Row Second Box *****************
                     FirstRowSecondBox(),
                   ]),
 
                   SizedBox(height: 20.sp),
 
-                  // Second Row First Box
+                  //***************** Second Row First Box *****************
                   Row(
                     children: [
                       SecondRowFirstBox(),
                       SizedBox(width: 10.sp),
 
-                      // Second Row Second Box
+                      //***************** Second Row Second Box *****************
                       SecondRowSecondBox(),
                     ],
                   ),
@@ -84,13 +84,13 @@ class _MedicineOrdersScreenState extends State<MedicineOrdersScreen> {
                     height: 20.sp,
                   ),
 
-                  // Third Row First Box
+                  //***************** Third Row First Box *****************
                   Row(
                     children: [
                       ThirdRowFirstBox(),
                       SizedBox(width: 10.sp),
 
-                      // Third Row Second Box
+                      //***************** Third Row Second Box *****************
                       ThirdRowSecondBox(),
                     ],
                   ),
