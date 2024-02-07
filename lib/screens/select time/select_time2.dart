@@ -42,7 +42,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.selectTime,
                       onTap: () {
                     Navigator.push(
@@ -55,12 +55,12 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
 
                   SizedBox(height: 50.sp),
 
-                  // Dr Shruti Kedia
+                  //***************** Dr Shruti Kedia *****************
                   ShrutiKediaContainer(isFavorite: isFavorite = true),
 
                   SizedBox(height: 30.sp),
 
-                  // Horizontal Scroll View
+                  //***************** Horizontal Scroll View *****************
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -151,6 +151,7 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
 
                   SizedBox(height: 50.sp),
 
+                  //***************** Today *****************
                   Text(
                     DoctorHuntText.today,
                     style: TextStyle(
@@ -163,12 +164,12 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Afternoon Slots
+                  //***************** Afternoon Slots *****************
                   SlotWidget(slotTextPath: DoctorHuntText.afternoon),
 
                   SizedBox(height: 20.sp),
 
-                  // Row Tab Bar
+                  //***************** Row Tab Bar *****************
                   SizedBox(
                     height: 80.sp,
                     width: double.infinity,
@@ -214,12 +215,12 @@ class _SelectTime2ScreenState extends State<SelectTime2Screen> {
                     
                     SizedBox(height: 40.sp),
 
-                  // Evening Slots
+                  //***************** Evening Slots *****************
                   SlotWidget(slotTextPath: DoctorHuntText.evening),
 
                   SizedBox(height: 20.sp),
 
-                  // Row Tab Bar 
+                  //***************** Row Tab Bar *****************
                   SizedBox(
                     height: 80.sp,
                     width: double.infinity,
@@ -297,6 +298,7 @@ class SlotWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        //***************** Slot Text *****************
         Text(
           slotTextPath,
           style: TextStyle(
