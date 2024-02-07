@@ -41,7 +41,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(rowText: DoctorHuntText.helpCenter,
                     onTap: () {
                       Navigator.push(
@@ -55,7 +55,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Search Box
+                    //***************** Search Box *****************
                     SizedBox(
                       height: 54.sp,
                       width: 320.sp,
@@ -91,7 +91,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 20.sp,
                     ),
 
-                    // Booking a new appointment
+                    //***************** Booking a new appointment *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.booking,
                       onTap: () {
@@ -105,7 +105,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Existing Appointment
+                    //***************** Existing Appointment *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.existing,
                     ),
@@ -114,7 +114,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Online consultations
+                    //***************** Online consultations *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.online,
                     ),
@@ -123,7 +123,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Feedbacks
+                    //***************** Feedbacks *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.feedbacks,
                     ),
@@ -132,7 +132,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Medicine Orders
+                    //***************** Medicine Orders *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.medOrders,
                       onTap: () {
@@ -147,7 +147,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Diagnostic Tests
+                    //***************** Diagnostic Tests *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.diagnosticTests,
                       onTap: () {
@@ -162,7 +162,7 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // Health Plans
+                    //***************** Health Plans *****************
                     ExtractedRowWidget(
                       textPath: DoctorHuntText.healthPlans,
                     ),
@@ -171,21 +171,21 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
                       height: 30.sp,
                     ),
 
-                    // My account and practo drive
+                    //***************** My account and practo drive *****************
                     ExtractedRowWidget(textPath: DoctorHuntText.myAccount),
                     
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Have a feature in mind
+                    //***************** Have a feature in mind *****************
                     ExtractedRowWidget(textPath: DoctorHuntText.feature),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // Other issues
+                    //***************** Other issues *****************
                     ExtractedRowWidget(textPath: DoctorHuntText.otherIssues),
 
                     SizedBox(
