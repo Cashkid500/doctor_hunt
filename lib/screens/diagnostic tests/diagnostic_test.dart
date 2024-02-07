@@ -39,7 +39,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //******************** Back Arrow **********************
                     RowWidget(rowText: DoctorHuntText.diagnosticTests,
                     onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -51,7 +51,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
 
                     SizedBox(height: 80.sp),
 
-                    // Circular Box
+                    //************** Circular Box ****************
                     Container(
                       height: 214.sp,
                       width: 214.sp,
@@ -64,7 +64,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Text
+                    //************** Text ****************
                     Text(
                       DoctorHuntText.noBooking,
                       style: TextStyle(
@@ -76,7 +76,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Text
+                    //************* Text ****************
                     SizedBox(
                       width: 280.sp,
                       child: Text(
@@ -91,7 +91,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
                     
                     SizedBox(height: 30.sp),
 
-                    // Button
+                    //************* Button ****************
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.bookNow,
                       onPressed: () {
