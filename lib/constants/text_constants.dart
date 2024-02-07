@@ -2,7 +2,7 @@ class DoctorHuntText {
 // Splash Screen Text
   static const String doctorHunt = "Doctor Hunt";
 
-// Onboarding Texts
+//*****************  Onboarding Texts *************************
   static const String onboarding1 = "Find Trusted Doctors";
   static const String onboarding2 = "Choose Best Doctors";
   static const String onboarding3 = "Easy Appointments";
@@ -11,7 +11,7 @@ class DoctorHuntText {
   static const String getStarted = "Get Started";
   static const String skip = "Skip";
 
-// Signup Texts
+//****************  Signup Texts ************************
   static const String join = "Join us to start searching";
   static const String search =
       "You can search course, apply course and find scholarship for abroad studies";
@@ -25,7 +25,7 @@ class DoctorHuntText {
   static const String signup = "Sign Up";
   static const String accountConfirmation = "Have an account? Log in";
 
-// Login Texts
+//*******************  Login Texts ************************
   static const String welcomeBack = "Welcome back";
   static const String emailAddress = "itsmemamun1@gmail.com";
   static const String login = "Login";
@@ -44,7 +44,7 @@ class DoctorHuntText {
   static const String verification =
       "Enter your email for the verification proccesss, we will send 4 digits code to your email.";
 
-// Home Screen Texts
+//*****************  Home Screen Texts ************************
   static const String hi = "Hi Handwerker!";
   static const String findDoctor = "Find Your Doctor";
   static const String homeSearch = "Search.....";
@@ -53,7 +53,7 @@ class DoctorHuntText {
   static const String blessing = "Dr. Blessing";
   static const String dentistSpecialist2 = "Dentist Specialist";
 
-// Live Chat Texts
+//****************  Live Chat Texts ************************
   static const String everhart = "Everhart Tween";
   static const String thanks = "Thanks for sharing doctor ❤️";
   static const String mash = "Bonebrake Mash";
@@ -64,7 +64,7 @@ class DoctorHuntText {
   static const String education = "Depending on their education 🙂";
   static const String comment = "Add a Comment......";
 
-// Medical Record Texts
+//***************** Medical Record Texts ************************
   static const String medicalRecord = "Medical Records";
   static const String addMedicalRecord = "Add a medical record.";
   static const String healthHistory =
@@ -74,7 +74,7 @@ class DoctorHuntText {
   static const String upload = "Upload from gallery";
   static const String files = "Upload files";
 
-// Add Record Texts
+//******************** Add Record Texts ****************************
   static const String addRecords = "Add Records";
   static const String moreImages = "Add more images";
   static const String recordFor = "Record for";
@@ -87,7 +87,7 @@ class DoctorHuntText {
   static const String dateCreated = "27 Feb, 2021";
   static const String uploadRecord = "Upload record";
 
-// All Records Texts
+//***************** All Records Texts ************************
   static const String allRecords = "All Records";
   static const String firstDay = "01";
   static const String day = "27";
@@ -101,7 +101,7 @@ class DoctorHuntText {
   static const String onePrescription = "1 Prescription";
   static const String new1 = "NEW";
 
-// Medicine Order Texts
+//******************* Medicine Order Texts *****************
   static const String medicineOrder = "Medicine Orders";
   static const String medicinesOrder = "Medicines Orders";
   static const String order = "Order medicines";
@@ -115,14 +115,14 @@ class DoctorHuntText {
   static const String delivery = "Order delivery";
   static const String status = "Order status";
 
-// Location Texts
+//******************* Location Texts ***********************
   static const String enableLocation = "Enable Location Services";
   static const String location = "Location";
   static const String yourLocation =
       "Your location services are switched off. Please enable location, to help us serve better.";
   static const String enable = "Enable Location";
 
-// Help Center Texts
+//******************* Help Center Texts ********************
   static const String helpCenter = "Help center";
   static const String issue = "I have an issue with";
   static const String booking = "Booking a new Appointment";
@@ -136,7 +136,7 @@ class DoctorHuntText {
   static const String feature = "Have a feature in mind";
   static const String otherIssues = "Other issues";
 
-// Diagnostic Tests Texts
+//******************* Diagnostic Tests Texts ****************************
   static const String noBooking = "You haven’t booked any tests yet";
   static const String checkup = "Get started with your first health checkup";
   static const String bookNow = "Book Now";
@@ -165,7 +165,7 @@ class DoctorHuntText {
   static const String dollar23 = "\$ 457 ";
   static const String dollar24 = "\$ 411 ";
 
-// Patient Details Texts
+//******************* Patient Details Texts *************************
   static const String patientDetails = "Patient Details";
   static const String emptyCart = "Your cart is empty";
   static const String addTests = "Add Tests";
@@ -182,7 +182,7 @@ class DoctorHuntText {
   static const String months = "Month";
   static const String year = "Year";
 
-// Privacy Policy Texts
+//******************* Privacy Policy Texts **************************
   static const String privacyPolicy = "Privacy Policy";
   static const String appPolicy = "Doctor Hunt Apps Privacy Policy";
   static const String longWords =
@@ -192,7 +192,7 @@ class DoctorHuntText {
   static const String established =
       "It is a long established fact that reader distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a moreIt is a long established.";
 
-// Settings Texts
+//******************* Settings Texts *****************************
   static const String settings = "Settings";
   static const String accountSettings = "Account settings";
   static const String linkedAccounts = "Linked accounts";
@@ -209,7 +209,7 @@ class DoctorHuntText {
   static const String notifications = "Notifications";
   static const String changePassword = "Change Password";
 
-// Menu Texts
+//******************* Menu Texts *********************************
   static const String logout = "Logout";
   static const String helpCenter2 = "Help Center";
   static const String privacyPolicy2 = "Privacy & Policy";
@@ -222,7 +222,7 @@ class DoctorHuntText {
   static const String cancel = "Cancel";
   static const String ok = "Ok";
 
-// My Doctors Texts
+//******************* My Doctors Texts ************************
   static const String myDoctors = "My Doctors";
   static const String tranquilli = "Dr. Tranquilli";
   static const String boneBrake = "Dr. Bonebrake";
@@ -249,7 +249,7 @@ class DoctorHuntText {
   static const String am = " AM tomorrow";
   static const String search3 = "search";
 
-// Find Doctors Texts
+//******************* Find Doctors Texts ************************
   static const String findDoctors = "Find Doctors";
   static const String dentist2 = "Dentist";
   static const String shruti = "Dr. Shruti Kedia";
@@ -262,7 +262,7 @@ class DoctorHuntText {
   static const String eightySixPatients = "86 Patient Stories";
   static const String seventyEightPatients = "78 Patient Stories";
 
-// Profile Texts
+//******************* Profile Texts ***************************
   static const String profile = "Profile";
   static const String profileSetup = "Set up your profile";
   static const String updateProfile =
@@ -277,7 +277,7 @@ class DoctorHuntText {
   static const String location2 = "Location";
   static const String addDetails = "Add Details";
 
-// Favourite Doctors Texts
+//******************* Favourite Doctors Texts *******************
   static const String favouriteDoctors = "Favourite Doctors";
   static const String shouey = "Dr. Shouey";
   static const String christenfeld = "Dr. Christenfeld N";
@@ -298,7 +298,7 @@ class DoctorHuntText {
   static const String see = "See all>";
   static const String dollarSymbol = "\$ ";
 
-// Doctors Texts
+//******************* Doctors Texts ************************
   static const String doctors = "Doctors";
   static const String pediatrician = "Dr. Pediatrician";
   static const String mistry = "Dr. Mistry Brick";
@@ -311,7 +311,7 @@ class DoctorHuntText {
   static const String all = "All";
   static const String physioTheraphy = "physio Therapy";
 
-// Popular Doctor Texts
+//******************* Popular Doctor Texts ****************
   static const String popularDoctor = "Popular Doctor";
   static const String twoPointFour = "2.4 ";
   static const String twoPointSeven = "2.7 ";
@@ -324,7 +324,7 @@ class DoctorHuntText {
   static const String patheologySpecialist = "Patheology Specialist";
   static const String category = "Category";
 
-// Doctor Details Texts
+//******************* Doctor Details Texts *************************
   static const String doctorDetails = "Doctor Details";
   static const String distanceCovered = "28.00/hr";
   static const String hundred = "100";
@@ -344,7 +344,7 @@ class DoctorHuntText {
   static const String reminderSystem =
       "That’s why some of appointment reminder system.";
 
-// Doctor Appointment Texts
+//******************* Doctor Appointment Texts *********************************
   static const String appointment = "Appointment";
   static const String appointmentFor = "Appointment For";
   static const String patientName2 = "Patient Name";
@@ -374,7 +374,7 @@ class DoctorHuntText {
   static const String successfulAppointment = "Your Appointment Successful";
   static const String thankYou = "Thank You !";
 
-// Select Time Texts
+//******************* Select Time Texts *****************************
   static const String selectTime = "Select Time";
   static const String today = "Today, 23 Feb";
   static const String noSlots = "No slots available";
