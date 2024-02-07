@@ -40,7 +40,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   RowWidget(rowText: DoctorHuntText.myDoctors,
                   onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
@@ -52,14 +52,14 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Search Box
+                  //***************** Search Box *****************
                   SearchField(searchPath: DoctorHuntText.search3),
 
                   SizedBox(
                     height: 30.sp,
                   ),
 
-                  // Dr. Tranquilli
+                  //***************** Dr. Tranquilli *****************
                   DoctorWidget(
                     imagePath: DoctorHuntAssetsPath.tranquilli,
                     namePath: DoctorHuntText.tranquilli,
@@ -81,7 +81,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Dr. Bonebrake
+                  //***************** Dr. Bonebrake *****************
                   DoctorWidget(
                     imagePath: DoctorHuntAssetsPath.boneBrake,
                     namePath: DoctorHuntText.boneBrake,
@@ -104,7 +104,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                     height: 20.sp,
                   ),
 
-                  // Dr Luke Whitesell
+                  //***************** Dr Luke Whitesell *****************
                   DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.luke,
                       namePath: DoctorHuntText.luke,
@@ -127,7 +127,7 @@ class _MyDoctorsScreenState extends State<MyDoctorsScreen> {
                     height: 20.sp,
                   ),
 
-                  // Dr Shoemaker
+                  //***************** Dr Shoemaker *****************
                   DoctorWidget(
                       imagePath: DoctorHuntAssetsPath.shoemaker,
                       namePath: DoctorHuntText.shoemaker,
@@ -237,8 +237,9 @@ class DoctorWidget extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(left: 20.sp, right: 20.sp, top: 20.sp),
-        child: Column(children: [
-          // First Row
+        child: Column(
+          children: [
+          //***************** First Row *****************
           Row(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
