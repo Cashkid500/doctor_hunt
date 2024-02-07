@@ -51,7 +51,7 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
 
                     SizedBox(height: 80.sp),
 
-                    // Circular Box
+                    //***************** Circular Box *****************
                     Container(
                       height: 214.sp,
                       width: 214.sp,
@@ -64,7 +64,7 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
 
                     SizedBox(height: 30.sp),
 
-                    // Text
+                    //***************** Text *****************
                     Text(
                       DoctorHuntText.noOrder,
                       style: TextStyle(
@@ -76,7 +76,7 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
 
                     SizedBox(height: 20.sp),
 
-                    // Text
+                    //***************** Text *****************
                     Center(
                       child: Text(
                         DoctorHuntText.placeOrder,
@@ -90,7 +90,7 @@ class _MedicineOrderScreenState extends State<MedicineOrderScreen> {
 
                     SizedBox(height: 40.sp),
 
-                    // Button
+                    //***************** Button *****************
                     ElevatedButtonWidget(
                       textPath: DoctorHuntText.order,
                       onPressed: () {
