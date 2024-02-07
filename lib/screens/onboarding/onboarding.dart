@@ -21,7 +21,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         children: [
           Stack(
             children: [
-              // Background Ellipse
+              //***************** Background Ellipse *****************
               Image.asset(DoctorHuntAssetsPath.ellipse),
               Center(
                 child: Column(
@@ -29,20 +29,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   children: [
                     Spacer(),
 
-                    // Onboarding1 Image
+                    //***************** Onboarding1 Image *****************
                     Image.asset(DoctorHuntAssetsPath.onboarding1),
                     SizedBox(height: 60.sp),
 
-                    // Onboarding1 Text
+                    //***************** Onboarding1 Text *****************
                     OnboardingText(
                         onboardingtextpath: DoctorHuntText.onboarding1),
                     SizedBox(height: 10.sp),
 
-                    // Dummy Text
+                    //***************** Dummy Text *****************
                     DummyText(),
                     Spacer(),
 
-                    // Get Started Button
+                    //***************** Get Started Button *****************
                     ElevatedButtonWidget(
                       elevatedButtonPath: DoctorHuntText.getStarted,
                       onPressed: () {
@@ -54,7 +54,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                     ),
 
-                    // Skip Button
+                    //***************** Skip Button *****************
                     SkipButton(),
                     SizedBox(height: 20.sp),
                   ],
@@ -63,13 +63,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           ),
 
-          // Onboarding 2
+          //***************** Onboarding 2 *****************
           Stack(
             children: [
               Positioned(
                 right: 0.sp,
 
-                // Background Ellipse2
+                //***************** Background Ellipse2 *****************
                 child: Image.asset(DoctorHuntAssetsPath.ellipse2),
               ),
               Center(
@@ -78,20 +78,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   children: [
                     Spacer(),
 
-                    // Onboarding2 Image
+                    //***************** Onboarding2 Image *****************
                     Image.asset(DoctorHuntAssetsPath.onboarding2),
                     SizedBox(height: 60.sp),
 
-                    // Onboarding2 Text
+                    //***************** Onboarding2 Text *****************
                     OnboardingText(
                         onboardingtextpath: DoctorHuntText.onboarding2),
                     SizedBox(height: 10.sp),
 
-                    // Dummy Text
+                    //***************** Dummy Text *****************
                     DummyText(),
                     Spacer(),
 
-                    // Get Started Button
+                    //***************** Get Started Button *****************
                     ElevatedButtonWidget(
                       elevatedButtonPath: DoctorHuntText.getStarted,
                       onPressed: () {
@@ -103,7 +103,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                     ),
 
-                    // Skip Button
+                    //***************** Skip Button *****************
                     SkipButton(),
                     SizedBox(height: 20.sp),
                   ],
@@ -112,10 +112,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ],
           ),
 
-          // Onboarding 3
+          //***************** Onboarding 3 *****************
           Stack(
             children: [
-              // Background Ellipse3
+              //***************** Background Ellipse3 *****************
               Image.asset(DoctorHuntAssetsPath.ellipse),
               Center(
                 child: Column(
@@ -123,20 +123,20 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   children: [
                     Spacer(),
 
-                    // Onboarding3 Image
+                    //***************** Onboarding3 Image *****************
                     Image.asset(DoctorHuntAssetsPath.onboarding3),
                     SizedBox(height: 60.sp),
 
-                    // Onboarding3 Text
+                    //***************** Onboarding3 Text *****************
                     OnboardingText(
                         onboardingtextpath: DoctorHuntText.onboarding3),
                     SizedBox(height: 10.sp),
 
-                    // Dummy Text
+                    //***************** Dummy Text *****************
                     DummyText(),
                     Spacer(),
 
-                    // Get Started Button
+                    //***************** Get Started Button *****************
                     ElevatedButtonWidget(
                       elevatedButtonPath: DoctorHuntText.getStarted,
                       onPressed: () {
@@ -148,7 +148,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       },
                     ),
 
-                    // Skip Button
+                    //***************** Skip Button *****************
                     SkipButton(),
                     SizedBox(height: 20.sp),
                   ],
