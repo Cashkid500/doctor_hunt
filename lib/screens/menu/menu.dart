@@ -112,8 +112,8 @@ class _MenuScreenState extends State<MenuScreen> {
 
                 SizedBox(height: 10.sp),
 
-                // Row
-                // My Doctor
+                //***************** Row *****************
+                //***************** My Doctor *****************
                 SizedBox(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,7 +139,7 @@ class _MenuScreenState extends State<MenuScreen> {
 
                             SizedBox(height: 30.sp),
 
-                            // Medical Records
+                            //***************** Medical Records *****************
                             MenuRowWidget(
                               menuAssetPath: DoctorHuntAssetsPath.record,
                               menuTextPath: DoctorHuntText.medicalRecord,
@@ -155,14 +155,14 @@ class _MenuScreenState extends State<MenuScreen> {
 
                             SizedBox(height: 30.sp),
 
-                            // Payments
+                            //***************** Payments *****************
                             MenuRowWidget(
                                 menuAssetPath: DoctorHuntAssetsPath.payments,
                                 menuTextPath: DoctorHuntText.payment),
 
                             SizedBox(height: 30.sp),
 
-                            // Medicine Orders
+                            //***************** Medicine Orders *****************
                             MenuRowWidget(
                               menuAssetPath: DoctorHuntAssetsPath.order,
                               menuTextPath: DoctorHuntText.medicineOrder,
@@ -178,14 +178,14 @@ class _MenuScreenState extends State<MenuScreen> {
 
                             SizedBox(height: 30.sp),
 
-                            // Test Bookings
+                            //***************** Test Bookings *****************
                             MenuRowWidget(
                                 menuAssetPath: DoctorHuntAssetsPath.bookings,
                                 menuTextPath: DoctorHuntText.testBookings),
 
                             SizedBox(height: 30.sp),
 
-                            // Privacy & Policy
+                            //***************** Privacy & Policy *****************
                             MenuRowWidget(
                               menuAssetPath: DoctorHuntAssetsPath.privacy,
                               menuTextPath: DoctorHuntText.privacyPolicy2,
@@ -201,7 +201,7 @@ class _MenuScreenState extends State<MenuScreen> {
 
                             SizedBox(height: 30.sp),
 
-                            // Help Center
+                            //***************** Help Center *****************
                             MenuRowWidget(
                               menuAssetPath: DoctorHuntAssetsPath.help,
                               menuTextPath: DoctorHuntText.helpCenter2,
@@ -217,7 +217,7 @@ class _MenuScreenState extends State<MenuScreen> {
 
                             SizedBox(height: 30.sp),
 
-                            // Settings
+                            //***************** Settings *****************
                             MenuRowWidget(
                               menuAssetPath: DoctorHuntAssetsPath.settings,
                               menuTextPath: DoctorHuntText.settings,
@@ -248,7 +248,7 @@ class _MenuScreenState extends State<MenuScreen> {
 
                 SizedBox(height: 20.sp),
 
-                // Logout
+                //***************** Logout *****************
                 Row(
                   children: [
                     Image.asset(DoctorHuntAssetsPath.logout),
@@ -306,7 +306,6 @@ class MenuRowWidget extends StatelessWidget {
             color: whiteText,
           ),
         ),
-        // Spacer(),
         GestureDetector(
           onTap: onTap,
           child: Icon(
@@ -320,7 +319,7 @@ class MenuRowWidget extends StatelessWidget {
   }
 }
 
-// Alert Dialog
+//***************** Alert Dialog *****************
 void _showOrderDialog(BuildContext context) {
   showDialog(
     context: context,
@@ -364,10 +363,10 @@ void _showOrderDialog(BuildContext context) {
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  // Cancel button
+                  //***************** Cancel button *****************
                   TextButton(
                     onPressed: () {
-                      // Add your action for Cancel here
+                      //***************** Add your action for Cancel here *****************
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => MenuScreen()));
                     },
@@ -381,10 +380,10 @@ void _showOrderDialog(BuildContext context) {
                     ),
                   ),
 
-                  // Okay button
+                  //***************** Okay button *****************
                   TextButton(
                     onPressed: () {
-                      // Add your action for OK here
+                      //***************** Add your action for OK here *****************
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => LoginScreen()));
                     },
