@@ -38,7 +38,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // Back Arrow
+                  //***************** Back Arrow *****************
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -61,7 +61,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                         ),
                       ),
 
-                      // Search Icon
+                      //***************** Search Icon *****************
                       Icon(Icons.search, color: royalIntrigue),
                     ],
                   ),
@@ -93,12 +93,12 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 30.sp),
 
-                  // Scrollable View
+                  //***************** Scrollable View *****************
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        // Doctor 1
+                        //***************** Doctor 1 *****************
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.truluck,
                             doctorNamePath: DoctorHuntText.truluck,
@@ -107,7 +107,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                         SizedBox(width: 10.sp),
 
-                        // Doctor 2
+                        //***************** Doctor 2 *****************
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.tranquilli2,
                             doctorNamePath: DoctorHuntText.tranquilli,
@@ -116,7 +116,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                         SizedBox(width: 10.sp),
 
-                        // Doctor 3
+                        //***************** Doctor 3 *****************
                         DoctorsWidget(
                             imagePath: DoctorHuntAssetsPath.truluck,
                             doctorNamePath: DoctorHuntText.truluck,
@@ -128,7 +128,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 40.sp),
 
-                  // Text
+                  //***************** Text *****************
                   Row(
                     children: [
                       Text(
@@ -145,7 +145,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 40.sp),
 
-                  // Dr Pediatrician
+                  //***************** Dr Pediatrician *****************
                   Doctors(
                       doctorsImagePath: DoctorHuntAssetsPath.pediatrician,
                       namePath: DoctorHuntText.pediatrician,
@@ -157,7 +157,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Dr. Mistry
+                  //***************** Dr. Mistry *****************
                   Doctors(
                       doctorsImagePath: DoctorHuntAssetsPath.mistry,
                       namePath: DoctorHuntText.mistry,
@@ -169,7 +169,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Dr. Ether Wall
+                  //***************** Dr. Ether Wall *****************
                   Doctors(
                       doctorsImagePath: DoctorHuntAssetsPath.ether,
                       namePath: DoctorHuntText.ether,
@@ -180,7 +180,7 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
 
                   SizedBox(height: 20.sp),
 
-                  // Dr. Johan
+                  //***************** Dr. Johan *****************
                   Doctors(
                       doctorsImagePath: DoctorHuntAssetsPath.johan,
                       namePath: DoctorHuntText.johan,
