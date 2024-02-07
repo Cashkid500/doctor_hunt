@@ -40,28 +40,29 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
               child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    // Back Arrow
+                    //***************** Back Arrow *****************
                     RowWidget(
                       rowText: DoctorHuntText.favouriteDoctors,
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => const NavigationScreen(),
+                          builder: (BuildContext context) =>
+                              const NavigationScreen(),
                         ));
                       },
                     ),
 
                     SizedBox(height: 30.sp),
 
-                    // Search Box
+                    //***************** Search Box *****************
                     SearchField(searchPath: DoctorHuntText.dentist2),
 
                     SizedBox(
                       height: 30.sp,
                     ),
 
-                    // First Row
+                    //***************** First Row *****************
                     Row(children: [
-                      // First Row First Container
+                      //***************** First Row First Container *****************
                       FirstContainer(
                           isFavorite: isFavorite = false,
                           imagePath: DoctorHuntAssetsPath.shouey,
@@ -71,7 +72,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
 
                       SizedBox(width: 10.sp),
 
-                      // First Row Second Container
+                      //***************** First Row Second Container *****************
                       Expanded(
                         child: FirstContainer(
                             isFavorite: isFavorite = true,
@@ -80,11 +81,12 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                             specializationPath: DoctorHuntText.dentistCancer),
                       ),
                     ]),
+
                     SizedBox(height: 20.sp),
 
-                    // Second Row
+                    //***************** Second Row *****************
                     Row(children: [
-                      // First Row First Container
+                      //***************** First Row First Container *****************
                       FirstContainer(
                           isFavorite: isFavorite,
                           imagePath: DoctorHuntAssetsPath.shouey,
@@ -93,7 +95,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
 
                       SizedBox(width: 10.sp),
 
-                      // First Row Second Container
+                      //***************** First Row Second Container *****************
                       Expanded(
                         child: FirstContainer(
                             isFavorite: isFavorite = false,
@@ -105,6 +107,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                     ]),
 
                     SizedBox(height: 40.sp),
+
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -131,7 +134,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                       height: 30.sp,
                     ),
 
-                    // Last Row
+                    //***************** Last Row *****************
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(children: [
@@ -146,7 +149,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                           width: 5.sp,
                         ),
 
-                        // Second Container
+                        //***************** Second Container *****************
                         LastRowContainer(
                             isFavorite: isFavorite = true,
                             starTextPath: DoctorHuntText.threePointZero,
@@ -158,7 +161,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                           width: 5.sp,
                         ),
 
-                        // Third Container
+                        //***************** Third Container *****************
                         LastRowContainer(
                             isFavorite: isFavorite = false,
                             starTextPath: DoctorHuntText.twoPointNine,
@@ -170,7 +173,7 @@ class _FavouriteDoctorsScreenState extends State<FavouriteDoctorsScreen> {
                           width: 5.sp,
                         ),
 
-                        // Fourth Container
+                        //***************** Fourth Container *****************
                         LastRowContainer(
                             isFavorite: isFavorite = true,
                             starTextPath: DoctorHuntText.threePointZero,
@@ -247,9 +250,10 @@ class LastRowContainer extends StatelessWidget {
               height: 2.sp,
             ),
             Container(
-                height: 54.sp,
-                width: 54.sp,
-                child: Image.asset(doctorImagePath)),
+              height: 54.sp,
+              width: 54.sp,
+              child: Image.asset(doctorImagePath),
+            ),
             SizedBox(
               height: 10.sp,
             ),
@@ -266,7 +270,8 @@ class LastRowContainer extends StatelessWidget {
               height: 5.sp,
             ),
             RichText(
-              text: TextSpan(children: [
+              text: TextSpan(
+                children: [
                 TextSpan(
                   text: DoctorHuntText.dollarSymbol,
                   style: TextStyle(
