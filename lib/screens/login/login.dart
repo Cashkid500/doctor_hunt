@@ -41,7 +41,7 @@ class _LoginScreenState extends State<LoginScreen> {
               children: [
                 SizedBox(height: 100.sp),
 
-                // Welcome Back
+                //***************** Welcome Back *****************
                 Center(
                   child: Text(
                     DoctorHuntText.welcomeBack,
@@ -56,27 +56,27 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 SizedBox(height: 10.sp),
 
-                // Search Course
+                //***************** Search Course *****************
                 SearchCourseText(),
                 SizedBox(height: 60.sp),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    // Google
+                    //***************** Google *****************
                     Google(),
 
-                    // Facebook
+                    //***************** Facebook *****************
                     Facebook(),
                   ],
                 ),
 
                 SizedBox(height: 20.sp),
 
-                // Email TextField
+                //***************** Email TextField *****************
                 EmailTextFormField(),
                 SizedBox(height: 20.sp),
 
-                // PasswordField
+                //***************** PasswordField *****************
                 PasswordField(
                   updateObscured: () {
                     setState(() {
@@ -88,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                 SizedBox(height: 20.sp),
 
-                // Login Button
+                //***************** Login Button *****************
                 ElevatedButtonWidget(
                   elevatedButtonPath: DoctorHuntText.login,
                   onPressed: () {
@@ -102,11 +102,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 
                 SizedBox(height: 10.sp),
 
-                // Forgot Password
+                //***************** Forgot Password *****************
                 ForgotPasswordTextButton(),
                 SizedBox(height: 60.sp),
 
-                // Don’t have an account? Join us
+                //***************** Don’t have an account? Join us *****************
                 JoinUsTextButton(),
               ],
             ),
@@ -203,7 +203,7 @@ class JoinUsTextButton extends StatelessWidget {
   }
 }
 
-// Forgot Password Bottom Sheet
+//***************** Forgot Password Bottom Sheet *****************
 void _showBottomSheet(BuildContext context) {
   showModalBottomSheet(
     backgroundColor: Colors.transparent,
@@ -220,7 +220,7 @@ void _showBottomSheet(BuildContext context) {
           ),
         ),
 
-        // Content of the bottom sheet
+        //***************** Content of the bottom sheet *****************
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -238,7 +238,7 @@ void _showBottomSheet(BuildContext context) {
                   ),
                   SizedBox(height: 50.sp),
 
-                  // Forgot Password
+                  //***************** Forgot Password *****************
                   Padding(
                     padding: EdgeInsets.only(right: 120.sp),
                     child: Text(
@@ -266,13 +266,13 @@ void _showBottomSheet(BuildContext context) {
                   ),
                   SizedBox(height: 30.sp),
 
-                  // Email TextFormField
+                  //***************** Email TextFormField *****************
                   TextFieldWidget(hintTextPath: DoctorHuntText.email),
                   SizedBox(height: 30.sp),
                   ElevatedButton(
                     onPressed: () {
                       Navigator.of(context).pop();
-                      // OTP Bottom Sheet
+                      //***************** OTP Bottom Sheet *****************
                       showModalBottomSheet(
                         backgroundColor: Colors.transparent,
                         isDismissible: false,
@@ -288,7 +288,7 @@ void _showBottomSheet(BuildContext context) {
                               ),
                             ),
 
-                            // Content of the bottom sheet
+                            //***************** Content of the bottom sheet *****************
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: <Widget>[
@@ -306,7 +306,7 @@ void _showBottomSheet(BuildContext context) {
                                       ),
                                       SizedBox(height: 50.sp),
 
-                                      // Enter 4 Digits Code
+                                      //***************** Enter 4 Digits Code *****************
                                       Padding(
                                         padding: EdgeInsets.only(right: 100.sp),
                                         child: Text(
@@ -335,7 +335,7 @@ void _showBottomSheet(BuildContext context) {
                                       ),
                                       SizedBox(height: 30.sp),
 
-                                      // OTP TextField
+                                      //***************** OTP TextField *****************
                                       Container(
                                         margin: EdgeInsets.symmetric(
                                             horizontal: 20.sp),
@@ -378,7 +378,7 @@ void _showBottomSheet(BuildContext context) {
                                         onPressed: () {
                                           Navigator.of(context).pop();
 
-                                          // Reset Password Bottom Sheet
+                                          //***************** Reset Password Bottom Sheet *****************
                                           showModalBottomSheet(
                                             backgroundColor: Colors.transparent,
                                             isDismissible: false,
@@ -415,7 +415,7 @@ void _showBottomSheet(BuildContext context) {
                                     ],
                                   ),
                                   onTap: () {
-                                    // Handle option 2
+                                    //***************** Handle option 2 *****************
                                     Navigator.pop(context);
                                   },
                                 ),
@@ -482,7 +482,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
         ),
       ),
 
-      // Content of the bottom sheet
+      //***************** Content of the bottom sheet *****************
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
@@ -500,7 +500,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 ),
                 SizedBox(height: 50.sp),
 
-                // Reset Password
+                //***************** Reset Password *****************
                 Padding(
                   padding: EdgeInsets.only(right: 135.sp),
                   child: Text(
@@ -528,7 +528,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 ),
                 SizedBox(height: 30.sp),
 
-                // New Password TextFormField
+                //***************** New Password TextFormField *****************
                 SizedBox(
                   height: 54.sp,
                   width: 320.sp,
@@ -572,7 +572,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 ),
                 SizedBox(height: 20.sp),
 
-                // Re-enter Password Field
+                //***************** Re-enter Password Field *****************
                 SizedBox(
                   height: 54.sp,
                   width: 320.sp,
@@ -616,7 +616,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 ),
                 SizedBox(height: 30.sp),
 
-                // Update Password Button
+                //***************** Update Password Button *****************
                 ElevatedButtonWidget(
                     elevatedButtonPath: DoctorHuntText.updatePassword,
                     onPressed: () {
@@ -627,7 +627,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
               ],
             ),
             onTap: () {
-              // Handle option 2
+              //***************** Handle option 2 *****************
               Navigator.pop(context);
             },
           ),
