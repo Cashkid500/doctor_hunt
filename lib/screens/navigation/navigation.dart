@@ -44,7 +44,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
             });
           },
           items: [
-            // Home
+            //***************** Home *****************
             BottomNavigationBarItem(
               backgroundColor: whiteText,
               icon: Container(
@@ -61,7 +61,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
               label: "",
             ),
 
-            // Favourite Doctor
+            //***************** Favourite Doctor *****************
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
@@ -77,7 +77,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
               label: "",
             ),
 
-            // Medical Record
+            //***************** Medical Record *****************
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
@@ -93,7 +93,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
               label: "",
             ),
 
-            // Live Chat
+            //***************** Live Chat *****************
             BottomNavigationBarItem(
               icon: Container(
                 decoration: BoxDecoration(
