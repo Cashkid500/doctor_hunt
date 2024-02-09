@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
@@ -7,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 class DoctorDetailsScreen extends StatefulWidget {
   const DoctorDetailsScreen({super.key});
@@ -29,34 +31,51 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
   //   _googleMapController.dispose();
   //   super.dispose();
   // }
-  static final Polyline _dPolyline = Polyline(
-    polylineId: PolylineId("_dPolyline"),
-    color: Colors.blue,
-    width: 5,
-    points: [
-      const LatLng(37.773972, -122.431297),
-      const LatLng(37.33429383, -122.06600055),
-    ],
-  );
+
+  // ******** Polyline ********
+  // static final Polyline _dPolyline = Polyline(
+  //   polylineId: PolylineId("_dPolyline"),
+  //   color: Colors.blue,
+  //   width: 5,
+  //   points: [
+  //     const LatLng(37.773972, -122.431297),
+  //     const LatLng(37.33429383, -122.06600055),
+  //   ],
+  // );
 
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      getCameraPosition();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await getCameraPosition();
     });
   }
 
-  void getCameraPosition() async {
-    final position = await Geolocator.getCurrentPosition(
-        desiredAccuracy: LocationAccuracy.high);
+  Future<void> getCameraPosition() async {
+    //  ask for location permission using permission_handler
+    //  if granted, get the current position of the device using Geolocator
+    //  set the initialCameraPosition to the current position
+    // if (!await Geolocator.isLocationServiceEnabled()) {
+    //   return;
+    // }
 
-    setState(() {
-      _initialCameraPosition = CameraPosition(
-        target: LatLng(position.latitude, position.longitude),
-        zoom: 11.5,
-      );
-    });
+    // if (await Geolocator.checkPermission() != LocationPermission.denied) {
+    //   return;
+    // }
+    if (await Permission.location.request() == PermissionStatus.granted) {
+      final position = await Geolocator.getCurrentPosition(
+          desiredAccuracy: LocationAccuracy.high);
+
+      log(position.latitude.toString());
+      log(position.longitude.toString());
+
+      setState(() {
+        _initialCameraPosition = CameraPosition(
+          target: LatLng(position.latitude, position.longitude),
+          zoom: 11.5,
+        );
+      });
+    }
   }
 
   Geolocator geolocator = Geolocator();
@@ -150,7 +169,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                                 textPath: DoctorHuntText.hundred,
                                 text2Path: DoctorHuntText.running),
 
-                            //****** Second Container ********  
+                            //****** Second Container ********
                             SecondRowContainer(
                                 textPath: DoctorHuntText.fiveHundred,
                                 text2Path: DoctorHuntText.ongoing),
@@ -200,8 +219,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                     SizedBox(height: 30.sp),
 
                     //***************** Third Services Row Texts ***********
-                    Row(
-                      children: [
+                    Row(children: [
                       //************** First Text **************
                       Text(
                         DoctorHuntText.three,
@@ -234,38 +252,35 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                     ),
 
                     //***************** Google Map ******************
-                    SizedBox(
-                      height: 210.sp,
-                      width: 335.sp,
-                      child: GoogleMap(
-                        mapType: MapType.normal,
-                        myLocationButtonEnabled: false,
-                        zoomControlsEnabled: true,
-                        initialCameraPosition: _initialCameraPosition ??
-                            CameraPosition(
-                              target: LatLng(37.773972, -122.431297),
-                              zoom: 11.5,
+                    if (_initialCameraPosition != null)
+                      SizedBox(
+                        height: 210.sp,
+                        width: 335.sp,
+                        child: GoogleMap(
+                            mapType: MapType.normal,
+                            myLocationButtonEnabled: false,
+                            zoomControlsEnabled: true,
+                            initialCameraPosition: _initialCameraPosition!
+                            // initialCameraPosition: CameraPosition(
+                            //   target: sourceLocation,
+                            //   zoom: 11.5,
+                            // ),
+                            // onMapCreated: (controller) =>
+                            //     _googleMapController = controller,
+                            // markers: {
+                            //   const Marker(
+                            //     markerId: MarkerId("source"),
+                            //     position: LatLng(37.773972, -122.431297),
+                            //     icon: BitmapDescriptor.defaultMarker,
+                            //   ),
+                            //   const Marker(
+                            //     markerId: MarkerId("destination"),
+                            //     position: LatLng(37.773972, -122.431297),
+                            //   ),
+                            // },
+                            // polylines: {_dPolyline},
                             ),
-                        // initialCameraPosition: CameraPosition(
-                        //   target: sourceLocation,
-                        //   zoom: 11.5,
-                        // ),
-                        // onMapCreated: (controller) =>
-                        //     _googleMapController = controller,
-                        markers: {
-                          const Marker(
-                            markerId: MarkerId("source"),
-                            position: LatLng(37.773972, -122.431297),
-                            icon: BitmapDescriptor.defaultMarker,
-                          ),
-                          const Marker(
-                            markerId: MarkerId("destination"),
-                            position: LatLng(37.773972, -122.431297),
-                          ),
-                        },
-                        polylines: {_dPolyline},
                       ),
-                    ),
 
                     SizedBox(
                       height: 30.sp,
@@ -353,8 +368,7 @@ class DoctorPediatricianContainer extends StatelessWidget {
                         color: royalIntrigue),
                   ),
                   SizedBox(height: 10.sp),
-                  Row(
-                    children: [
+                  Row(children: [
                     Image.asset(DoctorHuntAssetsPath.rating),
                     SizedBox(width: 40.sp),
                     RichText(
