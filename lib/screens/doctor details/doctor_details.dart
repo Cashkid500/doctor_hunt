@@ -106,7 +106,8 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     //***************** Back Arrow ****************
-                    Row(children: [
+                    Row(
+                      children: [
                       GestureDetector(
                         onTap: () {
                           Navigator.of(context).push(
