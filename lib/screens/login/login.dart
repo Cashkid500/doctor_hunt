@@ -99,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     );
                   },
                 ),
-                
+
                 SizedBox(height: 10.sp),
 
                 //***************** Forgot Password *****************
@@ -217,6 +217,15 @@ void _showBottomSheet(BuildContext context) {
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(32.r),
             topRight: Radius.circular(32.r),
+          ),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [
+              const Color.fromARGB(255, 166, 202, 167), // Top
+              whiteText, // Center
+              const Color.fromARGB(255, 166, 202, 167), // Bottom
+            ],
           ),
         ),
 
