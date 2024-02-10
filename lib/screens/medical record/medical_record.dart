@@ -88,8 +88,10 @@ class _MedicalRecordScreenState extends State<MedicalRecordScreen> {
                     width: 330.sp,
                     child: Text(
                       DoctorHuntText.healthHistory,
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                           fontSize: 14.sp,
+                          height: 1.5.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                           color: royalIntrigue),
