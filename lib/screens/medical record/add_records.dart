@@ -51,7 +51,8 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                     SizedBox(height: 30.sp),
 
                     //***************** Row *****************
-                    Row(children: [
+                    Row(
+                      children: [
                       Container(
                         height: 125.sp,
                         width: 100.sp,
@@ -78,6 +79,7 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                                 width: 72.sp,
                                 child: Text(
                                   DoctorHuntText.moreImages,
+                                  textAlign: TextAlign.center,
                                   style: TextStyle(
                                       color: greenTeal,
                                       fontSize: 16.sp,
