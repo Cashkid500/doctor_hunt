@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/medical%20record/all_records.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
+import 'package:doctor_hunt/screens/medical%20record/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -262,23 +263,6 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Divide extends StatelessWidget {
-  const Divide({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width,
-      child: Divider(
-        color: blackText,
-        thickness: 0.1.sp,
       ),
     );
   }
