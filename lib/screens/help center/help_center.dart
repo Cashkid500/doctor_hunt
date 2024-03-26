@@ -3,6 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/diagnostic%20tests/diagnostic_test.dart';
 import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart';
+import 'package:doctor_hunt/screens/help%20center/widget.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
 import 'package:doctor_hunt/screens/navigation/navigation.dart';
@@ -200,37 +201,3 @@ class _HelpCenterScreenState extends State<HelpCenterScreen> {
   }
 }
 
-class ExtractedRowWidget extends StatelessWidget {
-  const ExtractedRowWidget({
-    super.key,
-    this.onTap,
-    required this.textPath,
-  });
-
-  final String textPath;
-  final VoidCallback? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          textPath,
-          style: TextStyle(
-              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-              fontSize: 18.sp,
-              color: royalIntrigue,
-              fontWeight: FontWeight.w300),
-        ),
-        GestureDetector(
-          onTap: onTap,
-          child: Icon(
-            Icons.chevron_right,
-            color: royalIntrigue,
-          ),
-        ),
-      ],
-    );
-  }
-}
