@@ -5,6 +5,7 @@ import 'package:doctor_hunt/screens/help%20center/help_center.dart';
 import 'package:doctor_hunt/screens/login/login.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/medicine%20order/medicine_order.dart';
+import 'package:doctor_hunt/screens/menu/widget.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
 import 'package:doctor_hunt/screens/privacy%20policy/privacy_policy.dart';
 import 'package:doctor_hunt/screens/profile/profile.dart';
@@ -279,45 +280,6 @@ class _MenuScreenState extends State<MenuScreen> {
   }
 }
 
-class MenuRowWidget extends StatelessWidget {
-  const MenuRowWidget({
-    super.key,
-    this.onTap,
-    required this.menuAssetPath,
-    required this.menuTextPath,
-  });
-
-  final String menuAssetPath;
-  final String menuTextPath;
-  final VoidCallback? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Image.asset(menuAssetPath),
-        SizedBox(width: 20.sp),
-        Text(
-          menuTextPath,
-          style: TextStyle(
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w400,
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            color: whiteText,
-          ),
-        ),
-        GestureDetector(
-          onTap: onTap,
-          child: Icon(
-            Icons.chevron_right,
-            color: whiteText,
-            size: 15.sp,
-          ),
-        ),
-      ],
-    );
-  }
-}
 
 //***************** Alert Dialog *****************
 void _showOrderDialog(BuildContext context) {
