@@ -3,7 +3,7 @@ import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment2.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
-import 'package:doctor_hunt/screens/signup/sign_up.dart';
+import 'package:doctor_hunt/screens/signup/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
