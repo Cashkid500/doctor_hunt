@@ -1,7 +1,7 @@
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
-import 'package:doctor_hunt/screens/favourite%20doctor/favourite_doctors.dart';
+import 'package:doctor_hunt/screens/favourite%20doctor/widget.dart';
 import 'package:doctor_hunt/screens/home/widget.dart';
 import 'package:doctor_hunt/screens/menu/menu.dart';
 import 'package:doctor_hunt/screens/popular%20doctor/popular_doctor.dart';
