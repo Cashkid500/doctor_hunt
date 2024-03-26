@@ -2,6 +2,7 @@ import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/doctor%20appointment/doctor_appointment.dart';
+import 'package:doctor_hunt/screens/doctor%20appointment/widget.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/navigation/navigation.dart';
 import 'package:flutter/material.dart';
