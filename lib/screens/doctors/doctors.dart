@@ -4,6 +4,7 @@ import 'package:doctor_hunt/constants/text_constants.dart';
 import 'package:doctor_hunt/screens/doctor%20details/doctor_details.dart';
 import 'package:doctor_hunt/screens/medical%20record/medical_record.dart';
 import 'package:doctor_hunt/screens/my%20doctors/my_doctors.dart';
+import 'package:doctor_hunt/screens/my%20doctors/widget.dart';
 import 'package:doctor_hunt/screens/patient%20details/patient_details2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
