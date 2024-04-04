@@ -12,7 +12,7 @@ class FirstContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 115.sp,
+      height: 130.sp,
       width: 335.sp,
       decoration: BoxDecoration(
         color: whiteText,
@@ -77,7 +77,7 @@ class SecondContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 115.sp,
+      height: 130.sp,
       width: 335.sp,
       decoration: BoxDecoration(
         color: whiteText,
@@ -142,7 +142,7 @@ class ThirdContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 115.sp,
+      height: 130.sp,
       width: 335.sp,
       decoration: BoxDecoration(
         color: whiteText,

@@ -21,7 +21,7 @@ class FemaleDoctorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 264.sp,
+      height: 268.sp,
       width: 190.sp,
       decoration: BoxDecoration(
         border: border,

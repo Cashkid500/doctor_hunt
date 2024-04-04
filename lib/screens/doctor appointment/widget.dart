@@ -14,18 +14,17 @@ class TextRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          rowTextPath,
-          style: TextStyle(
-            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-            fontSize: 16.sp,
-            fontWeight: FontWeight.w700,
-            color: blackText,
-          ),
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        rowTextPath,
+        style: TextStyle(
+          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+          fontSize: 16.sp,
+          fontWeight: FontWeight.w700,
+          color: blackText,
         ),
-      ],
+      ),
     );
   }
 }

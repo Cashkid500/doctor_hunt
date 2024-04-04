@@ -60,7 +60,7 @@ class _AllRecordScreenState extends State<AllRecordScreen> {
 
                     //***************** Third Box *****************
                     ThirdContainer(),
-                    SizedBox(height: 180.sp),
+                    SizedBox(height: 150.sp),
                     
                     //***************** Button *****************
                     ElevatedButtonWidget(

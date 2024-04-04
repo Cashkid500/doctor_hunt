@@ -27,7 +27,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     return Scaffold(
       body: _screens[_selectedIndex],
       bottomNavigationBar: Container(
-        height: 78.sp,
+        height: 83.sp,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
           topLeft: Radius.circular(30.r),

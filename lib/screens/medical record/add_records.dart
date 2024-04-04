@@ -96,18 +96,16 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                     SizedBox(height: 80.sp),
 
                     //***************** Text *****************
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          DoctorHuntText.recordFor,
-                          style: TextStyle(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: blackText),
-                        ),
-                      ],
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        DoctorHuntText.recordFor,
+                        style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: blackText),
+                      ),
                     ),
 
                     SizedBox(height: 10.sp),
@@ -134,18 +132,16 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
                     SizedBox(height: 20.sp),
 
                     //***************** Text *****************
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          DoctorHuntText.recordType,
-                          style: TextStyle(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: blackText),
-                        ),
-                      ],
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        DoctorHuntText.recordType,
+                        style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: blackText),
+                      ),
                     ),
 
                     SizedBox(height: 20.sp),
@@ -214,18 +210,16 @@ class _AddRecordScreenState extends State<AddRecordScreen> {
 
                     //***************** Last Column *****************
                     //***************** Text *****************
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          DoctorHuntText.recordCreated,
-                          style: TextStyle(
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w500,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: blackText),
-                        ),
-                      ],
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        DoctorHuntText.recordCreated,
+                        style: TextStyle(
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: blackText),
+                      ),
                     ),
 
                     SizedBox(height: 10.sp),

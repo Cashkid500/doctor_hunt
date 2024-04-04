@@ -53,18 +53,17 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                     SizedBox(height: 30.sp),
 
                     //************ Appointment For *********
-                    Row(
-                      children: [
-                        Text(
-                          DoctorHuntText.appointmentFor,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 18.sp,
-                            fontWeight: FontWeight.w700,
-                            color: blackText,
-                          ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        DoctorHuntText.appointmentFor,
+                        style: TextStyle(
+                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                          color: blackText,
                         ),
-                      ],
+                      ),
                     ),
 
                     SizedBox(height: 20.sp),
