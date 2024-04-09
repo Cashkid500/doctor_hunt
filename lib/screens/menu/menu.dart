@@ -297,7 +297,7 @@ void _showOrderDialog(BuildContext context) {
           ),
         ),
         content: Container(
-          height: 86.sp,
+          height: 89.sp,
           width: 360.sp,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(8.r),
@@ -311,7 +311,7 @@ void _showOrderDialog(BuildContext context) {
                     DoctorHuntText.logoutConfirmation,
                     style: TextStyle(
                       fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                      fontSize: 15.sp,
+                      fontSize: 14.5.sp,
                       fontWeight: FontWeight.w400,
                       color: royalIntrigue,
                     ),
@@ -329,8 +329,7 @@ void _showOrderDialog(BuildContext context) {
                   TextButton(
                     onPressed: () {
                       //***************** Add your action for Cancel here *****************
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (BuildContext context) => MenuScreen()));
+                      Navigator.of(context).pop();
                     },
                     child: Text(
                       DoctorHuntText.cancel,
