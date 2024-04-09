@@ -61,7 +61,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                         color: whiteText,
                         borderRadius: BorderRadius.circular(10.r)),
                     child: Padding(
-                      padding: EdgeInsets.only(left: 10.sp, right: 10.sp),
+                      padding: EdgeInsets.only(left: 10.sp, right: 9.sp),
                       child: Row(
                         children: [
                           Text(
@@ -73,7 +73,9 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                               fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
                             ),
                           ),
+
                           SizedBox(width: 10.sp),
+
                           Container(
                             width: 234.0,
                             height: 7.0,
@@ -106,7 +108,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
 
                   //***************** User Data *****************
                   Container(
-                    height: 518.sp,
+                    height: 523.sp,
                     width: 335.sp,
                     decoration: BoxDecoration(
                       color: whiteText,
@@ -364,6 +366,7 @@ class _PatientDetails2ScreenState extends State<PatientDetails2Screen> {
                       ));
                     },
                   ),
+                  
                   SizedBox(height: 2.sp),
                 ],
               ),
