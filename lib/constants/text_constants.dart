@@ -147,7 +147,7 @@ class DoctorHuntText {
   static const String practo = "Practo asociate labs";
   static const String electronicReport = "E-Reports in 24-72 hours";
   static const String followUp = "Free follow-up with a doctor";
-  static const String recommend = "Recommend for you";
+  static const String recommend = "Recommended for you";
   static const String advanced = "Advanced Young Indian Health Checkup";
   static const String ideal = "Ideal for individuals aged 21-40 years";
   static const String tests = "69 tests included";
