@@ -108,6 +108,7 @@ class PasswordField extends StatelessWidget {
       child: TextField(
         keyboardType: TextInputType.text,
         obscureText: passwordObscured,
+        obscuringCharacter: '*',
         decoration: InputDecoration(
           focusedBorder:
               OutlineInputBorder(borderRadius: BorderRadius.circular(12.r)),
