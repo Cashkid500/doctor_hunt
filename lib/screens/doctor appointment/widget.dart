@@ -42,7 +42,7 @@ class RowContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 145.sp,
+      height: 148.sp,
       width: 100.sp,
       decoration: BoxDecoration(
         color: whiteText,
