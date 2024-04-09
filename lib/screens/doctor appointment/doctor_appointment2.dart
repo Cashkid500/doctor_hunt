@@ -298,7 +298,7 @@ void _showOrderDialog(BuildContext context) {
           "",
         ),
         content: Container(
-          height: 520.sp,
+          height: 571.sp,
           width: 335.sp,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16.r),
@@ -340,7 +340,7 @@ void _showOrderDialog(BuildContext context) {
                 DoctorHuntText.successfulAppointment,
                 style: TextStyle(
                   fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                  fontSize: 16.5.sp,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.w400,
                   color: royalIntrigue,
                 ),
