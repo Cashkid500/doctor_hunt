@@ -141,218 +141,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
               SizedBox(height: 10.sp),
 
-              //***************** First Textfield *****************
-              Padding(
-                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-                child: Container(
-                  height: 60.sp,
-                  width: 320.sp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    border: Border.all(
-                        color: royalIntrigue,
-                        width: 0.5.sp,
-                        style: BorderStyle.solid),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //***************** Name Text *****************
-                        Text(
-                          DoctorHuntText.name2,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w700,
-                            color: greenTeal,
-                          ),
-                        ),
-
-                        SizedBox(height: 5.sp),
-
-                        TextField(
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            isCollapsed: true,
-                            hintText: DoctorHuntText.fullName,
-                            hintStyle: TextStyle(
-                              color: royalIntrigue,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // //***************** First Textfield *****************
+              ProfileTextFieldWidget(titleTextPath: DoctorHuntText.name2, hintTextPath: DoctorHuntText.fullName),
 
               SizedBox(height: 10.sp),
 
-              //***************** Second Textfield *****************
-              Padding(
-                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-                child: Container(
-                  height: 60.sp,
-                  width: 320.sp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    border: Border.all(
-                        color: royalIntrigue,
-                        width: 0.5.sp,
-                        style: BorderStyle.solid),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        //***************** Contact Number *****************
-                        Text(
-                          DoctorHuntText.contactNumber,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w700,
-                            color: greenTeal,
-                          ),
-                        ),
-
-                        SizedBox(height: 5.sp),
-
-                        TextField(
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            isCollapsed: true,
-                            hintText: DoctorHuntText.internationalNumber,
-                            hintStyle: TextStyle(
-                              color: royalIntrigue,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w300,
-                            ),
-                            // suffixIcon: Image.asset("assets/images/edit.png"),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              // //***************** Second Textfield *****************
+            ProfileTextFieldWidget(
+              //***************** Contact Number *****************
+                  titleTextPath: DoctorHuntText.contactNumber,
+                  hintTextPath: DoctorHuntText.internationalNumber),
 
               SizedBox(
                 height: 10.sp,
               ),
 
               //***************** Third Textfield *****************
-              Padding(
-                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-                child: Container(
-                  height: 60.sp,
-                  width: 320.sp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    border: Border.all(
-                        color: royalIntrigue,
-                        width: 0.5.sp,
-                        style: BorderStyle.solid),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          //***************** Date of Birth *****************
-                          DoctorHuntText.dateOfBirth,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w700,
-                            color: greenTeal,
-                          ),
-                        ),
-
-                        SizedBox(height: 5.sp),
-
-                        TextField(
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            isCollapsed: true,
-                            hintText: DoctorHuntText.dateOrder,
-                            hintStyle: TextStyle(
-                              color: royalIntrigue,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w300,
-                            ),
-                            // suffixIcon: Image.asset("assets/images/edit.png"),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              ProfileTextFieldWidget(
+                //***************** Date of Birth *****************
+                  titleTextPath: DoctorHuntText.dateOfBirth,
+                  hintTextPath: DoctorHuntText.dateOrder),
+              
               SizedBox(height: 10.sp),
 
               //***************** Fourth Textfield *****************
-              Padding(
-                padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
-                child: Container(
-                  height: 60.sp,
-                  width: 320.sp,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.r),
-                    border: Border.all(
-                        color: royalIntrigue,
-                        width: 0.5.sp,
-                        style: BorderStyle.solid),
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          //***************** Location *****************
-                          DoctorHuntText.location2,
-                          style: TextStyle(
-                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                            fontSize: 10.sp,
-                            fontWeight: FontWeight.w700,
-                            color: greenTeal,
-                          ),
-                        ),
-
-                        SizedBox(height: 5.sp),
-
-                        TextField(
-                          keyboardType: TextInputType.name,
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                            isCollapsed: true,
-                            hintText: DoctorHuntText.addDetails,
-                            hintStyle: TextStyle(
-                              color: royalIntrigue,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              fontSize: 16.sp,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              ProfileTextFieldWidget(
+                //***************** Location *****************
+                  titleTextPath: DoctorHuntText.location2,
+                  hintTextPath: DoctorHuntText.addDetails),
 
               SizedBox(height: 20.sp),
 
@@ -377,5 +193,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-
-
