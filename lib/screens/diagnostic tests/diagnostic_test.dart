@@ -78,7 +78,7 @@ class _DiagnosticTestScreenState extends State<DiagnosticTestScreen> {
 
                     //************* Text ****************
                     SizedBox(
-                      width: 280.sp,
+                      width: 290.sp,
                       child: Text(
                         DoctorHuntText.checkup,
                         style: TextStyle(
