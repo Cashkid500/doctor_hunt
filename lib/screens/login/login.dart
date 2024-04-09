@@ -212,7 +212,7 @@ void _showBottomSheet(BuildContext context) {
     context: context,
     builder: (BuildContext context) {
       return Container(
-        height: 375.sp,
+        height: 376.sp,
         decoration: BoxDecoration(
           color: whiteText,
           borderRadius: BorderRadius.only(
@@ -249,8 +249,8 @@ void _showBottomSheet(BuildContext context) {
                   SizedBox(height: 50.sp),
 
                   //***************** Forgot Password *****************
-                  Padding(
-                    padding: EdgeInsets.only(right: 120.sp),
+                  Align(
+                    alignment: Alignment.centerLeft,
                     child: Text(
                       DoctorHuntText.forgotPassword,
                       style: TextStyle(
@@ -317,8 +317,8 @@ void _showBottomSheet(BuildContext context) {
                                       SizedBox(height: 50.sp),
 
                                       //***************** Enter 4 Digits Code *****************
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 100.sp),
+                                      Align(
+                                        alignment: Alignment.centerLeft,
                                         child: Text(
                                           DoctorHuntText.digitsCode,
                                           style: TextStyle(
@@ -511,8 +511,8 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                 SizedBox(height: 50.sp),
 
                 //***************** Reset Password *****************
-                Padding(
-                  padding: EdgeInsets.only(right: 135.sp),
+                Align(
+                  alignment: Alignment.centerLeft,
                   child: Text(
                     DoctorHuntText.resetPassword,
                     style: TextStyle(
