@@ -32,7 +32,7 @@ class FirstContainer extends StatelessWidget {
             padding: EdgeInsets.only(left: 10.sp),
             child: Row(children: [
               Container(
-                height: 60.sp,
+                height: 80.sp,
                 width: 60.sp,
                 decoration: BoxDecoration(
                   color: greenTeal,
@@ -97,7 +97,7 @@ class SecondContainer extends StatelessWidget {
             padding: EdgeInsets.only(left: 10.sp),
             child: Row(children: [
               Container(
-                height: 60.sp,
+                height: 80.sp,
                 width: 60.sp,
                 decoration: BoxDecoration(
                   color: greenTeal,
@@ -162,7 +162,7 @@ class ThirdContainer extends StatelessWidget {
             padding: EdgeInsets.only(left: 10.sp),
             child: Row(children: [
               Container(
-                height: 60.sp,
+                height: 80.sp,
                 width: 60.sp,
                 decoration: BoxDecoration(
                   color: greenTeal,
