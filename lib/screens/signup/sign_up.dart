@@ -15,6 +15,7 @@ class SignupScreen extends StatefulWidget {
 
 class _SignupScreenState extends State<SignupScreen> {
   bool passwordObscured = true;
+  String? selectedOption;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,14 +99,18 @@ class _SignupScreenState extends State<SignupScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    //***************** Circular Box *****************
-                    Container(
-                      height: 16.sp,
-                      width: 16.sp,
-                      decoration: BoxDecoration(
-                        color: royalIntrigue,
-                        borderRadius: BorderRadius.circular(10.r),
-                      ),
+                    //***************** Radio Button *****************
+                    Radio<String>(
+                      value: "",
+                      activeColor: royalIntrigue,
+                      groupValue: selectedOption,
+                      onChanged: (String? value) {
+                        setState(
+                          () {
+                            selectedOption = value;
+                          },
+                        );
+                      },
                     ),
 
                     //***************** I agree with the Terms of Service & Privacy Policy *****************
@@ -124,7 +129,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   ],
                 ),
 
-                SizedBox(height: 60.sp),
+                SizedBox(height: 45.sp),
 
                 //***************** Sign Up Button *****************
                 ElevatedButtonWidget(
