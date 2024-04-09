@@ -38,3 +38,66 @@ class ProfileHeader extends StatelessWidget {
     ]);
   }
 }
+
+//******************** Profile TextFormField ********************
+class ProfileTextFieldWidget extends StatelessWidget {
+  const ProfileTextFieldWidget({
+    super.key,
+    required this.titleTextPath,
+    required this.hintTextPath,
+  });
+
+  final String titleTextPath;
+  final String hintTextPath;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.only(left: 20.sp, top: 3.sp),
+      child: Container(
+        height: 60.sp,
+        width: 320.sp,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(12.r),
+          border: Border.all(
+              color: royalIntrigue, width: 0.5.sp, style: BorderStyle.solid),
+        ),
+        child: Padding(
+          padding: EdgeInsets.only(left: 10.sp, top: 5.sp),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //***************** Name Text *****************
+              Text(
+                titleTextPath,
+                style: TextStyle(
+                  fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                  fontSize: 10.sp,
+                  fontWeight: FontWeight.w700,
+                  color: greenTeal,
+                ),
+              ),
+
+              SizedBox(height: 5.sp),
+
+              TextField(
+                keyboardType: TextInputType.name,
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  isCollapsed: true,
+                  hintText: hintTextPath,
+                  hintStyle: TextStyle(
+                    color: royalIntrigue,
+                    fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                    fontSize: 16.sp,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+} 
