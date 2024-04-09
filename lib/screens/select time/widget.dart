@@ -25,7 +25,7 @@ class ShrutiKediaContainer extends StatelessWidget {
       ),
       child: Padding(
         padding: EdgeInsets.only(
-            left: 10.sp, right: 10.sp, top: 10.sp, bottom: 10.sp),
+            left: 10.sp, right: 6.sp, top: 10.sp, bottom: 10.sp),
         child: Row(children: [
           Image.asset(DoctorHuntAssetsPath.tranquilli),
           SizedBox(
