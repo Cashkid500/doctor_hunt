@@ -74,7 +74,7 @@ class DoctorWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 175.sp,
+      height: 179.sp,
       width: 335.sp,
       decoration: BoxDecoration(
         color: whiteText,
