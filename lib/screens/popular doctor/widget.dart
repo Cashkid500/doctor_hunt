@@ -134,7 +134,7 @@ class DoctorsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 200.sp,
-      width: 136.sp,
+      width: 153.sp,
       decoration: BoxDecoration(
         color: whiteText,
         borderRadius: BorderRadius.circular(12.sp),
