@@ -230,17 +230,16 @@ class _DiagnosticTest2ScreenState extends State<DiagnosticTest2Screen> {
                     SizedBox(height: 40.sp),
 
                     //********** Recommended **************
-                    Row(
-                      children: [
-                        Text(
-                          DoctorHuntText.recommend,
-                          style: TextStyle(
-                              fontSize: 18.sp,
-                              fontWeight: FontWeight.w700,
-                              fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                              color: blackText),
-                        ),
-                      ],
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        DoctorHuntText.recommend,
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w700,
+                            fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                            color: blackText),
+                      ),
                     ),
 
                     SizedBox(height: 20.sp),
