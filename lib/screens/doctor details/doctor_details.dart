@@ -214,13 +214,14 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                     ServicesRow(
                       servicesNumberingPath: DoctorHuntText.two,
                       servicesTextPath: DoctorHuntText.frustrating,
-                      fontSize: 12.7.sp,
+                      fontSize: 12.sp,
                     ),
 
                     SizedBox(height: 30.sp),
 
                     //***************** Third Services Row Texts ***********
-                    Row(children: [
+                    Row(
+                      children: [
                       //************** First Text **************
                       Text(
                         DoctorHuntText.three,
@@ -241,7 +242,7 @@ class _DoctorDetailsScreenState extends State<DoctorDetailsScreen> {
                         DoctorHuntText.reminderSystem,
                         style: TextStyle(
                           fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          fontSize: 12.7.sp,
+                          fontSize: 12.sp,
                           fontWeight: FontWeight.w700,
                           color: royalIntrigue,
                         ),
