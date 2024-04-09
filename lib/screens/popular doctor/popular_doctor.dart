@@ -130,18 +130,17 @@ class _PopularDoctorScreenState extends State<PopularDoctorScreen> {
                   SizedBox(height: 40.sp),
 
                   //***************** Text *****************
-                  Row(
-                    children: [
-                      Text(
-                        DoctorHuntText.category,
-                        style: TextStyle(
-                          fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
-                          fontSize: 18.sp,
-                          fontWeight: FontWeight.w700,
-                          color: blackText,
-                        ),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      DoctorHuntText.category,
+                      style: TextStyle(
+                        fontFamily: DoctorHuntAssetsPath.doctorHuntFont,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w700,
+                        color: blackText,
                       ),
-                    ],
+                    ),
                   ),
 
                   SizedBox(height: 40.sp),
