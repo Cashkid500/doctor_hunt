@@ -229,7 +229,7 @@ void _showBottomSheet(BuildContext context) {
             ],
           ),
         ),
-
+      
         //***************** Content of the bottom sheet *****************
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -247,7 +247,7 @@ void _showBottomSheet(BuildContext context) {
                     ),
                   ),
                   SizedBox(height: 50.sp),
-
+      
                   //***************** Forgot Password *****************
                   Align(
                     alignment: Alignment.centerLeft,
@@ -275,7 +275,7 @@ void _showBottomSheet(BuildContext context) {
                     ),
                   ),
                   SizedBox(height: 30.sp),
-
+      
                   //***************** Email TextFormField *****************
                   TextFieldWidget(hintTextPath: DoctorHuntText.email),
                   SizedBox(height: 30.sp),
@@ -297,7 +297,7 @@ void _showBottomSheet(BuildContext context) {
                                 topRight: Radius.circular(32.r),
                               ),
                             ),
-
+                                  
                             //***************** Content of the bottom sheet *****************
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -315,7 +315,7 @@ void _showBottomSheet(BuildContext context) {
                                         ),
                                       ),
                                       SizedBox(height: 50.sp),
-
+                                  
                                       //***************** Enter 4 Digits Code *****************
                                       Align(
                                         alignment: Alignment.centerLeft,
@@ -344,7 +344,7 @@ void _showBottomSheet(BuildContext context) {
                                         ),
                                       ),
                                       SizedBox(height: 30.sp),
-
+                                  
                                       //***************** OTP TextField *****************
                                       Container(
                                         margin: EdgeInsets.symmetric(
@@ -387,7 +387,7 @@ void _showBottomSheet(BuildContext context) {
                                       ElevatedButton(
                                         onPressed: () {
                                           Navigator.of(context).pop();
-
+                                  
                                           //***************** Reset Password Bottom Sheet *****************
                                           showModalBottomSheet(
                                             backgroundColor: Colors.transparent,
@@ -491,7 +491,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
           topRight: Radius.circular(32.r),
         ),
       ),
-
+    
       //***************** Content of the bottom sheet *****************
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -509,7 +509,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   ),
                 ),
                 SizedBox(height: 50.sp),
-
+          
                 //***************** Reset Password *****************
                 Align(
                   alignment: Alignment.centerLeft,
@@ -537,7 +537,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   ),
                 ),
                 SizedBox(height: 30.sp),
-
+          
                 //***************** New Password TextFormField *****************
                 SizedBox(
                   height: 54.sp,
@@ -581,7 +581,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   ),
                 ),
                 SizedBox(height: 20.sp),
-
+          
                 //***************** Re-enter Password Field *****************
                 SizedBox(
                   height: 54.sp,
@@ -625,7 +625,7 @@ class _ResetPasswordBottomSheetState extends State<ResetPasswordBottomSheet> {
                   ),
                 ),
                 SizedBox(height: 30.sp),
-
+          
                 //***************** Update Password Button *****************
                 ElevatedButtonWidget(
                     elevatedButtonPath: DoctorHuntText.updatePassword,
