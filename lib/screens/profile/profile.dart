@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:doctor_hunt/constants/asset_path.dart';
 import 'package:doctor_hunt/constants/color_constants.dart';
 import 'package:doctor_hunt/constants/text_constants.dart';
@@ -115,8 +117,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               CircleAvatar(
                                 radius: 60.r,
-                                backgroundImage:  AssetImage(
-                                    DoctorHuntAssetsPath.profilePic),
+                                backgroundImage: _selectedImage == null 
+                                ? AssetImage(DoctorHuntAssetsPath.profilePic) 
+                                : FileImage(File(_selectedImage!.path)) as ImageProvider,
                               ),
                               Container(
                                 height: 36.sp,
