@@ -156,15 +156,15 @@ class _DoctorAppointmentScreenState extends State<DoctorAppointmentScreen> {
                             color: whiteText),
                       ),
                       style: ButtonStyle(
-                        backgroundColor: MaterialStateProperty.all(greenTeal),
+                        backgroundColor: WidgetStateProperty.all(greenTeal),
                         shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                            WidgetStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.sp),
                           ),
                         ),
                         fixedSize:
-                            MaterialStateProperty.all(Size(270.sp, 54.sp)),
+                            WidgetStateProperty.all(Size(270.sp, 54.sp)),
                       ),
                     ),
                   ]),

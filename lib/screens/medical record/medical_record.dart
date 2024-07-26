@@ -183,13 +183,13 @@ class ElevatedButtonWidget extends StatelessWidget {
             color: whiteText),
       ),
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(greenTeal),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        backgroundColor: WidgetStateProperty.all(greenTeal),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.sp),
           ),
         ),
-        fixedSize: MaterialStateProperty.all(Size(270.sp, 54.sp)),
+        fixedSize: WidgetStateProperty.all(Size(270.sp, 54.sp)),
       ),
     );
   }

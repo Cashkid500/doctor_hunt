@@ -7,6 +7,7 @@ import 'package:doctor_hunt/screens/profile/profile2.dart';
 import 'package:doctor_hunt/screens/profile/widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -16,6 +17,18 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
+  XFile? _selectedImage;
+
+  Future<void> _pickImage() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      setState(() {
+        _selectedImage = image;
+      });
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,7 +115,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               CircleAvatar(
                                 radius: 60.r,
-                                backgroundImage: const AssetImage(
+                                backgroundImage:  AssetImage(
                                     DoctorHuntAssetsPath.profilePic),
                               ),
                               Container(
@@ -112,7 +125,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   color: royalIntrigue,
                                   borderRadius: BorderRadius.circular(100.r),
                                 ),
-                                child: Image.asset(DoctorHuntAssetsPath.camera),
+                                child: GestureDetector(onTap: _pickImage, child: Image.asset(DoctorHuntAssetsPath.camera)),
                               ),
                             ],
                           ),

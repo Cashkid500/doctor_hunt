@@ -225,13 +225,13 @@ class DoctorWidget extends StatelessWidget {
                       color: whiteText),
                 ),
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(greenTeal),
-                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                  backgroundColor: WidgetStateProperty.all(greenTeal),
+                  shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(4.sp),
                     ),
                   ),
-                  fixedSize: MaterialStateProperty.all(Size(112.sp, 34.sp)),
+                  fixedSize: WidgetStateProperty.all(Size(112.sp, 34.sp)),
                 ),
               ),
             ],

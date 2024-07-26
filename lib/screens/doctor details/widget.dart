@@ -124,13 +124,13 @@ class DoctorPediatricianContainer extends StatelessWidget {
                           color: whiteText),
                     ),
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(greenTeal),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      backgroundColor: WidgetStateProperty.all(greenTeal),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(4.sp),
                         ),
                       ),
-                      fixedSize: MaterialStateProperty.all(Size(150.sp, 32.sp)),
+                      fixedSize: WidgetStateProperty.all(Size(150.sp, 32.sp)),
                     ),
                   ),
                 ],
